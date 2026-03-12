@@ -747,7 +747,7 @@
 }{\vfill\sWuhao\noindent\nwpu@chs@funding\par\cleardoublepage}
 \newenvironment{keywords}{                                  %
     \vspace{1\baselineskip} \par                            %
-    \noindent \textbf{关键词：}}{}                          %
+    {\fHei 关键词：}}{}                          %
 %%-----------------------------------------------------------------------------%
 %% 英文摘要及关键词
 %%-----------------------------------------------------------------------------%
