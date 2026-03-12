@@ -526,6 +526,10 @@
     \renewcommand{\nwpu@chs@funding}{#1}                    %
     \renewcommand{\nwpu@eng@funding}{#2}                    %
 }                                                           %
+\newcommand{\schoolname}[2]{                                % 设置学校名称
+    \renewcommand{\nwpu@chs@schoolname}{#1}                 %
+    \renewcommand{\nwpu@eng@schoolname}{#2}                 %
+}                                                           %
 \newcommand{\studentnumber}[1]{\renewcommand{\nwpu@uid}{#1}}% 设置学号
 \newcommand{\schoolcode}[1]{\renewcommand{\nwpu@schoolcode}{#1}}% 设置学校代码
 \newcommand{\classnumber}[1]{\renewcommand{\nwpu@classnumber}{#1}}% 设置分类号

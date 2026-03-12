@@ -21,9 +21,9 @@
 %% 博士、专业学位、盲评版本、不使用 Adobe 字体
 %% \documentclass[lang=chs, degree=phd, blindreview=true, adobe=false, academic=false]{yanputhesis}
 %% 博士、学术学位、正常版本、强制使用 Windows 系统字体
-\documentclass[lang=chs, degree=phd, blindreview=false, winfonts=true, academic=true]{yanputhesis}
+% \documentclass[lang=chs, degree=phd, blindreview=true, winfonts=true, academic=true]{yanputhesis}
 %% 硕士、学术学位、正常版本、不使用 Adobe 字体
-%% \documentclass[lang=chs, degree=master, blindreview=false, adobe=false, academic=true]{yanputhesis}
+ \documentclass[lang=chs, degree=master, blindreview=false, adobe=false, academic=true]{yanputhesis}
 %% 硕士、专业学位、盲评版本、不使用 Adobe 字体
 %% \documentclass[lang=chs, degree=master, blindreview=true, adobe=false, academic=false]{yanputhesis}
 %%=============================================================================%
@@ -131,7 +131,7 @@
 %%-----------------------------------------------------------------------------%
 
 %% 封面右上角信息
-\schoolcode{\blindreview{10699}}             % 学校代码
+\schoolcode{10699}             % 学校代码
 \classnumber{O242}                           % 分类号
 \securitylevel{公开}                         % 密级
 \studentnumber{\blindreview{2026123456}}    % 学号
@@ -141,11 +141,12 @@
     Yet Another Thesis Template of \\ Northwestern Polytechnical University
 }                                                           % 请自行断行
 \author{\blindreview{张三丰}}{\blindreview{Sanfeng Zhang}}  % 姓名（添加盲评标记）
-\date{2026年3月}{March/2026}                                  % 答辩日期
+\date{2026年3月}{March/2026}                              % 答辩日期
+\schoolname{西北工业大学}{Northwestern Polytechnical University}
 \school{数学与统计学院}{School of Mathematics and Statistics}% 学院
 \major{数学}{Philosophy in Mathematics}                     % 专业 博士请添加 Ph
 \advisor{\blindreview{李四海}}{\blindreview{Sihai Li}}      % 导师（添加盲评标记）
-\advisorAcademicRank{\blindreview{~教授}}{\blindreview{Professor}}						  % 导师中英学术职位（教授 Professor、副教授 Associate Professor、研究员 Researcher 和讲师 Lecturer）
+\advisorAcademicRank{~教授}{Professor}						  % 导师中英学术职位（教授 Professor、副教授 Associate Professor、研究员 Researcher 和讲师 Lecturer）
 \funding{本研究得到玄学基金（编号23336666）资助。}{         % 基金资助
     The present work is supported by Funding of Metaphysics %
     (Project No：23336666).}                                %
@@ -162,12 +163,12 @@
 \makeCommitteePage{                                         % 学位论文评阅人
     \reviewers{\fullBlindReview{2}}                         % 和答辩委员会名单
     \committee{20XX 年 X 月 X 日}{
-        \defenseChair{\blindreview{赵钱孙}}{\blindreview{教授}}{\blindreview{西北工业大学}}
-        \committeeMember{\blindreview{周吴郑}}{\blindreview{教授}}{\blindreview{西北工业大学}}
-        \committeeMember{\blindreview{冯陈褚}}{\blindreview{教授}}{\blindreview{西北工业大学}}
-        \committeeMember{\blindreview{蒋沈韩}}{\blindreview{教授}}{\blindreview{西北工业大学}}
-        \committeeMember{\blindreview{朱秦尤}}{\blindreview{教授}}{\blindreview{西北工业大学}}
-        \defenseSecretary{\blindreview{金魏陶}}{\blindreview{教授}}{\blindreview{西北工业大学}}
+        \defenseChair{XXX}{教授}{西北工业大学}
+        \committeeMember{XXX}{教授}{西北工业大学}
+        \committeeMember{XXX}{教授}{西北工业大学}
+        \committeeMember{XXX}{教授}{西北工业大学}
+        \committeeMember{XXX}{教授}{西北工业大学}
+        \defenseSecretary{XXX}{讲师}{西北工业大学}
     }
 }
 %%-----------------------------------------------------------------------------%
