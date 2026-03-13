@@ -1,4 +1,5 @@
 # NwpuThesis
+本人为计算机学院26届硕士，本模板格式已成功通过学校的论文最终版提交。
 
 本仓库基于 [Yet-Another-LaTeX-Template-for-NPU-Thesis](https://github.com/NWPUMetaphysicsOffice/Yet-Another-LaTeX-Template-for-NPU-Thesis) 修改而成。
 
