@@ -13,19 +13,14 @@
 %%     https://www.latex-project.org/lppl.txt
 %% and version 1.3b or later is part of all distributions of LaTeX version
 %% 2005/12/01 or later.
+
 %%=============================================================================%
-%% 设置论文格式（学位、学位类型、盲评、Adobe 字体）
+%% 设置论文格式（学位、学位类型、盲评、字体）
 %%-----------------------------------------------------------------------------%
-%% 博士、学术学位、正常版本、不使用 Adobe 字体
-%% \documentclass[lang=chs, degree=phd, blindreview=false, adobe=false, academic=true]{yanputhesis}
-%% 博士、专业学位、盲评版本、不使用 Adobe 字体
-%% \documentclass[lang=chs, degree=phd, blindreview=true, adobe=false, academic=false]{yanputhesis}
-%% 博士、学术学位、正常版本、强制使用 Windows 系统字体
-% \documentclass[lang=chs, degree=phd, blindreview=true, winfonts=true, academic=true]{yanputhesis}
-%% 硕士、学术学位、正常版本、不使用 Adobe 字体
+%% 常用选项：degree=master|phd, academic=true|false, blindreview=true|false
  \documentclass[lang=chs, degree=master, blindreview=false, adobe=false, academic=true]{yanputhesis}
-%% 硕士、专业学位、盲评版本、不使用 Adobe 字体
-%% \documentclass[lang=chs, degree=master, blindreview=true, adobe=false, academic=false]{yanputhesis}
+
+
 %%=============================================================================%
 %% 导言区：请自行添加额外宏包
 %%-----------------------------------------------------------------------------%
@@ -33,16 +28,7 @@
 \usepackage{metalogo}                                       % 软件标志
 \usepackage[binary-units=true]{siunitx}                     % 物理量单位
 \usepackage{amsmath}                                        % 基础数学库
-\usepackage[acronym]{glossaries}							% 缩略表库
-%%=============================================================================%
-%% 缩略语（也可以是独立文件）
-%%-----------------------------------------------------------------------------%
-\newacronym{npu}{西工大}{西北工业大学}
-\newglossaryentry{massEnergyFunc}{
-	name = 质能方程,
-	description = 一种阐述能量与质量间相互关系的理论物理学公式
-}
-\makeglossaries
+
 
 %%=============================================================================%
 %% 基本信息录入
@@ -113,12 +99,7 @@
 %%-----------------------------------------------------------------------------%
 
 \tableofcontents                                            % 目录
-\phantomsection\addcontentsline{toc}{chapter}{缩写表}		  % 缩写表（学校未做要求）
-\printglossary[type=\acronymtype,title=缩写表]				  % 缩写表（学校未做要求）
-\printglossary[title=术语表]								  % 术语表（学校未做要求）
-\listoffigures                                              % 图目录（学校未做要求）
-\listoftables                                               % 表目录（学校未做要求）
-\printnomenclature                                          % 符号表（学校未做要求）
+
 %%-----------------------------------------------------------------------------%
 \mainmatter
 \sDefault
@@ -206,15 +187,6 @@ emmmmm
 \section{测试附录子标题}
 
 这是一份附录，请放置一些独立的证明、源代码、或其他辅助资料。
-
-\nomenclature{$r$}{圆（或球）的半径}
-\nomenclature{$C$}{圆的周长}
-\nomenclature{$S$}{圆的面积}
-
-\begin{equation}
-    C = 2 \pi r
-\end{equation}
-
 \begin{equation}
     S = \pi r^2
 \end{equation}
