@@ -226,7 +226,7 @@
 \fi                                                         %
 \pagestyle{fancyplain}                                      % 新增版式 fancyplain
 \fancyhf{}                                                  % 清空原有页眉页脚
-\fancyfoot[C, C]{\sWuhao{\thepage}}                         % 页脚中央显示页码
+\fancyfoot[C, C]{\sXiaowu{\thepage}}                        % 页脚中央显示页码
 \fancyhead{}                                                % 页眉清除原有设置
 \fancyhead[COH]{\sXiaowu{\leftmark}}                        %
 \if@npu@lang@chs                                            % 中文论文环境

@@ -35,6 +35,5 @@
             ]
         }
     ],
-    "latex-workshop.latex.recipe.default": "xelatex (fast)",
-    "latex-workshop.formatting.latex": "latexindent"
+    "latex-workshop.latex.recipe.default": "xelatex (fast)"
 }
