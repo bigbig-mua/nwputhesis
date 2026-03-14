@@ -609,9 +609,9 @@
     \end{titlepage} \fSong \normalsize \newpage \clearpage  %
 }                                                           %
 %%-----------------------------------------------------------------------------%
-%% 中文标题页
+%% 中文内封
 %%-----------------------------------------------------------------------------%
-\newcommand{\make@nwpu@chs@title}{                          % 设置中文标题页
+\newcommand{\make@nwpu@chs@title}{                          % 设置中文内封
     \thispagestyle{empty}                                   % 清空页面格式
     \newlength{\chstitle@hwidtha}                           % 大标题宽度
     \settowidth{\chstitle@hwidtha}{\sSanhao\nwpu@chs@schoolname}
@@ -630,9 +630,9 @@
         \setlength{\maxname@width}{\advisor@width}
     \fi
     \begin{titlepage}                                       %
-        \renewcommand{\baselinestretch}{1.5}                % 1.5 倍行距
-        \fSong \sSanhao \par \vspace{1\baselineskip}        % 1 * 21pt * 1.5
+        \renewcommand{\baselinestretch}{1.4}                %
         \begin{center}                                      %
+            \fSong \sSanhao \par \vspace*{1\baselineskip}   %
             \makebox[1.41667\chstitle@hwidtha][s]{\sSanhao\nwpu@chs@schoolname} \par
             \vspace*{5mm}                                   %
             \makebox[1.41667\chstitle@hwidthb][s]{\sYihao\nwpu@chs@doctitle} \par
@@ -655,7 +655,7 @@
             }                                               %
             \hspace{-1cm}                                   %
             \copy123\kern-\wd123\box124 \fSong \sWuhao \par % 排版结束
-            \vspace{7\baselineskip}                         % 7 * 10.5pt * 1.5
+            \vspace{6\baselineskip}                         % 7 * 10.5pt * 1.5
             \sSanhao \nwpu@chs@innerCoverFirstOption：\coverunderline[5.5cm]{\nwpu@chs@major} \\
             \sSanhao 作{\qquad}者：\coverunderline[5.5cm]{\makebox[\maxname@width][s]{\nwpu@chs@author}} \\
             \sSanhao 指导教师：\coverunderline[5.5cm]{\makebox[\maxname@width][s]{\nwpu@chs@advisor}} \\
@@ -672,7 +672,7 @@
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
         \begin{center}                                      %
-            \fSong \sErhao \par \vspace*{3\baselineskip}              %
+            \fSong \sErhao \par \vspace*{3\baselineskip}    %
             \fEng \sErhao \textbf{Title:} \sSanhao \nwpu@eng@title \par     %
             \fSong \sXiaoer \vspace{3\baselineskip}         %
             \fEng \sXiaosan \textbf{By} \par                %
@@ -698,7 +698,7 @@
 %%-----------------------------------------------------------------------------%
 \renewcommand{\maketitle}{                                  % 重制 maketitle
     \make@nwpu@coverpage                                    % 封皮页
-    \make@nwpu@chs@title                                    % 中文标题页
+    \make@nwpu@chs@title                                    % 中文内封
     \make@nwpu@eng@title                                    % 英文标题页
 }                                                           %
 %%=============================================================================%
