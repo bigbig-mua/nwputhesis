@@ -679,7 +679,7 @@
             \fEng \sXiaosan \nwpu@eng@author \par  %
             \fEng \sXiaosan \textbf{Under the Supervision of \nwpu@eng@advisorAcademicRank} \\
             \fEng \sXiaosan \nwpu@eng@advisor \par %
-            \fSong \sSanhao \vspace{5\baselineskip}         %
+            \fSong \sSanhao \vspace{4\baselineskip}         %
             \fEng \sXiaosan A Dissertation Submitted to \\  %
             \fEng \sXiaosan {\nwpu@eng@schoolname} \\       %
             \fSong \sSanhao \vspace{1\baselineskip}         %
