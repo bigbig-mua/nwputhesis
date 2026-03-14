@@ -564,6 +564,7 @@
         \begin{center}                                      %
             \hfill \fHei \sWuhao                            %
             \begin{minipage}{\coverpage@infowidth}          % 排版基本信息表
+                \setlength{\hfuzz}{15pt}
                 \vspace{.5cm}                               %
                 \renewcommand\arraystretch{1.3}             %
                 \begin{tabular}{|c|c|}\hline                %
