@@ -473,7 +473,6 @@
 %%-----------------------------------------------------------------------------%
 \newcommand{\nwpu@chs@title}{\chs@space}                    % 标题（中文）
 \newcommand{\nwpu@chs@author}{\chs@space}                   % 作者（中文）
-\newcommand{\nwpu@chs@date}{\chs@space}                     % 日期（中文）
 \newcommand{\nwpu@chs@school}{\chs@space}                   % 学院（中文）
 \newcommand{\nwpu@chs@major}{\chs@space}                    % 专业（中文）
 \newcommand{\nwpu@chs@advisor}{\chs@space}                  % 导师（中文）
@@ -482,12 +481,23 @@
 %%-----------------------------------------------------------------------------%
 \newcommand{\nwpu@eng@title}{\chs@space}                    % 标题（英文）
 \newcommand{\nwpu@eng@author}{\chs@space}                   % 作者（英文）
-\newcommand{\nwpu@eng@date}{\chs@space}                     % 日期（英文）
 \newcommand{\nwpu@eng@school}{\chs@space}                   % 学院（英文）
 \newcommand{\nwpu@eng@major}{\chs@space}                    % 专业（英文）
 \newcommand{\nwpu@eng@advisor}{\chs@space}                  % 导师（英文）
 \newcommand{\nwpu@eng@advisorAcademicRank}{\chs@space}      % 导师职称（英文）
 \newcommand{\nwpu@eng@funding}{\chs@space}                  % 基金赞助（英文）
+%%-----------------------------------------------------------------------------%
+\newcounter{nwpu@month}                                        % 月份计数器
+\setcounter{nwpu@month}{1}                                     % 默认1月
+\newcommand{\nwpu@year}{2026}                                  % 默认年份
+\newcommand{\nwpu@eng@monthname}{%                              % 英文月份名称
+  \ifcase\value{nwpu@month}\or
+    January\or February\or March\or April\or May\or June\or
+    July\or August\or September\or October\or November\or December
+  \fi
+}
+\newcommand{\nwpu@chs@date}{\nwpu@year{} 年 \thenwpu@month{} 月}  % 日期（中文）
+\newcommand{\nwpu@eng@date}{\nwpu@eng@monthname/\nwpu@year}       % 日期（英文）
 %%-----------------------------------------------------------------------------%
 \newcommand{\nwpu@uid}{2000123456}                          % default 学号
 \newcommand{\nwpu@schoolcode}{10699}                        % default 学校代码
@@ -507,6 +517,8 @@
     \renewcommand{\nwpu@chs@date}{#1}                       %
     \renewcommand{\nwpu@eng@date}{#2}                       %
 }                                                           %
+\newcommand{\dateyear}[1]{\renewcommand{\nwpu@year}{#1}}    % 设置年份
+\newcommand{\datemonth}[1]{\setcounter{nwpu@month}{#1}}     % 设置月份
 \newcommand{\school}[2]{                                    % 设置学院
     \renewcommand{\nwpu@chs@school}{#1}                     %
     \renewcommand{\nwpu@eng@school}{#2}                     %
