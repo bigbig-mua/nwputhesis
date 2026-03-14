@@ -88,7 +88,7 @@
 \newcommand{\sErhao}{\fontsize{22pt}{28pt}\selectfont}      % 二号，1.25 倍
 \newcommand{\sXiaoer}{\fontsize{18pt}{18pt}\selectfont}     % 小二，单倍
 \newcommand{\sSanhao}{\fontsize{16pt}{24pt}\selectfont}     % 三号，1.5 倍
-\newcommand{\sXiaosan}{\fontsize{15pt}{18pt}\selectfont}    % 小三，1.5 倍
+\newcommand{\sXiaosan}{\fontsize{15pt}{22pt}\selectfont}    % 小三，1.5 倍
 \newcommand{\sSihao}{\fontsize{14pt}{21pt}\selectfont}      % 四号，1.5 倍
 \newcommand{\sHgXiaosi}{\fontsize{13pt}{19pt}\selectfont}   % 半小四，1.5 倍
 \newcommand{\sLgXiaosi}{\fontsize{12.5pt}{13pt}\selectfont} % 半小四，约 1 倍
