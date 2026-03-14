@@ -7,7 +7,7 @@
 
 ## 与原版的区别
 
-- 新增vscode配置文件，搭配LaTex Workshop插件可直接在vscode内使用。（还有一个推荐安装的插件：latex-wordcount，用于统计论文字数）
+- 新增vscode配置文件，搭配LaTeX Workshop插件可直接在vscode内使用。（还有一个推荐安装的插件：latex-wordcount，用于统计论文字数）
   提供了两种编译方式（如下图所示）：
   - **Recipe: xelatex + bibtex + xelatex x 2**：包含 BibTeX，修改参考文献时必须使用此方式
   - **Recipe: xelatex (fast)**：快速编译，在不修改参考文献时使用
