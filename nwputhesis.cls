@@ -164,7 +164,7 @@
         \hb@xt@ #1{\hss#2\hss}}\hspace{3pt}}                %
 \let\coverunderline\dlmu@underline                          %
 %%-----------------------------------------------------------------------------%
-\RequirePackage{layouts}                                    % 页面具体尺寸信息
+% \RequirePackage{layouts}                                    % 页面具体尺寸信息（未使用，已注释）
 %%-----------------------------------------------------------------------------%
 \RequirePackage[sf]{titlesec}                               % 章节标题格式
 \RequirePackage{titletoc}                                   % 目录格式
