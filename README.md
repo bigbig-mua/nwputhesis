@@ -19,19 +19,19 @@
 | 英文摘要页 | 关键词的英文写法             | Key Words          | Key words          |
 | 页脚       | 字号                         | 五号               | 小五号             |
 
-
-
-## 对项目本身的改进
-- 新增vscode配置文件，搭配LaTeX Workshop插件可直接在vscode内使用。（还有一个推荐安装的插件：latex-wordcount，用于统计论文字数）
+## 使用说明
+- 本项目仅建议在 Windows + Tex Live 环境下使用
+- 推荐搭配 VS Code 中的 LaTeX Workshop 插件使用
   提供了两种编译方式（如下图所示）：
-  - **Recipe: xelatex + bibtex + xelatex x 2**：包含 BibTeX，修改参考文献时必须使用此方式
+  - **Recipe: xelatex + bibtex + xelatex x 2**：包含 BibTeX，想要正确编译参考文献时必须使用此种方式，但是编译速度很慢
   - **Recipe: xelatex (fast)**：快速编译，在不修改参考文献时使用
-
+  - 推荐平常使用第二种方式即可，只在添加参考文献时使用第一种方式
   ![[编译方式]](figures/example.png)
+
+## 其他改进
+- 将封皮右上角的内容从cls文件中迁移到tex文件当中，便于用户修改。
+- 优化封皮中的指导教师格式，直接将其固定于cls模板当中，避免格式出错。
+- 优化申请日期格式，直接将其固定于cls模板当中，避免格式出错。
 - 简化tex模板，使之更易于上手。
 - 修改项目结构，删除不必要的文件。
-- 去除了代码中的一些 warnings
-
-## 注意事项
-
-- 本项目仅建议在 Windows + TexLive 环境下使用
+- 去除了代码中的一些 warnings。
