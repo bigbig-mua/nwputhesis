@@ -71,9 +71,9 @@
 \RequirePackage[                                            % 超链接设置
     unicode=true,                                           % 允许 Unicode
     colorlinks=false,                                       % 不改变文字颜色
-    pdfborder={0 0 0}]{hyperref}                            % 不显示边框
+    pdfborder={0 0 0},                                      % 不显示边框
+    bookmarks=true]{hyperref}                               % 显示书签页
 \hypersetup{                                                % Acrobat 默认设置
-    bookmarks=true,                                         % 显示书签页
     pdftoolbar=true,                                        % 显示工具栏
     pdfmenubar=true,                                        % 显示菜单栏
     pdffitwindow=true,                                      % 缩放以适应窗口大小
