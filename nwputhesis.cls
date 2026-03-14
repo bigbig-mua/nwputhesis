@@ -954,6 +954,7 @@
             \end{center}
             \vspace*{4mm}
             \hspace*{6mm}\begin{minipage}{141.6mm}
+                \setlength{\hfuzz}{12pt}
                 \renewcommand{\baselinestretch}{2.22}\fSong\fontsize{10.6pt}{10.6pt}\selectfont
                 {\qquad}\mbox{秉承学校严谨的学风和优良的科学道德，本人郑重声明：所呈交的学位论文，是本}
                 \mbox{人在导师的指导下进行研究工作所取得的成果。尽我所知，除文中已经注明引用的内容}
