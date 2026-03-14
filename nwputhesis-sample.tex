@@ -10,19 +10,16 @@
 %%=============================================================================%
 %% 设置论文格式（学位、学位类型、盲评）
 %%=============================================================================%
-%% 常用选项：degree=master|phd, academic=true|false, blindreview=true|false
+% 选项：degree=master|phd, academic=true|false, blindreview=true|false
 \documentclass[degree=master, academic=true, blindreview=false]{nwputhesis}
 
-%%=============================================================================%
-%% 基本信息录入
-%%=============================================================================%
-
-%% 封面右上角信息
+% 封面右上角信息
 \schoolcode{10699}                % 学校代码
 \classnumber{O242}                % 分类号
 \securitylevel{公开}              % 密级
 \studentnumber{\blindreview{2023123456}}  % 学号
 
+% 其它基本信息
 \title{基于 LaTeX 排版的 \\ 西北工业大学论文模板}{          % 中英文标题
     Yet Another Thesis Template of \\ Northwestern Polytechnical University
 }
@@ -44,10 +41,9 @@
 %%=============================================================================%
 \begin{document}
 
-%% 总前言：封皮页、中英文标题、中英文摘要、目录
-\frontmatter                                                  % 前言部分
+\frontmatter
 % 封皮页及标题页
-\maketitle  
+\maketitle
 
 %% 学位论文评阅人和答辩委员会名单
 \makeCommitteePage{
@@ -62,7 +58,7 @@
     }
 }
 
-%% 中文摘要
+% 中文摘要
 \begin{abstract}
     这是在西北工业大学硕博研究生毕业论文格式的要求下的一份 LaTeX 文档类模板。
     \begin{keywords}
@@ -70,7 +66,7 @@
     \end{keywords}
 \end{abstract}
 
-%% 英文摘要
+% 英文摘要
 \begin{engabstract}
     This is
     \begin{engkeywords}
@@ -78,7 +74,8 @@
     \end{engkeywords}
 \end{engabstract}
 
-\tableofcontents                                              % 目录
+% 目录
+\tableofcontents
 
 %%=============================================================================%
 %% 论文正文
@@ -146,12 +143,12 @@
 
 \cleardoublepage
 
-%%=============================================================================%
-%% 参考文献以及附录
-%%=============================================================================%
+
+% 参考文献
 \bibliographystyle{nputhesis-noslash}
 \bibliography{ref/reference}
 
+% 附录
 \appendix
 \chapter{一份说明}
 
@@ -165,7 +162,6 @@
 \cleardoublepage
 
 \backmatter
-
 % 致谢
 \begin{acknowledgements}
     感谢我的老师和我的朋友们……
