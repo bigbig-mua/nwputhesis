@@ -66,7 +66,7 @@
 \RequirePackage{geometry}                                   % 纸张尺寸及页边距
 \geometry{a4paper,                                          % A4 纸张
     left=2.5cm, right=2.5cm, top=2.54cm, bottom=2.54cm,     % 页边距
-    headheight=0.53cm, headsep=0.51cm, footskip=0.79cm}     % 页眉页脚位置
+    headheight=0.93cm, headsep=0.11cm, footskip=0.79cm}     % 页眉页脚位置
 %%-----------------------------------------------------------------------------%
 \RequirePackage[                                            % 超链接设置
     unicode=true,                                           % 允许 Unicode
