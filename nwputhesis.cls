@@ -81,6 +81,14 @@
     pdfnewwindow=true,                                      % 以新窗口打开链接
 }                                                           %
 \RequirePackage{bookmark}                                   %
+%%-----------------------------------------------------------------------------
+%% 解决 hyperref "Token not allowed in a PDF string" 警告
+%%-----------------------------------------------------------------------------
+\pdfstringdefDisableCommands{%
+    \def\!{}%
+    \def\quad{ }%
+    \def\qquad{  }%
+}
 %%-----------------------------------------------------------------------------%
 \RequirePackage{type1cm}                                    % 设置字号与行距
 \newcommand{\sChuhao}{\fontsize{42pt}{63pt}\selectfont}     % 初号，1.5 倍
