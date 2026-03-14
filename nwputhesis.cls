@@ -706,6 +706,7 @@
 %%-----------------------------------------------------------------------------%
 \renewcommand{\maketitle}{
     \hbadness=10000
+    \vbadness=10000
     \make@nwpu@coverpage                                    % 封皮页
     \make@nwpu@chs@title                                    % 中文内封
     \make@nwpu@eng@title                                    % 英文内封
