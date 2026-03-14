@@ -520,7 +520,7 @@
     \renewcommand{\nwpu@eng@advisor}{#2}                    %
 }                                                           %
 \newcommand{\advisorAcademicRank}[2]{                       % 导师学术等级
-    \renewcommand{\nwpu@chs@advisorAcademicRank}{#1}        %
+    \renewcommand{\nwpu@chs@advisorAcademicRank}{~~#1}        %
     \renewcommand{\nwpu@eng@advisorAcademicRank}{#2}        %
 }
 \newcommand{\funding}[2]{                                   % 设置基金资助
