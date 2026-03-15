@@ -1,5 +1,7 @@
 # NwpuThesis
-本仓库基于 [Yet-Another-LaTeX-Template-for-NPU-Thesis](https://github.com/NWPUMetaphysicsOffice/Yet-Another-LaTeX-Template-for-NPU-Thesis) 修改而成，旨在提供格式更加完善，更易用的 tex 模板。本模板格式符合 2025 年西北工业大学研究生院编写的 [西北工业大学研究生学位论文写作指南](https://gs.nwpu.edu.cn/info/2283/30467.htm)，已成功通过学校的论文最终版提交（26届）。
+本模板已成功通过学校的论文最终版提交（26届），是目前已知所有西北工业大学硕博学位论文 LaTeX 模板中最新最完善的。
+
+本模板格式符合 2025 年西北工业大学研究生院编写的 [西北工业大学研究生学位论文写作指南](https://gs.nwpu.edu.cn/info/2283/30467.htm)。
 
 ## 使用说明
 - 本项目仅建议在 Windows + Tex Live 环境下使用
@@ -65,3 +67,15 @@
 - 简化 tex 模板，使之更易于上手。
 - 修改项目结构，删除不必要的文件。
 - 去除了代码中的一些 warnings。
+
+## 许可证
+
+本项目基于 [Yet-Another-LaTeX-Template-for-NPU-Thesis](https://github.com/NWPUMetaphysicsOffice/Yet-Another-LaTeX-Template-for-NPU-Thesis) 修改，采用 [GNU General Public License v3.0](LICENSE) 许可证发布。
+
+- 原作者：Shangkun Shen
+- 本版本修改者：Jiayi Yan
+
+你可以自由使用、修改和分发本模板，但必须：
+- 保留原作者和修改者的版权声明
+- 以相同许可证（GPL v3）发布衍生作品
+- 说明你对本模板所做的修改
