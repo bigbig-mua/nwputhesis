@@ -4,11 +4,40 @@
 ## 使用说明
 - 本项目仅建议在 Windows + Tex Live 环境下使用
 - 推荐搭配 VS Code 中的 LaTeX Workshop 插件使用
-  提供了两种编译方式（如下图所示）：
-  - **Recipe: xelatex + bibtex + xelatex x 2**：包含 BibTeX，想要正确编译参考文献时必须使用此种方式，但是编译速度很慢
-  - **Recipe: xelatex (fast)**：快速编译，在不修改参考文献时使用
-  - 推荐平常使用第二种方式即可，只在添加参考文献时使用第一种方式
-  ![[编译方式]](figures/example.png)
+
+### 设置论文格式
+在 `nwputhesis-sample.tex` 文件中，通过 `\documentclass` 的选项来设置论文格式：
+
+```latex
+\documentclass[degree=master, academic=true, blindreview=false, colorcover=true]{nwputhesis}
+```
+
+各选项说明：
+- `degree=master|phd`：设置学位，`master` 为硕士，`phd` 为博士
+- `academic=true|false`：设置学位类型，`true` 为学术型学位，`false` 为专业型学位
+- `blindreview=true|false`：设置是否盲评，`true` 为盲评版本（隐藏个人信息），`false` 为正常版本
+- `colorcover=true|false`：设置是否使用彩色封面和封底，`true` 为彩色（论文最终版提交电子版需要），`false` 为普通版本（用于打印）
+
+### 文件修改说明
+用户基本只需要修改 `data` 目录和 `ref` 下的文件：
+- `data/info.tex`：个人信息
+- `data/committee.tex`：答辩委员会
+- `data/abstract.tex`：中英文摘要
+- `data/chapter*.tex`：各章节内容
+- `data/appendix.tex`：附录
+- `data/acknowledgements.tex`：致谢
+- `data/accomplishments.tex`：参加科研情况
+- `ref/reference.bib`：参考文献
+
+如需新增章节，请在 `nwputhesis-sample.tex` 中添加新的 `\input{data/chapterX}` 命令。
+
+### 编译方式
+提供了两种编译方式（如下图所示）：
+- **Recipe: xelatex + bibtex + xelatex x 2**：包含 BibTeX，想要正确编译参考文献时必须使用此种方式，但是编译速度很慢
+- **Recipe: xelatex (fast)**：快速编译，在不修改参考文献时使用
+- 推荐平常使用第二种方式即可，只在添加参考文献时使用第一种方式
+
+![[编译方式]](figures/example.png)
 
 ## 先前项目中存在的格式问题（在本项目中均已修正）
 
