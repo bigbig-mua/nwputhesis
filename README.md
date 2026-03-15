@@ -29,6 +29,8 @@
 - `data/accomplishments.tex`：参加科研情况
 - `ref/reference.bib`：参考文献
 
+论文插图全部放在 `figures` 目录下，项目已将默认图片路径设为该目录，在 tex 文件中可直接引用文件名，无需添加路径前缀。例如：`\includegraphics{example.png}`。
+
 如需新增章节，请在 `nwputhesis-sample.tex` 中添加新的 `\input{data/chapterX}` 命令。
 
 ### 编译方式
