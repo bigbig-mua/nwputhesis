@@ -253,6 +253,7 @@
 \setlist{nolistsep}                                         % 消除列表间距
 %%-----------------------------------------------------------------------------%
 \RequirePackage{graphicx}                                   % 插图功能
+\graphicspath{{figures/}}                                    % 定义图片文件在 figures 子目录下
 \RequirePackage[final]{pdfpages}                            % 插入其他 pdf 文件
 \RequirePackage{xcolor}                                     % 颜色库
 \RequirePackage{tikz}                                       % tikz 矢量图绘制
@@ -566,12 +567,12 @@
             \begin{tikzpicture}[remember picture,overlay]
                 \node[at=(current page.center),inner sep=0pt] {
                     \if@npu@type@phd
-                        \includegraphics[width=\paperwidth,height=\paperheight]{figures/博士论文封面.jpg}
+                        \includegraphics[width=\paperwidth,height=\paperheight]{博士论文封面.jpg}
                     \else
                         \if@npu@academic
-                            \includegraphics[width=\paperwidth,height=\paperheight]{figures/学硕论文封面.jpg}
+                            \includegraphics[width=\paperwidth,height=\paperheight]{学硕论文封面.jpg}
                         \else
-                            \includegraphics[width=\paperwidth,height=\paperheight]{figures/专硕论文封面.jpg}
+                            \includegraphics[width=\paperwidth,height=\paperheight]{专硕论文封面.jpg}
                         \fi
                     \fi
                 };
@@ -740,12 +741,12 @@
         \begin{tikzpicture}[remember picture,overlay]
             \node[at=(current page.center),inner sep=0pt] {
                 \if@npu@type@phd
-                    \includegraphics[width=\paperwidth,height=\paperheight]{figures/博士论文封底.jpg}
+                    \includegraphics[width=\paperwidth,height=\paperheight]{博士论文封底.jpg}
                 \else
                     \if@npu@academic
-                        \includegraphics[width=\paperwidth,height=\paperheight]{figures/学硕论文封底.jpg}
+                        \includegraphics[width=\paperwidth,height=\paperheight]{学硕论文封底.jpg}
                     \else
-                        \includegraphics[width=\paperwidth,height=\paperheight]{figures/专硕论文封底.jpg}
+                        \includegraphics[width=\paperwidth,height=\paperheight]{专硕论文封底.jpg}
                     \fi
                 \fi
             };
