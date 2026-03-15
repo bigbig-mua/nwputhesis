@@ -488,7 +488,6 @@
 %%-----------------------------------------------------------------------------%
 \newcommand{\nwpu@eng@title}{\chs@space}                    % 标题（英文）
 \newcommand{\nwpu@eng@author}{\chs@space}                   % 作者（英文）
-\newcommand{\nwpu@eng@school}{\chs@space}                   % 学院（英文）
 \newcommand{\nwpu@eng@major}{\chs@space}                    % 专业（英文）
 \newcommand{\nwpu@eng@advisor}{\chs@space}                  % 导师（英文）
 \newcommand{\nwpu@eng@advisorAcademicRank}{\chs@space}      % 导师职称（英文）
@@ -526,10 +525,7 @@
 }                                                           %
 \newcommand{\dateyear}[1]{\renewcommand{\nwpu@year}{#1}}    % 设置年份
 \newcommand{\datemonth}[1]{\setcounter{nwpu@month}{#1}}     % 设置月份
-\newcommand{\school}[2]{                                    % 设置学院
-    \renewcommand{\nwpu@chs@school}{#1}                     %
-    \renewcommand{\nwpu@eng@school}{#2}                     %
-}                                                           %
+\newcommand{\school}[1]{\renewcommand{\nwpu@chs@school}{#1}}  % 设置学院
 \newcommand{\major}[2]{                                     % 设置专业
     \renewcommand{\nwpu@chs@major}{#1}                      %
     \renewcommand{\nwpu@eng@major}{#2}                      %
