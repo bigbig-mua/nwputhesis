@@ -106,6 +106,8 @@
 \newcommand{\sXiaowu}{\fontsize{9pt}{9pt}\selectfont}       % 小五，单倍
 \newcommand{\sDefault}{\fontsize{12pt}{20pt}\selectfont}    % 小四，1.67 倍
 %%-----------------------------------------------------------------------------%
+\RequirePackage{silence}                                     % 抑制警告
+\WarningsOff[ifplatform]
 \RequirePackage{ifplatform}                                 % 跨平台字体控制依赖
 \newcommand\defaultSog{SimSun}                              % 宋体，用于正文
 \newcommand\defaultHei{SimHei}                              % 黑体，用于标题
