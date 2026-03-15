@@ -21,6 +21,7 @@
 \newif\if@npu@output@blindreview                            % 盲评版本标记
 \newif\if@npu@font@adobe                                    % Adobe 字体标记
 \newif\if@npu@font@winfonts                                 % 强制使用 Win 字体
+\newif\if@npu@colorcover                              % 彩色封面封底标记
 \def\set@lang@chs{\@npu@lang@chstrue}                       % 设置中文版本
 \def\set@lang@eng{\@npu@lang@chsfalse}                      % 设置英文版本
 \def\set@type@phd{     \@npu@type@phdtrue\@npu@type@mstfalse\@npu@type@bclfalse}
@@ -32,6 +33,7 @@
 \DeclareOptionX{adobe}[true]{\csname @npu@font@adobe#1\endcsname}
 \DeclareOptionX{winfonts}[true]{\csname @npu@font@winfonts#1\endcsname}
 \DeclareOptionX{academic}[true]{\csname @npu@academic#1\endcsname}
+\DeclareOptionX{colorcover}[true]{\csname @npu@colorcover#1\endcsname}
 \DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{book}} % 传递参数到 book 类
 \ExecuteOptionsX{lang=chs}                                  % 默认为中文版本
 \ExecuteOptionsX{degree=phd}                                % 默认为博士版本
@@ -39,11 +41,13 @@
 \ExecuteOptionsX{blindreview=false}                         % 默认不开启盲评模式
 \ExecuteOptionsX{adobe=false}                               % 默认不用 Adobe 字体
 \ExecuteOptionsX{winfonts=false}                            % 默认不开启强制选项
+\ExecuteOptionsX{colorcover=false}                          % 默认不启用彩色封面封底
 \ProcessOptionsX \relax                                     %
 \let\@unusedoptionlist\@empty                               % 清除未使用选项警告
 \LoadClass[11pt, a4paper, openany, twoside]{book}           % 默认双面印刷
 \RequirePackage{etoolbox}                                   % LaTeX 补丁工具
 \RequirePackage{amssymb}                                    % AMS 数学符号
+\RequirePackage{tikz}                                        % 彩色封面封底背景图定位
 %%=============================================================================%
 %%=============================================================================%
 %% 盲评版本的文字替换功能
@@ -561,6 +565,22 @@
     \newlength{\coverpage@detailwidth}                      % 具体信息对齐宽度
     \settowidth{\coverpage@detailwidth}{\sSanhao 申请学位日期}
     \begin{titlepage}                                       %
+        % 彩色封面背景图
+        \if@npu@colorcover
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[at=(current page.center),inner sep=0pt] {
+                    \if@npu@type@phd
+                        \includegraphics[width=\paperwidth,height=\paperheight]{figures/博士论文封面.jpg}
+                    \else
+                        \if@npu@academic
+                            \includegraphics[width=\paperwidth,height=\paperheight]{figures/学硕论文封面.jpg}
+                        \else
+                            \includegraphics[width=\paperwidth,height=\paperheight]{figures/专硕论文封面.jpg}
+                        \fi
+                    \fi
+                };
+            \end{tikzpicture}
+        \fi
         \bfseries                                           %
         \renewcommand{\baselinestretch}{1.25}               % 1.25 倍行距
         \begin{center}                                      %
@@ -714,6 +734,29 @@
     \make@nwpu@chs@title                                    % 中文内封
     \make@nwpu@eng@title                                    % 英文内封
 }                                                           %
+%%-----------------------------------------------------------------------------%
+%% 彩色封底
+%%-----------------------------------------------------------------------------%
+\newcommand{\make@nwpu@backcover}{                          % 彩色封底
+    \if@npu@colorcover
+        \clearpage
+        \thispagestyle{empty}
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center),inner sep=0pt] {
+                \if@npu@type@phd
+                    \includegraphics[width=\paperwidth,height=\paperheight]{figures/博士论文封底.jpg}
+                \else
+                    \if@npu@academic
+                        \includegraphics[width=\paperwidth,height=\paperheight]{figures/学硕论文封底.jpg}
+                    \else
+                        \includegraphics[width=\paperwidth,height=\paperheight]{figures/专硕论文封底.jpg}
+                    \fi
+                \fi
+            };
+        \end{tikzpicture}
+    \fi
+}
+\AtEndDocument{\make@nwpu@backcover}                        % 在文档末尾自动插入封底                                                           %
 %%=============================================================================%
 %%=============================================================================%
 %% 学位论文评阅人和答辩委员会名单
