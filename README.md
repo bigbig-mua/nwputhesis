@@ -8,7 +8,7 @@
 - 推荐搭配 VS Code 中的 LaTeX Workshop 插件使用
 
 ### 字体说明（Windows 用户无需关注）
-最终版论文建议以 Windows 字体呈现。本模板已内置字体自动检测功能，如果检测到系统内有 Windows 字体，则直接使用，如果未检测到，则自动回退到替代字体。建议用户自行安装 Windows 字体（或者把最终版论文在 Windows 电脑上编译一下）。
+最终版论文建议以 Windows 字体呈现。本模板会自动检测系统中是否安装有 Windows 字体并自动使用，如果未检测到则自动回退到替代字体。建议用户自行安装 Windows 字体（或者把最终版论文在 Windows 电脑上编译一下）。
 
 ### 设置论文格式
 在 `nwputhesis-sample.tex` 文件中，通过 `\documentclass` 的选项来设置论文格式：
@@ -71,6 +71,7 @@
 - 修改项目结构，删除不必要的文件。
 - 去除了代码中的一些 warnings。
 - 更好的跨平台字体支持，自动检测系统字体并选择合适的字体方案。
+- 新增 GitHub Actions CI，支持多平台（Ubuntu/macOS/Windows）自动构建和测试。 
 
 ## 许可证
 
