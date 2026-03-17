@@ -75,7 +75,7 @@
 
 ## 许可证
 
-本项目基于 [Yet-Another-LaTeX-Template-for-NPU-Thesis](https://github.com/NWPUMetaphysicsOffice/Yet-Another-LaTeX-Template-for-NPU-Thesis) 修改，采用 [GNU General Public License v3.0](LICENSE) 许可证发布。
+本项目基于 [Yet-Another-LaTeX-Template-for-NPU-Thesis](https://github.com/NWPUMetaphysicsOffice/Yet-Another-LaTeX-Template-for-NPU-Thesis) 修改，部分设计参考了 [thuthesis](https://github.com/tuna/thuthesis)，采用 [GNU General Public License v3.0](LICENSE) 许可证发布。
 
 Copyright (c) 2016-2022 NWPU Metaphysics Office https://github.com/NWPUMetaphysicsOffice
 
