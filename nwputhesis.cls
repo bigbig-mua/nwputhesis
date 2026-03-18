@@ -1019,6 +1019,7 @@
     \renewcommand{\baselinestretch}{1.0}                    %
     \fontsize{12pt}{13pt}\selectfont                        %
     \setlength{\bibsep}{0.5ex}                              %
+    \setlength{\bibhang}{2em}                               % 悬挂缩进
     \sDefault \old@bibliography{#1} \cleardoublepage        % 参考文献 bib 文件
 }                                                           %
 %%-----------------------------------------------------------------------------%

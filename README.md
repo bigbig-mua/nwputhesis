@@ -10,21 +10,13 @@
 - 本项目推荐在 TeX Live 环境下使用，支持各种操作系统。
 - 推荐搭配 VS Code 中的 LaTeX Workshop 插件使用
 
-### 字体说明（Windows 用户无需关注）
-最终版论文建议以 Windows 字体呈现。本模板会自动检测系统中是否安装有 Windows 字体并自动使用，如果未检测到则自动回退到替代字体。建议用户自行安装 Windows 字体（或者把最终版论文在 Windows 电脑上编译一下）。
+### 编译方式
+提供了两种编译方式（如下图所示）：
+- **Recipe: xelatex + bibtex + xelatex x 2**：包含 BibTeX，想要正确编译参考文献时必须使用此种方式，但是编译速度很慢
+- **Recipe: xelatex (fast)**：快速编译，在不修改参考文献时使用
+- 推荐平常使用第二种方式即可，只在添加参考文献时使用第一种方式
 
-### 设置论文格式
-在 `nwputhesis-sample.tex` 文件中，通过 `\documentclass` 的选项来设置论文格式：
-
-```latex
-\documentclass[degree=master, academic=true, blindreview=false, colorcover=true]{nwputhesis}
-```
-
-各选项说明：
-- `degree=master|phd`：设置学位，`master` 为硕士，`phd` 为博士
-- `academic=true|false`：设置学位类型，`true` 为学术型学位，`false` 为专业型学位
-- `blindreview=true|false`：设置是否盲评，`true` 为盲评版本（隐藏个人信息），`false` 为正常版本
-- `colorcover=true|false`：设置是否使用彩色封面和封底，`true` 为彩色（论文最终版提交电子版需要），`false` 为普通版本（用于打印）
+![[编译方式]](figures/example.png)
 
 ### 文件修改说明
 用户基本只需要修改 `data` 目录和 `ref` 下的文件：
@@ -41,24 +33,37 @@
 
 如需新增章节，请在 `nwputhesis-sample.tex` 中添加新的 `\input{data/chapterX}` 命令。
 
-### 编译方式
-提供了两种编译方式（如下图所示）：
-- **Recipe: xelatex + bibtex + xelatex x 2**：包含 BibTeX，想要正确编译参考文献时必须使用此种方式，但是编译速度很慢
-- **Recipe: xelatex (fast)**：快速编译，在不修改参考文献时使用
-- 推荐平常使用第二种方式即可，只在添加参考文献时使用第一种方式
+## 格式说明
 
-![[编译方式]](figures/example.png)
+### 字体说明（Windows 用户无需关注）
+最终版论文建议以 Windows 字体呈现。本模板会自动检测系统中是否安装有 Windows 字体并自动使用，如果未检测到则自动回退到替代字体。建议用户自行安装 Windows 字体（或者把最终版论文在 Windows 电脑上编译一下）。
 
-## 先前项目中存在的格式问题（在本项目中均已修正）
+### 参考文献格式
+参考文献采用 GB/T 7714 标准，使用常见的悬挂缩进格式（而非首行缩进），可以正常通过学校格式审查。
+
+### 论文格式设置
+在 `nwputhesis-sample.tex` 文件中，通过 `\documentclass` 的选项来设置论文格式：
+
+```latex
+\documentclass[degree=master, academic=true, blindreview=false, colorcover=true]{nwputhesis}
+```
+
+各选项说明：
+- `degree=master|phd`：设置学位，`master` 为硕士，`phd` 为博士
+- `academic=true|false`：设置学位类型，`true` 为学术型学位，`false` 为专业型学位
+- `blindreview=true|false`：设置是否盲评，`true` 为盲评版本（隐藏个人信息），`false` 为正常版本
+- `colorcover=true|false`：设置是否使用彩色封面和封底，`true` 为彩色（论文最终版提交电子版需要），`false` 为普通版本（用于打印）
+
+### 先前项目中存在的格式问题（在本项目中均已修正）
 
 | 问题位置 | 具体问题                     | 错误格式（原仓库） | 正确格式（本仓库）     |
 | :------- | :--------------------------- | :----------------- | :--------------------- |
 | 中文内封 | 作者姓名和指导教师姓名       | 不等宽             | 等宽                   |
 | 英文内封 | 作者姓名、指导教师姓名、标题 | 加粗               | 不加粗                 |
-| 英文内封 | 月份和年份格式               | 空格隔开           | 使用 “/” 隔开          |
+| 英文内封 | 月份和年份格式               | 空格隔开           | 使用 "/" 隔开          |
 | 英文内封 | 标题字号                     | 二号               | 三号                   |
 | 英文内封 | 学位段落的字号               | 三号               | 小三                   |
-| 中文摘要 | “关键词：”格式               | 宋体，加粗，不缩进 | 黑体，不加粗，首行缩进 |
+| 中文摘要 | "关键词："格式               | 宋体，加粗，不缩进 | 黑体，不加粗，首行缩进 |
 | 英文摘要 | 关键词的英文写法             | Key Words          | Key words              |
 | 页脚     | 字号                         | 五号               | 小五                   |
 
