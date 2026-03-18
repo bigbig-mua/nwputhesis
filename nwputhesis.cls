@@ -21,6 +21,8 @@
 \newif\if@npu@output@blindreview                            % 盲评版本标记
 \newif\if@npu@font@adobe                                    % Adobe 字体标记
 \newif\if@npu@font@winfonts                                 % 强制使用 Win 字体
+\newif\if@npu@font@fandol                                   % 强制使用 Fandol 字体
+\newif\if@npu@using@fandol                                  % 实际使用 Fandol 字体标记
 \newif\if@npu@colorcover                              % 彩色封面封底标记
 \def\set@lang@chs{\@npu@lang@chstrue}                       % 设置中文版本
 \def\set@lang@eng{\@npu@lang@chsfalse}                      % 设置英文版本
@@ -32,6 +34,14 @@
 \DeclareOptionX{blindreview}[true]{\csname @npu@output@blindreview#1\endcsname}
 \DeclareOptionX{adobe}[true]{\csname @npu@font@adobe#1\endcsname}
 \DeclareOptionX{winfonts}[true]{\csname @npu@font@winfonts#1\endcsname}
+\DeclareOptionX{fontset}[auto]{%
+  \def\npu@fontset{#1}%
+  \ifx\npu@fontset\@nnil\else
+    \def\@tempa{fandol}\ifx\npu@fontset\@tempa\@npu@font@fandoltrue\fi
+    \def\@tempa{windows}\ifx\npu@fontset\@tempa\@npu@font@winfontstrue\fi
+    \def\@tempa{adobe}\ifx\npu@fontset\@tempa\@npu@font@adobetrue\fi
+  \fi
+}
 \DeclareOptionX{academic}[true]{\csname @npu@academic#1\endcsname}
 \DeclareOptionX{colorcover}[true]{\csname @npu@colorcover#1\endcsname}
 \DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{book}} % 传递参数到 book 类
@@ -41,6 +51,7 @@
 \ExecuteOptionsX{blindreview=false}                         % 默认不开启盲评模式
 \ExecuteOptionsX{adobe=false}                               % 默认不用 Adobe 字体
 \ExecuteOptionsX{winfonts=false}                            % 默认不开启强制选项
+\ExecuteOptionsX{fontset=auto}                              % 默认自动检测字体
 \ExecuteOptionsX{colorcover=false}                          % 默认不启用彩色封面封底
 \ProcessOptionsX \relax                                     %
 \let\@unusedoptionlist\@empty                               % 清除未使用选项警告
@@ -125,11 +136,13 @@
 % 根据系统和字体可用性设置字体
 \newcommand{\npu@set@fandol@fonts}{%
     \typeout{[nwputhesis] Using Fandol fonts (TeX Live built-in).}%
+    \@npu@using@fandoltrue
     \renewcommand\defaultSog{FandolSong}%
     \renewcommand\defaultHei{FandolHei}%
     \renewcommand\defaultKai{FandolKai}%
     \renewcommand\defaultFag{FandolFang}%
     \renewcommand\defaultEngFont{TeX Gyre Termes}%
+    \renewcommand\defaultEngSansFont{TeX Gyre Heros}%
     \renewcommand\codeFont{DejaVu Sans Mono}%
 }
 \newcommand{\npu@set@noto@fonts}{%
@@ -168,7 +181,9 @@
         }%
     \fi
 }
-\if@npu@font@winfonts\relax                                 % 强制使用 Win 字体选项
+\if@npu@font@fandol                                          % 强制使用 Fandol 字体选项
+    \npu@set@fandol@fonts
+\else\if@npu@font@winfonts\relax                             % 强制使用 Win 字体选项
 \else
     \if@npu@font@adobe                                      % Adobe 字体选项
         \renewcommand\defaultSog{Adobe Song Std}
@@ -207,19 +222,58 @@
             }%
         \fi
     \fi
-\fi
+\fi\fi
 \RequirePackage[SlantFont, BoldFont, CJKchecksingle]{xeCJK} % 设置中文字体
 \defaultfontfeatures{Mapping=tex-text}                      % 启用 TeX Ligatures
-\setCJKmainfont[ItalicFont=\defaultKai, AutoFakeBold]{\defaultSog}
-\setCJKsansfont[ItalicFont=\defaultKai, AutoFakeBold]{\defaultSog}
-\setCJKfamilyfont{song}{\defaultSog}                        % 设置 CJK 字体族
-\setCJKfamilyfont{hei}{\defaultHei}                         %
-\setCJKfamilyfont{kai}{\defaultKai}                         %
-\setCJKfamilyfont{fang}{\defaultFag}                        %
-\setCJKfamilyfont{eng}{\defaultEngFont}                     %
-\setsansfont{\defaultEngSansFont}                           %
-\setmonofont{\codeFont}                                     %
-\setmainfont{\defaultEngFont}                               %
+% 根据 Fandol 字体标记决定加载方式
+\if@npu@using@fandol
+    % Fandol 字体需要使用 Extension = .otf 来从 TeX Live 目录加载
+    \setCJKmainfont{FandolSong}[
+        Extension   = .otf,
+        UprightFont = *-Regular,
+        BoldFont    = *-Bold,
+        ItalicFont  = FandolKai-Regular,
+        ItalicFeatures = {Extension = .otf},
+    ]
+    \setCJKsansfont{FandolHei}[
+        Extension   = .otf,
+        UprightFont = *-Regular,
+        BoldFont    = *-Bold,
+    ]
+    \setCJKfamilyfont{song}{FandolSong}[
+        Extension   = .otf,
+        UprightFont = *-Regular,
+        BoldFont    = *-Bold,
+    ]
+    \setCJKfamilyfont{hei}{FandolHei}[
+        Extension   = .otf,
+        UprightFont = *-Regular,
+        BoldFont    = *-Bold,
+    ]
+    \setCJKfamilyfont{kai}{FandolKai}[
+        Extension   = .otf,
+        UprightFont = *-Regular,
+    ]
+    \setCJKfamilyfont{fang}{FandolFang}[
+        Extension   = .otf,
+        UprightFont = *-Regular,
+    ]
+    \setCJKfamilyfont{eng}{\defaultEngFont}
+    \setsansfont{\defaultEngSansFont}
+    \setmonofont{\codeFont}
+    \setmainfont{\defaultEngFont}
+\else
+    \setCJKmainfont[ItalicFont=\defaultKai, AutoFakeBold]{\defaultSog}
+    \setCJKsansfont[ItalicFont=\defaultKai, AutoFakeBold]{\defaultSog}
+    \setCJKfamilyfont{song}{\defaultSog}                        % 设置 CJK 字体族
+    \setCJKfamilyfont{hei}{\defaultHei}                         %
+    \setCJKfamilyfont{kai}{\defaultKai}                         %
+    \setCJKfamilyfont{fang}{\defaultFag}                        %
+    \setCJKfamilyfont{eng}{\defaultEngFont}                     %
+    \setsansfont{\defaultEngSansFont}                           %
+    \setmonofont{\codeFont}                                     %
+    \setmainfont{\defaultEngFont}                               %
+\fi
 \newcommand{\fSong}{\CJKfamily{song}}                       % 宋体: fSong
 \newcommand{\fHei}{\CJKfamily{hei}}                         % 黑体: fHei
 \newcommand{\fKai}{\CJKfamily{kai}}                         % 楷体: fKai
