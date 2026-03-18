@@ -3,20 +3,19 @@ name: Build
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  XECJK_PKGS: fontspec xecjk ulem xetex
-  CTEX_PKGS: cjk ctex everysel zhnumber
+  XECJK_PKGS: fontspec xecjk ulem
   BIB_PKGS: bibtex natbib
   BIN_PKGS: latexmk l3build
   REQUIRED_PKGS: >-
     xkeyval etoolbox amsmath amssymb
     geometry hyperref bookmark type1cm
-    silence ifplatform catchfile indentfirst
+    silence ifplatform indentfirst
     titlesec titletoc fancyhdr fancyref
     enumerate enumitem graphicx pdfpages xcolor
     caption subcaption wrapfig multirow makecell
     longtable booktabs tabularx setspace ragged2e
     ntheorem listings appendix nomencl multicol
-    algorithms algorithmicx
+    algorithms algorithmicx float
   TIKZ_PKGS: pgf tikz
   FONT_PKGS: fandol tex-gyre dejavu
 
@@ -34,7 +33,7 @@ jobs:
         uses: TeX-Live/setup-texlive-action@v4
         with:
           packages: >-
-            ${{ env.XECJK_PKGS }} ${{ env.CTEX_PKGS }} ${{ env.BIB_PKGS }}
+            ${{ env.XECJK_PKGS }} ${{ env.BIB_PKGS }}
             ${{ env.REQUIRED_PKGS }} ${{ env.TIKZ_PKGS }} ${{ env.FONT_PKGS }}
             ${{ env.BIN_PKGS }}
           update-all-packages: true
@@ -62,7 +61,7 @@ jobs:
         uses: TeX-Live/setup-texlive-action@v4
         with:
           packages: >-
-            ${{ env.XECJK_PKGS }} ${{ env.CTEX_PKGS }} ${{ env.BIB_PKGS }}
+            ${{ env.XECJK_PKGS }} ${{ env.BIB_PKGS }}
             ${{ env.REQUIRED_PKGS }} ${{ env.TIKZ_PKGS }} ${{ env.FONT_PKGS }}
             ${{ env.BIN_PKGS }}
           update-all-packages: true
