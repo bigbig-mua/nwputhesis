@@ -13,10 +13,14 @@ sourcefiles = {"*.cls", "*.bst"}
 checkengines = {"xetex"}
 stdengine = "xetex"
 
+-- 标题页测试在子目录中，需要单独配置
 checkconfigs = {
   "build",
   "testfiles/config-title-page",
 }
+
+-- 排除标题页测试（它们在子目录中单独运行）
+excludetests = {"01-*"}
 
 typesetexe = "xelatex"
 unpackexe = "xetex"
