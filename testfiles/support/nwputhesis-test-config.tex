@@ -1,9 +1,0 @@
-% Font configuration for l3build tests
-% Force use of Fandol fonts (available on all platforms including CI)
-
-% Override font detection before loading nwputhesis
-\makeatletter
-\let\IfFontExistsTF\@gobbletwo
-\makeatother
-
-% Now any font check will fail, causing fallback to Fandol
