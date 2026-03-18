@@ -14,7 +14,7 @@ env:
     enumerate enumitem graphicx pdfpages xcolor
     caption subcaption wrapfig multirow makecell
     longtable booktabs tabularx setspace ragged2e
-    ntheorem listings appendix nomencl multicol
+    ntheorem listings appendix nomencl multicol tocbasic
     algorithms algorithmicx float
   TIKZ_PKGS: pgf tikz
   FONT_PKGS: fandol tex-gyre dejavu
