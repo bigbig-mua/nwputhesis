@@ -258,10 +258,20 @@
         Extension   = .otf,
         UprightFont = *-Regular,
     ]
-    \setCJKfamilyfont{eng}{\defaultEngFont}
-    \setsansfont{\defaultEngSansFont}
-    \setmonofont{\codeFont}
-    \setmainfont{\defaultEngFont}
+    \setCJKfamilyfont{eng}{TeX Gyre Termes}
+    \setsansfont{TeX Gyre Heros}[
+        UprightFont    = texgyreheros-regular.otf,
+        BoldFont       = texgyreheros-bold.otf,
+        ItalicFont     = texgyreheros-italic.otf,
+        BoldItalicFont = texgyreheros-bolditalic.otf,
+    ]
+    \setmonofont{DejaVu Sans Mono}[Scale=0.9]
+    \setmainfont{TeX Gyre Termes}[
+        UprightFont    = texgyretermes-regular.otf,
+        BoldFont       = texgyretermes-bold.otf,
+        ItalicFont     = texgyretermes-italic.otf,
+        BoldItalicFont = texgyretermes-bolditalic.otf,
+    ]
 \else
     \setCJKmainfont[ItalicFont=\defaultKai, AutoFakeBold]{\defaultSog}
     \setCJKsansfont[ItalicFont=\defaultKai, AutoFakeBold]{\defaultSog}
