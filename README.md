@@ -82,6 +82,10 @@
 - 更好的跨平台字体支持，自动检测系统字体并选择合适的字体方案。
 - 新增 GitHub Actions CI，支持多平台（Ubuntu/macOS/Windows）自动构建和测试。 
 
+## 推荐项目
+
+[awesome-ai-research-writing](https://github.com/Leey21/awesome-ai-research-writing)
+
 ## 许可证
 
 本项目基于 [Yet-Another-LaTeX-Template-for-NPU-Thesis](https://github.com/NWPUMetaphysicsOffice/Yet-Another-LaTeX-Template-for-NPU-Thesis) 修改，部分设计参考了 [thuthesis](https://github.com/tuna/thuthesis)，采用 [GNU General Public License v3.0](LICENSE) 许可证发布。
