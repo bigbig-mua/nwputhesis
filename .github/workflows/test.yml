@@ -10,7 +10,7 @@ env:
   REQUIRED_PKGS: >-
     xkeyval etoolbox amsmath amssymb
     geometry hyperref bookmark type1cm
-    silence ifplatform indentfirst
+    silence ifplatform catchfile indentfirst
     titlesec titletoc fancyhdr fancyref
     enumerate enumitem graphicx pdfpages xcolor
     caption subcaption wrapfig multirow makecell
