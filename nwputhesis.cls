@@ -122,6 +122,7 @@
 \newcommand{\sDefault}{\fontsize{12pt}{20pt}\selectfont}    % 小四，1.67 倍
 %%-----------------------------------------------------------------------------%
 \RequirePackage{silence}                                     % 抑制警告
+\WarningsOff[ifplatform]                                    % 抑制 ifplatform 的 shell-escape 警告
 \RequirePackage{ifplatform}                                 % 跨平台字体控制依赖
 \RequirePackage{fontspec}                                   % 设置字体（提前加载以支持字体检测）
 %% 定义默认字体（Windows 字体）
