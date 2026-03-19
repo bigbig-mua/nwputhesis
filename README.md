@@ -8,6 +8,7 @@
 本模板格式符合 2025 年西北工业大学研究生院编写的 [西北工业大学研究生学位论文写作指南](https://gs.nwpu.edu.cn/info/2283/30467.htm)。
 
 ## 使用说明
+- 推荐直接下载 [最新 Release 版本](https://github.com/1195343015/nwputhesis/releases/latest) 使用。
 - 本项目推荐在 TeX Live 环境下使用，支持各种操作系统。
 - 推荐搭配 VS Code 中的 LaTeX Workshop 插件使用
 - LaTeX 新手指南：[清华大学 thuthesis 提供的新手指南](https://github.com/tuna/thuthesis/wiki/%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97)（对本项目同样适用）
