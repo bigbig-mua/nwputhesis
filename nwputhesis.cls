@@ -6,6 +6,7 @@
 %% See LICENSE file for details.
 %%
 %% 原项目: https://github.com/NWPUMetaphysicsOffice/Yet-Another-LaTeX-Template-for-NPU-Thesis
+%% 本项目: https://github.com/1195343015/nwputhesis
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{nwputhesis}
 [2023/03/07 v1.8.5 Yet Another NPU Thesis Template]
