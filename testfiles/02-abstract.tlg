@@ -211,7 +211,7 @@ x \ETC.}
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 8.49202
-....\hbox(9.312+2.20798)x455.24411, glue set 210.24423fil
+....\hbox(9.312+2.20798)x455.24411, glue set 204.24423fil
 .....\hbox(0.0+0.0)x24.0
 .....\TU/FandolHei(0)/m/n/12 关
 .....\glue 0.0 plus 1.60004
@@ -221,8 +221,13 @@ x \ETC.}
 .....\penalty 10000
 .....\TU/FandolHei(0)/m/n/12 ：
 .....\rule(0.0+0.0)x-8.496
+.....\kern 0.00052
+.....\kern -0.00052
+.....\kern -0.99649
+.....\kern 0.99649
 .....\glue 8.496 minus 6.0
-.....\glue 0.0 plus 1.60004
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/FandolSong(0)/m/n/12 关
 .....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 键
