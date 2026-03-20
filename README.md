@@ -8,10 +8,18 @@
 本模板格式符合 2025 年西北工业大学研究生院编写的 [西北工业大学研究生学位论文写作指南](https://gs.nwpu.edu.cn/info/2283/30467.htm)。
 
 ## 使用说明
+
+### 环境说明
+
+#### 本地运行
 - 推荐直接下载 [最新 Release 版本](https://github.com/1195343015/nwputhesis/releases/latest) 使用。
-- 本项目推荐在 TeX Live 环境下使用，支持各种操作系统。
-- 推荐搭配 VS Code 中的 LaTeX Workshop 插件使用
-- LaTeX 新手指南：[清华大学 thuthesis 提供的新手指南](https://github.com/tuna/thuthesis/wiki/%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97)（对本项目同样适用）
+- 支持各种操作系统，推荐在 TeX Live 环境下搭配 VS Code 中的 LaTeX Workshop 插件使用。
+
+#### 在线运行
+推荐使用 [TeXPage 模板](https://www.texpage.com/zh/template/1b72a41e-0d62-430e-8678-d697d89bdb7e/) 在线编辑。（不推荐使用 Overleaf，其免费版基本没法用）
+
+### LaTeX 新手指南
+[清华大学 thuthesis 提供的新手指南](https://github.com/tuna/thuthesis/wiki/%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97)（对本项目同样适用）
 
 ### 编译方式
 提供了两种编译方式（如下图所示）：
