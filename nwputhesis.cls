@@ -977,20 +977,20 @@
                     \fontsize{33}{33}\selectfont\fNWPU 西北工业大学 %
                 \end{minipage}                              %
             \end{center}                                    %
-            \vskip 0.7cm                                    %
+            \vskip 2cm                                    %
             \sChuhao\fSong {\bfseries 本科毕业设计（论文）}   %
-            \vskip 6cm                                      %
+            \vskip 4.5cm                                      %
             {                                               %
-                \sSanhao\fHei 题~~目 \hspace{0.2cm}\coverunderline[10cm]{\nwpu@chs@title} %
+                \sSanhao\fHei 题~~目 \hspace{0.2cm}\coverunderline[8cm]{\nwpu@chs@title} %
             }                                               %
-            \vskip 2.5cm                                    %
+            \vskip 2cm                                    %
             {                                               %
                 \sSihao\fSong 专业名称\coverunderline[5.5cm]{\nwpu@chs@major} %
-                \vskip 1cm                                %
+                \vskip 1.1cm                                %
                 \sSihao\fSong 学生姓名\coverunderline[5.5cm]{\nwpu@chs@author} %
-                \vskip 1cm                                %
+                \vskip 1.1cm                                %
                 \sSihao\fSong 指导教师\coverunderline[5.5cm]{\nwpu@chs@advisor} %
-                \vskip 1cm                                %
+                \vskip 1.1cm                                %
                 \sSihao\fSong 毕业时间\coverunderline[5.5cm]{\nwpu@chs@date} %
                 \vfill                                      %
             }                                               %
