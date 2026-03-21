@@ -57,7 +57,7 @@
 
 硕博特有选项：
 - `academic=true|false`：设置学位类型，`true` 为学术型学位，`false` 为专业型学位
-- `blindreview=true|false`：设置是否盲评，`true` 为盲评版本（隐藏个人信息），`false` 为正常版本
+- `blindreview=true|false`：设置是否盲评，`true` 为盲评版本（自动隐藏学号、作者、导师信息），`false` 为正常版本
 - `colorcover=true|false`：设置是否使用彩色封面和封底，`true` 为彩色（论文最终版提交电子版需要），`false` 为普通版本（用于打印）
 
 ### 文件修改说明

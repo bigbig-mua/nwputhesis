@@ -745,8 +745,8 @@
     \renewcommand{\nwpu@eng@title}{#2}                      %
 }                                                           %
 \renewcommand{\author}[2]{                                  % 设置作者
-    \renewcommand{\nwpu@chs@author}{#1}                     %
-    \renewcommand{\nwpu@eng@author}{#2}                     %
+    \renewcommand{\nwpu@chs@author}{\blindreview{#1}}                     %
+    \renewcommand{\nwpu@eng@author}{\blindreview{#2}}                     %
 }                                                           %
 \renewcommand{\date}[2]{                                    % 设置日期
     \renewcommand{\nwpu@chs@date}{#1}                       %
@@ -760,8 +760,8 @@
     \renewcommand{\nwpu@eng@major}{#2}                      %
 }                                                           %
 \newcommand{\advisor}[2]{                                   % 设置导师
-    \renewcommand{\nwpu@chs@advisor}{#1}                    %
-    \renewcommand{\nwpu@eng@advisor}{#2}                    %
+    \renewcommand{\nwpu@chs@advisor}{\blindreview{#1}}                    %
+    \renewcommand{\nwpu@eng@advisor}{\blindreview{#2}}                    %
 }                                                           %
 \newcommand{\advisorAcademicRank}[2]{                       % 导师学术等级
     \renewcommand{\nwpu@chs@advisorAcademicRank}{~~#1}        %
@@ -775,7 +775,7 @@
     \renewcommand{\nwpu@chs@schoolname}{#1}                 %
     \renewcommand{\nwpu@eng@schoolname}{#2}                 %
 }                                                           %
-\newcommand{\studentnumber}[1]{\renewcommand{\nwpu@uid}{#1}}% 设置学号
+\newcommand{\studentnumber}[1]{\renewcommand{\nwpu@uid}{\blindreview{#1}}}% 设置学号
 \newcommand{\schoolcode}[1]{\renewcommand{\nwpu@schoolcode}{#1}}% 设置学校代码
 \newcommand{\classnumber}[1]{\renewcommand{\nwpu@classnumber}{#1}}% 设置分类号
 \newcommand{\securitylevel}[1]{\renewcommand{\nwpu@securitylevel}{#1}}% 设置密级
