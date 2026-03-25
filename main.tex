@@ -33,8 +33,10 @@
 \tableofcontents
 
 % 图目录和表目录（学校模板未要求）
-\listoffigures
-\listoftables
+\ifgraduate{
+    \listoffigures
+    \listoftables
+}{}
 
 \mainmatter
 \sDefault

@@ -1181,6 +1181,16 @@
     \addcontentsline{toc}{chapter}{\listtablename}          %
     \old@log \cleardoublepage                               %
 }                                                           %
+\renewcommand\NAT@bibsetnum[1]{%
+   \setlength{\leftmargin}{0pt}%
+   \setlength{\labelwidth}{0pt}%
+   \setlength{\labelsep}{0pt}%
+   \setlength{\itemindent}{0pt}%
+   \setlength{\listparindent}{0pt}%
+   \setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
+   \hangindent=-\bibhang\hangafter=1%
+}
+\renewcommand\bibnumfmt[1]{\hspace*{\bibhang}[#1]\hspace*{0.5em}}
 %%=============================================================================%
 %%=============================================================================%
 %% 参考文献及附录处理
