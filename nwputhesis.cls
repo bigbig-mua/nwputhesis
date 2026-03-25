@@ -9,7 +9,7 @@
 %% 本项目: https://github.com/1195343015/nwputhesis
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{nwputhesis}
-[2023/03/07 v1.8.5 Yet Another NPU Thesis Template]
+[2023/03/07 v2.1.1 Yet Another NPU Thesis Template]
 %%=============================================================================%
 %% 文档选项和基础文档类型控制
 %%-----------------------------------------------------------------------------%
