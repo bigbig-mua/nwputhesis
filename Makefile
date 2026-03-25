@@ -28,9 +28,6 @@ $(SAMPLE).pdf:
 # 构建文档（如果有 dtx 文件）
 doc: $(PACKAGE).pdf
 
-$(PACKAGE).pdf: $(PACKAGE).dtx
-	$(LATEXMK) -xelatex $(PACKAGE).dtx
-
 # 查看生成的 PDF
 view: viewthesis
 
@@ -45,10 +42,6 @@ clean:
 # 清理所有生成文件
 cleanall: clean
 	-@$(RM) -f $(SAMPLE).pdf $(PACKAGE).pdf 2>/dev/null || true
-
-# 完全清理
-distclean: cleanall
-	-@$(RM) -f *.cls *.sty 2>/dev/null || true
 
 # 测试目标（用于 CI，使用 l3build）
 test:
