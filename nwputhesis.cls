@@ -1334,10 +1334,7 @@
   \phantomsection\chapter*{\nwpu@page@acp}                %
   \markboth{\nwpu@page@acp}{}                             %
   \addcontentsline{toc}{chapter}{\nwpu@page@acp}          %
-  \newlength{\oldparindent}                               %
-  \setlength{\oldparindent}{\parindent}                   %
-  \setlength{\parindent}{0pt}                             %
-}{\setlength{\parindent}{\oldparindent} \cleardoublepage}   %
+}{\cleardoublepage}                                       %
 %%-----------------------------------------------------------------------------%
 \newenvironment{designsummary}{                              % 毕业设计小结（本科）
   \renewcommand{\baselinestretch}{1.0}                    %
