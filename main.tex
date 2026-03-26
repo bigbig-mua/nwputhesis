@@ -40,7 +40,6 @@
 }{}
 
 \mainmatter
-\graduatebodyfont
 
 % 各章节
 \input{data/chapter1}
@@ -51,7 +50,6 @@
 \input{data/chapter6}
 
 % 参考文献
-\bibliographystyle{nputhesis-noslash}
 \bibliography{ref/reference}
 
 % 附录（研究生在致谢之前）
@@ -72,6 +70,6 @@
 \ifgraduate{\input{data/graduate-accomplishments}}{}
 
 % 知识产权与原创性声明（仅硕博）
-\ifgraduate{\makestatement}{}
+\ifgraduate{\includepdf[pages=-]{figures/声明.pdf}}{}
 
 \end{document}

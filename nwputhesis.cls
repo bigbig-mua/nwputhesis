@@ -61,6 +61,7 @@
     \@twosidefalse\@mparswitchfalse                 % 本科强制单面印刷
 \fi
 \RequirePackage{etoolbox}                                   % LaTeX 补丁工具
+\RequirePackage{totcount}                                   % 引用计数总数追踪
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{%
     \cleardoublepage
 }{}{\errmessage{failed to patch chapter pagination}}
@@ -113,7 +114,9 @@
     pdffitwindow=true,                                      % 缩放以适应窗口大小
     pdfstartview={FitH},                                    % 适合窗口宽度
     pdfnewwindow=true,                                      % 以新窗口打开链接
+    hypertexnames=false,                                    % 避免重复页锚点命名
 }                                                           %
+\special{pdf:minorversion 7}                                % 允许包含 PDF 1.7 页面
 \RequirePackage{bookmark}                                   %
 %%-----------------------------------------------------------------------------
 %% 解决 hyperref "Token not allowed in a PDF string" 警告
@@ -143,7 +146,12 @@
     \renewcommand{\baselinestretch}{1.0}%
     \sDefault
 }
-%%-----------------------------------------------------------------------------%
+\let\nwpu@oldmainmatter\mainmatter
+\renewcommand{\mainmatter}{%
+    \nwpu@oldmainmatter
+    \graduatebodyfont
+}
+%%-----------------------------------------------------------------------------% 
 \RequirePackage{silence}                                     % 抑制警告
 \WarningsOff[ifplatform]                                    % 抑制 ifplatform 的 shell-escape 警告
 \RequirePackage{ifplatform}                                 % 跨平台字体控制依赖
@@ -464,8 +472,10 @@
 %%-----------------------------------------------------------------------------%
 \RequirePackage[numbers, sort&compress]{natbib}             % 参考文献
 \let\oldcite\cite                                           % 参考文献
-\renewcommand{\cite}[1]{\textsuperscript{\oldcite{#1}}}     % 上标引用形式
-%%-----------------------------------------------------------------------------%
+\newcounter{citecount}                                      % 引用计数器
+\renewcommand{\cite}[1]{\stepcounter{citecount}\textsuperscript{\oldcite{#1}}} % 上标引用形式
+\regtotcounter{citecount}                                   % 注册引用计数器
+%%-----------------------------------------------------------------------------% 
 \RequirePackage{enumerate}                                  % 编号列表
 \RequirePackage{enumitem}                                   % 列表格式控制
 \setlist{nosep}                                             % 消除间距
@@ -1203,12 +1213,14 @@
 %%-----------------------------------------------------------------------------%
 \let\old@bibliography\bibliography                          % 保护原有附录环境
 \renewcommand{\bibliography}[1]{                            %
-    \phantomsection\addcontentsline{toc}{chapter}{参考文献} %
-    \graduatebodyfont                                       %
-    \setlength{\bibsep}{0.5ex}                              %
-    \setlength{\bibhang}{2em}                               % 悬挂缩进
-    \nocite{*}                                              % 无正文引用时也生成合法的 BibTeX 输入
-    \old@bibliography{#1} \cleardoublepage                  % 参考文献 bib 文件
+    \ifnum\value{citecount}>0                               %
+        \bibliographystyle{nputhesis-noslash}               % 固定参考文献样式
+        \phantomsection\addcontentsline{toc}{chapter}{参考文献} %
+        \graduatebodyfont                                   %
+        \setlength{\bibsep}{0.5ex}                          %
+        \setlength{\bibhang}{2em}                           % 悬挂缩进
+        \old@bibliography{#1} \cleardoublepage              % 参考文献 bib 文件
+    \fi                                                     %
 }                                                           %
 %%-----------------------------------------------------------------------------%
 \patchcmd{\hyper@makecurrent}{%                             % 附录章节引用补丁
