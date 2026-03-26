@@ -61,7 +61,6 @@
     \@twosidefalse\@mparswitchfalse                 % 本科强制单面印刷
 \fi
 \RequirePackage{etoolbox}                                   % LaTeX 补丁工具
-\RequirePackage{totcount}                                   % 引用计数总数追踪
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{%
     \cleardoublepage
 }{}{\errmessage{failed to patch chapter pagination}}
@@ -472,9 +471,7 @@
 %%-----------------------------------------------------------------------------%
 \RequirePackage[numbers, sort&compress]{natbib}             % 参考文献
 \let\oldcite\cite                                           % 参考文献
-\newcounter{citecount}                                      % 引用计数器
-\renewcommand{\cite}[1]{\stepcounter{citecount}\textsuperscript{\oldcite{#1}}} % 上标引用形式
-\regtotcounter{citecount}                                   % 注册引用计数器
+\renewcommand{\cite}[1]{\textsuperscript{\oldcite{#1}}}     % 上标引用形式
 %%-----------------------------------------------------------------------------% 
 \RequirePackage{enumerate}                                  % 编号列表
 \RequirePackage{enumitem}                                   % 列表格式控制
@@ -1213,14 +1210,18 @@
 %%-----------------------------------------------------------------------------%
 \let\old@bibliography\bibliography                          % 保护原有附录环境
 \renewcommand{\bibliography}[1]{                            %
-    \ifnum\value{citecount}>0                               %
-        \bibliographystyle{nputhesis-noslash}               % 固定参考文献样式
+    \if@filesw                                               %
+        \immediate\write\@auxout{\string\bibstyle{nputhesis-noslash}}%
+        \immediate\write\@auxout{\string\bibdata{#1}}%
+    \fi                                                      %
+    \IfFileExists{\jobname.bbl}{                             %
+        \bibliographystyle{nputhesis-noslash}               %
         \phantomsection\addcontentsline{toc}{chapter}{参考文献} %
         \graduatebodyfont                                   %
         \setlength{\bibsep}{0.5ex}                          %
-        \setlength{\bibhang}{2em}                           % 悬挂缩进
-        \old@bibliography{#1} \cleardoublepage              % 参考文献 bib 文件
-    \fi                                                     %
+        \setlength{\bibhang}{2em}                           %
+        \old@bibliography{#1} \cleardoublepage              %
+    }{}                                                     %
 }                                                           %
 %%-----------------------------------------------------------------------------%
 \patchcmd{\hyper@makecurrent}{%                             % 附录章节引用补丁

@@ -13,10 +13,9 @@
         },
         {
             "name": "bibtex",
-            "command": "cmd",
+            "command": ".\\tools\\run-bibtex-if-needed.bat",
             "args": [
-                "/c",
-                "if exist \"%DOCFILE%.aux\" (findstr /c:\"\\citation{\" \"%DOCFILE%.aux\" >nul && bibtex \"%DOCFILE%\" || echo Skip bibtex: no citations.) else (echo Skip bibtex: no aux file.)"
+                "%DOCFILE%"
             ]
         }
     ],
