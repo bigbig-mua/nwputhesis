@@ -13,8 +13,9 @@
         },
         {
             "name": "bibtex",
-            "command": ".\\tools\\run-bibtex-if-needed.bat",
+            "command": "texlua",
             "args": [
+                "./tools/run-bibtex-if-needed.lua",
                 "%DOCFILE%"
             ]
         }
