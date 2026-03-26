@@ -1,6 +1,21 @@
 name: Test
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths-ignore:
+      - "README.md"
+      - ".vscode/**"
+      - "main.pdf"
+      - "data/graduate-info.tex"
+      - "data/ungraduate-info.tex"
+  pull_request:
+    paths-ignore:
+      - "README.md"
+      - ".vscode/**"
+      - "main.pdf"
+      - "data/graduate-info.tex"
+      - "data/ungraduate-info.tex"
+  workflow_dispatch:
 
 env:
   XECJK_PKGS: fontspec xecjk ulem
