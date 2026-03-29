@@ -3,7 +3,7 @@
 [![Test](https://github.com/1195343015/nwputhesis/actions/workflows/test.yml/badge.svg)](https://github.com/1195343015/nwputhesis/actions/workflows/test.yml)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-> 模板升级时，一般只需要替换 `nwputhesis.cls`；通常不需要改动已填写好的 `data` 和 `ref` 目录内容，如有特殊情况会在 Releases 页面说明。
+> 模板升级时，用户通常不需要改动已填写好的 `data` 、`figures` 和 `ref` 内容，只需要替换其他文件即可，如有特殊情况会在 Releases 页面说明。
 
 本模板已成功通过学校的论文最终版提交（26届硕士），是截至目前（26年3月）已知所有西北工业大学硕博学位论文 LaTeX 模板中最新最完善的，现已添加本科毕业设计论文支持。
 
