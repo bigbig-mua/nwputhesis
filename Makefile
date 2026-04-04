@@ -3,6 +3,10 @@
 
 PACKAGE = nwputhesis
 SAMPLE  = main
+TEST_BUILD = 02-abstract 03-committee 05-acknowledgements 06-accomplishments
+TEST_TITLE_PAGE = 01-title-page-bachelor 01-title-page-master-academic 01-title-page-master-professional 01-title-page-phd
+TEST_TOC = 04-toc
+TEST_BIBER = 07-bibliography
 
 LATEXMK = latexmk
 SHELL   := /usr/bin/env bash
@@ -46,7 +50,10 @@ cleanall: clean
 # 测试目标（用于 CI，使用 l3build）
 test:
 ifeq ($(target),)
-	l3build check
+	texlua build.lua check $(TEST_BUILD)
+	texlua build.lua check --config testfiles/config-title-page $(TEST_TITLE_PAGE)
+	texlua build.lua check --config testfiles/config-toc $(TEST_TOC)
+	texlua build.lua check --config testfiles/config-biber $(TEST_BIBER)
 else
 	bash testfiles/test.sh $(target)
 endif

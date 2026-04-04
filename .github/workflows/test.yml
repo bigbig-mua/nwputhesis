@@ -19,7 +19,7 @@ on:
 
 env:
   XECJK_PKGS: fontspec xecjk ulem
-  BIB_PKGS: bibtex natbib
+  BIB_PKGS: biblatex biblatex-gb7714-2015 biber
   BIN_PKGS: latexmk l3build
   REQUIRED_PKGS: >-
     xkeyval etoolbox amsmath amssymb
