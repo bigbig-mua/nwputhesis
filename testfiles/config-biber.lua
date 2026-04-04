@@ -4,7 +4,7 @@ includetests = {"07-bibliography"}
 excludetests = {}
 
 supportdir = "testfiles/support"
-checksuppfiles = {"*.tex", "*.bib", "*.cls", "*.bst", "figures/*", "*.ttf"}
+checksuppfiles = {"*.tex", "*.bib", "*.cls", "figures/*", "*.ttf"}
 
 checkruns = 3
 bibtexopts = ""

@@ -5,10 +5,10 @@
 module = "nwputhesis"
 
 supportdir = "./testfiles/support"
-checksuppfiles = {"*.tex", "*.bib", "*.cls", "*.bst", "figures/*", "*.ttf"}
+checksuppfiles = {"*.tex", "*.bib", "*.cls", "figures/*", "*.ttf"}
 
-installfiles = {"*.cls", "*.bst"}
-sourcefiles = {"*.cls", "*.bst"}
+installfiles = {"*.cls"}
+sourcefiles = {"*.cls"}
 
 checkengines = {"xetex"}
 stdengine = "xetex"

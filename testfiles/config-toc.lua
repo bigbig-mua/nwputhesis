@@ -4,6 +4,6 @@ includetests = {"04-toc"}
 excludetests = {}
 
 supportdir = "testfiles/support"
-checksuppfiles = {"*.tex", "*.bib", "*.cls", "*.bst", "figures/*", "*.ttf"}
+checksuppfiles = {"*.tex", "*.bib", "*.cls", "figures/*", "*.ttf"}
 
 checkruns = 2
