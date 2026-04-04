@@ -123,7 +123,7 @@ Completed box being shipped out [1]
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
-....\special{pdf:minorversion 7}
+....\special{pdf:minorversion 5}
 ....\special{pdf:minorversion 7}
 ....\special{pdf:docview<</OpenAction[@page1/FitH]/PageMode/UseOutlines/ViewerPref\ETC.}
 ....\special{pdf:dest (Doc-Start) [@thispage /XYZ @xpos @ypos null]}
@@ -133,8 +133,9 @@ Completed box being shipped out [1]
 ....\special{pdf:out [-] 1<</Title(\376\377\144\130\000\040\211\201)/A<</S/GoTo/D(\ETC.}
 ....\write1{\@writefile{toc}{\protect \contentsline {chapter}{摘{\hskip 1em\rela
 x \ETC.}
-....\marks1{\__mark_value:nn {1}{第 0 章~~ 摘{\hskip 1em\relax }要}}
-....\marks2{\__mark_value:nn {2}{}}
+....\marks1{\__mark_id:n {1}第 0 章~~ 摘{\hskip 1em\relax }要}
+....\marks2{\__mark_id:n {2}}
+....\mark{{第 0 章~~ 摘{\hskip 1em\relax }要}{}}
 ....\write1{\@writefile{lof}{\protect \addvspace {10\p@ }}}
 ....\write1{\@writefile{lot}{\protect \addvspace {10\p@ }}}
 ....\glue(\topskip) 11.0
@@ -163,20 +164,25 @@ x \ETC.}
 ....\penalty 10000
 ....\glue 14.0
 ....\glue 0.0
-....\marks1{\__mark_value:nn {3}{摘{\hskip 1em\relax }要}}
-....\penalty 10000
-....\marks2{\__mark_value:nn {4}{摘{\hskip 1em\relax }要}}
-....\penalty 10000
-....\marks3{\__mark_value:nn {5}{摘{\hskip 1em\relax }要}}
+....\marks1{\__mark_id:n {3}摘{\hskip 1em\relax }要}
+....\marks2{\__mark_id:n {4}摘{\hskip 1em\relax }要}
+....\marks3{\__mark_id:n {5}摘{\hskip 1em\relax }要}
+....\mark{{摘{\hskip 1em\relax }要}{摘{\hskip 1em\relax }要}}
 ....\penalty 10000
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 3.46393
-....\hbox(9.336+2.19598)x455.24411, glue set 320.24411fil
+....\glue(\baselineskip) 3.43993
+....\hbox(9.36+2.19598)x455.24411, glue set 284.24411fil
 .....\hbox(0.0+0.0)x24.0
 .....\TU/FandolSong(0)/m/n/12 这
 .....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 是
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 研
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 究
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 生
 .....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 测
 .....\glue 0.0 plus 1.60004
@@ -211,8 +217,8 @@ x \ETC.}
 ....\glue 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 8.49202
-....\hbox(9.312+2.20798)x455.24411, glue set 204.24423fil
+....\glue(\baselineskip) 8.44402
+....\hbox(9.36+2.20798)x455.24411, glue set 96.24423fil
 .....\hbox(0.0+0.0)x24.0
 .....\TU/FandolHei(0)/m/n/12 关
 .....\glue 0.0 plus 1.60004
@@ -229,6 +235,12 @@ x \ETC.}
 .....\glue 8.496 minus 6.0
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/FandolSong(0)/m/n/12 研
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 究
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 生
+.....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 关
 .....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 键
@@ -245,6 +257,12 @@ x \ETC.}
 .....\rule(0.0+0.0)x-8.292
 .....\glue 8.292 minus 6.0
 .....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 研
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 究
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 生
+.....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 关
 .....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 键
@@ -260,6 +278,12 @@ x \ETC.}
 .....\TU/FandolSong(0)/m/n/12 ；
 .....\rule(0.0+0.0)x-8.292
 .....\glue 8.292 minus 6.0
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 研
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 究
+.....\glue 0.0 plus 1.60004
+.....\TU/FandolSong(0)/m/n/12 生
 .....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 关
 .....\glue 0.0 plus 1.60004
@@ -631,8 +655,9 @@ Completed box being shipped out [3]
 ....\special{pdf:dest (chapter*.2) [@thispage /XYZ @xpos @ypos null]}
 ....\special{pdf:out [-] 1<</Title(\376\377\000A\000B\000S\000T\000R\000A\000C\000\ETC.}
 ....\write1{\@writefile{toc}{\protect \contentsline {chapter}{ABSTRACT}{\thepage \ETC.}
-....\marks1{\__mark_value:nn {6}{第 0 章~~ ABSTRACT}}
-....\marks2{\__mark_value:nn {7}{}}
+....\marks1{\__mark_id:n {6}第 0 章~~ ABSTRACT}
+....\marks2{\__mark_id:n {7}}
+....\mark{{第 0 章~~ ABSTRACT}{}}
 ....\write1{\@writefile{lof}{\protect \addvspace {10\p@ }}}
 ....\write1{\@writefile{lot}{\protect \addvspace {10\p@ }}}
 ....\glue(\topskip) 11.0
@@ -658,16 +683,15 @@ Completed box being shipped out [3]
 ....\penalty 10000
 ....\glue 14.0
 ....\glue 0.0
-....\marks1{\__mark_value:nn {8}{Abstract}}
-....\penalty 10000
-....\marks2{\__mark_value:nn {9}{ABSTRACT}}
-....\penalty 10000
-....\marks3{\__mark_value:nn {10}{ABSTRACT}}
+....\marks1{\__mark_id:n {8}Abstract}
+....\marks2{\__mark_id:n {9}ABSTRACT}
+....\marks3{\__mark_id:n {10}ABSTRACT}
+....\mark{{Abstract}{ABSTRACT}}
 ....\penalty 10000
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 4.60393
-....\hbox(8.196+0.13199)x455.24411, glue set 281.6201fil
+....\hbox(8.196+2.61598)x455.24411, glue set 237.1841fil
 .....\hbox(0.0+0.0)x24.0
 .....\TU/TeXGyreTermes(1)/m/n/12 This
 .....\glue 3.0 plus 1.5 minus 1.0
@@ -675,9 +699,11 @@ Completed box being shipped out [3]
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 a
 .....\glue 3.0 plus 1.5 minus 1.0
-.....\TU/TeXGyreTermes(1)/m/n/12 test
+.....\TU/TeXGyreTermes(1)/m/n/12 graduate
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 abstract
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 test
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 content.
 .....\glue 4.0 plus 4.5 minus 0.33333
@@ -690,8 +716,8 @@ Completed box being shipped out [3]
 ....\glue 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 11.67201
-....\hbox(8.196+2.61598)x455.24411, glue set 184.98022fil
+....\glue(\baselineskip) 9.18802
+....\hbox(8.196+2.61598)x455.24411, glue set 51.67221fil
 .....\TU/TeXGyreTermes(1)/b/n/12 Key
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/b/n/12 words:
@@ -699,6 +725,8 @@ Completed box being shipped out [3]
 .....\kern -0.0002
 .....\kern 0.0002
 .....\glue 4.0 plus 3.0 minus 0.5
+.....\TU/TeXGyreTermes(1)/m/n/12 graduate
+.....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 keyword
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 one
@@ -706,6 +734,8 @@ Completed box being shipped out [3]
 .....\kern -2.00006
 .....\TU/TeXGyreTermes(1)/m/n/12 ;
 .....\glue 3.0 plus 2.25 minus 0.66666
+.....\TU/TeXGyreTermes(1)/m/n/12 graduate
+.....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 keyword
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 two
@@ -713,6 +743,8 @@ Completed box being shipped out [3]
 .....\kern -2.00006
 .....\TU/TeXGyreTermes(1)/m/n/12 ;
 .....\glue 3.0 plus 2.25 minus 0.66666
+.....\TU/TeXGyreTermes(1)/m/n/12 graduate
+.....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 keyword
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 three

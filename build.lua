@@ -12,17 +12,25 @@ sourcefiles = {"*.cls"}
 
 checkengines = {"xetex"}
 stdengine = "xetex"
+specialformats = specialformats or {}
+specialformats.latex = specialformats.latex or {}
+specialformats.latex.xetex = {
+  binary = "xelatex",
+  format = "",
+  options = "-no-pdf",
+}
 
 -- 标题页测试在子目录中，需要单独配置
 checkconfigs = {
   "build",
+  "testfiles/config-abstract",
   "testfiles/config-title-page",
   "testfiles/config-toc",
   "testfiles/config-biber",
 }
 
 -- 排除标题页测试（它们在子目录中单独运行）
-excludetests = {"01-*", "04-*", "07-*"}
+excludetests = {"01-*", "02-*", "04-*", "07-*"}
 
 typesetexe = "xelatex"
 unpackexe = "xetex"
@@ -33,3 +41,32 @@ typesetopts = "-shell-escape -file-line-error -halt-on-error -interaction=nonsto
 
 lvtext = ".tex"
 maxprintline = 79
+
+local is_windows = package.config:sub(1, 1) == "\\"
+if is_windows then
+  function runcmd(cmd, dir, vars)
+    dir = dir or "."
+    vars = vars or {}
+    local env
+    if checkformat ~= "context" then
+      env = os_setenv .. " TEXMFCNF=." .. os_pathsep
+    end
+    local envpaths = "." .. localtexmf() .. os_pathsep
+      .. localdir .. os_pathsep
+      .. dir .. (typesetsearch and os_pathsep or "")
+    if string.match(envpaths, " ") then
+      envpaths = string.gsub(envpaths, '"', "")
+    end
+    for _, var in pairs(vars) do
+      env = (env and (env .. os_concat) or "")
+        .. os_setenv .. " " .. var .. "=" .. envpaths
+    end
+    cmd = string.gsub(cmd, '"%s*\\\\input%s+([^"]+)"', '\\input %1')
+    return run(
+      dir,
+      set_epoch_cmd(epoch, forcedocepoch)
+        .. (env and (env .. os_concat) or "")
+        .. cmd
+    )
+  end
+end

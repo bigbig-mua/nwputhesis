@@ -504,7 +504,6 @@
     style=gb7714-2025,
     sorting=none
 ]{biblatex}                                                 % 参考文献
-\RenewDocumentCommand{\cite}{m}{\supercite{#1}}            % 上标引用形式
 %%-----------------------------------------------------------------------------% 
 \RequirePackage{enumerate}                                  % 编号列表
 \RequirePackage{enumitem}                                   % 列表格式控制

@@ -3,9 +3,10 @@
 
 PACKAGE = nwputhesis
 SAMPLE  = main
-TEST_BUILD = 02-abstract 03-committee 05-acknowledgements 06-accomplishments
+TEST_BUILD = 03-committee 05-acknowledgements 06-accomplishments 08-citation
+TEST_ABSTRACT = 02-abstract-bachelor 02-abstract-graduate
 TEST_TITLE_PAGE = 01-title-page-bachelor 01-title-page-master-academic 01-title-page-master-professional 01-title-page-phd
-TEST_TOC = 04-toc
+TEST_TOC = 04-toc-bachelor 04-toc-graduate
 TEST_BIBER = 07-bibliography
 
 LATEXMK = latexmk
@@ -51,6 +52,7 @@ cleanall: clean
 test:
 ifeq ($(target),)
 	texlua build.lua check $(TEST_BUILD)
+	texlua build.lua check --config testfiles/config-abstract $(TEST_ABSTRACT)
 	texlua build.lua check --config testfiles/config-title-page $(TEST_TITLE_PAGE)
 	texlua build.lua check --config testfiles/config-toc $(TEST_TOC)
 	texlua build.lua check --config testfiles/config-biber $(TEST_BIBER)

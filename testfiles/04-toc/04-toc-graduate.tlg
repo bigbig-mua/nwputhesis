@@ -12,7 +12,7 @@ Package fontspec Info:
 (fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font 'FandolHei-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
-(04-toc.toc
+(04-toc-graduate.toc
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font 'FandolSong-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
 Package fontspec Info: 
@@ -136,7 +136,7 @@ Completed box being shipped out [1]
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
-....\special{pdf:minorversion 7}
+....\special{pdf:minorversion 5}
 ....\special{pdf:minorversion 7}
 ....\special{pdf:docview<</OpenAction[@page1/FitH]/PageMode/UseOutlines/ViewerPref\ETC.}
 ....\special{pdf:dest (Doc-Start) [@thispage /XYZ @xpos @ypos null]}
@@ -172,9 +172,11 @@ Completed box being shipped out [1]
 ....\penalty 10000
 ....\glue 14.0
 ....\glue 0.0
-....\marks1{\__mark_value:nn {1}{\MakeUppercase    []{目{\hskip 1em\relax }录}}}
-....\marks2{\__mark_value:nn {2}{\MakeUppercase    []{目{\hskip 1em\relax }录}}}
-....\marks3{\__mark_value:nn {3}{\MakeUppercase    []{目{\hskip 1em\relax }录}}}
+....\marks1{\__mark_id:n {1}\MakeUppercase    []{目{\hskip 1em\relax }录}}
+....\marks2{\__mark_id:n {2}\MakeUppercase    []{目{\hskip 1em\relax }录}}
+....\marks3{\__mark_id:n {3}\MakeUppercase    []{目{\hskip 1em\relax }录}}
+....\mark{{\MakeUppercase    []{目{\hskip 1em\relax }录}}{\MakeUppercase    [\ETC
+.}
 ....\penalty 10000
 ....\glue 0.0 plus 0.1
 ....\penalty 10000
@@ -183,7 +185,7 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(9.7125+3.90004)x455.24411, glue set 332.14659fill
+....\hbox(9.7125+3.90004)x455.24411, glue set 283.20909fill
 .....\hbox(0.0+0.0)x0.0
 .....\rule(9.09996+3.90004)x0.0
 .....\hbox(9.7125+2.29999)x0.0, glue set - 37.5fil
@@ -199,6 +201,8 @@ Completed box being shipped out [1]
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\glue 43.75
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
+.....\TU/TeXGyreTermes(1)/m/n/12.5 Graduate
+.....\glue 3.125 plus 1.5625 minus 1.04166
 .....\TU/TeXGyreTermes(1)/m/n/12.5 First
 .....\glue 3.125 plus 1.5625 minus 1.04166
 .....\TU/TeXGyreTermes(1)/m/n/12.5 Chapter
@@ -239,7 +243,7 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 2.10002
-....\hbox(13.99994+6.00006)x455.24411, glue set 348.8503fill
+....\hbox(13.99994+6.00006)x455.24411, glue set 301.8703fill
 .....\glue(\leftskip) 33.0053
 .....\hbox(0.0+0.0)x0.0
 .....\rule(13.99994+6.00006)x0.0
@@ -253,6 +257,8 @@ Completed box being shipped out [1]
 ......\kern 0.0002
 ......\glue 0.0 plus 1.0fil
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
+.....\TU/TeXGyreTermes(1)/m/n/12 Graduate
+.....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 Background
 .....\kern -0.0002
 .....\kern 0.0002
@@ -289,7 +295,7 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 0.0
-....\hbox(13.99994+6.00006)x455.24411, glue set 354.03809fill
+....\hbox(13.99994+6.00006)x455.24411, glue set 307.05809fill
 .....\glue(\leftskip) 56.9055
 .....\hbox(0.0+0.0)x0.0
 .....\rule(13.99994+6.00006)x0.0
@@ -303,6 +309,8 @@ Completed box being shipped out [1]
 ......\kern 0.0002
 ......\glue 0.0 plus 1.0fil
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
+.....\TU/TeXGyreTermes(1)/m/n/12 Graduate
+.....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 Scope
 .....\kern -0.0002
 .....\kern 0.0002
@@ -341,7 +349,7 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(9.7125+3.90004)x455.24411, glue set 317.89659fill
+....\hbox(9.7125+3.90004)x455.24411, glue set 268.95909fill
 .....\hbox(0.0+0.0)x0.0
 .....\rule(9.09996+3.90004)x0.0
 .....\hbox(9.7125+2.29999)x0.0, glue set - 37.5fil
@@ -357,6 +365,8 @@ Completed box being shipped out [1]
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\glue 43.75
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
+.....\TU/TeXGyreTermes(1)/m/n/12.5 Graduate
+.....\glue 3.125 plus 1.5625 minus 1.04166
 .....\TU/TeXGyreTermes(1)/m/n/12.5 Second
 .....\glue 3.125 plus 1.5625 minus 1.04166
 .....\TU/TeXGyreTermes(1)/m/n/12.5 Chapter
@@ -397,7 +407,7 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 2.10002
-....\hbox(13.99994+6.00006)x455.24411, glue set 369.9343fill
+....\hbox(13.99994+6.00006)x455.24411, glue set 322.9543fill
 .....\glue(\leftskip) 33.0053
 .....\hbox(0.0+0.0)x0.0
 .....\rule(13.99994+6.00006)x0.0
@@ -411,6 +421,8 @@ Completed box being shipped out [1]
 ......\kern 0.0002
 ......\glue 0.0 plus 1.0fil
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
+.....\TU/TeXGyreTermes(1)/m/n/12 Graduate
+.....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 Method
 .....\kern -0.0002
 .....\kern 0.0002
@@ -731,7 +743,7 @@ Completed box being shipped out [1]
 ..........\glue 0.0 plus 1.0fil minus 1.0fil
 .........\glue 0.0 plus 1.0fill
 .........\vbox(6.993+2.70003)x455.24411
-..........\hbox(6.993+2.70003)x455.24411, glue set 187.25705fil
+..........\hbox(6.993+2.70003)x455.24411, glue set 169.63956fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
 ...........\TU/FandolSong(0)/m/n/9 第
@@ -745,6 +757,8 @@ Completed box being shipped out [1]
 ...........\glue 2.25 plus 1.125 minus 0.75
 ...........\penalty 10000
 ...........\glue 2.25 plus 1.125 minus 0.75
+...........\glue 2.25 plus 1.125 minus 0.75
+...........\TU/TeXGyreTermes(1)/m/n/9 Graduate
 ...........\glue 2.25 plus 1.125 minus 0.75
 ...........\TU/TeXGyreTermes(1)/m/n/9 First
 ...........\glue 2.25 plus 1.125 minus 0.75
@@ -794,14 +808,15 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x455.24411, glue set 604.30716fil
+...\vbox(700.50723+0.0)x455.24411, glue set 609.80716fil
 ....\write-{}
 ....\write-{}
 ....\special{pdf:dest (chapter.3) [@thispage /XYZ @xpos @ypos null]}
-....\special{pdf:out [-] 1<</Title(\376\377\000F\000i\000r\000s\000t\000\040\000C\\ETC.}
+....\special{pdf:out [-] 1<</Title(\376\377\000G\000r\000a\000d\000u\000a\000t\000\ETC.}
 ....\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \numberline \ETC.}
-....\marks1{\__mark_value:nn {4}{第 1 章~~ First Chapter}}
-....\marks2{\__mark_value:nn {5}{}}
+....\marks1{\__mark_id:n {4}第 1 章~~ Graduate First Chapter}
+....\marks2{\__mark_id:n {5}}
+....\mark{{第 1 章~~ Graduate First Chapter}{}}
 ....\write1{\@writefile{lof}{\protect \addvspace {10\p@ }}}
 ....\write1{\@writefile{lot}{\protect \addvspace {10\p@ }}}
 ....\glue(\topskip) 11.0
@@ -812,7 +827,7 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 7.20007
-....\hbox(16.79993+7.20007)x455.24411, glue set 146.65407fil
+....\hbox(16.79993+7.20007)x455.24411, glue set 111.23807fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\rule(16.79993+7.20007)x0.0
 .....\hbox(16.79993+7.20007)x69.79199
@@ -829,6 +844,8 @@ Completed box being shipped out [1]
 ......\rule(16.79993+7.20007)x0.0
 ......\glue 20.0
 ......\special{color pop}
+.....\TU/TeXGyreHeros(0)/m/n/16 Graduate
+.....\glue 4.448 plus 2.224 minus 1.48267
 .....\TU/TeXGyreHeros(0)/m/n/16 First
 .....\glue 4.448 plus 2.224 minus 1.48267
 .....\TU/TeXGyreHeros(0)/m/n/16 Chapter
@@ -847,7 +864,7 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(14.69994+6.30006)x455.24411, glue set 354.2901fil
+....\hbox(14.69994+6.30006)x455.24411, glue set 292.3121fil
 .....\rule(14.69994+6.30006)x0.0
 .....\hbox(14.69994+6.30006)x26.46
 ......\special{color push gray 0}
@@ -857,6 +874,8 @@ Completed box being shipped out [1]
 ......\rule(14.69994+6.30006)x0.0
 ......\glue 7.0
 ......\special{color pop}
+.....\TU/TeXGyreHeros(0)/m/n/14 Graduate
+.....\glue 3.892 plus 1.946 minus 1.29733
 .....\TU/TeXGyreHeros(0)/m/n/14 Background
 .....\kern -0.0002
 .....\kern 0.0002
@@ -866,11 +885,12 @@ Completed box being shipped out [1]
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty 10000
-....\marks2{\__mark_value:nn {6}{\MakeUppercase    []{1.1. \ Background}}}
+....\marks2{\__mark_id:n {6}\MakeUppercase    []{1.1. \ Graduate Background}}
+....\marks3{\__mark_id:n {7}\MakeUppercase    []{1.1. \ Graduate Background}}
+....\mark{{第 1 章~~ Graduate First Chapter}{\MakeUppercase    []{1.1. \ Grad\ETC
+.}
 ....\penalty 10000
-....\marks3{\__mark_value:nn {7}{\MakeUppercase    []{1.1. \ Background}}}
-....\penalty 10000
-....\special{pdf:out [-] 2<</Title(\376\377\000B\000a\000c\000k\000g\000r\000o\000\ETC.}
+....\special{pdf:out [-] 2<</Title(\376\377\000G\000r\000a\000d\000u\000a\000t\000\ETC.}
 ....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
 ....\penalty 10000
 ....\penalty 10000
@@ -882,7 +902,7 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(13.29994+5.70006)x455.24411, glue set 382.97711fil
+....\hbox(13.29994+5.70006)x455.24411, glue set 325.42612fil
 .....\rule(13.29994+5.70006)x0.0
 .....\hbox(13.29994+5.70006)x35.412
 ......\special{color push gray 0}
@@ -892,6 +912,8 @@ Completed box being shipped out [1]
 ......\rule(13.29994+5.70006)x0.0
 ......\glue 6.5
 ......\special{color pop}
+.....\TU/TeXGyreHeros(0)/m/n/13 Graduate
+.....\glue 3.614 plus 1.80699 minus 1.20467
 .....\TU/TeXGyreHeros(0)/m/n/13 Scope
 .....\kern -0.0002
 .....\kern 0.0002
@@ -901,13 +923,14 @@ Completed box being shipped out [1]
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty 10000
-....\special{pdf:out [-] 3<</Title(\376\377\000S\000c\000o\000p\000e)/A<</S/GoTo/D\ETC.}
+....\special{pdf:out [-] 3<</Title(\376\377\000G\000r\000a\000d\000u\000a\000t\000\ETC.}
 ....\write1{\@writefile{toc}{\protect \contentsline {subsection}{\protect \numberline \ETC.}
 ....\penalty 10000
 ....\penalty 10000
 ....\penalty 10000
 ....\glue 0.0
 ....\glue 0.0
+....\glue -5.5
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ...\glue(\baselineskip) 12.09747
@@ -1196,7 +1219,7 @@ Completed box being shipped out [3]
 ..........\glue 0.0 plus 1.0fil minus 1.0fil
 .........\glue 0.0 plus 1.0fill
 .........\vbox(6.993+2.70003)x455.24411
-..........\hbox(6.993+2.70003)x455.24411, glue set 182.12706fil
+..........\hbox(6.993+2.70003)x455.24411, glue set 164.50955fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
 ...........\TU/FandolSong(0)/m/n/9 第
@@ -1210,6 +1233,8 @@ Completed box being shipped out [3]
 ...........\glue 2.25 plus 1.125 minus 0.75
 ...........\penalty 10000
 ...........\glue 2.25 plus 1.125 minus 0.75
+...........\glue 2.25 plus 1.125 minus 0.75
+...........\TU/TeXGyreTermes(1)/m/n/9 Graduate
 ...........\glue 2.25 plus 1.125 minus 0.75
 ...........\TU/TeXGyreTermes(1)/m/n/9 Second
 ...........\glue 2.25 plus 1.125 minus 0.75
@@ -1259,12 +1284,13 @@ Completed box being shipped out [3]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x455.24411, glue set 624.30716fil
+...\vbox(700.50723+0.0)x455.24411, glue set 629.80716fil
 ....\special{pdf:dest (chapter.6) [@thispage /XYZ @xpos @ypos null]}
-....\special{pdf:out [-] 1<</Title(\376\377\000S\000e\000c\000o\000n\000d\000\040\\ETC.}
+....\special{pdf:out [-] 1<</Title(\376\377\000G\000r\000a\000d\000u\000a\000t\000\ETC.}
 ....\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \numberline \ETC.}
-....\marks1{\__mark_value:nn {8}{第 2 章~~ Second Chapter}}
-....\marks2{\__mark_value:nn {9}{}}
+....\marks1{\__mark_id:n {8}第 2 章~~ Graduate Second Chapter}
+....\marks2{\__mark_id:n {9}}
+....\mark{{第 2 章~~ Graduate Second Chapter}{}}
 ....\write1{\@writefile{lof}{\protect \addvspace {10\p@ }}}
 ....\write1{\@writefile{lot}{\protect \addvspace {10\p@ }}}
 ....\glue(\topskip) 11.0
@@ -1275,7 +1301,7 @@ Completed box being shipped out [3]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 7.20007
-....\hbox(16.79993+7.20007)x455.24411, glue set 135.07806fil
+....\hbox(16.79993+7.20007)x455.24411, glue set 99.66206fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\rule(16.79993+7.20007)x0.0
 .....\hbox(16.79993+7.20007)x69.79199
@@ -1292,6 +1318,8 @@ Completed box being shipped out [3]
 ......\rule(16.79993+7.20007)x0.0
 ......\glue 20.0
 ......\special{color pop}
+.....\TU/TeXGyreHeros(0)/m/n/16 Graduate
+.....\glue 4.448 plus 2.224 minus 1.48267
 .....\TU/TeXGyreHeros(0)/m/n/16 Second
 .....\glue 4.448 plus 2.224 minus 1.48267
 .....\TU/TeXGyreHeros(0)/m/n/16 Chapter
@@ -1310,7 +1338,7 @@ Completed box being shipped out [3]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(14.69994+6.30006)x455.24411, glue set 382.30411fil
+....\hbox(14.69994+6.30006)x455.24411, glue set 320.32611fil
 .....\rule(14.69994+6.30006)x0.0
 .....\hbox(14.69994+6.30006)x26.46
 ......\special{color push gray 0}
@@ -1320,6 +1348,8 @@ Completed box being shipped out [3]
 ......\rule(14.69994+6.30006)x0.0
 ......\glue 7.0
 ......\special{color pop}
+.....\TU/TeXGyreHeros(0)/m/n/14 Graduate
+.....\glue 3.892 plus 1.946 minus 1.29733
 .....\TU/TeXGyreHeros(0)/m/n/14 Method
 .....\kern -0.0002
 .....\kern 0.0002
@@ -1329,17 +1359,19 @@ Completed box being shipped out [3]
 .....\glue(\parfillskip) 0.0 plus 1.0fil
 .....\glue(\rightskip) 0.0
 ....\penalty 10000
-....\marks2{\__mark_value:nn {10}{\MakeUppercase    []{2.1. \ Method}}}
+....\marks2{\__mark_id:n {10}\MakeUppercase    []{2.1. \ Graduate Method}}
+....\marks3{\__mark_id:n {11}\MakeUppercase    []{2.1. \ Graduate Method}}
+....\mark{{第 2 章~~ Graduate Second Chapter}{\MakeUppercase    []{2.1. \ Gra\ETC
+.}
 ....\penalty 10000
-....\marks3{\__mark_value:nn {11}{\MakeUppercase    []{2.1. \ Method}}}
-....\penalty 10000
-....\special{pdf:out [-] 2<</Title(\376\377\000M\000e\000t\000h\000o\000d)/A<</S/G\ETC.}
+....\special{pdf:out [-] 2<</Title(\376\377\000G\000r\000a\000d\000u\000a\000t\000\ETC.}
 ....\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
 ....\penalty 10000
 ....\penalty 10000
 ....\penalty 10000
 ....\glue 0.0
 ....\glue 0.0
+....\glue -5.5
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ...\glue(\baselineskip) 12.09747

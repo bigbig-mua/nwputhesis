@@ -1,9 +1,7 @@
-testfiledir = "testfiles/04-toc"
+testfiledir = "testfiles/02-abstract"
 
 includetests = {"*"}
 excludetests = {}
 
 supportdir = "testfiles/support"
 checksuppfiles = {"*.tex", "*.bib", "*.cls", "figures/*", "*.ttf"}
-
-checkruns = 2
