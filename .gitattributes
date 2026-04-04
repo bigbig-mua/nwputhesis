@@ -1,12 +1,39 @@
-# 开发相关
+# Normalize text files to LF
+* text=auto
+*.tex text eol=lf
+*.cls text eol=lf
+*.bib text eol=lf
+*.bst text eol=lf
+*.lua text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.sh text eol=lf
+*.tlg text eol=lf
+*.tcx text eol=lf
+Makefile text eol=lf
+
+# Treat binary assets as binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.otf binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.docx binary
+
+# Development files
 .github/ export-ignore
 .gitignore export-ignore
 .gitattributes export-ignore
 
-# 文档
+# Docs
 CONTRIBUTING.md export-ignore
 
-# 构建产物和辅助文件
+# Build outputs and helper files
 build/ export-ignore
 testfiles/ export-ignore
 build.lua export-ignore

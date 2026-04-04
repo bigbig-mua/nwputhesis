@@ -24,5 +24,6 @@ __latexindent_temp_nwputhesis.cls
 *.xdv
 *.fls
 *.fdb_latexmk
+
 ## test files:
 build/
