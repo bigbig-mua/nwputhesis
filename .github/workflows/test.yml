@@ -57,7 +57,7 @@ jobs:
         run: make
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: nwputhesis-pdf
           path: main.pdf
@@ -85,7 +85,7 @@ jobs:
         run: make test
 
       - name: Upload test results if failed
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: test-result-${{ matrix.os }}
