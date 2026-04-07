@@ -11,6 +11,8 @@
 
 本科论文格式符合 26 届最新要求，参考 [西北工业大学本科毕业设计（论文）撰写规范](https://jiaowu.nwpu.edu.cn/info/1160/24598.htm)。
 
+> 如需使用 Typst，可参考 [modern-npu-thesis](https://github.com/1195343015/modern-npu-thesis) ，这是一个西北工业大学硕博论文 Typst 模板。
+
 ## 使用说明
 - 推荐直接下载 [最新 Release 版本](https://github.com/1195343015/nwputhesis/releases/latest) 使用，非 Windows 系统用户需要从仓库中自行下载 Windows 字体。（不推荐 clone/fork 使用，因为仓库里有很多用于测试的文件，整体体积较大，而且处于不稳定的开发状态）
 - 支持各种操作系统，推荐在 TeX Live 最新版本下搭配 VS Code 中的 LaTeX Workshop 插件使用。
