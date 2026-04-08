@@ -141,6 +141,7 @@
 \newcommand{\sHgXiaosi}{\fontsize{13pt}{19pt}\selectfont}   % 半小四，1.5 倍
 \newcommand{\sLgXiaosi}{\fontsize{12.5pt}{13pt}\selectfont} % 半小四，约 1 倍
 \newcommand{\sXiaosi}{\fontsize{12pt}{14.4pt}\selectfont}   % 小四，1.2 倍
+\newcommand{\graduatecontentsfont}{\fontsize{12pt}{19pt}\selectfont} % 硕博目录统一格式
 \newcommand{\sLargeWuhao}{\fontsize{11pt}{11pt}\selectfont} % 大五，单倍
 \newcommand{\sWuhao}{\fontsize{10.5pt}{10.5pt}\selectfont}  % 五号，单倍
 \newcommand{\sXiaowu}{\fontsize{9pt}{9pt}\selectfont}       % 小五，单倍
@@ -431,26 +432,28 @@
 \newcommand{\nwpu@eng@chaptercname}[1]{Chapter #1}          % 目录章节英文标题
 \if@npu@type@bcl                                            % 本科论文目录章节格式
     \newcommand{\nwpu@bcl@chaptercname}[1]{第\CJKnumber{#1}章}% 本科目录章节中文标题
-    \titlecontents{chapter}[0pt]{\sXiaosi\fHei\bf\vspace{0.5em}}%
-    {\contentsmargin{1em}\sXiaosi\fHei\bf\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{3.8em}}%
-    {\contentsmargin{1em}\sXiaosi\fHei\bf}%
-    {\titlerule*[.5pc]{.}\contentspage}[\vspace{0em}]
-\else\if@npu@lang@chs                                       % 硕博中文本地化显示
-        \titlecontents{chapter}[0pt]{\fSong\sLgXiaosi\vspace{   %
-                0.5em}}{\contentsmargin{1em}\fSong\makebox[0pt  %
+    \titlecontents{chapter}[0pt]{\sXiaosi\fHei\vspace{0.5em}}%
+    {\contentsmargin{1em}\sXiaosi\fHei\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{3.8em}}%
+    {\contentsmargin{1em}\sXiaosi\fHei\bfseries}%
+    {\normalfont\titlerule*[.5pc]{.}\contentspage}[\vspace{0em}]
+\else
+    \dottedcontents{section}[1.16cm]{\fSong\graduatecontentsfont}{1.8em}{3pt}   %
+    \dottedcontents{subsection}[2.00cm]{\fSong\graduatecontentsfont}{2.7em}{3pt}%
+    \dottedcontents{subsubsection}[2.86cm]{\fSong\graduatecontentsfont}{3.4em}{3pt}
+    \if@npu@lang@chs                                            % 硕博中文本地化显示
+        \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
             ][l]{\nwpu@chs@chaptercname{\thecontentslabel}}\hspace{%
-                3.5em}}{\contentsmargin{1em}\fSong}{\titlerule*[%
-                .5pc]{.}\contentspage}[\vspace{0em}]            %
+                3.5em}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{\titlerule*[%
+                .3pc]{.}\contentspage}[\vspace{0em}]            %
     \else                                                       % 硕博英文
         \newlength{\contents@titlewidth}                        %
         \newlength{\contents@appendixwidth}                     %
-        \settowidth{\contents@titlewidth}{\sLgXiaosi Chapter 000}%
-        \settowidth{\contents@appendixwidth}{\sLgXiaosi Appendix M00}
-        \titlecontents{chapter}[0pt]{\fSong\sLgXiaosi\vspace{   %
-                0.5em}}{\contentsmargin{1em}\fSong\makebox[0pt  %
+        \settowidth{\contents@titlewidth}{\graduatecontentsfont Chapter 000} %
+        \settowidth{\contents@appendixwidth}{\graduatecontentsfont Appendix M00}
+        \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
             ][l]{\nwpu@eng@chaptercname{\thecontentslabel}}\hspace{%
-                \contents@titlewidth}}{\contentsmargin{1em}\fSong}{
-            \titlerule*[.5pc]{.}\contentspage}[\vspace{0em}]    %
+                \contents@titlewidth}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{
+            \titlerule*[.3pc]{.}\contentspage}[\vspace{0em}]    %
     \fi\fi                                                      %
 %%-----------------------------------------------------------------------------%
 \RequirePackage{fancyhdr}                                   % 页眉设置
@@ -1167,7 +1170,7 @@
 }{\vfill\sWuhao\noindent\nwpu@chs@funding\par\cleardoublepage}
 \newenvironment{keywords}{                                  %
     \if@npu@type@bcl                                        % 本科关键词格式
-        \vspace{0.1\baselineskip} \par\noindent{\fHei 关键词：}%
+        \vspace{1\baselineskip} \par\noindent{\fHei 关键词：}%
     \else                                                   % 硕博关键词格式
         \vspace{1\baselineskip} \par{\fHei 关键词：}         %
     \fi                                                     %
@@ -1254,7 +1257,13 @@
 \DeclareFieldFormat[patent]{number}{\nwpuPatentNumberAllowBreaks{#1}}
 \newcommand{\nwpu@bibitemcmd}{%
     \addvspace{\bibitemsep}%
-    \leavevmode\hspace*{\nwpu@bibfirstlineindent}\mkgbnumlabel{\printfield{labelnumber}}\hspace{0.3em}}
+    \leavevmode%
+    \if@npu@type@bcl
+        \hspace*{0pt}%
+    \else
+        \hspace*{\nwpu@bibfirstlineindent}%
+    \fi
+    \mkgbnumlabel{\printfield{labelnumber}}\hspace{0.3em}}
 \defbibenvironment{bibliography}
     {\begingroup\setlength{\parindent}{0pt}\setlength{\emergencystretch}{2em}\sloppy}
     {\endgroup}
