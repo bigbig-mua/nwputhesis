@@ -18,15 +18,15 @@ on:
   workflow_dispatch:
 
 env:
-  CORE_PKGS: scheme-basic collection-latex collection-latexrecommended collection-latexextra
-  XECJK_PKGS: collection-xetex collection-langchinese xecjk ulem
+  CORE_PKGS: scheme-basic tools amsmath amsfonts
+  XECJK_PKGS: fontspec xecjk ulem iftex
   BIB_PKGS: biblatex biblatex-gb7714-2015 biber
   BIN_PKGS: latexmk l3build
   REQUIRED_PKGS: >-
-    algorithmicx algorithms appendix bookmark catchfile enumitem fancyhdr fancyref
-    float ifplatform koma-script makecell multirow nomencl ntheorem pdfpages
-    pgf ragged2e setspace silence texlive-scripts-extra titlesec
-    xcolor xkeyval xstring
+    algorithmicx algorithms appendix bookmark booktabs caption catchfile
+    enumitem etoolbox fancyhdr fancyref float geometry ifplatform koma-script
+    makecell multirow nomencl ntheorem pdfpages pgf ragged2e setspace
+    silence titlesec type1cm xcolor xkeyval xstring
   FONT_PKGS: fandol tex-gyre dejavu
 
 jobs:
