@@ -1144,7 +1144,7 @@ TC.}
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 9.87202
-....\hbox(8.256+2.61598)x455.24411, glue set - 0.02954
+....\hbox(8.256+2.61598)x455.24411, glue set 0.22102
 .....\hbox(0.0+0.0)x0.0
 .....\rule(*+*)x0.0
 .....\penalty 10000
@@ -1210,24 +1210,32 @@ TC.}
 .....\kern -0.0002
 .....\kern 0.0002
 .....\glue 3.0 plus 1.50899 minus 0.99403
-.....\hbox(8.112+2.12398)x3.996
-......\TU/TeXGyreTermes(1)/m/n/12 (
 .....\TU/TeXGyreTermes(1)/m/n/12 2025
 .....\kern -0.0002
 .....\kern 0.0002
-.....\hbox(8.112+2.12398)x3.996
-......\TU/TeXGyreTermes(1)/m/n/12 )
-......\kern -0.0002
-......\kern 0.0002
 .....\glue 2.00006
 .....\hbox(7.944+1.87198)x3.996
 ......\TU/TeXGyreTermes(1)/m/n/12 [
-.....\TU/TeXGyreTermes(1)/m/n/12 2026/
+.....\TU/TeXGyreTermes(1)/m/n/12 2026
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 -
+.....\discretionary
 .....\kern -0.00023
 .....\kern 0.00023
-.....\TU/TeXGyreTermes(1)/m/n/12 04/
+.....\penalty 10000
+.....\glue 0.0
+.....\TU/TeXGyreTermes(1)/m/n/12 04
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 -
+.....\discretionary
 .....\kern -0.00023
 .....\kern 0.00023
+.....\penalty 10000
+.....\glue 0.0
 .....\TU/TeXGyreTermes(1)/m/n/12 04
 .....\kern -0.0002
 .....\kern 0.0002
@@ -1254,13 +1262,13 @@ TC.}
 .....\TU/TeXGyreTermes(1)/m/n/12 glyph#99
 .....\glue 0.0
 .....\penalty 100
+.....\glue(\thickmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#45
+.....\penalty 100
 .....\glue(\rightskip) 0.0
 ....\penalty 10150
 ....\glue(\baselineskip) 9.17601
-....\hbox(8.20801+2.616)x455.24411, glue set 262.23611fil
-.....\TU/TeXGyreTermes(1)/m/n/12 glyph#45
-.....\penalty 100
-.....\glue(\thickmuskip) 0.0 plus 1.99997
+....\hbox(8.20801+2.616)x455.24411, glue set 265.57211fil
 .....\TU/TeXGyreTermes(1)/m/n/12 glyph#103
 .....\glue(\medmuskip) 0.0 plus 1.99997
 .....\TU/TeXGyreTermes(1)/m/n/12 glyph#103

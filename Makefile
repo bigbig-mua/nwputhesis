@@ -9,7 +9,7 @@ TEST_ACK = 05-acknowledgements-bachelor 05-acknowledgements-graduate
 TEST_ABSTRACT = 02-abstract-bachelor 02-abstract-graduate
 TEST_TITLE_PAGE = 01-title-page-bachelor 01-title-page-master-academic 01-title-page-master-professional 01-title-page-phd
 TEST_TOC = 04-toc-bachelor 04-toc-graduate
-TEST_BIBER = 07-bibliography-bachelor 07-bibliography-graduate
+TEST_BIBER = 07-bibliography-bachelor 07-bibliography-graduate 07-bibliography-graduate-2025
 TEST_DESIGNSUMMARY = 08-designsummary-bachelor
 
 LATEXMK = latexmk

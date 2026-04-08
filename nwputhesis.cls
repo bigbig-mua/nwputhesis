@@ -26,6 +26,7 @@
 \newif\if@npu@font@local                                   % 使用本地 fonts 目录字体
 \newif\if@npu@using@fandol                                  % 实际使用 Fandol 字体标记
 \newif\if@npu@colorcover                              % 彩色封面封底标记
+\def\nwpu@bibstyle{gb7714-2015}                             % 默认参考文献标准
 \def\set@lang@chs{\@npu@lang@chstrue}                       % 设置中文版本
 \def\set@lang@eng{\@npu@lang@chsfalse}                      % 设置英文版本
 \def\set@type@phd{     \@npu@type@phdtrue\@npu@type@mstfalse\@npu@type@bclfalse}
@@ -33,6 +34,21 @@
 \def\set@type@bachelor{\@npu@type@phdfalse\@npu@type@mstfalse\@npu@type@bcltrue}
 \DeclareOptionX{lang}[chs]{\csname set@lang@#1\endcsname}
 \DeclareOptionX{degree}[phd]{\csname set@type@#1\endcsname}
+\DeclareOptionX{bibstyle}[2015]{%
+    \def\npu@bibstyle@opt{#1}%
+    \def\@tempa{2015}%
+    \def\@tempb{2025}%
+    \ifx\npu@bibstyle@opt\@tempa
+        \def\nwpu@bibstyle{gb7714-2015}%
+    \else\ifx\npu@bibstyle@opt\@tempb
+        \def\nwpu@bibstyle{gb7714-2025}%
+    \else
+        \ClassError{nwputhesis}{Unsupported bibstyle `#1'}{%
+            Supported bibstyle values are 2015 and 2025.%
+        }%
+    \fi
+    \fi
+}
 \DeclareOptionX{blindreview}[true]{\csname @npu@output@blindreview#1\endcsname}
 \DeclareOptionX{adobe}[true]{\csname @npu@font@adobe#1\endcsname}
 \DeclareOptionX{winfonts}[true]{\csname @npu@font@winfonts#1\endcsname}
@@ -51,6 +67,7 @@
 \DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{book}} % 传递参数到 book 类
 \ExecuteOptionsX{lang=chs}                                  % 默认为中文版本
 \ExecuteOptionsX{degree=phd}                                % 默认为博士版本
+\ExecuteOptionsX{bibstyle=2015}                             % 默认采用 GB/T 7714-2015
 \ExecuteOptionsX{academic=true}                             % 默认为学术型硕博
 \ExecuteOptionsX{blindreview=false}                         % 默认不开启盲评模式
 \ExecuteOptionsX{adobe=false}                               % 默认不用 Adobe 字体
@@ -512,7 +529,7 @@
 %%-----------------------------------------------------------------------------%
 \RequirePackage[
     backend=biber,
-    style=gb7714-2025,
+    style=\nwpu@bibstyle,
     sorting=none
 ]{biblatex}                                                 % 参考文献
 %%-----------------------------------------------------------------------------% 
