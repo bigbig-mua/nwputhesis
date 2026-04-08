@@ -10,6 +10,7 @@ TEST_TOC = 04-toc-bachelor 04-toc-graduate
 TEST_BIBER = 07-bibliography
 
 LATEXMK = latexmk
+L3BUILD = l3build
 SHELL   := /usr/bin/env bash
 
 # 跨平台删除命令
@@ -51,11 +52,11 @@ cleanall: clean
 # 测试目标（用于 CI，使用 l3build）
 test:
 ifeq ($(target),)
-	texlua build.lua check $(TEST_BUILD)
-	texlua build.lua check --config testfiles/config-abstract $(TEST_ABSTRACT)
-	texlua build.lua check --config testfiles/config-title-page $(TEST_TITLE_PAGE)
-	texlua build.lua check --config testfiles/config-toc $(TEST_TOC)
-	texlua build.lua check --config testfiles/config-biber $(TEST_BIBER)
+	$(L3BUILD) check $(TEST_BUILD)
+	$(L3BUILD) check --config testfiles/config-abstract $(TEST_ABSTRACT)
+	$(L3BUILD) check --config testfiles/config-title-page $(TEST_TITLE_PAGE)
+	$(L3BUILD) check --config testfiles/config-toc $(TEST_TOC)
+	$(L3BUILD) check --config testfiles/config-biber $(TEST_BIBER)
 else
 	bash testfiles/test.sh $(target)
 endif
