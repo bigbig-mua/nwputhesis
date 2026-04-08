@@ -9,14 +9,13 @@
 %
 % 选项：
 %   degree=bachelor|master|phd   （本科|硕士|博士）
-%   bibstyle=2015|2025           （参考文献标准，默认 2015）
 %   localfonts=true|false        （使用本地 fonts 目录字体，无 Windows 字体时启用）
 %
 %   以下三个选项本科生无需关注
 %   academic=true|false          （学术学位|专业学位）
 %   blindreview=true|false       （盲评模式）
 %   colorcover=true|false        （彩色封面封底）
-\documentclass[degree=master, bibstyle=2015, localfonts=false, academic=false, blindreview=false, colorcover=false]{nwputhesis}
+\documentclass[degree=bachelor, localfonts=false, academic=false, blindreview=false, colorcover=false]{nwputhesis}
 
 % 个人信息设置
 \ifbachelor{\input{data/ungraduate-info}}{\input{data/graduate-info}}
