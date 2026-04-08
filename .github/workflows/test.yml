@@ -24,8 +24,8 @@ env:
   BIN_PKGS: latexmk l3build
   REQUIRED_PKGS: >-
     algorithmicx algorithms appendix bookmark booktabs caption catchfile
-    enumitem etoolbox fancyhdr fancyref float geometry ifplatform koma-script
-    makecell multirow nomencl ntheorem pdfpages pgf ragged2e setspace
+    enumitem etoolbox fancyhdr float geometry ifplatform indentfirst koma-script
+    listings makecell multirow nomencl ntheorem pdfpages pgf
     silence titlesec type1cm wrapfig xcolor xkeyval xstring
   FONT_PKGS: fandol tex-gyre dejavu
 

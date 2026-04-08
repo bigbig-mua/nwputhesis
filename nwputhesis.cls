@@ -457,7 +457,6 @@
     \fi\fi                                                      %
 %%-----------------------------------------------------------------------------%
 \RequirePackage{fancyhdr}                                   % 页眉设置
-\RequirePackage{fancyref}                                   %
 \newcommand{\npu@headrule}{                                 %
     \rlap{\rule[.7\baselineskip]{\headwidth}{3.4pt}}        %
     \vspace{-1.07\baselineskip}                             %
@@ -508,7 +507,6 @@
     sorting=none
 ]{biblatex}                                                 % 参考文献
 %%-----------------------------------------------------------------------------% 
-\RequirePackage{enumerate}                                  % 编号列表
 \RequirePackage{enumitem}                                   % 列表格式控制
 \setlist{nosep}                                             % 消除间距
 \setlist{noitemsep}                                         % 消除列表间距
@@ -517,7 +515,6 @@
 \RequirePackage{graphicx}                                   % 插图功能
 \RequirePackage[final]{pdfpages}                            % 插入其他 pdf 文件
 \RequirePackage{xcolor}                                     % 颜色库
-\RequirePackage{tikz}                                       % tikz 矢量图绘制
 \RequirePackage[labelsep=quad]{caption}                     % 浮动体标题控制
 \RequirePackage{subcaption}                                 % 子图
 \RequirePackage{wrapfig}                                    % 文字环绕
@@ -525,8 +522,6 @@
 \RequirePackage{longtable}                                  % 长表格（跨页表格）
 \RequirePackage{booktabs}                                   % 三线表
 \RequirePackage{tabularx}                                   % 定宽表格
-\RequirePackage{setspace}                                   % 空白长度控制
-\RequirePackage{ragged2e}                                   % 对齐
 \DeclareCaptionFont{cWuhao}{\sWuhao}                        % 图表标题为五号
 \captionsetup[table]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
 \captionsetup[figure]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
