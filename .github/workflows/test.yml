@@ -18,6 +18,7 @@ on:
   workflow_dispatch:
 
 env:
+  TEXLIVE_CACHE_VERSION: tl2026-2026-04-08-v1
   CORE_PKGS: scheme-basic tools amsmath amsfonts
   XECJK_PKGS: fontspec xecjk ulem iftex
   BIB_PKGS: biblatex biblatex-gb7714-2015 biber
@@ -47,6 +48,14 @@ jobs:
             ${{ env.REQUIRED_PKGS }} ${{ env.FONT_PKGS }}
             ${{ env.BIN_PKGS }}
           texlive_version: 2026
+          cache_version: ${{ env.TEXLIVE_CACHE_VERSION }}
+
+      - name: Dump TeX environment
+        shell: bash
+        run: |
+          tlmgr --version
+          xelatex --version
+          tlmgr info fontspec xetex xecjk l3build latex-bin latex-bin-dev
 
       - name: Build document
         run: make
@@ -76,6 +85,14 @@ jobs:
             ${{ env.REQUIRED_PKGS }} ${{ env.FONT_PKGS }}
             ${{ env.BIN_PKGS }}
           texlive_version: 2026
+          cache_version: ${{ env.TEXLIVE_CACHE_VERSION }}
+
+      - name: Dump TeX environment
+        shell: bash
+        run: |
+          tlmgr --version
+          xelatex --version
+          tlmgr info fontspec xetex xecjk l3build latex-bin latex-bin-dev
 
       - name: Build document
         run: make test
