@@ -108,7 +108,7 @@ Completed box being shipped out [1]
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
-....\special{pdf:minorversion 5}
+....\special{pdf:minorversion 7}
 ....\special{pdf:minorversion 7}
 ....\special{pdf:docview<</OpenAction[@page1/FitH]/PageMode/UseOutlines/ViewerPref\ETC.}
 ....\special{pdf:dest (Doc-Start) [@thispage /XYZ @xpos @ypos null]}
@@ -144,10 +144,11 @@ Completed box being shipped out [1]
 ....\penalty 10000
 ....\glue 14.4
 ....\glue 0.0
-....\marks1{\__mark_id:n {1}中~文~摘~要}
-....\marks2{\__mark_id:n {2}中~文~摘~要}
-....\marks3{\__mark_id:n {3}中~文~摘~要}
-....\mark{{中~文~摘~要}{中~文~摘~要}}
+....\marks1{\__mark_value:nn {1}{中~文~摘~要}}
+....\penalty 10000
+....\marks2{\__mark_value:nn {2}{中~文~摘~要}}
+....\penalty 10000
+....\marks3{\__mark_value:nn {3}{中~文~摘~要}}
 ....\penalty 10000
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
@@ -454,10 +455,11 @@ Completed box being shipped out [2]
 ....\penalty 10000
 ....\glue 14.4
 ....\glue 0.0
-....\marks1{\__mark_id:n {4}英~文~摘~要}
-....\marks2{\__mark_id:n {5}英~文~摘~要}
-....\marks3{\__mark_id:n {6}英~文~摘~要}
-....\mark{{英~文~摘~要}{英~文~摘~要}}
+....\marks1{\__mark_value:nn {4}{英~文~摘~要}}
+....\penalty 10000
+....\marks2{\__mark_value:nn {5}{英~文~摘~要}}
+....\penalty 10000
+....\marks3{\__mark_value:nn {6}{英~文~摘~要}}
 ....\penalty 10000
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
