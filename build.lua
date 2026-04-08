@@ -23,6 +23,7 @@ specialformats.latex.xetex = {
 -- 标题页测试在子目录中，需要单独配置
 checkconfigs = {
   "build",
+  "testfiles/config-acknowledgements",
   "testfiles/config-abstract",
   "testfiles/config-title-page",
   "testfiles/config-toc",
@@ -30,7 +31,7 @@ checkconfigs = {
 }
 
 -- 排除标题页测试（它们在子目录中单独运行）
-excludetests = {"01-*", "02-*", "04-*", "07-*"}
+excludetests = {"01-*", "02-*", "04-*", "05-*", "07-*"}
 
 typesetexe = "xelatex"
 unpackexe = "xetex"

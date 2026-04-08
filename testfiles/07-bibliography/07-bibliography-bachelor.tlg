@@ -1,0 +1,1227 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+第 1章 1.
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font 'FandolHei-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
+Package fontspec Info: 
+(fontspec)             Font family 'FandolHei(0)' created for font 'FandolHei' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+File: nwpuheader.png Graphic file (type bmp)
+<nwpuheader.png>
+Completed box being shipped out [1]
+\vbox(722.98434+2.70003)x434.90039
+.\hbox(0.0+0.0)x0.0
+..\special{pdf:docinfo<</Title()/Subject()/Creator(LaTeX with hyperref)/Author()\ETC.}
+.\hbox(0.0+0.0)x0.0
+..\kern -72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil
+...\kern -72.26999
+...\hbox(0.0+0.0)x0.0
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999
+.....\kern -72.26999
+.....\special{pdf:obj @pgfcolorspaces <<>>}
+.....\special{pdf:put @resources << /ColorSpace @pgfcolorspaces >>}
+.....\special{pdf:put @pgfcolorspaces <<  /pgfprgb [/Pattern /DeviceRGB]  >>}
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\hbox(0.0+0.0)x0.0, shifted 845.04684
+.....\kern 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\vbox(0.0+0.0)x0.0, glue set 30.59439fil
+..\kern 0.0
+..\kern -29.59065
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 17.06377fil
+...\kern 0.0
+...\kern 18.0675
+...\kern -1.00374
+...\special{pdf:dest (page.1) [@thispage /XYZ @xpos @ypos null]}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(722.98434+2.70003)x434.90039
+..\glue -29.59065
+..\vbox(752.575+2.70003)x416.83289, shifted 18.0675
+...\vbox(26.46085+0.0)x416.83289, glue set 5.02473fil
+....\glue 0.0 plus 1.0fil
+....\hbox(21.43611+0.0)x416.83289
+.....\special{color push gray 0}
+.....\hbox(21.43611+0.0)x416.83289
+......\hbox(21.43611+0.0)x416.83289
+.......\vbox(21.43611+0.0)x416.83289
+........\hbox(17.91615+4.08003)x416.83289
+.........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
+..........\vbox(0.0+0.0)x416.83289
+...........\hbox(0.0+0.0)x416.83289, glue set 208.41644fil
+............\hbox(0.0+0.0)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0 plus 1.0fil
+............\glue(\rightskip) 0.0 plus 1.0fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\vbox(17.91615+4.08003)x416.83289
+..........\hbox(17.91615+4.08003)x416.83289, glue set 91.8861fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\hbox(17.91615+0.0)x233.0607
+............\hbox(17.91615+0.0)x233.0607
+.............\special{pdf:image bbox 0 0 1547.99629 118.99971 clip 0 width 233.0607pt (nwpu\ETC.}
+...........\rule(9.51996+4.08003)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+..........\vbox(0.0+0.0)x416.83289
+...........\hbox(0.0+0.0)x416.83289, glue set 416.83289fil
+............\glue(\leftskip) 0.0 plus 1.0fil
+............\hbox(0.0+0.0)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0
+............\glue(\rightskip) 0.0
+........\glue 0.0
+........\glue(\parskip) 0.0
+........\glue(\parskip) 0.0
+........\glue(\lineskip) 0.0
+........\hbox(10.31996+0.0)x416.83289, glue set 416.83289fil
+.........\hbox(0.0+0.0)x0.0
+.........\hbox(10.31996+0.0)x0.0, glue set - 416.83289fil
+..........\hbox(10.31996+0.0)x416.83289
+...........\rule(10.31996+-9.51996)x416.83289
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\penalty 10000
+.........\glue(\parfillskip) 0.0 plus 1.0fil
+.........\glue(\rightskip) 0.0
+........\glue -10.88004
+......\glue 0.0 plus 1.0fil minus 1.0fil
+.....\special{color pop}
+...\glue 3.1298
+...\glue(\lineskip) 0.0
+...\vbox(700.50687+0.0)x416.83289, glue set 615.90688fil
+....\write-{}
+....\special{color push gray 0}
+....\special{pdf:majorversion 1}
+....\special{pdf:minorversion 7}
+....\special{pdf:minorversion 7}
+....\special{pdf:docview<</OpenAction[@page1/FitH]/PageMode/UseOutlines/ViewerPref\ETC.}
+....\special{pdf:dest (Doc-Start) [@thispage /XYZ @xpos @ypos null]}
+....\write-{}
+....\write-{}
+....\special{pdf:dest (chapter.1) [@thispage /XYZ @xpos @ypos null]}
+....\special{pdf:out [-] 1<</Title(\376\377\000L\000i\000t\000e\000r\000a\000t\000\ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {chapter}{\protect \numberline \ETC.}
+....\marks1{\__mark_value:nn {1}{\MakeUppercase    []{第 1章\ 1. \ Literature R\E
+TC.}
+....\marks2{\__mark_value:nn {2}{}}
+....\write1{\@writefile{lof}{\protect \addvspace {10\p@ }}}
+....\write1{\@writefile{lot}{\protect \addvspace {10\p@ }}}
+....\glue(\topskip) 11.0
+....\rule(0.0+0.0)x*
+....\penalty 10000
+....\glue 15.2
+....\glue 0.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 7.20007
+....\hbox(16.79993+7.20007)x416.83289, glue set 119.07245fil
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\rule(16.79993+7.20007)x0.0
+.....\hbox(16.79993+7.20007)x64.0
+......\special{color push gray 0}
+......\TU/FandolHei(0)/m/n/16 第
+......\glue 0.0 plus 1.92004
+......\TU/FandolHei(0)/m/n/16 一
+......\glue 0.0 plus 1.92004
+......\TU/FandolHei(0)/m/n/16 章
+......\kern -0.00017
+......\kern 0.00017
+......\rule(16.79993+7.20007)x0.0
+......\glue 16.0
+......\special{color pop}
+.....\TU/TeXGyreTermes(1)/m/n/16 Literature
+.....\glue 4.0 plus 2.0 minus 1.33333
+.....\TU/TeXGyreTermes(1)/m/n/16 Review
+.....\kern -0.0002
+.....\kern 0.0002
+.....\kern 0.0
+.....\rule(16.79993+7.20007)x0.0
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\penalty 10000
+....\glue 14.4
+....\glue 0.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 3.03722
+....\hbox(9.76271+2.61598)x416.83289, glue set 273.91287fil
+.....\hbox(0.0+0.0)x26.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Reference
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 usage
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 test
+.....\penalty 10000
+.....\glue 0.0
+.....\mathon
+.....\hbox(5.408+1.24799)x16.492, shifted -4.3547
+......\hbox(5.296+1.24799)x2.664
+.......\TU/TeXGyreTermes(1)/m/n/8 [
+......\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[0 1 0]/A<</S/G\ETC.}
+......\TU/TeXGyreTermes(1)/m/n/8 1
+......\kern -0.0002
+......\kern 0.0002
+......\special{pdf:eann}
+......\TU/TeXGyreTermes(1)/m/n/8 -
+......\kern -0.00023
+......\kern 0.00023
+......\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[0 1 0]/A<</S/G\ETC.}
+......\TU/TeXGyreTermes(1)/m/n/8 7
+......\kern -0.0002
+......\kern 0.0002
+......\special{pdf:eann}
+......\hbox(5.296+1.24799)x2.664
+.......\TU/TeXGyreTermes(1)/m/n/8 ]
+.......\kern -0.0002
+.......\kern 0.0002
+.....\mathoff
+.....\kern 0.0
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -2.61598
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 12.09747
+...\hbox(10.38+2.70003)x416.83289
+....\special{color push gray 0}
+....\hbox(10.38+2.70003)x416.83289
+.....\hbox(10.38+2.70003)x416.83289
+......\vbox(10.38+2.70003)x416.83289
+.......\rule(0.0+0.0)x416.83289
+.......\glue 4.08003
+.......\hbox(6.29997+2.70003)x416.83289
+........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
+.........\vbox(0.0+0.0)x416.83289
+..........\hbox(0.0+0.0)x416.83289, glue set 208.41644fil
+...........\hbox(0.0+0.0)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0 plus 1.0fil
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\vbox(6.29997+2.70003)x416.83289
+.........\hbox(6.29997+2.70003)x416.83289, glue set 203.91644fil
+..........\glue(\leftskip) 0.0 plus 1.0fil
+..........\hbox(0.0+0.0)x0.0
+..........\penalty 10000
+..........\glue 2.25 plus 1.125 minus 0.75
+..........\TU/TeXGyreTermes(1)/m/n/9 1
+..........\kern -0.0002
+..........\kern 0.0002
+..........\penalty 10000
+..........\glue 2.25 plus 1.125 minus 0.75
+..........\rule(6.29997+2.70003)x0.0
+..........\penalty 10000
+..........\glue(\parfillskip) 0.0
+..........\glue(\rightskip) 0.0 plus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\vbox(0.0+0.0)x416.83289
+..........\hbox(0.0+0.0)x416.83289, glue set 416.83289fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\special{color pop}
+.\kern -725.68437
+.\hbox(0.0+0.0)x0.0
+..\kern -72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil
+...\kern -72.26999
+...\hbox(0.0+0.0)x0.0
+....\hbox(0.0+0.0)x0.0, shifted 845.04684
+.....\kern 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\kern 725.68437
+.\kern 0.0
+.\kern 0.0
+File: nwpuheader.png Graphic file (type bmp)
+<nwpuheader.png>
+Completed box being shipped out [2]
+\vbox(722.98434+2.70003)x434.90039
+.\hbox(0.0+0.0)x0.0
+..\kern -72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil
+...\kern -72.26999
+...\hbox(0.0+0.0)x0.0
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999
+.....\kern -72.26999
+.....\special{pdf:put @resources << /ColorSpace @pgfcolorspaces >>}
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\hbox(0.0+0.0)x0.0, shifted 845.04684
+.....\kern 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\vbox(0.0+0.0)x0.0, glue set 30.59439fil
+..\kern 0.0
+..\kern -29.59065
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 17.06377fil
+...\kern 0.0
+...\kern 18.0675
+...\kern -1.00374
+...\special{pdf:dest (page.2) [@thispage /XYZ @xpos @ypos null]}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(722.98434+2.70003)x434.90039
+..\glue -29.59065
+..\vbox(752.575+2.70003)x416.83289, shifted 18.0675
+...\vbox(26.46085+0.0)x416.83289, glue set 5.02473fil
+....\glue 0.0 plus 1.0fil
+....\hbox(21.43611+0.0)x416.83289
+.....\special{color push gray 0}
+.....\hbox(21.43611+0.0)x416.83289
+......\hbox(21.43611+0.0)x416.83289
+.......\vbox(21.43611+0.0)x416.83289
+........\hbox(17.91615+4.08003)x416.83289
+.........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
+..........\vbox(0.0+0.0)x416.83289
+...........\hbox(0.0+0.0)x416.83289, glue set 208.41644fil
+............\hbox(0.0+0.0)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0 plus 1.0fil
+............\glue(\rightskip) 0.0 plus 1.0fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\vbox(17.91615+4.08003)x416.83289
+..........\hbox(17.91615+4.08003)x416.83289, glue set 91.8861fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\hbox(17.91615+0.0)x233.0607
+............\hbox(17.91615+0.0)x233.0607
+.............\special{pdf:image bbox 0 0 1547.99629 118.99971 clip 0 width 233.0607pt (nwpu\ETC.}
+...........\rule(9.51996+4.08003)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fill
+.........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+..........\vbox(0.0+0.0)x416.83289
+...........\hbox(0.0+0.0)x416.83289, glue set 416.83289fil
+............\glue(\leftskip) 0.0 plus 1.0fil
+............\hbox(0.0+0.0)x0.0
+............\penalty 10000
+............\glue(\parfillskip) 0.0
+............\glue(\rightskip) 0.0
+........\glue 0.0
+........\glue(\parskip) 0.0
+........\glue(\parskip) 0.0
+........\glue(\lineskip) 0.0
+........\hbox(10.31996+0.0)x416.83289, glue set 416.83289fil
+.........\hbox(0.0+0.0)x0.0
+.........\hbox(10.31996+0.0)x0.0, glue set - 416.83289fil
+..........\hbox(10.31996+0.0)x416.83289
+...........\rule(10.31996+-9.51996)x416.83289
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\penalty 10000
+.........\glue(\parfillskip) 0.0 plus 1.0fil
+.........\glue(\rightskip) 0.0
+........\glue -10.88004
+......\glue 0.0 plus 1.0fil minus 1.0fil
+.....\special{color pop}
+...\glue 3.1298
+...\glue(\lineskip) 0.0
+...\vbox(700.50687+0.0)x416.83289, glue set 357.0069fil
+....\write-{}
+....\write-{}
+....\special{pdf:dest (chapter*.2) [@thispage /XYZ @xpos @ypos null]}
+....\glue(\topskip) 11.0
+....\rule(0.0+0.0)x*
+....\penalty 10000
+....\glue 15.2
+....\glue 0.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 7.20007
+....\hbox(16.79993+7.20007)x416.83289, glue set 176.41644fil
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\rule(16.79993+7.20007)x0.0
+.....\TU/FandolHei(0)/m/n/16 参
+.....\glue 0.0 plus 1.92004
+.....\TU/FandolHei(0)/m/n/16 考
+.....\glue 0.0 plus 1.92004
+.....\TU/FandolHei(0)/m/n/16 文
+.....\glue 0.0 plus 1.92004
+.....\TU/FandolHei(0)/m/n/16 献
+.....\kern -0.00017
+.....\kern 0.00017
+.....\kern 0.0
+.....\rule(16.79993+7.20007)x0.0
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\penalty 10000
+....\glue 14.4
+....\glue 0.0
+....\special{pdf:out [-] 1<</Title(\376\377\123\302\200\003\145\207\163\056)/A<</S\ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {chapter}{参考文献}{\thepage \E
+TC.}
+....\penalty 10000
+....\marks1{\__mark_value:nn {3}{\MakeUppercase    []{参考文献}}}
+....\penalty 10000
+....\marks2{\__mark_value:nn {4}{\MakeUppercase    []{参考文献}}}
+....\penalty 10000
+....\marks3{\__mark_value:nn {5}{\MakeUppercase    []{参考文献}}}
+....\penalty 10000
+....\glue 2.7
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 4.60393
+....\hbox(8.196+2.61598)x416.83289, glue set 127.26141fil
+.....\hbox(0.0+0.0)x0.0
+.....\rule(*+*)x0.0
+.....\penalty 10000
+.....\glue 0.0
+.....\glue 0.0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\TU/TeXGyreTermes(1)/m/n/12 1
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\glue 3.60004
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -20.0
+.......\special{pdf:dest (cite.0@knuth1984) [@thispage /XYZ @xpos @ypos null]}
+.......\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 KNUTH
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 25
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 D
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 E
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 The
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 TeXbook
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 M
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 Addison-Wesley
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 ,
+.....\glue 3.0 plus 1.50449 minus 0.997
+.....\TU/TeXGyreTermes(1)/m/n/12 1984
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 2.7
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 9.18802
+....\hbox(8.196+2.61598)x416.83289, glue set - 0.92581
+.....\hbox(0.0+0.0)x0.0
+.....\rule(*+*)x0.0
+.....\penalty 10000
+.....\glue 0.0
+.....\glue 0.0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\TU/TeXGyreTermes(1)/m/n/12 2
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\glue 3.60004
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -20.0
+.......\special{pdf:dest (cite.0@lamport1986) [@thispage /XYZ @xpos @ypos null]}
+.......\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 LAMPORT
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 25
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 L
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 Document
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Preparation
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 System
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 J
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 Software:
+.....\glue 3.0 plus 1.50749 minus 0.99501
+.....\TU/TeXGyreTermes(1)/m/n/12 Practice
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 and
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Experience
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 ,
+.....\glue(\rightskip) 0.0
+....\penalty 300
+....\glue(\baselineskip) 9.12802
+....\hbox(8.256+2.12398)x416.83289, glue set 312.50922fil
+.....\TU/TeXGyreTermes(1)/m/n/12 1986
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 ,
+.....\glue 3.0 plus 1.50449 minus 0.997
+.....\TU/TeXGyreTermes(1)/m/n/12 16
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(8.112+2.12398)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 (
+.....\TU/TeXGyreTermes(1)/m/n/12 6
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(8.112+2.12398)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 )
+......\kern -0.0002
+......\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 :
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 2.00006
+.....\TU/TeXGyreTermes(1)/m/n/12 555-567
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 2.7
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 9.68002
+....\hbox(8.196+2.60399)x416.83289, glue set 0.90608
+.....\hbox(0.0+0.0)x0.0
+.....\rule(*+*)x0.0
+.....\penalty 10000
+.....\glue 0.0
+.....\glue 0.0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\TU/TeXGyreTermes(1)/m/n/12 3
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\glue 3.60004
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -20.0
+.......\special{pdf:dest (cite.0@mittelbach2004) [@thispage /XYZ @xpos @ypos null]}
+.......\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 MITTELBACH
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 25
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 F
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 ,
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 3.0 plus 1.50449 minus 0.997
+.....\TU/TeXGyreTermes(1)/m/n/12 GOOSSENS
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 25
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 M
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 The
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 LaTeX
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Companion
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 in
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Practice
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 C
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\penalty 0
+.....\TU/TeXGyreTermes(1)/m/n/12 //
+.....\kern -0.00023
+.....\kern 0.00023
+.....\penalty 0
+.....\TU/TeXGyreTermes(1)/m/n/12 TUG
+.....\glue(\rightskip) 0.0
+....\penalty 300
+....\glue(\baselineskip) 9.20001
+....\hbox(8.196+2.61598)x416.83289, glue set 233.95721fil
+.....\TU/TeXGyreTermes(1)/m/n/12 Conference
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Proceedings
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 2004
+.....\kern -0.0002
+.....\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 :
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 2.00006
+.....\TU/TeXGyreTermes(1)/m/n/12 12-24
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 2.7
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 9.18802
+....\hbox(8.196+2.61598)x416.83289, glue set 0.07553
+.....\hbox(0.0+0.0)x0.0
+.....\rule(*+*)x0.0
+.....\penalty 10000
+.....\glue 0.0
+.....\glue 0.0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\TU/TeXGyreTermes(1)/m/n/12 4
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\glue 3.60004
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -20.0
+.......\special{pdf:dest (cite.0@thesis2025) [@thispage /XYZ @xpos @ypos null]}
+.......\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 DOE
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 25
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 J
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 Thesis
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Template
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Engineering
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 for
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Graduate
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Writing
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 D
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 Northwestern
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Poly-
+.....\glue(\rightskip) 0.0
+....\penalty 400
+....\glue(\baselineskip) 9.12802
+....\hbox(8.256+2.61598)x416.83289, glue set 287.80928fil
+.....\TU/TeXGyreTermes(1)/m/n/12 technical
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 University
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 ,
+.....\glue 3.0 plus 1.50449 minus 0.997
+.....\TU/TeXGyreTermes(1)/m/n/12 2025
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 2.7
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 9.12802
+....\hbox(8.256+2.60399)x416.83289, glue set 1.85988
+.....\hbox(0.0+0.0)x0.0
+.....\rule(*+*)x0.0
+.....\penalty 10000
+.....\glue 0.0
+.....\glue 0.0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\TU/TeXGyreTermes(1)/m/n/12 5
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\glue 3.60004
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -20.0
+.......\special{pdf:dest (cite.0@patent2024) [@thispage /XYZ @xpos @ypos null]}
+.......\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 SMITH
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 25
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 A
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 ,
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 3.0 plus 1.50449 minus 0.997
+.....\TU/TeXGyreTermes(1)/m/n/12 WANG
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 25
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 B
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 Document
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Build
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Pipeline
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 with
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Citation
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Validation
+.....\kern -0.0002
+.....\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 :
+.....\glue 3.0 plus 1.50749 minus 0.99501
+.....\TU/TeXGyreTermes(1)/m/n/12 CN
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 0
+.....\glue(\rightskip) 0.0
+....\penalty 300
+....\glue(\baselineskip) 9.28401
+....\hbox(8.112+1.87198)x416.83289, glue set 288.16908fil
+.....\TU/TeXGyreTermes(1)/m/n/12 202410000001.2
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 P
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 2024
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 2.7
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 9.92001
+....\hbox(8.20801+2.61598)x416.83289, glue set 0.21962
+.....\hbox(0.0+0.0)x0.0
+.....\rule(*+*)x0.0
+.....\penalty 10000
+.....\glue 0.0
+.....\glue 0.0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\TU/TeXGyreTermes(1)/m/n/12 6
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\glue 3.60004
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -20.0
+.......\special{pdf:dest (cite.0@standard2023) [@thispage /XYZ @xpos @ypos null]}
+.......\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 Information
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 and
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 documentation
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 —
+.....\discretionary
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 Rules
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 for
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 bibliographic
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 references
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 and
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 citations
+.....\glue(\rightskip) 0.0
+....\penalty 300
+....\glue(\baselineskip) 9.18802
+....\hbox(8.196+1.87198)x416.83289, glue set 252.09709fil
+.....\TU/TeXGyreTermes(1)/m/n/12 to
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 information
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 resources
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 S
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 2023
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue 2.7
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 9.87202
+....\hbox(8.256+2.61598)x416.83289, glue set 0.91205
+.....\hbox(0.0+0.0)x0.0
+.....\rule(*+*)x0.0
+.....\penalty 10000
+.....\glue 0.0
+.....\glue 0.0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\TU/TeXGyreTermes(1)/m/n/12 7
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\glue 3.60004
+.....\penalty 10000
+.....\hbox(0.0+0.0)x0.0
+......\hbox(0.0+0.0)x0.0, shifted -20.0
+.......\special{pdf:dest (cite.0@website2025) [@thispage /XYZ @xpos @ypos null]}
+.......\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 UNIVERSITY
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 25
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 N
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 P
+.....\kern -0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\TU/TeXGyreTermes(1)/m/n/12 Graduate
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 thesis
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 writing
+.....\glue 3.0 plus 1.5 minus 1.0
+.....\TU/TeXGyreTermes(1)/m/n/12 guide
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 0
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 EB
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\TU/TeXGyreTermes(1)/m/n/12 /
+.....\kern -0.00023
+.....\kern 0.00023
+.....\TU/TeXGyreTermes(1)/m/n/12 OL
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\glue 3.0 plus 1.50899 minus 0.99403
+.....\hbox(8.112+2.12398)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 (
+.....\TU/TeXGyreTermes(1)/m/n/12 2025
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(8.112+2.12398)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 )
+......\kern -0.0002
+......\kern 0.0002
+.....\glue 2.00006
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 [
+.....\TU/TeXGyreTermes(1)/m/n/12 2026/
+.....\kern -0.00023
+.....\kern 0.00023
+.....\TU/TeXGyreTermes(1)/m/n/12 04/
+.....\kern -0.00023
+.....\kern 0.00023
+.....\TU/TeXGyreTermes(1)/m/n/12 04
+.....\kern -0.0002
+.....\kern 0.0002
+.....\hbox(7.944+1.87198)x3.996
+......\TU/TeXGyreTermes(1)/m/n/12 ]
+......\kern -0.0002
+......\kern 0.0002
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\glue(\rightskip) 0.0
+....\penalty 10150
+....\glue(\baselineskip) 9.17601
+....\hbox(8.20801+2.616)x416.83289, glue set 200.4849fil
+.....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[0 1 1]/A<</S/U\ETC.}
+.....\mathon
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#64
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#106
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#106
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#85
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#99
+.....\glue 0.0
+.....\penalty 100
+.....\glue(\thickmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#45
+.....\penalty 100
+.....\glue(\thickmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#103
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#103
+.....\penalty 200
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#60
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#99
+.....\glue 0.0
+.....\penalty 100
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#89
+.....\penalty 200
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#78
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#115
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#85
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#110
+.....\glue 0.0
+.....\penalty 100
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#89
+.....\penalty 200
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#51
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#48
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#110
+.....\glue 0.0
+.....\penalty 100
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#89
+.....\penalty 200
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#44
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#78
+.....\glue 0.0
+.....\penalty 100
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#103
+.....\penalty 200
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#67
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#78
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#56
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#82
+.....\glue 0.0
+.....\penalty 100
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#103
+.....\penalty 200
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#108
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#108
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#52
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#107
+.....\glue 0.0
+.....\penalty 100
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#103
+.....\penalty 200
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#107
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#122
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#58
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#102
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#101
+.....\glue 0.0
+.....\penalty 100
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#89
+.....\penalty 200
+.....\glue(\medmuskip) 0.0 plus 1.99997
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#64
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#106
+.....\glue 0.0
+.....\penalty 100
+.....\TU/TeXGyreTermes(1)/m/n/12 glyph#76
+.....\glue 0.0
+.....\penalty 100
+.....\mathoff
+.....\special{pdf:eann}
+.....\TU/TeXGyreTermes(1)/m/n/12 .
+.....\kern -0.0002
+.....\kern 0.0002
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0 plus 1.0fil
+.....\glue(\rightskip) 0.0
+....\glue -2.616
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 12.09747
+...\hbox(10.38+2.70003)x416.83289
+....\special{color push gray 0}
+....\hbox(10.38+2.70003)x416.83289
+.....\hbox(10.38+2.70003)x416.83289
+......\vbox(10.38+2.70003)x416.83289
+.......\rule(0.0+0.0)x416.83289
+.......\glue 4.08003
+.......\hbox(6.29997+2.70003)x416.83289
+........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
+.........\vbox(0.0+0.0)x416.83289
+..........\hbox(0.0+0.0)x416.83289, glue set 208.41644fil
+...........\hbox(0.0+0.0)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0 plus 1.0fil
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\vbox(6.29997+2.70003)x416.83289
+.........\hbox(6.29997+2.70003)x416.83289, glue set 203.91644fil
+..........\glue(\leftskip) 0.0 plus 1.0fil
+..........\hbox(0.0+0.0)x0.0
+..........\penalty 10000
+..........\glue 2.25 plus 1.125 minus 0.75
+..........\TU/TeXGyreTermes(1)/m/n/9 2
+..........\kern -0.0002
+..........\kern 0.0002
+..........\penalty 10000
+..........\glue 2.25 plus 1.125 minus 0.75
+..........\rule(6.29997+2.70003)x0.0
+..........\penalty 10000
+..........\glue(\parfillskip) 0.0
+..........\glue(\rightskip) 0.0 plus 1.0fil
+........\glue 0.0 plus 1.0fill
+........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\vbox(0.0+0.0)x416.83289
+..........\hbox(0.0+0.0)x416.83289, glue set 416.83289fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\special{color pop}
+.\kern -725.68437
+.\hbox(0.0+0.0)x0.0
+..\kern -72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil
+...\kern -72.26999
+...\hbox(0.0+0.0)x0.0
+....\hbox(0.0+0.0)x0.0, shifted 845.04684
+.....\kern 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\kern 725.68437
+.\kern 0.0

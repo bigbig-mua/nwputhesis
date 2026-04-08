@@ -3,11 +3,12 @@
 
 PACKAGE = nwputhesis
 SAMPLE  = main
-TEST_BUILD = 03-committee 05-acknowledgements 06-accomplishments
+TEST_BUILD = 03-committee 06-accomplishments
+TEST_ACK = 05-acknowledgements-bachelor 05-acknowledgements-graduate
 TEST_ABSTRACT = 02-abstract-bachelor 02-abstract-graduate
 TEST_TITLE_PAGE = 01-title-page-bachelor 01-title-page-master-academic 01-title-page-master-professional 01-title-page-phd
 TEST_TOC = 04-toc-bachelor 04-toc-graduate
-TEST_BIBER = 07-bibliography
+TEST_BIBER = 07-bibliography-bachelor 07-bibliography-graduate
 
 LATEXMK = latexmk
 L3BUILD = l3build
@@ -53,6 +54,7 @@ cleanall: clean
 test:
 ifeq ($(target),)
 	$(L3BUILD) check $(TEST_BUILD)
+	$(L3BUILD) check --config testfiles/config-acknowledgements $(TEST_ACK)
 	$(L3BUILD) check --config testfiles/config-abstract $(TEST_ABSTRACT)
 	$(L3BUILD) check --config testfiles/config-title-page $(TEST_TITLE_PAGE)
 	$(L3BUILD) check --config testfiles/config-toc $(TEST_TOC)

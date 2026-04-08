@@ -10,7 +10,18 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
-(04-toc-bachelor.toc)
+(04-toc-bachelor.toc
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font 'FandolSong-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
+Package fontspec Info: 
+(fontspec)             Font family 'FandolSong(1)' created for font 'FandolSong' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+)
 \tf@toc=\write...
 File: nwpuheader.png Graphic file (type bmp)
 <nwpuheader.png>
@@ -106,7 +117,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 528.0468fil
+...\vbox(700.50687+0.0)x416.83289, glue set 525.10692fil
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
@@ -156,59 +167,56 @@ TC.}
 ....\penalty 10000
 ....\glue 0.0 plus 0.1
 ....\penalty 10000
-....\glue 6.0
+....\glue 3.79994
 ....\glue 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(10.07994+4.32004)x416.83289, glue set 297.26033fill
+....\hbox(13.29994+5.70006)x416.83289, glue set 288.86037fill
 .....\hbox(0.0+0.0)x0.0
-.....\rule(10.07994+4.32004)x0.0
-.....\hbox(9.24+2.07599)x0.0, glue set - 36.0fil
-......\TU/FandolHei(0)/b/n/12 第
-......\glue 0.0 plus 1.15202
-......\TU/FandolHei(0)/b/n/12 一
-......\glue 0.0 plus 1.15202
-......\TU/FandolHei(0)/b/n/12 章
+.....\rule(13.29994+5.70006)x0.0
+.....\hbox(9.168+2.14798)x0.0, glue set - 36.0fil
+......\TU/FandolSong(1)/b/n/12 第
+......\glue 0.0 plus 1.52003
+......\TU/FandolSong(1)/b/n/12 一
+......\glue 0.0 plus 1.52003
+......\TU/FandolSong(1)/b/n/12 章
 ......\kern -0.00017
 ......\kern 0.00017
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\glue 45.60004
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
-.....\TU/FandolHei(0)/b/n/12 本
-.....\glue 0.0 plus 1.15202
-.....\TU/FandolHei(0)/b/n/12 科
-.....\glue 0.0 plus 1.15202
-.....\TU/FandolHei(0)/b/n/12 第
-.....\glue 0.0 plus 1.15202
-.....\TU/FandolHei(0)/b/n/12 一
-.....\glue 0.0 plus 1.15202
-.....\TU/FandolHei(0)/b/n/12 章
+.....\TU/FandolSong(1)/b/n/12 本
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/b/n/12 科
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/b/n/12 第
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/b/n/12 一
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/b/n/12 章
 .....\kern -0.00017
 .....\kern 0.00017
 .....\special{pdf:eann}
-.....\rule(10.07994+4.32004)x0.0
+.....\rule(13.29994+5.70006)x0.0
 .....\kern 0.0
-.....\glue -6.0
+.....\glue -3.60004
 .....\glue 3.0
 .....\leaders 0.0 plus 1.0fill
-......\hbox(1.2+0.13199)x6.0, glue set 3.0fil
+......\hbox(3.09003+0.0)x3.60004, glue set 0.60004fil
 .......\glue 0.0 plus 1.0fil minus 1.0fil
-.......\hbox(1.2+0.13199)x3.0
+.......\hbox(3.09003+0.0)x3.0
 ........\special{color push gray 0}
-........\TU/TeXGyreTermes(1)/m/n/12 .
-........\kern -0.0002
-........\kern 0.0002
+........\hbox(3.09003+0.0)x3.0
+.........\hbox(1.2+0.13199)x3.0, shifted -1.89003
+..........\TU/TeXGyreTermes(1)/m/n/12 .
+..........\kern -0.0002
+..........\kern 0.0002
 ........\special{color pop}
 .....\kern 0.0
-.....\hbox(8.112+0.0)x16.97252, glue set 10.97252fil
-......\glue 0.0 plus 1.0fil
-......\TU/TeXGyreTermes(1)/m/n/12 1
-......\kern -0.0002
-......\kern 0.0002
-.....\rule(*+*)x0.0
-.....\penalty 10000
-.....\glue -16.97252
+.....\TU/TeXGyreTermes(1)/m/n/12 1
+.....\kern -0.0002
+.....\kern 0.0002
 .....\penalty 10000
 .....\glue(\parfillskip) -10.95 plus 1.0fil
 .....\glue(\rightskip) 27.92252
@@ -220,11 +228,11 @@ TC.}
 ....\penalty 10000
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 1.68002
-....\hbox(13.99994+6.00006)x416.83289, glue set 320.85507fill
+....\glue(\baselineskip) 0.0
+....\hbox(13.29994+5.70006)x416.83289, glue set 312.85507fill
 .....\glue(\leftskip) 33.0053
 .....\hbox(0.0+0.0)x0.0
-.....\rule(13.99994+6.00006)x0.0
+.....\rule(13.29994+5.70006)x0.0
 .....\rule(*+*)x0.0
 .....\penalty 10000
 .....\glue -21.60004
@@ -235,52 +243,51 @@ TC.}
 ......\kern 0.0002
 ......\glue 0.0 plus 1.0fil
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
-.....\TU/FandolSong(0)/m/n/12 本
-.....\glue 0.0 plus 1.60004
-.....\TU/FandolSong(0)/m/n/12 科
-.....\glue 0.0 plus 1.60004
-.....\TU/FandolSong(0)/m/n/12 背
-.....\glue 0.0 plus 1.60004
-.....\TU/FandolSong(0)/m/n/12 景
+.....\TU/FandolSong(1)/m/n/12 本
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/m/n/12 科
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/m/n/12 背
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/m/n/12 景
 .....\kern -0.00017
 .....\kern 0.00017
 .....\special{pdf:eann}
-.....\rule(13.99994+6.00006)x0.0
+.....\rule(13.29994+5.70006)x0.0
 .....\kern 0.0
-.....\glue -5.0
+.....\glue -3.0
 .....\glue 3.0
 .....\leaders 0.0 plus 1.0fill
-......\hbox(1.2+0.13199)x5.0, glue set 2.0fil
+......\hbox(3.09003+0.0)x3.0
 .......\glue 0.0 plus 1.0fil minus 1.0fil
-.......\hbox(1.2+0.13199)x3.0
+.......\hbox(3.09003+0.0)x3.0
 ........\special{color push gray 0}
-........\TU/TeXGyreTermes(1)/m/n/12 .
-........\kern -0.0002
-........\kern 0.0002
+........\hbox(3.09003+0.0)x3.0
+.........\hbox(1.2+0.13199)x3.0, shifted -1.89003
+..........\TU/TeXGyreTermes(1)/m/n/12 .
+..........\kern -0.0002
+..........\kern 0.0002
 ........\special{color pop}
 .....\kern 0.0
-.....\hbox(8.112+0.0)x16.97252, glue set 10.97252fil
-......\glue 0.0 plus 1.0fil
-......\TU/TeXGyreTermes(1)/m/n/12 1
-......\kern -0.0002
-......\kern 0.0002
-.....\rule(*+*)x0.0
-.....\penalty 10000
-.....\glue -16.97252
+.....\TU/TeXGyreTermes(1)/m/n/12 1
+.....\kern -0.0002
+.....\kern 0.0002
 .....\penalty 10000
 .....\glue(\parfillskip) -10.95 plus 1.0fil
 .....\glue(\rightskip) 27.92252
 ....\penalty 10000
+....\glue 0.0
+....\glue 0.0
 ....\penalty 10000
 ....\glue 0.0 plus 0.1
 ....\penalty 10000
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 0.0
-....\hbox(13.99994+6.00006)x416.83289, glue set 296.95486fill
+....\hbox(13.29994+5.70006)x416.83289, glue set 288.95486fill
 .....\glue(\leftskip) 56.9055
 .....\hbox(0.0+0.0)x0.0
-.....\rule(13.99994+6.00006)x0.0
+.....\rule(13.29994+5.70006)x0.0
 .....\rule(*+*)x0.0
 .....\penalty 10000
 .....\glue -32.39996
@@ -291,98 +298,94 @@ TC.}
 ......\kern 0.0002
 ......\glue 0.0 plus 1.0fil
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
-.....\TU/FandolSong(0)/m/n/12 本
-.....\glue 0.0 plus 1.60004
-.....\TU/FandolSong(0)/m/n/12 科
-.....\glue 0.0 plus 1.60004
-.....\TU/FandolSong(0)/m/n/12 范
-.....\glue 0.0 plus 1.60004
-.....\TU/FandolSong(0)/m/n/12 围
+.....\TU/FandolSong(1)/m/n/12 本
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/m/n/12 科
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/m/n/12 范
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/m/n/12 围
 .....\kern -0.00017
 .....\kern 0.00017
 .....\special{pdf:eann}
-.....\rule(13.99994+6.00006)x0.0
+.....\rule(13.29994+5.70006)x0.0
 .....\kern 0.0
-.....\glue -5.0
+.....\glue -3.0
 .....\glue 3.0
 .....\leaders 0.0 plus 1.0fill
-......\hbox(1.2+0.13199)x5.0, glue set 2.0fil
+......\hbox(3.09003+0.0)x3.0
 .......\glue 0.0 plus 1.0fil minus 1.0fil
-.......\hbox(1.2+0.13199)x3.0
+.......\hbox(3.09003+0.0)x3.0
 ........\special{color push gray 0}
-........\TU/TeXGyreTermes(1)/m/n/12 .
-........\kern -0.0002
-........\kern 0.0002
+........\hbox(3.09003+0.0)x3.0
+.........\hbox(1.2+0.13199)x3.0, shifted -1.89003
+..........\TU/TeXGyreTermes(1)/m/n/12 .
+..........\kern -0.0002
+..........\kern 0.0002
 ........\special{color pop}
 .....\kern 0.0
-.....\hbox(8.112+0.0)x16.97252, glue set 10.97252fil
-......\glue 0.0 plus 1.0fil
-......\TU/TeXGyreTermes(1)/m/n/12 1
-......\kern -0.0002
-......\kern 0.0002
-.....\rule(*+*)x0.0
-.....\penalty 10000
-.....\glue -16.97252
+.....\TU/TeXGyreTermes(1)/m/n/12 1
+.....\kern -0.0002
+.....\kern 0.0002
 .....\penalty 10000
 .....\glue(\parfillskip) -10.95 plus 1.0fil
 .....\glue(\rightskip) 27.92252
 ....\penalty 10000
+....\glue 0.0
+....\glue 0.0
 ....\penalty -300
 ....\glue 0.0 plus 0.1
 ....\penalty 10000
-....\glue 6.0
+....\glue 3.79994
 ....\glue 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\lineskip) 1.0
-....\hbox(10.07994+4.32004)x416.83289, glue set 297.26033fill
+....\glue(\baselineskip) 0.0
+....\hbox(13.29994+5.70006)x416.83289, glue set 288.86037fill
 .....\hbox(0.0+0.0)x0.0
-.....\rule(10.07994+4.32004)x0.0
-.....\hbox(9.24+2.07599)x0.0, glue set - 36.0fil
-......\TU/FandolHei(0)/b/n/12 第
-......\glue 0.0 plus 1.15202
-......\TU/FandolHei(0)/b/n/12 二
-......\glue 0.0 plus 1.15202
-......\TU/FandolHei(0)/b/n/12 章
+.....\rule(13.29994+5.70006)x0.0
+.....\hbox(9.168+2.14798)x0.0, glue set - 36.0fil
+......\TU/FandolSong(1)/b/n/12 第
+......\glue 0.0 plus 1.52003
+......\TU/FandolSong(1)/b/n/12 二
+......\glue 0.0 plus 1.52003
+......\TU/FandolSong(1)/b/n/12 章
 ......\kern -0.00017
 ......\kern 0.00017
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\glue 45.60004
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
-.....\TU/FandolHei(0)/b/n/12 本
-.....\glue 0.0 plus 1.15202
-.....\TU/FandolHei(0)/b/n/12 科
-.....\glue 0.0 plus 1.15202
-.....\TU/FandolHei(0)/b/n/12 第
-.....\glue 0.0 plus 1.15202
-.....\TU/FandolHei(0)/b/n/12 二
-.....\glue 0.0 plus 1.15202
-.....\TU/FandolHei(0)/b/n/12 章
+.....\TU/FandolSong(1)/b/n/12 本
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/b/n/12 科
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/b/n/12 第
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/b/n/12 二
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/b/n/12 章
 .....\kern -0.00017
 .....\kern 0.00017
 .....\special{pdf:eann}
-.....\rule(10.07994+4.32004)x0.0
+.....\rule(13.29994+5.70006)x0.0
 .....\kern 0.0
-.....\glue -6.0
+.....\glue -3.60004
 .....\glue 3.0
 .....\leaders 0.0 plus 1.0fill
-......\hbox(1.2+0.13199)x6.0, glue set 3.0fil
+......\hbox(3.09003+0.0)x3.60004, glue set 0.60004fil
 .......\glue 0.0 plus 1.0fil minus 1.0fil
-.......\hbox(1.2+0.13199)x3.0
+.......\hbox(3.09003+0.0)x3.0
 ........\special{color push gray 0}
-........\TU/TeXGyreTermes(1)/m/n/12 .
-........\kern -0.0002
-........\kern 0.0002
+........\hbox(3.09003+0.0)x3.0
+.........\hbox(1.2+0.13199)x3.0, shifted -1.89003
+..........\TU/TeXGyreTermes(1)/m/n/12 .
+..........\kern -0.0002
+..........\kern 0.0002
 ........\special{color pop}
 .....\kern 0.0
-.....\hbox(8.112+0.0)x16.97252, glue set 10.97252fil
-......\glue 0.0 plus 1.0fil
-......\TU/TeXGyreTermes(1)/m/n/12 2
-......\kern -0.0002
-......\kern 0.0002
-.....\rule(*+*)x0.0
-.....\penalty 10000
-.....\glue -16.97252
+.....\TU/TeXGyreTermes(1)/m/n/12 2
+.....\kern -0.0002
+.....\kern 0.0002
 .....\penalty 10000
 .....\glue(\parfillskip) -10.95 plus 1.0fil
 .....\glue(\rightskip) 27.92252
@@ -394,11 +397,11 @@ TC.}
 ....\penalty 10000
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 1.68002
-....\hbox(13.99994+6.00006)x416.83289, glue set 320.85507fill
+....\glue(\baselineskip) 0.0
+....\hbox(13.29994+5.70006)x416.83289, glue set 312.85507fill
 .....\glue(\leftskip) 33.0053
 .....\hbox(0.0+0.0)x0.0
-.....\rule(13.99994+6.00006)x0.0
+.....\rule(13.29994+5.70006)x0.0
 .....\rule(*+*)x0.0
 .....\penalty 10000
 .....\glue -21.60004
@@ -409,43 +412,41 @@ TC.}
 ......\kern 0.0002
 ......\glue 0.0 plus 1.0fil
 .....\special{pdf:bann<</Type/Annot/Subtype/Link/Border[0 0 0]/H/I/C[1 0 0]/A<</S/G\ETC.}
-.....\TU/FandolSong(0)/m/n/12 本
-.....\glue 0.0 plus 1.60004
-.....\TU/FandolSong(0)/m/n/12 科
-.....\glue 0.0 plus 1.60004
-.....\TU/FandolSong(0)/m/n/12 方
-.....\glue 0.0 plus 1.60004
-.....\TU/FandolSong(0)/m/n/12 法
+.....\TU/FandolSong(1)/m/n/12 本
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/m/n/12 科
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/m/n/12 方
+.....\glue 0.0 plus 1.52003
+.....\TU/FandolSong(1)/m/n/12 法
 .....\kern -0.00017
 .....\kern 0.00017
 .....\special{pdf:eann}
-.....\rule(13.99994+6.00006)x0.0
+.....\rule(13.29994+5.70006)x0.0
 .....\kern 0.0
-.....\glue -5.0
+.....\glue -3.0
 .....\glue 3.0
 .....\leaders 0.0 plus 1.0fill
-......\hbox(1.2+0.13199)x5.0, glue set 2.0fil
+......\hbox(3.09003+0.0)x3.0
 .......\glue 0.0 plus 1.0fil minus 1.0fil
-.......\hbox(1.2+0.13199)x3.0
+.......\hbox(3.09003+0.0)x3.0
 ........\special{color push gray 0}
-........\TU/TeXGyreTermes(1)/m/n/12 .
-........\kern -0.0002
-........\kern 0.0002
+........\hbox(3.09003+0.0)x3.0
+.........\hbox(1.2+0.13199)x3.0, shifted -1.89003
+..........\TU/TeXGyreTermes(1)/m/n/12 .
+..........\kern -0.0002
+..........\kern 0.0002
 ........\special{color pop}
 .....\kern 0.0
-.....\hbox(8.112+0.0)x16.97252, glue set 10.97252fil
-......\glue 0.0 plus 1.0fil
-......\TU/TeXGyreTermes(1)/m/n/12 2
-......\kern -0.0002
-......\kern 0.0002
-.....\rule(*+*)x0.0
-.....\penalty 10000
-.....\glue -16.97252
+.....\TU/TeXGyreTermes(1)/m/n/12 2
+.....\kern -0.0002
+.....\kern 0.0002
 .....\penalty 10000
 .....\glue(\parfillskip) -10.95 plus 1.0fil
 .....\glue(\rightskip) 27.92252
 ....\penalty 10000
-....\glue -5.5
+....\glue 0.0
+....\glue 0.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ...\glue(\baselineskip) 12.09747

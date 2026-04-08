@@ -432,10 +432,19 @@
 \newcommand{\nwpu@eng@chaptercname}[1]{Chapter #1}          % 目录章节英文标题
 \if@npu@type@bcl                                            % 本科论文目录章节格式
     \newcommand{\nwpu@bcl@chaptercname}[1]{第\CJKnumber{#1}章}% 本科目录章节中文标题
-    \titlecontents{chapter}[0pt]{\sXiaosi\fHei\vspace{0.5em}}%
-    {\contentsmargin{1em}\sXiaosi\fHei\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{3.8em}}%
-    {\contentsmargin{1em}\sXiaosi\fHei\bfseries}%
-    {\normalfont\titlerule*[.5pc]{.}\contentspage}[\vspace{0em}]
+    \titlecontents{section}[1.16cm]{\fSong\graduatecontentsfont}%
+    {\contentslabel{1.8em}}{}%
+    {\titlerule*[3pt]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
+    \titlecontents{subsection}[2.00cm]{\fSong\graduatecontentsfont}%
+    {\contentslabel{2.7em}}{}%
+    {\titlerule*[3pt]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
+    \titlecontents{subsubsection}[2.86cm]{\fSong\graduatecontentsfont}%
+    {\contentslabel{3.4em}}{}%
+    {\titlerule*[3pt]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
+    \titlecontents{chapter}[0pt]{\graduatecontentsfont\fSong\vspace{0.2\baselineskip}}%
+    {\contentsmargin{1em}\graduatecontentsfont\fSong\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{3.8em}}%
+    {\contentsmargin{1em}\graduatecontentsfont\fSong\bfseries}%
+    {\graduatecontentsfont\normalfont\titlerule*[.3pc]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]
 \else
     \dottedcontents{section}[1.16cm]{\fSong\graduatecontentsfont}{1.8em}{3pt}   %
     \dottedcontents{subsection}[2.00cm]{\fSong\graduatecontentsfont}{2.7em}{3pt}%
