@@ -92,8 +92,13 @@ jobs:
           xelatex --version
           tlmgr info fontspec xetex xecjk l3build latex-bin latex-bin-dev
 
-      - name: Build document
+      - name: Run regression tests
+        if: matrix.os == 'ubuntu-latest'
         run: make test
+
+      - name: Build document only
+        if: matrix.os != 'ubuntu-latest'
+        run: make
 
       - name: Upload test results if failed
         uses: actions/upload-artifact@v6
