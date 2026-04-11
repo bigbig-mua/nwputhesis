@@ -41,15 +41,11 @@
 
 #### 研究生论文（硕士/博士）
 - `content/thesis/graduate/`：研究生论文相关内容，包括个人信息、摘要、正文各章节、附录、致谢、答辩委员会和科研情况等
-- `content/thesis/graduate/chapters.tex`：研究生正文章节清单，用于新增或删除章节
 
 #### 本科毕业设计论文
 - `content/thesis/undergraduate/`：本科毕业设计论文相关内容，包括个人信息、摘要、正文各章节、附录、致谢和毕业设计小结等
-- `content/thesis/undergraduate/chapters.tex`：本科正文章节清单，用于新增或删除章节
 
 论文插图全部放在 `content/figures` 目录下，项目已将默认图片路径设为该目录，在 tex 文件中可直接引用文件名，无需添加路径前缀。例如：`\includegraphics{example.png}`。
-
-如需新增或删除章节，请在对应的 `content/thesis/graduate/chapters.tex` 或 `content/thesis/undergraduate/chapters.tex` 中添加或删除 `\input{...}` 命令，无需修改 `thesis-main.tex`。
 
 硕博提交最终版论文时，可直接将签字版声明扫描成电子版 PDF，替换 [声明.pdf](content/figures/声明.pdf)。
 
