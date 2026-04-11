@@ -91,6 +91,7 @@
 \newcommand{\ifbachelor}[2]{\if@npu@type@bcl#1\else#2\fi}   % 本科/研究生条件
 \newcommand{\ifgraduate}[2]{\if@npu@type@bcl#2\else#1\fi}   % 研究生/本科条件
 %%-----------------------------------------------------------------------------%
+\RequirePackage{amsmath}                                    % AMS 数学公式
 \RequirePackage{amssymb}                                    % AMS 数学符号
 \RequirePackage{tikz}                                        % 彩色封面封底背景图定位
 %%=============================================================================%
@@ -116,7 +117,7 @@
 \if@npu@type@bcl                                            % 本科论文页边距
     \geometry{a4paper,                                      % A4 纸张
         left=1.25in, right=1.25in, top=1in, bottom=1in,    % 页边距
-        headheight=0.93cm, headsep=0.11cm, footskip=0.79cm}% 页眉页脚位置
+        headheight=0.93cm, headsep=0.4cm, footskip=0.79cm}% 页眉页脚位置
 \else                                                       % 硕博论文页边距
     \geometry{a4paper,                                      % A4 纸张
         left=2.5cm, right=2.5cm, top=2.54cm, bottom=2.54cm, % 页边距
@@ -423,7 +424,7 @@
     {\sXiaosi\thesubsection}{0.5em}{}{}
     \titleformat{\subsubsection}[hang]{\fHei}%
     {(\arabic{subsubsection})}{0.5em}{}{}
-    \titlespacing{\chapter}{0pt}{15.2pt}{14.4pt}
+    \titlespacing{\chapter}{0pt}{5pt}{14.4pt}
     \titlespacing{\section}{0pt}{-3pt}{2pt}
     \titlespacing{\subsection}{0pt}{-1.5pt}{-1pt}
     \titlespacing{\subsubsection}{0pt}{0.25em}{0em}
@@ -568,7 +569,7 @@
 \setlength\heavyrulewidth{1.5pt}                            % 表格上下线宽 1.5 磅
 \setlength\lightrulewidth{1pt}                              % 表格中线宽 1.0 磅
 %%-----------------------------------------------------------------------------%
-\RequirePackage[thmmarks]{ntheorem}                         % 定理环境格式
+\RequirePackage[amsmath,thmmarks]{ntheorem}                 % 定理环境格式
 \theorembodyfont{\normalfont\itshape}                       % 主体文字格式
 \theoremseparator{\quad}                                    % 标题与主体间隔
 \setlength\topsep{0pt}                                      % 设置定理环境间距

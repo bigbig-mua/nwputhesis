@@ -18,7 +18,7 @@
 \documentclass[degree=bachelor, localfonts=false, academic=false, blindreview=false, colorcover=false]{nwputhesis}
 
 % 个人信息设置
-\ifbachelor{\input{data/ungraduate-info}}{\input{data/graduate-info}}
+\ifbachelor{\input{data/undergraduate/info}}{\input{data/graduate/info}}
 \addbibresource{ref/reference.bib}
 
 \begin{document}
@@ -29,10 +29,10 @@
 \maketitle
 
 % 答辩委员会（仅硕博）
-\ifgraduate{\input{data/graduate-committee}}{}
+\ifgraduate{\input{data/graduate/committee}}{}
 
 % 摘要
-\input{data/abstract}
+\ifbachelor{\input{data/undergraduate/abstract}}{\input{data/graduate/abstract}}
 
 % 目录
 \tableofcontents
@@ -46,32 +46,40 @@
 \mainmatter
 
 % 各章节
-\input{data/chapter1}
-\input{data/chapter2}
-\input{data/chapter3}
-\input{data/chapter4}
-\input{data/chapter5}
-\input{data/chapter6}
+\ifbachelor{
+    \input{data/undergraduate/chapter1}
+    \input{data/undergraduate/chapter2}
+    \input{data/undergraduate/chapter3}
+    \input{data/undergraduate/chapter4}
+    \input{data/undergraduate/chapter5}
+}{
+    \input{data/graduate/chapter1}
+    \input{data/graduate/chapter2}
+    \input{data/graduate/chapter3}
+    \input{data/graduate/chapter4}
+    \input{data/graduate/chapter5}
+    \input{data/graduate/chapter6}
+}
 
 % 参考文献
 \printbibliography
 
 % 附录（研究生在致谢之前）
-\ifgraduate{\input{data/appendix}}{}
+\ifgraduate{\input{data/graduate/appendix}}{}
 
 \backmatter
 
 % 致谢
-\input{data/acknowledgements}
+\ifbachelor{\input{data/undergraduate/acknowledgements}}{\input{data/graduate/acknowledgements}}
 
 % 毕业设计小结（仅本科）
-\ifbachelor{\input{data/ungraduate-designsummary}}{}
+\ifbachelor{\input{data/undergraduate/designsummary}}{}
 
 % 附录（仅本科，在致谢之后）
-\ifbachelor{\input{data/appendix}}{}
+\ifbachelor{\input{data/undergraduate/appendix}}{}
 
 % 参加科研情况（仅硕博）
-\ifgraduate{\input{data/graduate-accomplishments}}{}
+\ifgraduate{\input{data/graduate/accomplishments}}{}
 
 % 知识产权与原创性声明（仅硕博）
 \ifgraduate{\includepdf[pages=-]{figures/声明.pdf}}{}

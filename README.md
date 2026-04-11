@@ -43,26 +43,19 @@
 
 ### 文件修改说明
 用户基本只需要修改 `data` 和 `ref` 下的文件：
-- `data/abstract.tex`：中英文摘要
-- `data/chapter*.tex`：各章节内容
-- `data/appendix.tex`：附录
-- `data/acknowledgements.tex`：致谢
 - `ref/reference.bib`：参考文献
 
 #### 研究生论文（硕士/博士）
-- `data/graduate-info.tex`：个人信息
-- `data/graduate-committee.tex`：答辩委员会
-- `data/graduate-accomplishments.tex`：参加科研情况
+- `data/graduate/`：研究生论文相关内容，包括个人信息、摘要、正文各章节、附录、致谢、答辩委员会和科研情况等
 
 #### 本科毕业设计论文
-- `data/ungraduate-info.tex`：个人信息
-- `data/ungraduate-designsummary.tex`：毕业设计小结
+- `data/undergraduate/`：本科毕业设计论文相关内容，包括个人信息、摘要、正文各章节、附录、致谢和毕业设计小结等
 
 论文插图全部放在 `figures` 目录下，项目已将默认图片路径设为该目录，在 tex 文件中可直接引用文件名，无需添加路径前缀。例如：`\includegraphics{example.png}`。
 
 `main.tex` 中的 `\listoffigures` 和 `\listoftables` 是硕博论文的可选项。学校模板未强制要求图目录和表目录，如果不需要，直接将这两行注释掉即可,附录等其他内容同理。
 
-如需新增或删除章节，请在 `main.tex` 中添加或删除 `\input{data/chapterX}` 命令。
+如需新增或删除章节，请在 `main.tex` 中对应学位类型的目录分支下添加或删除 `\input{data/graduate/chapterX}` 或 `\input{data/undergraduate/chapterX}` 命令。
 
 硕博提交最终版论文时，可直接将签字版声明扫描成电子版 PDF，替换 [声明.pdf](figures/声明.pdf)。
 
