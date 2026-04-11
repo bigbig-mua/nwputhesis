@@ -5,17 +5,21 @@
 %% 本项目: https://github.com/1195343015/nwputhesis
 %% 当前版本：2.1.5
 
-%% 设置论文格式
-%
-% 选项：
-%   degree=bachelor|master|phd   （本科|硕士|博士）
-%   localfonts=true|false        （使用本地 fonts 目录字体，无 Windows 字体时启用）
-%
-%   以下三个选项本科生无需关注
-%   academic=true|false          （学术学位|专业学位）
-%   blindreview=true|false       （盲评模式）
-%   colorcover=true|false        （彩色封面封底）
-\documentclass[degree=bachelor, localfonts=false, academic=false, blindreview=false, colorcover=false]{nwputhesis}
+\input{thesis-setup}
+
+\providecommand{\NPUThesisDegree}{bachelor}
+\providecommand{\NPUThesisLocalFonts}{false}
+\providecommand{\NPUThesisAcademic}{false}
+\providecommand{\NPUThesisBlindReview}{false}
+\providecommand{\NPUThesisColorCover}{false}
+
+\documentclass[
+    degree=\NPUThesisDegree,
+    localfonts=\NPUThesisLocalFonts,
+    academic=\NPUThesisAcademic,
+    blindreview=\NPUThesisBlindReview,
+    colorcover=\NPUThesisColorCover
+]{nwputhesis}
 
 % 个人信息设置
 \ifbachelor{\input{data/undergraduate/info}}{\input{data/graduate/info}}
@@ -47,18 +51,9 @@
 
 % 各章节
 \ifbachelor{
-    \input{data/undergraduate/chapter1}
-    \input{data/undergraduate/chapter2}
-    \input{data/undergraduate/chapter3}
-    \input{data/undergraduate/chapter4}
-    \input{data/undergraduate/chapter5}
+    \input{data/undergraduate/chapters}
 }{
-    \input{data/graduate/chapter1}
-    \input{data/graduate/chapter2}
-    \input{data/graduate/chapter3}
-    \input{data/graduate/chapter4}
-    \input{data/graduate/chapter5}
-    \input{data/graduate/chapter6}
+    \input{data/graduate/chapters}
 }
 
 % 参考文献

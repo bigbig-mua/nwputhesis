@@ -26,20 +26,14 @@
 ![[编译方式]](figures/example.png)
 
 ### 论文格式设置
-在 `main.tex` 文件中，通过 `\documentclass` 的选项来设置论文格式：
+推荐直接编译对应的入口文件：
+- `bachelor.tex`：本科毕业设计论文
+- `master.tex`：硕士学位论文
+- `phd.tex`：博士学位论文
 
-```latex
-\documentclass[degree=master, localfonts=false, academic=false, blindreview=false, colorcover=false]{nwputhesis}
-```
+`thesis-main.tex` 为内部核心入口，通常不需要修改。
 
-各选项说明：
-- `degree=bachelor|master|phd`：设置学位，`bachelor` 为本科，`master` 为硕士，`phd` 为博士
-- `localfonts=true|false`：是否使用本地 `fonts` 目录字体，`true` 为使用本地字体（适用于无 Windows 字体的系统），`false` 为自动检测系统字体
-
-硕博特有选项：
-- `academic=true|false`：设置学位类型，`true` 为学术型学位，`false` 为专业型学位
-- `blindreview=true|false`：设置是否盲评，`true` 为盲评版本（自动隐藏学号、作者、导师信息），`false` 为正常版本
-- `colorcover=true|false`：设置是否使用彩色封面和封底，`true` 为彩色（论文最终版提交电子版需要），`false` 为普通版本（用于打印）
+如需调整编译选项，请修改 `thesis-setup.tex`，各选项的具体作用已经写在 `thesis-setup.tex` 的注释中。
 
 ### 文件修改说明
 用户基本只需要修改 `data` 和 `ref` 下的文件：
@@ -52,10 +46,6 @@
 - `data/undergraduate/`：本科毕业设计论文相关内容，包括个人信息、摘要、正文各章节、附录、致谢和毕业设计小结等
 
 论文插图全部放在 `figures` 目录下，项目已将默认图片路径设为该目录，在 tex 文件中可直接引用文件名，无需添加路径前缀。例如：`\includegraphics{example.png}`。
-
-`main.tex` 中的 `\listoffigures` 和 `\listoftables` 是硕博论文的可选项。学校模板未强制要求图目录和表目录，如果不需要，直接将这两行注释掉即可,附录等其他内容同理。
-
-如需新增或删除章节，请在 `main.tex` 中对应学位类型的目录分支下添加或删除 `\input{data/graduate/chapterX}` 或 `\input{data/undergraduate/chapterX}` 命令。
 
 硕博提交最终版论文时，可直接将签字版声明扫描成电子版 PDF，替换 [声明.pdf](figures/声明.pdf)。
 
