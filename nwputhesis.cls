@@ -550,6 +550,8 @@
 \RequirePackage{booktabs}                                   % 三线表
 \RequirePackage{tabularx}                                   % 定宽表格
 \DeclareCaptionFont{cWuhao}{\sWuhao}                        % 图表标题为五号
+\DeclareCaptionFont{cGradFigureCaption}{%
+    \fontsize{10.5pt}{9.5pt}\selectfont}                   % 研究生图题：五号，收紧行距
 \DeclareCaptionFont{cBclTableCaption}{%
     \fontsize{10.5pt}{14pt}\selectfont\bfseries}           % 本科表题：五号黑体，增大标题行距
 \DeclareCaptionFont{cBclFigureCaption}{%
@@ -570,8 +572,11 @@
         belowskip=2pt}
     \captionsetup[subfigure]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
 \else
+    \setlength{\textfloatsep}{8pt}                         % 研究生图/表与正文间距进一步收紧
+    \setlength{\floatsep}{8pt}                             %
+    \setlength{\intextsep}{8pt}                            %
     \captionsetup[table]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
-    \captionsetup[figure]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
+    \captionsetup[figure]{labelfont=cGradFigureCaption, textfont=cGradFigureCaption, aboveskip=10pt, belowskip=0pt}
     \captionsetup[subfigure]{%
         labelformat=simple,
         labelfont=cWuhao,
