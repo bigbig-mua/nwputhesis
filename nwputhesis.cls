@@ -121,7 +121,7 @@
 \else                                                       % 硕博论文页边距
     \geometry{a4paper,                                      % A4 纸张
         left=2.5cm, right=2.5cm, top=2.54cm, bottom=2.54cm, % 页边距
-        headheight=0.93cm, headsep=0.11cm, footskip=0.79cm} % 页眉页脚位置
+        headheight=1.0cm, headsep=0.11cm, footskip=0.79cm}  % 页眉页脚位置
 \fi
 %%-----------------------------------------------------------------------------%
 \RequirePackage[                                            % 超链接设置
@@ -520,11 +520,11 @@
     \fancyhf{}                                              % 清空原有页眉页脚
     \fancyfoot[C, C]{\sXiaowu{\thepage}}                    % 页脚中央显示页码
     \fancyhead{}                                            % 页眉清除原有设置
-    \fancyhead[COH]{\sXiaowu{\leftmark}}                    %
+    \fancyhead[COH]{\raisebox{0.5pt}{\sXiaowu{\leftmark}}}  %
     \if@npu@lang@chs                                        % 中文论文环境
-        \fancyhead[CEH]{\sXiaowu{\nwpu@chs@header}}         %
+        \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@chs@header}}}%
     \else                                                   % 英文论文环境
-        \fancyhead[CEH]{\sXiaowu{\nwpu@eng@header}}         %
+        \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@eng@header}}}%
     \fi                                                     %
 \fi                                                         %
 %%-----------------------------------------------------------------------------%
@@ -568,12 +568,18 @@
         textfont=cBclFigureCaption,
         aboveskip=12pt,
         belowskip=2pt}
+    \captionsetup[subfigure]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
 \else
     \captionsetup[table]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
     \captionsetup[figure]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
+    \captionsetup[subfigure]{%
+        labelformat=simple,
+        labelfont=cWuhao,
+        textfont=cWuhao,
+        aboveskip=10pt,
+        belowskip=0pt}
 \fi
 \captionsetup[subtable]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
-\captionsetup[subfigure]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
 \AtBeginEnvironment{tabular}{\sWuhao}                       % 表格内容为五号
 \AtBeginEnvironment{tabularx}{\sWuhao}                      %
 \newcolumntype{C}{>{\centering\arraybackslash}X}            % 等宽居中
