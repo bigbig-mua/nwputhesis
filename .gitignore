@@ -24,6 +24,7 @@ __latexindent_temp_nwputhesis.cls
 *.xdv
 *.fls
 *.fdb_latexmk
+bachelor.bbl-SAVE-ERROR
 
 ## test files:
 build/

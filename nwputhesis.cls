@@ -424,9 +424,9 @@
     {\sXiaosi\thesubsection}{0.5em}{}{}
     \titleformat{\subsubsection}[hang]{\fHei}%
     {(\arabic{subsubsection})}{0.5em}{}{}
-    \titlespacing{\chapter}{0pt}{5pt}{14.4pt}
-    \titlespacing{\section}{0pt}{-3pt}{2pt}
-    \titlespacing{\subsection}{0pt}{-1.5pt}{-1pt}
+    \titlespacing{\chapter}{0pt}{5pt}{23pt}
+    \titlespacing{\section}{0pt}{2pt}{2pt}
+    \titlespacing{\subsection}{0pt}{3pt}{-1pt}
     \titlespacing{\subsubsection}{0pt}{0.25em}{0em}
 \else                                                       % 硕博论文章节格式
     \titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter  %
@@ -550,8 +550,28 @@
 \RequirePackage{booktabs}                                   % 三线表
 \RequirePackage{tabularx}                                   % 定宽表格
 \DeclareCaptionFont{cWuhao}{\sWuhao}                        % 图表标题为五号
-\captionsetup[table]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
-\captionsetup[figure]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
+\DeclareCaptionFont{cBclTableCaption}{%
+    \fontsize{10.5pt}{14pt}\selectfont\bfseries}           % 本科表题：五号黑体，增大标题行距
+\DeclareCaptionFont{cBclFigureCaption}{%
+    \fontsize{10.5pt}{11.5pt}\selectfont\fSong}            % 本科图题：五号宋体，行距进一步收紧
+\if@npu@type@bcl
+    \setlength{\textfloatsep}{20pt}                        % 本科图/表/算法与正文前后各空一行
+    \setlength{\floatsep}{20pt}                            %
+    \setlength{\intextsep}{20pt}                           %
+    \captionsetup[table]{%
+        labelfont=cBclTableCaption,
+        textfont=cBclTableCaption,
+        aboveskip=12pt,
+        belowskip=2pt}
+    \captionsetup[figure]{%
+        labelfont=cBclFigureCaption,
+        textfont=cBclFigureCaption,
+        aboveskip=12pt,
+        belowskip=2pt}
+\else
+    \captionsetup[table]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
+    \captionsetup[figure]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
+\fi
 \captionsetup[subtable]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
 \captionsetup[subfigure]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
 \AtBeginEnvironment{tabular}{\sWuhao}                       % 表格内容为五号
