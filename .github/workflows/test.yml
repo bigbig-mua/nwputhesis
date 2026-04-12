@@ -60,12 +60,6 @@ jobs:
           texlive_version: 2026
           cache_version: ${{ env.TEXLIVE_CACHE_VERSION }}
 
-      - name: Dump TeX environment
-        run: |
-          tlmgr --version
-          xelatex --version
-          tlmgr info fontspec xetex xecjk l3build latex-bin latex-bin-dev
-
       - name: Build document
         run: make
 
@@ -76,12 +70,40 @@ jobs:
           path: master.pdf
           retention-days: 30
 
-  test:
+  test-ubuntu:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install TeX Live
+        uses: zauguin/install-texlive@v4
+        with:
+          packages: >-
+            ${{ env.CORE_PKGS }} ${{ env.XECJK_PKGS }} ${{ env.BIB_PKGS }}
+            ${{ env.REQUIRED_PKGS }} ${{ env.FONT_PKGS }}
+            ${{ env.BIN_PKGS }}
+          texlive_version: 2026
+          cache_version: ${{ env.TEXLIVE_CACHE_VERSION }}
+
+      - name: Run regression tests
+        run: make test
+
+      - name: Upload test results if failed
+        uses: actions/upload-artifact@v6
+        if: failure()
+        with:
+          name: test-result-ubuntu-latest
+          path: |
+            build/test
+            build/test-testfiles
+
+  build-cross-platform:
     if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
@@ -96,25 +118,5 @@ jobs:
           texlive_version: 2026
           cache_version: ${{ env.TEXLIVE_CACHE_VERSION }}
 
-      - name: Dump TeX environment
-        run: |
-          tlmgr --version
-          xelatex --version
-          tlmgr info fontspec xetex xecjk l3build latex-bin latex-bin-dev
-
-      - name: Run regression tests
-        if: matrix.os == 'ubuntu-latest'
-        run: make test
-
-      - name: Build document only
-        if: matrix.os != 'ubuntu-latest'
+      - name: Build document
         run: make
-
-      - name: Upload test results if failed
-        uses: actions/upload-artifact@v6
-        if: failure()
-        with:
-          name: test-result-${{ matrix.os }}
-          path: |
-            build/test
-            build/test-testfiles
