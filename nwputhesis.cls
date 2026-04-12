@@ -244,6 +244,10 @@
             \npu@set@fandol@fonts
         }%
     \fi
+    \ifwindows
+        % Windows CI 可能缺少中文字体，统一回退到 TeX Live 自带 Fandol
+        \npu@set@fandol@fonts
+    \fi
 }
 \if@npu@font@local                                          % 使用本地 fonts 目录字体
     \npu@set@local@fonts
@@ -257,20 +261,14 @@
             \renewcommand\defaultKai{Adobe Kaiti Std}
             \renewcommand\defaultFag{Adobe Fangsong Std}
         \else
-            \ifwindows\relax\fi                                 % Windows 使用默认字体
-            \unless\ifwindows                                   % 非 Windows 系统检测 Windows 字体
-                % 检测所有 Windows 字体是否可用（宋体、黑体、楷体、仿宋、Times New Roman、Consolas）
-                \IfFontExistsTF{Times New Roman}{%
-                    \IfFontExistsTF{SimSun}{%
-                        \IfFontExistsTF{SimHei}{%
-                            \IfFontExistsTF{KaiTi}{%
-                                \IfFontExistsTF{FangSong}{%
-                                    \IfFontExistsTF{Consolas}{%
-                                        % 所有 Windows 字体都可用，保持默认设置
-                                        \typeout{[nwputhesis] Detected Windows fonts, using them.}
-                                    }{%
-                                        \npu@fallback@fonts
-                                    }%
+            % 检测所有 Windows 字体是否可用；不齐则按平台回退到更稳妥的字体集
+            \IfFontExistsTF{Times New Roman}{%
+                \IfFontExistsTF{SimSun}{%
+                    \IfFontExistsTF{SimHei}{%
+                        \IfFontExistsTF{KaiTi}{%
+                            \IfFontExistsTF{FangSong}{%
+                                \IfFontExistsTF{Consolas}{%
+                                    \typeout{[nwputhesis] Detected Windows fonts, using them.}
                                 }{%
                                     \npu@fallback@fonts
                                 }%
@@ -286,7 +284,9 @@
                 }{%
                     \npu@fallback@fonts
                 }%
-            \fi
+            }{%
+                \npu@fallback@fonts
+            }%
         \fi
     \fi\fi\fi
 \RequirePackage[SlantFont, BoldFont, CJKchecksingle]{xeCJK} % 设置中文字体
