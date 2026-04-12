@@ -2,7 +2,7 @@
 # 参考 thuthesis 的 Makefile 结构
 
 PACKAGE = nwputhesis
-SAMPLE  = main
+SAMPLE  = master
 TEST_COMMITTEE = 03-committee-graduate
 TEST_ACCOMPLISHMENTS = 06-accomplishments-graduate
 TEST_ACK = 05-acknowledgements-bachelor 05-acknowledgements-graduate

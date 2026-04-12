@@ -10,7 +10,7 @@ on:
       - ".gitignore"
       - ".github/ISSUE_TEMPLATE/**"
       - ".vscode/**"
-      - "main.pdf"
+      - "master.pdf"
       - "data/graduate-info.tex"
       - "data/ungraduate-info.tex"
   pull_request:
@@ -22,7 +22,7 @@ on:
       - ".gitignore"
       - ".github/ISSUE_TEMPLATE/**"
       - ".vscode/**"
-      - "main.pdf"
+      - "master.pdf"
       - "data/graduate-info.tex"
       - "data/ungraduate-info.tex"
   workflow_dispatch:
@@ -73,7 +73,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: nwputhesis-pdf
-          path: main.pdf
+          path: master.pdf
           retention-days: 30
 
   test:
