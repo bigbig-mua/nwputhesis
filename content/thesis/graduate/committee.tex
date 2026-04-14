@@ -1,7 +1,10 @@
 %% 学位论文评阅人和答辩委员会名单
 
 \makeCommitteePage{
-    \reviewers{\fullBlindReview{2}}
+    \reviewers{
+        \expert{XXX}{教授}{西北工业大学} % 明评示例
+        \fullBlindReview{1} % 盲评示例，参数为评阅人数量
+    }
     \committee{20XX 年 X 月 X 日}{
         \defenseChair{XXX}{教授}{西北工业大学}
         \committeeMember{XXX}{教授}{西北工业大学}
