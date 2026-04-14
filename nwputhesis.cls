@@ -539,7 +539,7 @@
         \npu@headrule                                       %
     \fi                                                     %
 }
-\graphicspath{{content/figures/}}                           % 定义图片文件在 figures 子目录下
+\graphicspath{{content/figures/}{figures/}}                % 定义图片文件搜索目录
 \if@npu@type@bcl                                            % 本科论文页眉设置
     \pagestyle{fancyplain}                                  % 新增版式 fancyplain
     \fancyhf{}                                              % 清空原有页眉页脚

@@ -1,9 +1,374 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-LaTeX Warning: File `nwpulogo.png' not found on input line ....
-./01-title-page-bachelor.tex:23: Unable to load picture or PDF file 'nwpulogo.png'.
-<to be read again> 
-                   }
-l. ...\maketitle
-The requested image couldn't be read because
-it was not a recognized image format.
+File: nwpulogo.png Graphic file (type bmp)
+<nwpulogo.png>
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font 'FandolSong-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
+Package fontspec Info: 
+(fontspec)             Font family 'FandolSong(1)' created for font 'FandolSong' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font 'FandolHei-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
+Package fontspec Info: 
+(fontspec)             Font family 'FandolHei(0)' created for font 'FandolHei' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+LaTeX Font Info:    Calculating math sizes for size <16> on input line ....
+LaTeX Font Info:    Calculating math sizes for size <14> on input line ....
+Completed box being shipped out [1]
+\vbox(722.98434+0.0)x434.90039
+.\hbox(0.0+0.0)x0.0
+..\special{pdf:docinfo<</Title()/Subject()/Creator(LaTeX with hyperref)/Author()\ETC.}
+.\hbox(0.0+0.0)x0.0
+..\kern -72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil
+...\kern -72.26999
+...\hbox(0.0+0.0)x0.0
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999
+.....\kern -72.26999
+.....\special{pdf:obj @pgfcolorspaces <<>>}
+.....\special{pdf:put @resources << /ColorSpace @pgfcolorspaces >>}
+.....\special{pdf:put @pgfcolorspaces <<  /pgfprgb [/Pattern /DeviceRGB]  >>}
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\hbox(0.0+0.0)x0.0, shifted 845.04684
+.....\kern 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\vbox(0.0+0.0)x0.0, glue set 38.8455fil
+..\kern 0.0
+..\kern -37.84177
+..\kern -1.00374
+..\hbox(0.0+0.0)x0.0, glue set - 17.06377fil
+...\kern 0.0
+...\kern 18.0675
+...\kern -1.00374
+...\special{pdf:dest (page.1) [@thispage /XYZ @xpos @ypos null]}
+...\penalty 10000
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue(\lineskip) 0.0
+.\vbox(722.98434+0.0)x434.90039
+..\glue -37.84177
+..\vbox(760.82611+0.0)x416.83289, shifted 18.0675
+...\vbox(26.46085+0.0)x416.83289, glue set 26.46085fil
+....\glue 0.0 plus 1.0fil
+....\hbox(0.0+0.0)x416.83289
+.....\special{color push gray 0}
+.....\hbox(0.0+0.0)x416.83289
+.....\special{color pop}
+...\glue 11.38092
+...\glue(\lineskip) 0.0
+...\vbox(700.50687+0.0)x416.83289, glue set 73.14384fill
+....\write-{}
+....\special{color push gray 0}
+....\special{pdf:majorversion 1}
+....\special{pdf:minorversion 7}
+....\special{pdf:minorversion 7}
+....\special{pdf:docview<</OpenAction[@page1/FitH]/PageMode/UseOutlines/ViewerPref\ETC.}
+....\special{pdf:dest (Doc-Start) [@thispage /XYZ @xpos @ypos null]}
+....\write-{}
+....\glue(\topskip) 11.0
+....\rule(0.0+0.0)x*
+....\penalty 10000
+....\glue 65.44142
+....\glue 0.0
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\lineskip) 1.0
+....\hbox(58.59467+0.0)x416.83289, glue set 66.15266fil
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\hbox(0.0+0.0)x0.0
+......\glue 0.0
+......\glue 0.0
+......\glue -5.47499
+......\hbox(0.0+0.0)x0.0
+.......\special{color push gray 0}
+.......\special{color pop}
+......\glue 5.47499
+.....\penalty 0
+.....\hbox(58.59467+0.0)x284.52756
+......\special{pdf:image bbox 0 0 1446.9965 297.99927 clip 0 width 284.52756pt (nwpu\ETC.}
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\glue 36.98866
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 29.442
+....\hbox(33.558+8.39998)x416.83289, glue set - 0.07541
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\hbox(0.0+0.0)x0.0
+.....\TU/FandolSong(1)/b/n/42 本
+.....\glue 0.0 plus 5.04012
+.....\TU/FandolSong(1)/b/n/42 科
+.....\glue 0.0 plus 5.04012
+.....\TU/FandolSong(1)/b/n/42 毕
+.....\glue 0.0 plus 5.04012
+.....\TU/FandolSong(1)/b/n/42 业
+.....\glue 0.0 plus 5.04012
+.....\TU/FandolSong(1)/b/n/42 设
+.....\glue 0.0 plus 5.04012
+.....\TU/FandolSong(1)/b/n/42 计
+.....\glue 0.0 plus 5.04012
+.....\glue 26.46 minus 21.0
+.....\rule(0.0+0.0)x-26.46
+.....\TU/FandolSong(1)/b/n/42 （论
+.....\glue 0.0 plus 5.04012
+.....\TU/FandolSong(1)/b/n/42 文
+.....\penalty 10000
+.....\TU/FandolSong(1)/b/n/42 ）
+.....\rule(0.0+0.0)x-26.46
+.....\kern 0.00162
+.....\kern -0.00162
+.....\kern -0.99623
+.....\kern 0.99623
+.....\glue 26.46 minus 21.0
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\glue 99.58464
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 42.26402
+....\hbox(12.336+6.6719)x416.83289, glue set 63.7602fil
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\hbox(0.0+0.0)x0.0
+.....\TU/FandolHei(0)/m/n/16 题
+.....\kern -0.00017
+.....\kern 0.00017
+.....\penalty 10000
+.....\glue 4.0 plus 2.0 minus 1.33333
+.....\penalty 10000
+.....\glue 4.0 plus 2.0 minus 1.33333
+.....\TU/FandolHei(0)/m/n/16 目
+.....\kern -0.00018
+.....\kern 0.00018
+.....\glue 4.0 plus 2.0 minus 1.33333
+.....\glue 5.69046
+.....\glue 1.0
+.....\mathon
+.....\vbox(12.336+6.6719)x231.62204
+......\hbox(12.336+3.47198)x231.62204
+.......\glue 4.0 plus 2.0 minus 1.33333
+.......\hbox(12.336+3.47198)x227.62204, glue set 35.82703fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\TU/TeXGyreTermes(1)/m/n/16 Github
+........\glue 4.0 plus 2.0 minus 1.33333
+........\TU/FandolHei(0)/m/n/16 模
+........\glue 0.0 plus 1.92004
+........\TU/FandolHei(0)/m/n/16 板
+........\glue 4.0 plus 2.0 minus 1.33333
+........\TU/TeXGyreTermes(1)/m/n/16 nwputhesis
+........\kern -0.0002
+........\kern 0.0002
+........\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern1.91995
+......\rule(0.63998+0.0)x*
+.....\mathoff
+.....\glue 3.0
+.....\glue 4.0 plus 2.0 minus 1.33333
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\glue 42.67912
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 3.28209
+....\hbox(11.046+5.4599)x416.83289, glue set 98.42137fil
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\hbox(0.0+0.0)x0.0
+.....\TU/FandolSong(1)/m/n/14 专
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 业
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 名
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 称
+.....\kern -0.00017
+.....\kern 0.00017
+.....\glue 1.0
+.....\mathon
+.....\vbox(11.046+5.4599)x159.99014
+......\hbox(11.046+2.65999)x159.99014
+.......\glue 3.5 plus 1.75 minus 1.16666
+.......\hbox(11.046+2.65999)x156.49014, glue set 22.24507fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\TU/FandolSong(1)/m/n/14 计
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 算
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 机
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 科
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 学
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 与
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 技
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 术
+........\kern -0.00017
+........\kern 0.00017
+........\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern1.67995
+......\rule(0.55998+0.0)x*
+.....\mathoff
+.....\glue 3.0
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\glue 31.2982
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 4.7041
+....\hbox(10.836+5.3199)x416.83289, glue set 98.42137fil
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\hbox(0.0+0.0)x0.0
+.....\TU/FandolSong(1)/m/n/14 学
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 生
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 姓
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 名
+.....\kern -0.00017
+.....\kern 0.00017
+.....\glue 1.0
+.....\mathon
+.....\vbox(10.822+5.3199)x159.99014
+......\hbox(10.822+2.51999)x159.99014
+.......\glue 3.5 plus 1.75 minus 1.16666
+.......\hbox(10.822+2.51999)x156.49014, glue set 57.24507fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\TU/FandolSong(1)/m/n/14 航
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 小
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 天
+........\kern -0.00017
+........\kern 0.00017
+........\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern1.67995
+......\rule(0.55998+0.0)x*
+.....\mathoff
+.....\glue 3.0
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\glue 31.2982
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 4.8581
+....\hbox(10.822+4.9139)x416.83289, glue set 98.42137fil
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\hbox(0.0+0.0)x0.0
+.....\TU/FandolSong(1)/m/n/14 指
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 导
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 教
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 师
+.....\kern -0.00017
+.....\kern 0.00017
+.....\glue 1.0
+.....\mathon
+.....\vbox(10.64+4.9139)x159.99014
+......\hbox(10.64+2.11398)x159.99014
+.......\glue 3.5 plus 1.75 minus 1.16666
+.......\hbox(10.64+2.11398)x156.49014, glue set 64.24507fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\TU/FandolSong(1)/m/n/14 张
+........\glue 0.0 plus 1.68004
+........\TU/FandolSong(1)/m/n/14 三
+........\kern -0.00017
+........\kern 0.00017
+........\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern1.67995
+......\rule(0.55998+0.0)x*
+.....\mathoff
+.....\glue 3.0
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\glue 31.2982
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\baselineskip) 5.2641
+....\hbox(10.822+5.1799)x416.83289, glue set 98.42137fil
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\hbox(0.0+0.0)x0.0
+.....\TU/FandolSong(1)/m/n/14 毕
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 业
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 时
+.....\glue 0.0 plus 1.68004
+.....\TU/FandolSong(1)/m/n/14 间
+.....\kern -0.00017
+.....\kern 0.00017
+.....\glue 1.0
+.....\mathon
+.....\vbox(10.808+5.1799)x159.99014
+......\hbox(10.808+2.37999)x159.99014
+.......\glue 3.5 plus 1.75 minus 1.16666
+.......\hbox(10.808+2.37999)x156.49014, glue set 41.49507fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\TU/TeXGyreTermes(1)/m/n/14 2026
+........\kern -0.0002
+........\kern 0.0002
+........\glue 3.5 plus 1.75 minus 1.16666
+........\TU/FandolSong(1)/m/n/14 年
+........\kern -0.00018
+........\kern 0.00018
+........\glue 3.5 plus 1.75 minus 1.16666
+........\TU/TeXGyreTermes(1)/m/n/14 6
+........\kern -0.0002
+........\kern 0.0002
+........\glue 3.5 plus 1.75 minus 1.16666
+........\TU/FandolSong(1)/m/n/14 月
+........\kern -0.00017
+........\kern 0.00017
+........\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern1.67995
+......\rule(0.55998+0.0)x*
+.....\mathoff
+.....\glue 3.0
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\glue 0.0 plus 1.0fill
+....\penalty -51
+....\glue 3.0 plus 1.0 minus 1.0
+....\glue 0.0 plus 1.0fil
+....\glue 0.0
+...\glue(\baselineskip) 22.47748
+...\hbox(0.0+0.0)x416.83289
+....\special{color push gray 0}
+....\hbox(0.0+0.0)x416.83289
+....\special{color pop}
+.\kern -722.98434
+.\hbox(0.0+0.0)x0.0
+..\kern -72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil
+...\kern -72.26999
+...\hbox(0.0+0.0)x0.0
+....\hbox(0.0+0.0)x0.0, shifted 845.04684
+.....\kern 0.0
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\kern 722.98434
+.\kern 0.0
+.\kern 0.0

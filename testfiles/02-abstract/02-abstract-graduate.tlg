@@ -220,7 +220,7 @@ x \ETC.}
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 8.44402
-....\hbox(9.36+2.20798)x455.24411, glue set 96.24496fil
+....\hbox(9.36+2.20798)x455.24411, glue set 108.24496fil
 .....\hbox(0.0+0.0)x24.0
 .....\TU/FandolHei(0)/m/n/12 关
 .....\glue 0.0 plus 1.60004
@@ -230,13 +230,8 @@ x \ETC.}
 .....\penalty 10000
 .....\TU/FandolHei(0)/m/n/12 ：
 .....\rule(0.0+0.0)x-8.496
-.....\kern 0.00052
-.....\kern -0.00052
-.....\kern -0.99649
-.....\kern 0.99649
 .....\glue 8.496 minus 6.0
-.....\glue 3.0 plus 1.5 minus 1.0
-.....\glue 3.0 plus 1.5 minus 1.0
+.....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 研
 .....\glue 0.0 plus 1.60004
 .....\TU/FandolSong(0)/m/n/12 究
@@ -252,7 +247,6 @@ x \ETC.}
 .....\TU/FandolSong(0)/m/n/12 一
 .....\kern -0.00018
 .....\kern 0.00018
-.....\glue 3.0 plus 1.5 minus 1.0
 .....\kern -2.00043
 .....\penalty 10000
 .....\TU/FandolSong(0)/m/n/12 ；
@@ -274,7 +268,6 @@ x \ETC.}
 .....\TU/FandolSong(0)/m/n/12 二
 .....\kern -0.00018
 .....\kern 0.00018
-.....\glue 3.0 plus 1.5 minus 1.0
 .....\kern -2.00043
 .....\penalty 10000
 .....\TU/FandolSong(0)/m/n/12 ；
@@ -723,20 +716,23 @@ Completed box being shipped out [3]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 9.18802
-....\hbox(8.196+2.61598)x455.24411, glue set 51.67294fil
+....\hbox(8.196+2.61598)x455.24411, glue set 53.66895fil
 .....\TU/TeXGyreTermes(1)/b/n/12 Key
 .....\glue 3.0 plus 1.5 minus 1.0
-.....\TU/TeXGyreTermes(1)/b/n/12 words:
-.....\kern 0.0
-.....\kern -0.0002
-.....\kern 0.0002
-.....\glue 4.0 plus 3.0 minus 0.5
+.....\TU/TeXGyreTermes(1)/b/n/12 words
+.....\penalty 10000
+.....\TU/FandolSong(0)/b/n/12 ：
+.....\rule(0.0+0.0)x-8.064
+.....\kern 0.00049
+.....\kern -0.00049
+.....\kern -0.99649
+.....\kern 0.99649
+.....\glue 8.064 minus 6.0
 .....\TU/TeXGyreTermes(1)/m/n/12 graduate
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 keyword
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 one
-.....\glue 3.0 plus 1.5 minus 1.0
 .....\kern -2.00043
 .....\TU/TeXGyreTermes(1)/m/n/12 ;
 .....\glue 3.0 plus 2.25 minus 0.66666
@@ -745,7 +741,6 @@ Completed box being shipped out [3]
 .....\TU/TeXGyreTermes(1)/m/n/12 keyword
 .....\glue 3.0 plus 1.5 minus 1.0
 .....\TU/TeXGyreTermes(1)/m/n/12 two
-.....\glue 3.0 plus 1.5 minus 1.0
 .....\kern -2.00043
 .....\TU/TeXGyreTermes(1)/m/n/12 ;
 .....\glue 3.0 plus 2.25 minus 0.66666
