@@ -1292,7 +1292,7 @@
 }
 \newenvironment{engkeywords}{                               %
     \if@npu@type@bcl                                        % 本科英文关键词格式
-        \vspace{1\baselineskip} \par\noindent \textbf{KEY WORDS:}%
+        \vspace{1\baselineskip} \par\noindent \textbf{KEY WORDS：}%
     \else                                                   % 硕博英文关键词格式
         \vspace{1\baselineskip} \par\noindent \textbf{Key words：}%
     \fi                                                     %
