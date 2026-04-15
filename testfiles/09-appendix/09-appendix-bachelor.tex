@@ -1,0 +1,40 @@
+\input{regression-test.tex}
+\documentclass[degree=bachelor, fontset=fandol]{nwputhesis}
+
+\begin{document}
+\START
+\showoutput
+
+\frontmatter
+\mainmatter
+\chapter{Body Chapter}
+
+\begin{thesisappendix}
+\makeatletter
+\typeout{APPENDIX-TITLE=\nwpu@appendixtitle{\thechapter}}
+\makeatother
+
+\begin{figure}[htbp]
+    \caption{Bachelor Appendix Figure}
+\end{figure}
+\typeout{APPENDIX-FIGURE=\thefigure}
+
+\begin{table}[htbp]
+    \caption{Bachelor Appendix Table}
+\end{table}
+\typeout{APPENDIX-TABLE=\thetable}
+
+\begin{algorithm}[htbp]
+    \caption{Bachelor Appendix Algorithm}
+\end{algorithm}
+\typeout{APPENDIX-ALGORITHM=\thealgorithm}
+
+\begin{equation}
+    a=b
+\end{equation}
+\typeout{APPENDIX-EQUATION=\theequation}
+\end{thesisappendix}
+
+\clearpage
+\OMIT
+\end{document}

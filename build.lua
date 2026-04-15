@@ -31,10 +31,11 @@ checkconfigs = {
   "testfiles/config-toc",
   "testfiles/config-biber",
   "testfiles/config-designsummary",
+  "testfiles/config-appendix",
 }
 
 -- 排除标题页测试（它们在子目录中单独运行）
-excludetests = {"01-*", "02-*", "03-*", "04-*", "05-*", "06-*", "07-*", "08-*"}
+excludetests = {"01-*", "02-*", "03-*", "04-*", "05-*", "06-*", "07-*", "08-*", "09-*"}
 
 typesetexe = "xelatex"
 unpackexe = "xetex"

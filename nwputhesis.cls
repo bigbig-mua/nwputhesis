@@ -1495,21 +1495,21 @@
 }
 \newcommand{\nwpu@appendixtableprefix}{%                   % 附录表编号前缀
     \if@npu@type@bcl
-        附表%
+        附%
     \else
         \nwpu@ifappendixletter{\nwpu@appendixprefix-}{}%
     \fi
 }
 \newcommand{\nwpu@appendixfigureprefix}{%                  % 附录图编号前缀
     \if@npu@type@bcl
-        附图%
+        附%
     \else
         \nwpu@ifappendixletter{\nwpu@appendixprefix-}{}%
     \fi
 }
 \newcommand{\nwpu@appendixalgorithmprefix}{%               % 附录算法编号前缀
     \if@npu@type@bcl
-        附算法%
+        附%
     \else
         \nwpu@ifappendixletter{\nwpu@appendixprefix-}{}%
     \fi

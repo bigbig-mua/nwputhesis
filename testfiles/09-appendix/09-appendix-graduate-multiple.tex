@@ -1,0 +1,38 @@
+\input{regression-test.tex}
+\documentclass[degree=master, academic=true, fontset=fandol]{nwputhesis}
+
+\begin{document}
+\START
+\showoutput
+
+\frontmatter
+\mainmatter
+\chapter{Body Chapter}
+
+\begin{thesisappendix}
+\makeatletter
+\typeout{APPENDIX-ONE-TITLE=\nwpu@appendixtitle{\thechapter}}
+\makeatother
+\begin{figure}[htbp]
+    \caption{Graduate Appendix A Figure}
+\end{figure}
+\typeout{APPENDIX-ONE-FIGURE=\thefigure}
+\end{thesisappendix}
+
+\begin{thesisappendix}
+\makeatletter
+\typeout{APPENDIX-TWO-TITLE=\nwpu@appendixtitle{\thechapter}}
+\makeatother
+\begin{equation}
+    a=b
+\end{equation}
+\typeout{APPENDIX-TWO-EQUATION=\theequation}
+\begin{algorithm}[htbp]
+    \caption{Graduate Appendix B Algorithm}
+\end{algorithm}
+\typeout{APPENDIX-TWO-ALGORITHM=\thealgorithm}
+\end{thesisappendix}
+
+\clearpage
+\OMIT
+\end{document}
