@@ -168,6 +168,7 @@
     \renewcommand{\baselinestretch}{1.0}%
     \sDefault
 }
+\raggedbottom                                               % 避免分页时拉伸竖直空白
 \let\nwpu@oldmainmatter\mainmatter
 \renewcommand{\mainmatter}{%
     \nwpu@oldmainmatter
