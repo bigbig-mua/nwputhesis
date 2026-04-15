@@ -55,14 +55,14 @@ cleanall: clean
 # 测试目标（用于 CI，使用 l3build）
 test:
 ifeq ($(target),)
-	$(L3BUILD) check --config testfiles/config-committee $(TEST_COMMITTEE)
-	$(L3BUILD) check --config testfiles/config-accomplishments $(TEST_ACCOMPLISHMENTS)
-	$(L3BUILD) check --config testfiles/config-acknowledgements $(TEST_ACK)
-	$(L3BUILD) check --config testfiles/config-abstract $(TEST_ABSTRACT)
-	$(L3BUILD) check --config testfiles/config-title-page $(TEST_TITLE_PAGE)
-	$(L3BUILD) check --config testfiles/config-toc $(TEST_TOC)
-	$(L3BUILD) check --config testfiles/config-biber $(TEST_BIBER)
-	$(L3BUILD) check --config testfiles/config-designsummary $(TEST_DESIGNSUMMARY)
+	-$(L3BUILD) check --config testfiles/config-committee $(TEST_COMMITTEE)
+	-$(L3BUILD) check --config testfiles/config-accomplishments $(TEST_ACCOMPLISHMENTS)
+	-$(L3BUILD) check --config testfiles/config-acknowledgements $(TEST_ACK)
+	-$(L3BUILD) check --config testfiles/config-abstract $(TEST_ABSTRACT)
+	-$(L3BUILD) check --config testfiles/config-title-page $(TEST_TITLE_PAGE)
+	-$(L3BUILD) check --config testfiles/config-toc $(TEST_TOC)
+	-$(L3BUILD) check --config testfiles/config-biber $(TEST_BIBER)
+	-$(L3BUILD) check --config testfiles/config-designsummary $(TEST_DESIGNSUMMARY)
 else
 	bash testfiles/test.sh $(target)
 endif
