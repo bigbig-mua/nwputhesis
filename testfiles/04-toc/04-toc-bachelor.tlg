@@ -117,7 +117,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 11.38092
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 526.70691fil
+...\vbox(700.50687+0.0)x416.83289, glue set 526.65065fil
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
@@ -449,6 +449,7 @@ TC.}
 ....\glue 0.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 12.09747
 ...\hbox(10.38+2.70003)x416.83289
 ....\special{color push gray 0}
@@ -599,7 +600,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 11.38092
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 591.90681fil
+...\vbox(700.50687+0.0)x416.83289, glue set 591.8436fil
 ....\write-{}
 ....\write-{}
 ....\write-{}
@@ -732,6 +733,7 @@ Completed box being shipped out [1]
 ....\glue 0.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 12.09747
 ...\hbox(10.38+2.70003)x416.83289
 ....\special{color push gray 0}
@@ -881,7 +883,7 @@ Completed box being shipped out [2]
 .....\special{color pop}
 ...\glue 11.38092
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 606.3068fil
+...\vbox(700.50687+0.0)x416.83289, glue set 606.24203fil
 ....\write-{}
 ....\special{pdf:dest (chapter.6) [@thispage /XYZ @xpos @ypos null]}
 ....\special{pdf:out [-] 1<</Title(\376\377\147\054\171\321\173\054\116\214\172\34\ETC.}
@@ -975,6 +977,7 @@ Completed box being shipped out [2]
 ....\glue 0.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 12.09747
 ...\hbox(10.38+2.70003)x416.83289
 ....\special{color push gray 0}

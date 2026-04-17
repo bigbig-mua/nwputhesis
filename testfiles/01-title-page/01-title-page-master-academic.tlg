@@ -68,7 +68,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x455.24411
+...\vbox(700.50723+0.0)x455.24411, glue set >20000.0fil
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
@@ -689,6 +689,7 @@ Completed box being shipped out [1]
 .....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
 ....\glue -5.5
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 22.47748
 ...\hbox(0.0+0.0)x455.24411
 ....\special{color push gray 0}
@@ -753,13 +754,14 @@ Completed box being shipped out [2]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x0.0, glue set 689.50723fil
+...\vbox(700.50723+0.0)x0.0, glue set 689.4336fil
 ....\write-{}
 ....\write-{}
 ....\glue(\topskip) 11.0
 ....\hbox(0.0+0.0)x0.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 22.47748
 ...\hbox(0.0+0.0)x455.24411
 ....\special{color push gray 0}
@@ -818,7 +820,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x455.24411, glue set 45.02904fil
+...\vbox(700.50723+0.0)x455.24411, glue set 45.02423fil
 ....\glue(\topskip) 11.0
 ....\rule(0.0+0.0)x*
 ....\penalty 10000
@@ -1186,6 +1188,7 @@ Completed box being shipped out [1]
 ....\glue 3.0 plus 1.0 minus 1.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 22.47748
 ...\hbox(0.0+0.0)x455.24411
 ....\special{color push gray 0}
@@ -1244,13 +1247,14 @@ Completed box being shipped out [2]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x0.0, glue set 689.50723fil
+...\vbox(700.50723+0.0)x0.0, glue set 689.4336fil
 ....\write-{}
 ....\write-{}
 ....\glue(\topskip) 11.0
 ....\hbox(0.0+0.0)x0.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 22.47748
 ...\hbox(0.0+0.0)x455.24411
 ....\special{color push gray 0}
@@ -1309,7 +1313,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x455.24411, glue set 74.29724fil
+...\vbox(700.50723+0.0)x455.24411, glue set 74.2893fil
 ....\glue(\topskip) 11.0
 ....\rule(0.0+0.0)x*
 ....\penalty 10000
@@ -1548,6 +1552,7 @@ Completed box being shipped out [1]
 ....\glue 3.0 plus 1.0 minus 1.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 22.47748
 ...\hbox(0.0+0.0)x455.24411
 ....\special{color push gray 0}
@@ -1606,12 +1611,13 @@ Completed box being shipped out [2]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x0.0, glue set 689.50723fil
+...\vbox(700.50723+0.0)x0.0, glue set 689.4336fil
 ....\write-{}
 ....\glue(\topskip) 11.0
 ....\hbox(0.0+0.0)x0.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 22.47748
 ...\hbox(0.0+0.0)x455.24411
 ....\special{color push gray 0}

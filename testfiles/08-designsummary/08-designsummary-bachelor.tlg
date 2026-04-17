@@ -104,7 +104,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 11.38092
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 597.50687fil
+...\vbox(700.50687+0.0)x416.83289, glue set 597.44305fil
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
@@ -258,6 +258,7 @@ Completed box being shipped out [1]
 ....\glue -2.11198
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 12.09747
 ...\hbox(10.38+2.70003)x416.83289
 ....\special{color push gray 0}

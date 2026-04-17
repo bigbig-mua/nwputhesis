@@ -105,7 +105,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 11.38092
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 617.50687fil
+...\vbox(700.50687+0.0)x416.83289, glue set 617.44092fil
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
@@ -203,6 +203,7 @@ TC.}
 ....\glue -2.61598
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 12.09747
 ...\hbox(10.38+2.70003)x416.83289
 ....\special{color push gray 0}
@@ -352,7 +353,7 @@ Completed box being shipped out [2]
 .....\special{color pop}
 ...\glue 11.38092
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 358.60689fil
+...\vbox(700.50687+0.0)x416.83289, glue set 358.56859fil
 ....\write-{}
 ....\write-{}
 ....\special{pdf:dest (chapter*.2) [@thispage /XYZ @xpos @ypos null]}
@@ -1176,6 +1177,7 @@ TC.}
 ....\glue -2.616
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
+....\glue 0.0 plus 0.0001fil
 ...\glue(\baselineskip) 12.09747
 ...\hbox(10.38+2.70003)x416.83289
 ....\special{color push gray 0}
