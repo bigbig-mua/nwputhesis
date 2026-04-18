@@ -569,8 +569,11 @@
 \RequirePackage[
     backend=biber,
     style=\nwpu@bibstyle,
+    gbpunctin = false,
     sorting=none
 ]{biblatex}                                                 % 参考文献
+\DefineBibliographyStrings{english}{in={}}
+\DefineBibliographyStrings{english}{incn={}}
 %%-----------------------------------------------------------------------------% 
 \RequirePackage{enumitem}                                   % 列表格式控制
 \setlist{nosep}                                             % 消除间距
