@@ -1,6 +1,7 @@
 # NwpuThesis
 
 [![Test](https://github.com/1195343015/nwputhesis/actions/workflows/test.yml/badge.svg)](https://github.com/1195343015/nwputhesis/actions/workflows/test.yml)
+[![Release](https://img.shields.io/github/v/release/1195343015/nwputhesis)](https://github.com/1195343015/nwputhesis/releases/latest)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 > 如果没有强烈使用 LaTeX 写论文的需求，推荐使用 Typst 模板 **[modern-npu-thesis](https://github.com/1195343015/modern-npu-thesis)** ，这是一个 **西北工业大学本硕博论文 Typst 模板**。相比 LaTeX，其语法更简洁，类似于 Markdown 语法，对新手更友好，编译速度远比 LaTeX 快。
