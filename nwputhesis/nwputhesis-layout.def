@@ -2,19 +2,18 @@
 %% It is loaded internally by nwputhesis.cls.
 
 %%-----------------------------------------------------------------------------%
+\ExplSyntaxOn
 \RequirePackage{indentfirst}                                % 段首空格设置
-\if@npu@type@bcl                                            % 本科论文段首空格
-    \setlength\parindent{26pt}                              % 段首空格长度（本科）
-\else
-    \setlength\parindent{24pt}                              % 段首空格长度（硕博）
-\fi
+\nwpu_if_bachelor:TF                                        % 本科论文段首空格
+    { \setlength\parindent{26pt} }                          % 段首空格长度（本科）
+    { \setlength\parindent{24pt} }                          % 段首空格长度（硕博）
 \setlength\parskip{0pt}                                     % 段落间距
 \renewcommand{\baselinestretch}{1.0}                        % 行距
 %%-----------------------------------------------------------------------------%
 \RequirePackage{ulem}                                       % 下划线
-\newcommand\dlmu@underline[2][5cm]{\hspace{1pt}\underline{  %
-        \hb@xt@ #1{\hss#2\hss}}\hspace{3pt}}                %
-\let\coverunderline\dlmu@underline                          %
+\NewDocumentCommand \dlmu@underline { O{5cm} m }
+    { \hspace{1pt}\underline{ \hb@xt@ #1 { \hss #2 \hss } } \hspace{3pt} }
+\cs_set_eq:NN \coverunderline \dlmu@underline
 %%-----------------------------------------------------------------------------%
 % \RequirePackage{layouts}                                    % 页面具体尺寸信息（未使用，已注释）
 %%-----------------------------------------------------------------------------%
@@ -22,7 +21,8 @@
 \RequirePackage{titletoc}                                   % 目录格式
 \setcounter{secnumdepth}{3}                                 % 标题计数器深度
 \setcounter{tocdepth}{2}                                    % 目录中标题深度
-\if@npu@type@bcl                                            % 本科论文章节格式
+\nwpu_if_bachelor:TF                                        % 本科论文章节格式
+{
     \renewcommand{\thechapter}{\arabic{chapter}}            % 章节编号保持数字
     \renewcommand{\chaptername}{第\CJKnumber{\thechapter}章}% 章节名称（中文数字）
     \titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter\fHei}% 一级：三号黑体不加粗
@@ -37,7 +37,8 @@
     \titlespacing{\section}{0pt}{2pt}{2pt}
     \titlespacing{\subsection}{0pt}{3pt}{-1pt}
     \titlespacing{\subsubsection}{0pt}{0.25em}{0em}
-\else                                                       % 硕博论文章节格式
+}
+{                                                           % 硕博论文章节格式
     \titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter  %
         \sffamily\fHei}{\sffamily\fHei\sSanhao{\chaptertitlename}}{20pt}{\sSanhao}%
     \titleformat{\section}[hang]{\sffamily\fHei\sSihao}{%       %
@@ -51,14 +52,15 @@
     \titlespacing{\subsection}{0pt}{6.5pt}{0em}                 %
     \titlespacing{\subsubsection}{0pt}{0.25em}{0pt}             %
     \titlespacing{\paragraph}{0pt}{0.25em}{0pt}                 %
-\fi
+}
 \dottedcontents{section}[1.16cm]{}{1.8em}{5pt}              % 定义目录中各级标题
 \dottedcontents{subsection}[2.00cm]{}{2.7em}{5pt}           % 之间的格式以及缩进
 \dottedcontents{subsubsection}[2.86cm]{}{3.4em}{5pt}        %
-\newcommand{\nwpu@chs@chaptercname}[1]{第 #1 章}            % 目录章节中文标题（硕博）
-\newcommand{\nwpu@eng@chaptercname}[1]{Chapter #1}          % 目录章节英文标题
-\if@npu@type@bcl                                            % 本科论文目录章节格式
-    \newcommand{\nwpu@bcl@chaptercname}[1]{第\CJKnumber{#1}章}% 本科目录章节中文标题
+\cs_new:Npn \nwpu@chs@chaptercname #1 { 第 ~ #1 ~ 章 }     % 目录章节中文标题（硕博）
+\cs_new:Npn \nwpu@eng@chaptercname #1 { Chapter ~ #1 }     % 目录章节英文标题
+\nwpu_if_bachelor:TF                                        % 本科论文目录章节格式
+{
+    \cs_new:Npn \nwpu@bcl@chaptercname #1 { 第 \CJKnumber{#1} 章 }% 本科目录章节中文标题
     \titlecontents{section}[1.16cm]{\fSong\graduatecontentsfont}%
     {\contentslabel{1.8em}}{}%
     {\titlerule*[3pt]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
@@ -72,16 +74,19 @@
     {\contentsmargin{1em}\graduatecontentsfont\fSong\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{3.8em}}%
     {\contentsmargin{1em}\graduatecontentsfont\fSong\bfseries}%
     {\graduatecontentsfont\normalfont\titlerule*[.3pc]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]
-\else
+}
+{
     \dottedcontents{section}[1.16cm]{\fSong\graduatecontentsfont}{1.8em}{3pt}   %
     \dottedcontents{subsection}[2.00cm]{\fSong\graduatecontentsfont}{2.7em}{3pt}%
     \dottedcontents{subsubsection}[2.86cm]{\fSong\graduatecontentsfont}{3.4em}{3pt}
-    \if@npu@lang@chs                                            % 硕博中文本地化显示
+    \nwpu_if_chinese:TF                                      % 硕博中文本地化显示
+    {
         \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
             ][l]{\nwpu@chs@chaptercname{\thecontentslabel}}\hspace{%
                 3.5em}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{\titlerule*[%
                 .3pc]{.}\contentspage}[\vspace{0em}]            %
-    \else                                                       % 硕博英文
+    }
+    {                                                           % 硕博英文
         \newlength{\contents@titlewidth}                        %
         \newlength{\contents@appendixwidth}                     %
         \settowidth{\contents@titlewidth}{\graduatecontentsfont Chapter 000} %
@@ -90,52 +95,55 @@
             ][l]{\nwpu@eng@chaptercname{\thecontentslabel}}\hspace{%
                 \contents@titlewidth}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{
             \titlerule*[.3pc]{.}\contentspage}[\vspace{0em}]    %
-    \fi\fi                                                      %
+    }
+}
 %%-----------------------------------------------------------------------------%
 \RequirePackage{fancyhdr}                                   % 页眉设置
-\newcommand{\npu@headrule}{                                 %
+\cs_new_protected:Npn \npu@headrule
+{
     \rlap{\rule[.7\baselineskip]{\headwidth}{3.4pt}}        %
     \vspace{-1.07\baselineskip}                             %
     \rule[.5\baselineskip]{\headwidth}{0.6pt}               %
     \vspace{-.8\baselineskip}                               %
-}                                                           %
-\newcommand{\npu@bcl@headrule}{                             % 本科页眉线
+}
+\cs_new_protected:Npn \npu@bcl@headrule                     % 本科页眉线
+{
     \makebox[0pt][l]{\rule[.7\baselineskip]{\headwidth}{0.8pt}}%
     \vskip-.8\baselineskip                                  %
-}                                                           %
+}
 \renewcommand{\headrule}{                                   %
     \if@fancyplain\let\headrulewidth\plainheadrulewidth\fi  %
-    \if@npu@type@bcl                                        % 本科页眉线
-        \npu@bcl@headrule                                   %
-    \else                                                   % 硕博页眉线
-        \npu@headrule                                       %
-    \fi                                                     %
+    \nwpu_if_bachelor:TF                                    % 本科页眉线
+        { \npu@bcl@headrule }                               %
+        { \npu@headrule }                                   %
 }
 \graphicspath{{content/figures/}{figures/}}                % 定义图片文件搜索目录
-\if@npu@type@bcl                                            % 本科论文页眉设置
+\nwpu_if_bachelor:TF                                        % 本科论文页眉设置
+{
     \pagestyle{fancyplain}                                  % 新增版式 fancyplain
     \fancyhf{}                                              % 清空原有页眉页脚
     \fancyfoot[C,C]{\sXiaowu~\thepage~}                     % 页脚中央显示页码
     \chead{\includegraphics[scale=0.15]{nwpuheader.png}}% 页眉居中（图片）
-\else                                                       % 硕博论文页眉设置
-    \if@npu@lang@chs                                        % 中英文章节页眉设置
+}
+{                                                           % 硕博论文页眉设置
+    \nwpu_if_chinese:TF                                     % 中英文章节页眉设置
+    {
         \renewcommand{\chaptermark}[1]{                     %
-            \markboth{\nwpu@chs@chaptercname\thechapter~~ #1}{}}%
-    \else                                                   %
+            \markboth{\nwpu@chs@chaptercname\thechapter~~ #1}{}}
+    }
+    {                                                       %
         \renewcommand{\chaptermark}[1]{                     %
-            \markboth{\nwpu@eng@chaptercname\thechapter~~ #1}{}}%
-    \fi                                                     %
+            \markboth{\nwpu@eng@chaptercname\thechapter~~ #1}{}}
+    }
     \pagestyle{fancyplain}                                  % 新增版式 fancyplain
     \fancyhf{}                                              % 清空原有页眉页脚
     \fancyfoot[C, C]{\sXiaowu{\thepage}}                    % 页脚中央显示页码
     \fancyhead{}                                            % 页眉清除原有设置
     \fancyhead[COH]{\raisebox{0.5pt}{\sXiaowu{\leftmark}}}  %
-    \if@npu@lang@chs                                        % 中文论文环境
-        \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@chs@header}}}%
-    \else                                                   % 英文论文环境
-        \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@eng@header}}}%
-    \fi                                                     %
-\fi                                                         %
+    \nwpu_if_chinese:TF                                     % 中文论文环境
+        { \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@chs@header}}} }
+        { \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@eng@header}}} }
+}
 %%-----------------------------------------------------------------------------%
 \RequirePackage[
     backend=biber,
@@ -143,11 +151,11 @@
     gbpunctin = false,
     sorting=none
 ]{biblatex}                                                 % 参考文献
-\ifgraduate{%
+\nwpu_if_graduate:TF{%
     \DefineBibliographyStrings{english}{in={}}%
     \DefineBibliographyStrings{english}{incn={}}%
 }{}
-%%-----------------------------------------------------------------------------% 
+%%-----------------------------------------------------------------------------%
 \RequirePackage{enumitem}                                   % 列表格式控制
 \setlist{nosep}                                             % 消除间距
 %%-----------------------------------------------------------------------------%
@@ -168,7 +176,8 @@
     \fontsize{10.5pt}{14pt}\selectfont\bfseries}           % 本科表题：五号黑体，增大标题行距
 \DeclareCaptionFont{cBclFigureCaption}{%
     \fontsize{10.5pt}{11.5pt}\selectfont\fSong}            % 本科图题：五号宋体，行距进一步收紧
-\if@npu@type@bcl
+\nwpu_if_bachelor:TF
+{
     \setlength{\textfloatsep}{20pt}                        % 本科图/表/算法与正文前后各空一行
     \setlength{\floatsep}{20pt}                            %
     \setlength{\intextsep}{20pt}                           %
@@ -183,7 +192,8 @@
         aboveskip=12pt,
         belowskip=2pt}
     \captionsetup[subfigure]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
-\else
+}
+{
     \setlength{\textfloatsep}{8pt}                         % 研究生图/表与正文间距进一步收紧
     \setlength{\floatsep}{8pt}                             %
     \setlength{\intextsep}{8pt}                            %
@@ -195,7 +205,7 @@
         textfont=cWuhao,
         aboveskip=10pt,
         belowskip=0pt}
-\fi
+}
 \captionsetup[subtable]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
 \AtBeginEnvironment{tabular}{\sWuhao}                       % 表格内容为五号
 \AtBeginEnvironment{tabularx}{\sWuhao}                      %
@@ -218,18 +228,24 @@
 \setlength\topsep{0pt}                                      % 设置定理环境间距
 \theorempreskip{0pt}                                        % 节前空白大小
 \theorempostskip{0pt}                                       % 节后空白大小
-\def\thm@space@setup{                                       %
+\cs_set_protected:Npn \thm@space@setup {                       %
     \thm@preskip=0pt                                        %
     \thm@postskip=0pt}                                      %
 \AtBeginDocument{                                           %
+    \typeout{NWPUDEBUG display skips begin}                 %
     \setlength{\abovedisplayskip}{0pt}                      %
     \setlength{\belowdisplayskip}{0pt}                      %
     \setlength{\abovedisplayshortskip}{0pt}                 %
-    \setlength{\belowdisplayshortskip}{0pt}}                %
+    \setlength{\belowdisplayshortskip}{0pt}                 %
+    \typeout{NWPUDEBUG display skips end}}                  %
 {\theoremsymbol{\ensuremath{\square}}                       % 证明环境 囗
-    \if@npu@lang@chs\newtheorem*{proof}{证明}\else\newtheorem*{proof}{Proof}\fi}
-\newcommand{\qedinEquation}{{\rlap{$\qquad\square$}}}       % 公式中添加证毕符号
-\if@npu@lang@chs                                            % 定制中文定理环境
+    \nwpu_if_chinese:TF
+        { \newtheorem*{proof}{证明} }
+        { \newtheorem*{proof}{Proof} }
+}
+\cs_new_protected:Npn \qedinEquation { {\rlap{$\qquad\square$}} }% 公式中添加证毕符号
+\nwpu_if_chinese:TF                                         % 定制中文定理环境
+{
     \newtheorem{theorem}{定理}[chapter]                     %
     \newtheorem{axiom}[theorem]{公理}                       %
     \newtheorem{corollary}[theorem]{推论}                   %
@@ -237,7 +253,8 @@
     \newtheorem{definition}[theorem]{定义}                  %
     \newtheorem{example}[theorem]{例}                       %
     \newtheorem{proposition}[theorem]{命题}                 %
-\else                                                       % 定制英文定理环境
+}
+{                                                           % 定制英文定理环境
     \newtheorem{theorem}{Theorem}[chapter]                  %
     \newtheorem{axiom}[theorem]{Axiom}                      %
     \newtheorem{corollary}[theorem]{Corollary}              %
@@ -245,7 +262,7 @@
     \newtheorem{definition}[theorem]{Definition}            %
     \newtheorem{example}[theorem]{Example}                  %
     \newtheorem{proposition}[theorem]{Proposition}          %
-\fi                                                         %
+}
 %%-----------------------------------------------------------------------------%
 \RequirePackage{listings}                                   % 添加插入代码控制
 \lstset{                                                    % 代码样式
@@ -296,4 +313,5 @@
     % \end{multicols}
     % \setlength{\columnsep}{\npu@columnsep@save}
     \nompostamble}
+\ExplSyntaxOff
 %%=============================================================================%

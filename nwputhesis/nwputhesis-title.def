@@ -1,12 +1,13 @@
 %% This file is part of nwputhesis.
 %% It is loaded internally by nwputhesis.cls.
 
+\ExplSyntaxOn
 \newbox\nwpu@titlebox
 \newbox\nwpu@underlinebox
 
 %% 封皮页
 %%-----------------------------------------------------------------------------%
-\newcommand{\make@nwpu@coverpage}{                          % 设置封皮页
+\cs_new_protected:Npn \make@nwpu@coverpage {                          % 设置封皮页
     \thispagestyle{empty}                                   % 清空页面格式
     \newlength{\coverpage@infowidth}                        % 基本信息表格宽度
     \settowidth{\coverpage@infowidth}{\sWuhao 学校代码~:~ 2000000000}
@@ -14,25 +15,25 @@
     \settowidth{\coverpage@detailwidth}{\sSanhao 申请学位日期}
     \begin{titlepage}                                       %
         % 彩色封面背景图
-        \if@npu@colorcover
+        \nwpu_if_colorcover:TF {
             \begin{tikzpicture}[remember picture,overlay]
                 \node[at=(current page.center),inner sep=0pt] {
-                    \if@npu@type@phd
+                    \nwpu_if_phd:TF {
                         \includegraphics[width=\paperwidth,height=\paperheight]{博士论文封面.jpg}
-                    \else
-                        \if@npu@type@bcl
+                    } {
+                        \nwpu_if_bachelor:TF {
                             \includegraphics[width=\paperwidth,height=\paperheight]{本科论文封面.jpg}
-                        \else
-                            \if@npu@academic
+                        } {
+                            \nwpu_if_academic:TF {
                                 \includegraphics[width=\paperwidth,height=\paperheight]{学硕论文封面.jpg}
-                            \else
+                            } {
                                 \includegraphics[width=\paperwidth,height=\paperheight]{专硕论文封面.jpg}
-                            \fi
-                        \fi
-                    \fi
+                            }
+                        }
+                    }
                 };
             \end{tikzpicture}
-        \fi
+        }
         \bfseries                                           %
         \renewcommand{\baselinestretch}{1.25}               % 1.25 倍行距
         \begin{center}                                      %
@@ -94,7 +95,7 @@
 %%-----------------------------------------------------------------------------%
 %% 中文内封
 %%-----------------------------------------------------------------------------%
-\newcommand{\make@nwpu@chs@title}{                          % 设置中文内封
+\cs_new_protected:Npn \make@nwpu@chs@title {                          % 设置中文内封
     \thispagestyle{empty}                                   % 清空页面格式
     \newlength{\chstitle@hwidtha}                           % 大标题宽度
     \settowidth{\chstitle@hwidtha}{\sSanhao\nwpu@chs@schoolname}
@@ -151,7 +152,7 @@
 %%-----------------------------------------------------------------------------%
 %% 英文内封
 %%-----------------------------------------------------------------------------%
-\newcommand{\make@nwpu@eng@title}{                          % 设置英文内封
+\cs_new_protected:Npn \make@nwpu@eng@title {                          % 设置英文内封
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
         \begin{center}                                      %
@@ -160,17 +161,17 @@
             \fSong \sXiaoer \vspace{3\baselineskip}         %
             \fEng \sXiaosan \textbf{By} \par                %
             \fEng \sXiaosan \nwpu@eng@author \par  %
-            \fEng \sXiaosan \textbf{Under the Supervision of \nwpu@eng@advisorAcademicRank} \\
+            \fEng \sXiaosan \textbf{Under~the~Supervision~of~\nwpu@eng@advisorAcademicRank} \\
             \fEng \sXiaosan \nwpu@eng@advisor \par %
             \fSong \sSanhao \vspace{4\baselineskip}         %
-            \fEng \sXiaosan A Dissertation Submitted to \\  %
+            \fEng \sXiaosan A~Dissertation~Submitted~to \\  %
             \fEng \sXiaosan {\nwpu@eng@schoolname} \\       %
             \fSong \sSanhao \vspace{1\baselineskip}         %
-            \fEng \sXiaosan {In Partial Fulfillment of The Requirement} \\
-            \fEng \sXiaosan {For The Degree of} \\                      %
-            \fEng \sXiaosan {{\nwpu@eng@degree} of \if@npu@type@mst\nwpu@eng@major\else\textbf{\nwpu@eng@major}\fi}
+            \fEng \sXiaosan {In~Partial~Fulfillment~of~The~Requirement} \\
+            \fEng \sXiaosan {For~The~Degree~of} \\                      %
+            \fEng \sXiaosan {{\nwpu@eng@degree}~of~\nwpu_if_master:TF{\nwpu@eng@major}{\textbf{\nwpu@eng@major}}}
             \fSong \sXiaosan \par \vspace{4\baselineskip}   %
-            \fEng \sXiaosan Xi'an, P.R. China \\            %
+            \fEng \sXiaosan Xi'an,~P.R.~China \\            %
             \fEng \sXiaosan {\nwpu@eng@date}                %
         \end{center}                                        %
     \end{titlepage} \fSong \normalsize \newpage             %
@@ -179,7 +180,7 @@
 %%-----------------------------------------------------------------------------%
 %% 本科封面
 %%-----------------------------------------------------------------------------%
-\newcommand{\make@nwpu@bachelor@cover}{                       % 设置本科封面
+\cs_new_protected:Npn \make@nwpu@bachelor@cover {                       % 设置本科封面
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
         \begin{center}                                      %
@@ -208,59 +209,58 @@
 %%-----------------------------------------------------------------------------%
 %% 生成标题页
 %%-----------------------------------------------------------------------------%
-\renewcommand{\maketitle}{
+\cs_gset_protected:Npn \maketitle {
     \hbadness=10000
     \vbadness=10000
-    \if@npu@type@bcl                                        % 本科封面
+    \nwpu_if_bachelor:TF {                                      % 本科封面
         \make@nwpu@bachelor@cover                           %
-    \else                                                   % 硕博封面
+    } {                                                      % 硕博封面
         \make@nwpu@coverpage                                % 封皮页
         \make@nwpu@chs@title                                % 中文内封
         \make@nwpu@eng@title                                % 英文内封
-    \fi
+    }
 }                                                           %
 %%-----------------------------------------------------------------------------%
 %% 彩色封底
 %%-----------------------------------------------------------------------------%
-\newcommand{\make@nwpu@backcover}{                          % 彩色封底
-    \if@npu@colorcover
+\cs_new_protected:Npn \make@nwpu@backcover {                          % 彩色封底
+    \nwpu_if_colorcover:TF {
         \clearpage
         \thispagestyle{empty}
         \begin{tikzpicture}[remember picture,overlay]
             \node[at=(current page.center),inner sep=0pt] {
-                \if@npu@type@phd
+                \nwpu_if_phd:TF {
                     \includegraphics[width=\paperwidth,height=\paperheight]{博士论文封底.jpg}
-                \else
-                    \if@npu@type@bcl
+                } {
+                    \nwpu_if_bachelor:TF {
                         \includegraphics[width=\paperwidth,height=\paperheight]{本科论文封底.jpg}
-                    \else
-                        \if@npu@academic
+                    } {
+                        \nwpu_if_academic:TF {
                             \includegraphics[width=\paperwidth,height=\paperheight]{学硕论文封底.jpg}
-                        \else
+                        } {
                             \includegraphics[width=\paperwidth,height=\paperheight]{专硕论文封底.jpg}
-                        \fi
-                    \fi
-                \fi
+                        }
+                    }
+                }
             };
         \end{tikzpicture}
-    \fi
+    }
 }
 \AtEndDocument{\make@nwpu@backcover}                        % 在文档末尾自动插入封底                                                           %
 %%=============================================================================%
 %%=============================================================================%
 %% 学位论文评阅人和答辩委员会名单
 %%-----------------------------------------------------------------------------%
-\catcode `\@ = 11\relax
 \def\npu@replicate#1{\expandafter\npu@replicate@aux\romannumeral\number #1000Q{}}
 \def\npu@replicate@aux#1{\csname npu@replicate@aux@#1\endcsname}
 \long\def\npu@replicate@aux@m#1Q#2#3{\npu@replicate@aux#1Q{#2#3}{#3}}
 \long\def\npu@replicate@aux@Q#1#2{#1}
 %%-----------------------------------------------------------------------------%
-\newcommand{\npu@text}[1]{\relax\sDefault{#1}}
-\newcommand{\expert}[3]{\npu@text{#1} & \npu@text{#2} & \npu@text{#3} \\ }
-\newcommand{\expertBlindReview}{\expert{全盲评阅}{无}{无}}
-\newcommand{\expertEmpty}{\expert{}{}{}}
-\newcommand{\fullBlindReview}[1]{%
+\cs_new_protected:Npn \npu@text #1 {\relax\sDefault{#1}}
+\cs_new_protected:Npn \expert #1 #2 #3 {\npu@text{#1} & \npu@text{#2} & \npu@text{#3} \\ }
+\cs_new_protected:Npn \expertBlindReview {\expert{全盲评阅}{无}{无}}
+\cs_new_protected:Npn \expertEmpty {\expert{}{}{}}
+\cs_new_protected:Npn \fullBlindReview #1 {%
     \ifcase#1\or
         \expertBlindReview\expertEmpty\expertEmpty\expertEmpty\expertEmpty
     \or
@@ -275,13 +275,13 @@
         \npu@replicate{#1}{\expertBlindReview}%
     \fi
 }
-\newcommand{\defenseDate}[1]{\sDefault\textbf{答辩日期}%
+\cs_new_protected:Npn \defenseDate #1 {\sDefault\textbf{答辩日期}%
     & \multicolumn{3}{c}{\sDefault{#1}} \\ }
-\newcommand{\defenseChair}[3]{\sDefault\textbf{主席} & \expert{#1}{#2}{#3} }
-\newcommand{\committeeMember}[3]{\sDefault\textbf{委员} & \expert{#1}{#2}{#3} }
-\newcommand{\defenseSecretary}[3]{\sDefault\textbf{秘书} & \expert{#1}{#2}{#3} }
+\cs_new_protected:Npn \defenseChair #1 #2 #3 {\sDefault\textbf{主席} & \expert{#1}{#2}{#3} }
+\cs_new_protected:Npn \committeeMember #1 #2 #3 {\sDefault\textbf{委员} & \expert{#1}{#2}{#3} }
+\cs_new_protected:Npn \defenseSecretary #1 #2 #3 {\sDefault\textbf{秘书} & \expert{#1}{#2}{#3} }
 %%-----------------------------------------------------------------------------%
-\newcommand{\makeCommitteePage}[1]{                         %
+\cs_new_protected:Npn \makeCommitteePage #1 {                         %
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
         \linespread{1.2} \sXiaosan \par                     % 1.2 倍行距
@@ -293,7 +293,7 @@
     \end{titlepage} \normalsize \newpage             %
     \thispagestyle{empty} \cleardoublepage}                 %
 %%-----------------------------------------------------------------------------%
-\newcommand{\reviewers}[1]{                                 %
+\cs_new_protected:Npn \reviewers #1 {                                 %
     \fSong \sDefault \vspace{\baselineskip}                 %
     \fSong \sSihao \vspace{0.3\baselineskip}                %
     \fHei \sSihao {学位论文评阅人名单} \par                 %
@@ -307,7 +307,7 @@
     \end{tabular}                                          %
     \renewcommand{\arraystretch}{\oldarraystretch}}         %
 %%-----------------------------------------------------------------------------%
-\newcommand{\committee}[2]{                                 %
+\cs_new_protected:Npn \committee #1 #2 {                                 %
     \fSong \sDefault \vspace{\baselineskip}                 %
     \fSong \sSihao \vspace{0.3\baselineskip}                %
     \fHei \sSihao {答辩委员会名单} \par                     %
@@ -322,3 +322,5 @@
     \end{tabular}                                          %
     \renewcommand{\arraystretch}{\oldarraystretch}}         %
 %%=============================================================================%
+
+\ExplSyntaxOff

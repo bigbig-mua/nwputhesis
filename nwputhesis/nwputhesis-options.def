@@ -176,4 +176,29 @@
     unknown     .code:n    = \nwpu_unknown_key:n {#1},
   }
 \ProcessKeyOptions [ nwputhesis ]
+%%-----------------------------------------------------------------------------%
+%% expl3 条件包装器：在 expl3 代码中替代 \if@npu@... 原始条件
+%%-----------------------------------------------------------------------------%
+\prg_new_conditional:Npnn \nwpu_if_bachelor: { T, F, TF }
+  { \if@npu@type@bcl \prg_return_true: \else \prg_return_false: \fi }
+\prg_new_conditional:Npnn \nwpu_if_graduate: { T, F, TF }
+  { \if@npu@type@bcl \prg_return_false: \else \prg_return_true: \fi }
+\prg_new_conditional:Npnn \nwpu_if_phd: { T, F, TF }
+  { \if@npu@type@phd \prg_return_true: \else \prg_return_false: \fi }
+\prg_new_conditional:Npnn \nwpu_if_master: { T, F, TF }
+  { \if@npu@type@mst \prg_return_true: \else \prg_return_false: \fi }
+\prg_new_conditional:Npnn \nwpu_if_chinese: { T, F, TF }
+  { \if@npu@lang@chs \prg_return_true: \else \prg_return_false: \fi }
+\prg_new_conditional:Npnn \nwpu_if_academic: { T, F, TF }
+  { \if@npu@academic \prg_return_true: \else \prg_return_false: \fi }
+\prg_new_conditional:Npnn \nwpu_if_blindreview: { T, F, TF }
+  { \if@npu@output@blindreview \prg_return_true: \else \prg_return_false: \fi }
+\prg_new_conditional:Npnn \nwpu_if_colorcover: { T, F, TF }
+  { \if@npu@colorcover \prg_return_true: \else \prg_return_false: \fi }
+\prg_new_conditional:Npnn \nwpu_if_fandol: { T, F, TF }
+  { \if@npu@using@fandol \prg_return_true: \else \prg_return_false: \fi }
+\prg_new_conditional:Npnn \nwpu_if_local_fonts: { T, F, TF }
+  { \if@npu@font@local \prg_return_true: \else \prg_return_false: \fi }
+\prg_new_conditional:Npnn \nwpu_if_winfonts: { T, F, TF }
+  { \if@npu@font@winfonts \prg_return_true: \else \prg_return_false: \fi }
 \ExplSyntaxOff

@@ -4,57 +4,65 @@
 %%=============================================================================%
 %% 论文元数据填写
 %%-----------------------------------------------------------------------------%
-\newcommand{\chs@colon}{\char"FF1A}                         % 中文冒号
-\newcommand{\chs@space}{\char"3000}                         % 全角空格
-\newcommand{\chs@period}{\char"3002}                        % 中文句号
-\newcommand{\chs@question}{\char"FF1F}                      % 中文问号
-\newcommand{\chs@exclamation}{\char"FF01}                   % 中文感叹号
-\newcommand{\chs@comma}{\char"FF0C}                         % 中文逗号
-\newcommand{\chs@semicolon}{\char"FF1B}                     % 中文分号
-\newcommand{\chs@leftparenthesis}{\char"FF08}               % 左括号
-\newcommand{\chs@rightparenthesis}{\char"FF09}              % 右括号
-%%-----------------------------------------------------------------------------%
-\newcommand{\nwpu@chs@title}{\chs@space}                    % 标题（中文）
-\newcommand{\nwpu@chs@author}{\chs@space}                   % 作者（中文）
-\newcommand{\nwpu@chs@school}{\chs@space}                   % 学院（中文）
-\newcommand{\nwpu@chs@major}{\chs@space}                    % 专业（中文）
-\newcommand{\nwpu@chs@advisor}{\chs@space}                  % 导师（中文）
-\newcommand{\nwpu@chs@advisorAcademicRank}{\chs@space}      % 导师职称（中文）
-\newcommand{\nwpu@chs@funding}{\chs@space}                  % 基金赞助（中文）
-%%-----------------------------------------------------------------------------%
-\newcommand{\nwpu@eng@title}{\chs@space}                    % 标题（英文）
-\newcommand{\nwpu@eng@author}{\chs@space}                   % 作者（英文）
-\newcommand{\nwpu@eng@major}{\chs@space}                    % 专业（英文）
-\newcommand{\nwpu@eng@advisor}{\chs@space}                  % 导师（英文）
-\newcommand{\nwpu@eng@advisorAcademicRank}{\chs@space}      % 导师职称（英文）
-\newcommand{\nwpu@eng@funding}{\chs@space}                  % 基金赞助（英文）
-%%-----------------------------------------------------------------------------%
-\newcounter{nwpu@month}                                     % 月份计数器
-\setcounter{nwpu@month}{1}                                  % 默认1月
-\newcommand{\nwpu@year}{2026}                               % 默认年份
-\newcommand{\nwpu@eng@monthname}{%                          % 英文月份名称
-    \ifcase\value{nwpu@month}\or
-        January\or February\or March\or April\or May\or June\or
-        July\or August\or September\or October\or November\or December
-    \fi
-}
-\newcommand{\nwpu@chs@date}{\nwpu@year{} 年 \thenwpu@month{} 月} % 日期（中文）
-\newcommand{\nwpu@eng@date}{\nwpu@eng@monthname/\nwpu@year}  % 日期（英文）
-%%-----------------------------------------------------------------------------%
-\newcommand{\nwpu@uid}{2000123456}                          % default 学号
-\newcommand{\nwpu@schoolcode}{10699}                        % default 学校代码
-\newcommand{\nwpu@classnumber}{O242}                        % default 分类号
-\newcommand{\nwpu@securitylevel}{公开}                      % default 密级
-\newcommand{\nwpu@funding}{\chs@space}                      % 基金资助
-%%-----------------------------------------------------------------------------%
-\newcommand{\nwpu@set@chs@title}[1]{\renewcommand{\nwpu@chs@title}{#1}}
-\newcommand{\nwpu@set@eng@title}[1]{\renewcommand{\nwpu@eng@title}{#1}}
-\newcommand{\nwpu@set@chs@author}[1]{\renewcommand{\nwpu@chs@author}{\blindreview{#1}}}
-\newcommand{\nwpu@set@eng@author}[1]{\renewcommand{\nwpu@eng@author}{\blindreview{#1}}}
-\newcommand{\nwpu@set@chs@date}[1]{\renewcommand{\nwpu@chs@date}{#1}}
-\newcommand{\nwpu@set@eng@date}[1]{\renewcommand{\nwpu@eng@date}{#1}}
-\newcommand{\nwpu@set@year}[1]{\renewcommand{\nwpu@year}{#1}}
 \ExplSyntaxOn
+\cs_new:Npn \chs@colon { \char"FF1A }                         % 中文冒号
+\cs_new:Npn \chs@space { \char"3000 }                         % 全角空格
+\cs_new:Npn \chs@period { \char"3002 }                        % 中文句号
+\cs_new:Npn \chs@question { \char"FF1F }                      % 中文问号
+\cs_new:Npn \chs@exclamation { \char"FF01 }                   % 中文感叹号
+\cs_new:Npn \chs@comma { \char"FF0C }                         % 中文逗号
+\cs_new:Npn \chs@semicolon { \char"FF1B }                     % 中文分号
+\cs_new:Npn \chs@leftparenthesis { \char"FF08 }               % 左括号
+\cs_new:Npn \chs@rightparenthesis { \char"FF09 }              % 右括号
+%%-----------------------------------------------------------------------------%
+\cs_new:Npn \nwpu@chs@title { \chs@space }                    % 标题（中文）
+\cs_new:Npn \nwpu@chs@author { \chs@space }                   % 作者（中文）
+\cs_new:Npn \nwpu@chs@school { \chs@space }                   % 学院（中文）
+\cs_new:Npn \nwpu@chs@major { \chs@space }                    % 专业（中文）
+\cs_new:Npn \nwpu@chs@advisor { \chs@space }                  % 导师（中文）
+\cs_new:Npn \nwpu@chs@advisorAcademicRank { \chs@space }      % 导师职称（中文）
+\cs_new:Npn \nwpu@chs@funding { \chs@space }                  % 基金赞助（中文）
+%%-----------------------------------------------------------------------------%
+\cs_new:Npn \nwpu@eng@title { \chs@space }                    % 标题（英文）
+\cs_new:Npn \nwpu@eng@author { \chs@space }                   % 作者（英文）
+\cs_new:Npn \nwpu@eng@major { \chs@space }                    % 专业（英文）
+\cs_new:Npn \nwpu@eng@advisor { \chs@space }                  % 导师（英文）
+\cs_new:Npn \nwpu@eng@advisorAcademicRank { \chs@space }      % 导师职称（英文）
+\cs_new:Npn \nwpu@eng@funding { \chs@space }                  % 基金赞助（英文）
+%%-----------------------------------------------------------------------------%
+\newcounter{nwpu@month}                                       % 月份计数器
+\setcounter{nwpu@month}{1}                                    % 默认1月
+\cs_new:Npn \nwpu@year { 2026 }                               % 默认年份
+\cs_new:Npn \nwpu@eng@monthname                               % 英文月份名称
+  {
+    \ifcase\value{nwpu@month}\or
+      January\or February\or March\or April\or May\or June\or
+      July\or August\or September\or October\or November\or December
+    \fi
+  }
+\cs_new:Npn \nwpu@chs@date { \nwpu@year{} 年 \thenwpu@month{} 月 } % 日期（中文）
+\cs_new:Npn \nwpu@eng@date { \nwpu@eng@monthname/\nwpu@year } % 日期（英文）
+%%-----------------------------------------------------------------------------%
+\cs_new:Npn \nwpu@uid { 2000123456 }                          % default 学号
+\cs_new:Npn \nwpu@schoolcode { 10699 }                        % default 学校代码
+\cs_new:Npn \nwpu@classnumber { O242 }                        % default 分类号
+\cs_new:Npn \nwpu@securitylevel { 公开 }                      % default 密级
+\cs_new:Npn \nwpu@funding { \chs@space }                      % 基金资助
+%%-----------------------------------------------------------------------------%
+\cs_new_protected:Npn \nwpu@set@chs@title #1
+  { \cs_gset:Npn \nwpu@chs@title {#1} }
+\cs_new_protected:Npn \nwpu@set@eng@title #1
+  { \cs_gset:Npn \nwpu@eng@title {#1} }
+\cs_new_protected:Npn \nwpu@set@chs@author #1
+  { \cs_gset:Npn \nwpu@chs@author { \blindreview{#1} } }
+\cs_new_protected:Npn \nwpu@set@eng@author #1
+  { \cs_gset:Npn \nwpu@eng@author { \blindreview{#1} } }
+\cs_new_protected:Npn \nwpu@set@chs@date #1
+  { \cs_gset:Npn \nwpu@chs@date {#1} }
+\cs_new_protected:Npn \nwpu@set@eng@date #1
+  { \cs_gset:Npn \nwpu@eng@date {#1} }
+\cs_new_protected:Npn \nwpu@set@year #1
+  { \cs_gset:Npn \nwpu@year {#1} }
 \cs_new_protected:Npn \nwpu_set_month:n #1
   {
     \regex_match:nnTF { \A \s* \d+ \s* \Z } {#1}
@@ -76,24 +84,37 @@
   }
 \cs_new_protected:Npn \nwpu@set@month #1
   { \nwpu_set_month:n {#1} }
-\ExplSyntaxOff
-\newcommand{\nwpu@set@school}[1]{\renewcommand{\nwpu@chs@school}{#1}}
-\newcommand{\nwpu@set@chs@major}[1]{\renewcommand{\nwpu@chs@major}{#1}}
-\newcommand{\nwpu@set@eng@major}[1]{\renewcommand{\nwpu@eng@major}{#1}}
-\newcommand{\nwpu@set@chs@advisor}[1]{\renewcommand{\nwpu@chs@advisor}{\blindreview{#1}}}
-\newcommand{\nwpu@set@eng@advisor}[1]{\renewcommand{\nwpu@eng@advisor}{\blindreview{#1}}}
-\newcommand{\nwpu@set@chs@advisor@rank}[1]{\renewcommand{\nwpu@chs@advisorAcademicRank}{~~#1}}
-\newcommand{\nwpu@set@eng@advisor@rank}[1]{\renewcommand{\nwpu@eng@advisorAcademicRank}{#1}}
-\newcommand{\nwpu@set@chs@funding}[1]{\renewcommand{\nwpu@chs@funding}{#1}}
-\newcommand{\nwpu@set@eng@funding}[1]{\renewcommand{\nwpu@eng@funding}{#1}}
-\newcommand{\nwpu@set@chs@schoolname}[1]{\renewcommand{\nwpu@chs@schoolname}{#1}}
-\newcommand{\nwpu@set@eng@schoolname}[1]{\renewcommand{\nwpu@eng@schoolname}{#1}}
-\newcommand{\nwpu@set@studentnumber}[1]{\renewcommand{\nwpu@uid}{\blindreview{#1}}}
-\newcommand{\nwpu@set@schoolcode}[1]{\renewcommand{\nwpu@schoolcode}{#1}}
-\newcommand{\nwpu@set@classnumber}[1]{\renewcommand{\nwpu@classnumber}{#1}}
-\newcommand{\nwpu@set@securitylevel}[1]{\renewcommand{\nwpu@securitylevel}{#1}}
-%%-----------------------------------------------------------------------------% 
-\ExplSyntaxOn
+\cs_new_protected:Npn \nwpu@set@school #1
+  { \cs_gset:Npn \nwpu@chs@school {#1} }
+\cs_new_protected:Npn \nwpu@set@chs@major #1
+  { \cs_gset:Npn \nwpu@chs@major {#1} }
+\cs_new_protected:Npn \nwpu@set@eng@major #1
+  { \cs_gset:Npn \nwpu@eng@major {#1} }
+\cs_new_protected:Npn \nwpu@set@chs@advisor #1
+  { \cs_gset:Npn \nwpu@chs@advisor { \blindreview{#1} } }
+\cs_new_protected:Npn \nwpu@set@eng@advisor #1
+  { \cs_gset:Npn \nwpu@eng@advisor { \blindreview{#1} } }
+\cs_new_protected:Npn \nwpu@set@chs@advisor@rank #1
+  { \cs_gset:Npn \nwpu@chs@advisorAcademicRank { ~~#1 } }
+\cs_new_protected:Npn \nwpu@set@eng@advisor@rank #1
+  { \cs_gset:Npn \nwpu@eng@advisorAcademicRank {#1} }
+\cs_new_protected:Npn \nwpu@set@chs@funding #1
+  { \cs_gset:Npn \nwpu@chs@funding {#1} }
+\cs_new_protected:Npn \nwpu@set@eng@funding #1
+  { \cs_gset:Npn \nwpu@eng@funding {#1} }
+\cs_new_protected:Npn \nwpu@set@chs@schoolname #1
+  { \cs_gset:Npn \nwpu@chs@schoolname {#1} }
+\cs_new_protected:Npn \nwpu@set@eng@schoolname #1
+  { \cs_gset:Npn \nwpu@eng@schoolname {#1} }
+\cs_new_protected:Npn \nwpu@set@studentnumber #1
+  { \cs_gset:Npn \nwpu@uid { \blindreview{#1} } }
+\cs_new_protected:Npn \nwpu@set@schoolcode #1
+  { \cs_gset:Npn \nwpu@schoolcode {#1} }
+\cs_new_protected:Npn \nwpu@set@classnumber #1
+  { \cs_gset:Npn \nwpu@classnumber {#1} }
+\cs_new_protected:Npn \nwpu@set@securitylevel #1
+  { \cs_gset:Npn \nwpu@securitylevel {#1} }
+%%-----------------------------------------------------------------------------%
 \DeclareKeys [ nwputhesis ]
   {
     title                 .code:n = \nwpu@set@chs@title {#1},
