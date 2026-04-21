@@ -89,8 +89,8 @@
     {                                                           % 硕博英文
         \newlength{\contents@titlewidth}                        %
         \newlength{\contents@appendixwidth}                     %
-        \settowidth{\contents@titlewidth}{\graduatecontentsfont Chapter 000} %
-        \settowidth{\contents@appendixwidth}{\graduatecontentsfont Appendix M00}
+        \settowidth{\contents@titlewidth}{\graduatecontentsfont Chapter~000} %
+        \settowidth{\contents@appendixwidth}{\graduatecontentsfont Appendix~M00}
         \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
             ][l]{\nwpu@eng@chaptercname{\thecontentslabel}}\hspace{%
                 \contents@titlewidth}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{
