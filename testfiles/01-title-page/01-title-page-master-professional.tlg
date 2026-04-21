@@ -5,7 +5,7 @@ Don't change this file in any respect.
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font 'FandolHei-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
 Package fontspec Info: 
-(fontspec)             Font family 'FandolHei(0)' created for font 'FandolHei' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)             Font family 'FandolHei(0)' created for font 'FandolHei' with options [Ligatures=TeX,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
@@ -13,10 +13,18 @@ Package fontspec Info:
 (fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
 LaTeX Font Info:    Calculating math sizes for size <10.5> on input line ....
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
+(Font)              size <10.95> substituted on input line ....
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line ....
+LaTeX Font Info:    Trying to load font information for U+msa on input line ....
+LaTeX Font Info:    Trying to load font information for U+msb on input line ....
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line ....
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font 'FandolSong-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
 Package fontspec Info: 
-(fontspec)             Font family 'FandolSong(1)' created for font 'FandolSong' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)             Font family 'FandolSong(1)' created for font 'FandolSong' with options [Ligatures=TeX,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
@@ -24,6 +32,12 @@ Package fontspec Info:
 (fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
 LaTeX Font Info:    Calculating math sizes for size <16> on input line ....
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
+(Font)              size <17.28> substituted on input line ....
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line ....
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line ....
 Completed box being shipped out [1]
 \vbox(722.98453+0.0)x454.106
 .\hbox(0.0+0.0)x0.0
@@ -78,7 +92,7 @@ Completed box being shipped out [1]
 ....\special{pdf:dest (Doc-Start) [@thispage /XYZ @xpos @ypos null]}
 ....\write-{}
 ....\glue(\topskip) 0.0
-....\hbox(44.86317+39.61316)x455.24411, glue set 317.99736fill
+....\hbox(44.97566+39.50067)x455.24411, glue set 317.99736fill
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
 ......\glue 0.0
@@ -91,16 +105,16 @@ Completed box being shipped out [1]
 .....\penalty 0
 .....\glue 0.0 plus 1.0fill
 .....\mathon
-.....\vbox(44.86317+39.61316)x106.169
+.....\vbox(44.97566+39.50067)x106.169
 ......\glue 14.22636
 ......\glue 0.0
 ......\glue(\parskip) 0.0
 ......\glue(\parskip) 0.0
-......\hbox(37.74998+32.49998)x106.169
+......\hbox(37.86247+32.3875)x106.169
 .......\hbox(0.0+0.0)x0.0
-.......\hbox(37.74998+32.49998)x119.70001
+.......\hbox(37.86247+32.3875)x119.70001
 ........\mathon
-........\vbox(37.74998+32.49998)x119.70001
+........\vbox(37.86247+32.3875)x119.70001
 .........\rule(0.4+0.0)x119.70001
 .........\hbox(11.94371+5.11879)x119.70001
 ..........\glue(\tabskip) 0.0
@@ -388,11 +402,11 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(11.888+3.88799)x455.24411, glue set 156.49017fil
+....\hbox(12.208+3.568)x455.24411, glue set 156.49017fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
 .....\mathon
-.....\vbox(11.888+3.88799)x142.26378
+.....\vbox(12.208+3.568)x142.26378
 ......\hbox(12.128+3.64798)x142.26378, glue set 37.1319fill
 .......\hbox(0.0+0.0)x0.0
 .......\TU/FandolSong(0)/b/n/16 作
@@ -436,11 +450,11 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(56.984+48.984)x455.24411, glue set 47.79234fil
+....\hbox(57.30399+48.664)x455.24411, glue set 47.79234fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
 .....\mathon
-.....\vbox(56.984+48.984)x355.65944
+.....\vbox(57.30399+48.664)x355.65944
 ......\hbox(12.32+3.64798)x355.65944, glue set 95.82973fill
 .......\hbox(12.32+2.51198)x96.0, glue set 2.0
 ........\glue 4.0 plus 2.0 minus 1.33333

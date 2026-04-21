@@ -1,18 +1,25 @@
 \input{regression-test.tex}
 \documentclass[degree=master, academic=false, fontset=fandol]{nwputhesis}
 
-% 个人信息设置
-\classnumber{TP311.1}
-\studentnumber{2023123456}
-\title{硕士专业学位论文标题}{Professional Master Thesis Title}
-\author{张三}{San Zhang}
-\dateyear{2026}
-\datemonth{3}
-\school{计算机学院}
-\major{软件工程}{Software Engineering}
-\advisor{李四}{Si Li}
-\advisorAcademicRank{教授}{Professor}
-\funding{本研究得到测试基金资助。}{This work is supported by Test Fund.}
+\nwputhesissetup{
+  class-number = {TP311.1},
+  student-number = {2023123456},
+  title = {硕士专业学位论文标题},
+  title* = {Professional Master Thesis Title},
+  author = {张三},
+  author* = {San Zhang},
+  year = {2026},
+  month = {3},
+  school = {计算机学院},
+  major = {软件工程},
+  major* = {Software Engineering},
+  advisor = {李四},
+  advisor* = {Si Li},
+  advisor-rank = {教授},
+  advisor-rank* = {Professor},
+  funding = {本研究得到测试基金资助。},
+  funding* = {This work is supported by Test Fund.},
+}
 
 \begin{document}
 \START
