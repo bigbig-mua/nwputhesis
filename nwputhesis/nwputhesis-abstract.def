@@ -19,6 +19,10 @@
         \markboth{摘{\quad}要}{摘{\quad}要}                     %
     \fi                                                         %
 }{%
+    \if@npu@type@bcl                                        % 本科：恢复正文章节格式
+        \titleformat{\chapter}[hang]{\normalfont\sSanhao\fHei\filcenter}% 三号黑体不加粗
+        {第\CJKnumber{\thechapter}章}{1em}{\sSanhao}%
+    \fi
     \vfill\sWuhao
     \if@npu@type@bcl
         \noindent

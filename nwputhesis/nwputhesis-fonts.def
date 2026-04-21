@@ -78,53 +78,17 @@
     }%
 }
 \newcommand{\npu@select@mac@fonts}{%
-    % macOS: 系统中文字体不全时回退到 Fandol，避免触发缺字错误
+    % macOS: 检测核心中文字体，缺失则回退 Fandol
     \IfFontExistsTF{STSongti-SC-Regular}{%
-        \IfFontExistsTF{STHeiti}{%
-            \IfFontExistsTF{STKaiti}{%
-                \IfFontExistsTF{STFangSong}{%
-                    \IfFontExistsTF{Menlo}{%
-                        \npu@set@mac@fonts
-                    }{%
-                        \npu@set@fandol@fonts
-                    }%
-                }{%
-                    \npu@set@fandol@fonts
-                }%
-            }{%
-                \npu@set@fandol@fonts
-            }%
-        }{%
-            \npu@set@fandol@fonts
-        }%
+        \npu@set@mac@fonts
     }{%
         \npu@set@fandol@fonts
     }%
 }
 \newcommand{\npu@select@windows@fonts}{%
-    % Windows: 字体不齐全时也回退到 Fandol，保证 CI 可构建
-    \IfFontExistsTF{Times New Roman}{%
-        \IfFontExistsTF{SimSun}{%
-            \IfFontExistsTF{SimHei}{%
-                \IfFontExistsTF{KaiTi}{%
-                    \IfFontExistsTF{FangSong}{%
-                        \IfFontExistsTF{Consolas}{%
-                            \npu@set@windows@fonts
-                        }{%
-                            \npu@set@fandol@fonts
-                        }%
-                    }{%
-                        \npu@set@fandol@fonts
-                    }%
-                }{%
-                    \npu@set@fandol@fonts
-                }%
-            }{%
-                \npu@set@fandol@fonts
-            }%
-        }{%
-            \npu@set@fandol@fonts
-        }%
+    % Windows: 检测核心中文字体，缺失则回退 Fandol
+    \IfFontExistsTF{SimSun}{%
+        \npu@set@windows@fonts
     }{%
         \npu@set@fandol@fonts
     }%
@@ -148,7 +112,7 @@
     \npu@select@auto@fonts
 \fi\fi\fi
 \RequirePackage[SlantFont, BoldFont, CJKchecksingle]{xeCJK} % 设置中文字体
-\defaultfontfeatures{Mapping=tex-text}                      % 启用 TeX Ligatures
+\defaultfontfeatures{Ligatures=TeX}                        % 启用 TeX Ligatures
 % 根据 Fandol 字体标记决定加载方式
 \if@npu@using@fandol
     % Fandol 字体需要使用 Extension = .otf 来从 TeX Live 目录加载

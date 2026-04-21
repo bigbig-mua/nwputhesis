@@ -176,11 +176,4 @@
     unknown     .code:n    = \nwpu_unknown_key:n {#1},
   }
 \ProcessKeyOptions [ nwputhesis ]
-\if@npu@type@bcl
-  \if@npu@colorcover
-    \ClassWarningNoLine { nwputhesis }
-      { Option~`colorcover'~is~not~supported~for~bachelor~theses;~ignoring~it }
-    \@npu@colorcoverfalse
-  \fi
-\fi
 \ExplSyntaxOff

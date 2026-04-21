@@ -150,8 +150,6 @@
 %%-----------------------------------------------------------------------------% 
 \RequirePackage{enumitem}                                   % 列表格式控制
 \setlist{nosep}                                             % 消除间距
-\setlist{noitemsep}                                         % 消除列表间距
-\setlist{nolistsep}                                         % 消除列表间距
 %%-----------------------------------------------------------------------------%
 \RequirePackage{graphicx}                                   % 插图功能
 \RequirePackage[final]{pdfpages}                            % 插入其他 pdf 文件
