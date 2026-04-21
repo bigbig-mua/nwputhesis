@@ -1,0 +1,125 @@
+%% This file is part of nwputhesis.
+%% It is loaded internally by nwputhesis.cls.
+
+%% 附录处理
+%%-----------------------------------------------------------------------------%
+\patchcmd{\hyper@makecurrent}{%                             % 附录章节引用补丁
+    \ifx\Hy@param\Hy@chapterstring                          %
+        \let\Hy@param\Hy@chapapp\fi}{\iftoggle{inappendix}{%% 修复附录中章节引用
+        \@checkappendixparam{chapter}%                      %
+        \@checkappendixparam{section}%                      %
+        \@checkappendixparam{subsection}%                   %
+        \@checkappendixparam{subsubsection}%                %
+        \@checkappendixparam{paragraph}%                    %
+        \@checkappendixparam{subparagraph}%                 %
+    }{}}{}{\errmessage{failed to patch}}                    %
+\newcommand*{\@checkappendixparam}[1]{%                     %
+    \def\@checkappendixparamtmp{#1}%                        %
+    \ifx\Hy@param\@checkappendixparamtmp                    %
+        \let\Hy@param\Hy@appendixstring                     %
+    \fi}                                                    %
+\newtoggle{inappendix}\togglefalse{inappendix}              %
+\apptocmd{\appendix}{\toggletrue{inappendix}}{}{\errmessage{failed to patch}}
+\apptocmd{\subappendices}{\toggletrue{inappendix}}{}{\errmessage{failed to patch}}
+\appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
+\appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
+\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
+%%-----------------------------------------------------------------------------%
+\newif\ifnwpu@thesisappendixmode
+\nwpu@thesisappendixmodefalse
+\newcounter{nwpu@thesisappendixcount}
+\newcounter{nwpu@thesisappendixtotal}
+\setcounter{nwpu@thesisappendixtotal}{1}
+\newcommand{\nwpu@setappendixtotal}[1]{%
+    \setcounter{nwpu@thesisappendixtotal}{#1}%
+}
+\newcommand{\nwpuSetAppendixTotal}[1]{%
+    \nwpu@setappendixtotal{#1}%
+}
+\newcommand{\nwpu@chs@appendixname}[1]{附录 #1}             % 目录附录中文标题
+\newcommand{\nwpu@eng@appendixname}[1]{Appendix #1}         % 目录附录英文标题
+\newcommand{\nwpu@appendixname}[1]{%                        % 附录标题
+    \if@npu@lang@chs
+        \nwpu@chs@appendixname{#1}%
+    \else
+        \nwpu@eng@appendixname{#1}%
+    \fi
+}
+\newcommand{\nwpu@ifappendixletter}[2]{%                    % 附录是否显示字母
+    \if@npu@type@bcl
+        \ifnum\value{nwpu@thesisappendixtotal}>1
+            #1%
+        \else
+            #2%
+        \fi
+    \else
+        #1%
+    \fi
+}
+\newcommand{\nwpu@appendixtitle}[1]{%                       % 附录显示标题
+    \nwpu@ifappendixletter{\nwpu@appendixname{#1}}{\nwpu@page@app}%
+}
+\newcommand{\nwpu@appendixprefix}{%                         % 附录编号前缀
+    \nwpu@ifappendixletter{\Alph{chapter}}{}%
+}
+\newcommand{\nwpu@appendixequationprefix}{%                 % 附录公式编号前缀
+    \if@npu@type@bcl
+        附%
+    \else
+        \nwpu@ifappendixletter{\nwpu@appendixprefix-}{}%
+    \fi
+}
+\newcommand{\nwpu@appendixtableprefix}{%                    % 附录表编号前缀
+    \if@npu@type@bcl
+        附%
+    \else
+        \nwpu@ifappendixletter{\nwpu@appendixprefix-}{}%
+    \fi
+}
+\newcommand{\nwpu@appendixfigureprefix}{%                   % 附录图编号前缀
+    \if@npu@type@bcl
+        附%
+    \else
+        \nwpu@ifappendixletter{\nwpu@appendixprefix-}{}%
+    \fi
+}
+\newcommand{\nwpu@appendixalgorithmprefix}{%                % 附录算法编号前缀
+    \if@npu@type@bcl
+        附%
+    \else
+        \nwpu@ifappendixletter{\nwpu@appendixprefix-}{}%
+    \fi
+}
+\AtEndDocument{%
+    \protected@write\@auxout{}{%
+        \string\nwpuSetAppendixTotal{\arabic{nwpu@thesisappendixcount}}%
+    }%
+}
+\let\old@appendix\appendix                                  % 保护原有附录环境
+\renewcommand{\appendix}{%                                  % 在原有基础上定制
+    \old@appendix                                           %
+    \setcounter{chapter}{0}                                 % 重置章节编号
+    \renewcommand{\thechapter}{\Alph{chapter}}              %
+    \renewcommand{\thesection}{%
+        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{section}}
+    \renewcommand{\theequation}{%
+        \nwpu@appendixequationprefix\arabic{equation}}
+    \renewcommand{\thetable}{%
+        \nwpu@appendixtableprefix\arabic{table}}%
+    \renewcommand{\thefigure}{%
+        \nwpu@appendixfigureprefix\arabic{figure}}
+    \renewcommand{\thealgorithm}{%
+        \nwpu@appendixalgorithmprefix\arabic{algorithm}}
+    \renewcommand{\thetheorem}{%
+        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{theorem}}
+    \renewcommand{\theaxiom}{%
+        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{axiom}}%
+    \renewcommand{\thecorollary}{%
+        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{corollary}}
+    \renewcommand{\thelemma}{%
+        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{lemma}}%
+    \renewcommand{\thedefinition}{%
+        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{definition}}
+    \renewcommand{\theexample}{%
+        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{example}}
+}                                                           %

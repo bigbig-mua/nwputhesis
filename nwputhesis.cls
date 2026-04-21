@@ -184,5 +184,6 @@
 \input{nwputhesis/nwputhesis-title.def}
 \input{nwputhesis/nwputhesis-abstract.def}
 \input{nwputhesis/nwputhesis-bibliography.def}
+\input{nwputhesis/nwputhesis-appendix.def}
 \input{nwputhesis/nwputhesis-backmatter.def}
 \@npu@class@loadedtrue
