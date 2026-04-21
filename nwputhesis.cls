@@ -25,12 +25,31 @@
 \newif\if@npu@font@local                                    % 使用本地 fonts 目录字体
 \newif\if@npu@using@fandol                                  % 实际使用 Fandol 字体标记
 \newif\if@npu@colorcover                                    % 彩色封面封底标记
+\newif\if@npu@class@loaded                                  % 类文件已完成加载
 \def\nwpu@bibstyle{gb7714-2015}                             % 默认参考文献标准
 \@npu@lang@chstrue
 \@npu@type@phdtrue
 \@npu@academictrue
 \ExplSyntaxOn
 \tl_new:N \l__nwpu_option_value_tl
+\bool_new:N \l__nwpu_in_setup_bool
+\prg_new_conditional:Npnn \nwpu_load_time_key_allowed:n #1 { T, F, TF }
+  {
+    \bool_if:NTF \l__nwpu_in_setup_bool
+      {
+        \if@npu@class@loaded
+          \ClassError { nwputhesis } { Option~`#1'~is~load-time~only }
+            {
+              Set~`#1'~in~\string\documentclass[...]~instead.~
+              This~option~affects~class~loading,~fonts,~or~layout.
+            }
+          \prg_return_false:
+        \else
+          \prg_return_true:
+        \fi
+      }
+      { \prg_return_true: }
+  }
 \cs_new_protected:Npn \nwpu_legacy_bool_set:nn #1#2
   {
     \tl_set:Nx \l__nwpu_option_value_tl {#2}
@@ -47,82 +66,105 @@
   }
 \cs_new_protected:Npn \nwpu_lang_set:n #1
   {
-    \tl_set:Nx \l__nwpu_option_value_tl {#1}
-    \str_case:VnF \l__nwpu_option_value_tl
+    \nwpu_load_time_key_allowed:nT { lang }
       {
-        { chs } { \@npu@lang@chstrue }
-        { eng } { \@npu@lang@chsfalse }
-      }
-      {
-        \ClassError { nwputhesis } { Unsupported~language~`\tl_use:N \l__nwpu_option_value_tl' }
-          { Supported~lang~values~are~chs~and~eng. }
+        \tl_set:Nx \l__nwpu_option_value_tl {#1}
+        \str_case:VnF \l__nwpu_option_value_tl
+          {
+            { chs } { \@npu@lang@chstrue }
+            { eng } { \@npu@lang@chsfalse }
+          }
+          {
+            \ClassError { nwputhesis } { Unsupported~language~`\tl_use:N \l__nwpu_option_value_tl' }
+              { Supported~lang~values~are~chs~and~eng. }
+          }
       }
   }
 \cs_new_protected:Npn \nwpu_degree_set:n #1
   {
-    \tl_set:Nx \l__nwpu_option_value_tl {#1}
-    \str_case:VnF \l__nwpu_option_value_tl
+    \nwpu_load_time_key_allowed:nT { degree }
       {
-        { phd }      { \@npu@type@phdtrue  \@npu@type@mstfalse \@npu@type@bclfalse }
-        { master }   { \@npu@type@phdfalse \@npu@type@msttrue  \@npu@type@bclfalse }
-        { bachelor } { \@npu@type@phdfalse \@npu@type@mstfalse \@npu@type@bcltrue  }
-      }
-      {
-        \ClassError { nwputhesis } { Unsupported~degree~`\tl_use:N \l__nwpu_option_value_tl' }
-          { Supported~degree~values~are~phd,~master~and~bachelor. }
+        \tl_set:Nx \l__nwpu_option_value_tl {#1}
+        \str_case:VnF \l__nwpu_option_value_tl
+          {
+            { phd }      { \@npu@type@phdtrue  \@npu@type@mstfalse \@npu@type@bclfalse }
+            { master }   { \@npu@type@phdfalse \@npu@type@msttrue  \@npu@type@bclfalse }
+            { bachelor } { \@npu@type@phdfalse \@npu@type@mstfalse \@npu@type@bcltrue  }
+          }
+          {
+            \ClassError { nwputhesis } { Unsupported~degree~`\tl_use:N \l__nwpu_option_value_tl' }
+              { Supported~degree~values~are~phd,~master~and~bachelor. }
+          }
       }
   }
 \cs_new_protected:Npn \nwpu_bibstyle_set:n #1
   {
-    \tl_set:Nx \l__nwpu_option_value_tl {#1}
-    \str_case:VnF \l__nwpu_option_value_tl
+    \nwpu_load_time_key_allowed:nT { bibstyle }
       {
-        { 2015 } { \def\nwpu@bibstyle{gb7714-2015} }
-        { 2025 } { \def\nwpu@bibstyle{gb7714-2025} }
-      }
-      {
-        \ClassError { nwputhesis } { Unsupported~bibstyle~`\tl_use:N \l__nwpu_option_value_tl' }
-          { Supported~bibstyle~values~are~2015~and~2025. }
+        \tl_set:Nx \l__nwpu_option_value_tl {#1}
+        \str_case:VnF \l__nwpu_option_value_tl
+          {
+            { 2015 } { \def\nwpu@bibstyle{gb7714-2015} }
+            { 2025 } { \def\nwpu@bibstyle{gb7714-2025} }
+          }
+          {
+            \ClassError { nwputhesis } { Unsupported~bibstyle~`\tl_use:N \l__nwpu_option_value_tl' }
+              { Supported~bibstyle~values~are~2015~and~2025. }
+          }
       }
   }
 \cs_new_protected:Npn \nwpu_fontset_set:n #1
   {
-    \tl_set:Nx \l__nwpu_option_value_tl {#1}
-    \@npu@font@adobefalse
-    \@npu@font@winfontsfalse
-    \@npu@font@fandolfalse
-    \@npu@font@localfalse
-    \str_case:VnF \l__nwpu_option_value_tl
+    \nwpu_load_time_key_allowed:nT { fontset }
       {
-        { auto }    { }
-        { fandol }  { \@npu@font@fandoltrue }
-        { windows } { \@npu@font@winfontstrue }
-        { adobe }   { \@npu@font@adobetrue }
-        { local }   { \@npu@font@localtrue }
-      }
-      {
-        \ClassError { nwputhesis } { Unsupported~fontset~`\tl_use:N \l__nwpu_option_value_tl' }
-          { Supported~fontset~values~are~auto,~fandol,~windows,~adobe~and~local. }
+        \tl_set:Nx \l__nwpu_option_value_tl {#1}
+        \@npu@font@adobefalse
+        \@npu@font@winfontsfalse
+        \@npu@font@fandolfalse
+        \@npu@font@localfalse
+        \str_case:VnF \l__nwpu_option_value_tl
+          {
+            { auto }    { }
+            { fandol }  { \@npu@font@fandoltrue }
+            { windows } { \@npu@font@winfontstrue }
+            { adobe }   { \@npu@font@adobetrue }
+            { local }   { \@npu@font@localtrue }
+          }
+          {
+            \ClassError { nwputhesis } { Unsupported~fontset~`\tl_use:N \l__nwpu_option_value_tl' }
+              { Supported~fontset~values~are~auto,~fandol,~windows,~adobe~and~local. }
+          }
       }
   }
 \DeclareKeys [ nwputhesis ]
   {
     lang        .code:n    = \nwpu_lang_set:n {#1},
+    language    .code:n    = \nwpu_lang_set:n {#1},
     degree      .code:n    = \nwpu_degree_set:n {#1},
     bibstyle    .code:n    = \nwpu_bibstyle_set:n {#1},
+    bib-style   .code:n    = \nwpu_bibstyle_set:n {#1},
     blindreview .code:n    = \nwpu_legacy_bool_set:nn { output@blindreview } {#1},
     blindreview .default:n = true,
-    adobe       .code:n    = \nwpu_legacy_bool_set:nn { font@adobe } {#1},
+    blind-review .code:n    = \nwpu_legacy_bool_set:nn { output@blindreview } {#1},
+    blind-review .default:n = true,
+    adobe       .code:n    = \nwpu_load_time_key_allowed:nT { adobe } { \nwpu_legacy_bool_set:nn { font@adobe } {#1} },
     adobe       .default:n = true,
-    winfonts    .code:n    = \nwpu_legacy_bool_set:nn { font@winfonts } {#1},
+    winfonts    .code:n    = \nwpu_load_time_key_allowed:nT { winfonts } { \nwpu_legacy_bool_set:nn { font@winfonts } {#1} },
     winfonts    .default:n = true,
-    localfonts  .code:n    = \nwpu_legacy_bool_set:nn { font@local } {#1},
+    win-fonts   .code:n    = \nwpu_load_time_key_allowed:nT { win-fonts } { \nwpu_legacy_bool_set:nn { font@winfonts } {#1} },
+    win-fonts   .default:n = true,
+    localfonts  .code:n    = \nwpu_load_time_key_allowed:nT { localfonts } { \nwpu_legacy_bool_set:nn { font@local } {#1} },
     localfonts  .default:n = true,
+    local-fonts .code:n    = \nwpu_load_time_key_allowed:nT { local-fonts } { \nwpu_legacy_bool_set:nn { font@local } {#1} },
+    local-fonts .default:n = true,
     fontset     .code:n    = \nwpu_fontset_set:n {#1},
-    academic    .code:n    = \nwpu_legacy_bool_set:nn { academic } {#1},
+    font-set    .code:n    = \nwpu_fontset_set:n {#1},
+    academic    .code:n    = \nwpu_load_time_key_allowed:nT { academic } { \nwpu_legacy_bool_set:nn { academic } {#1} },
     academic    .default:n = true,
     colorcover  .code:n    = \nwpu_legacy_bool_set:nn { colorcover } {#1},
     colorcover  .default:n = true,
+    color-cover .code:n    = \nwpu_legacy_bool_set:nn { colorcover } {#1},
+    color-cover .default:n = true,
     unknown     .code:n    = \PassOptionsToClass { \CurrentOption } { book },
   }
 \ProcessKeyOptions [ nwputhesis ]
@@ -143,3 +185,4 @@
 \input{nwputhesis/nwputhesis-abstract.def}
 \input{nwputhesis/nwputhesis-bibliography.def}
 \input{nwputhesis/nwputhesis-backmatter.def}
+\@npu@class@loadedtrue
