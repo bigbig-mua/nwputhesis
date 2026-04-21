@@ -9,7 +9,6 @@
 \newif\if@npu@type@bcl                                      % 本科版本标记
 \newif\if@npu@academic                                      % 学术学位标记
 \newif\if@npu@output@blindreview                            % 盲评版本标记
-\newif\if@npu@font@adobe                                    % Adobe 字体标记
 \newif\if@npu@font@winfonts                                 % 强制使用 Win 字体
 \newif\if@npu@font@fandol                                   % 强制使用 Fandol 字体
 \newif\if@npu@font@local                                    % 使用本地 fonts 目录字体
@@ -108,7 +107,6 @@
     \nwpu_load_time_key_allowed:nT { fontset }
       {
         \tl_set:Nx \l__nwpu_option_value_tl {#1}
-        \@npu@font@adobefalse
         \@npu@font@winfontsfalse
         \@npu@font@fandolfalse
         \@npu@font@localfalse
@@ -117,12 +115,11 @@
             { auto }    { }
             { fandol }  { \@npu@font@fandoltrue }
             { windows } { \@npu@font@winfontstrue }
-            { adobe }   { \@npu@font@adobetrue }
             { local }   { \@npu@font@localtrue }
           }
           {
             \ClassError { nwputhesis } { Unsupported~fontset~`\tl_use:N \l__nwpu_option_value_tl' }
-              { Supported~fontset~values~are~auto,~fandol,~windows,~adobe~and~local. }
+              { Supported~fontset~values~are~auto,~fandol,~windows~and~local. }
           }
       }
   }
@@ -149,8 +146,6 @@
     blindreview .default:n = true,
     blind-review .code:n    = \nwpu_legacy_bool_set:nn { output@blindreview } {#1},
     blind-review .default:n = true,
-    adobe       .code:n    = \nwpu_load_time_key_allowed:nT { adobe } { \nwpu_legacy_bool_set:nn { font@adobe } {#1} },
-    adobe       .default:n = true,
     winfonts    .code:n    = \nwpu_load_time_key_allowed:nT { winfonts } { \nwpu_legacy_bool_set:nn { font@winfonts } {#1} },
     winfonts    .default:n = true,
     win-fonts   .code:n    = \nwpu_load_time_key_allowed:nT { win-fonts } { \nwpu_legacy_bool_set:nn { font@winfonts } {#1} },

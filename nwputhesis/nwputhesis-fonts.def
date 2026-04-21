@@ -145,14 +145,7 @@
 \else\if@npu@font@winfonts                                   % 强制使用 Win 字体选项
     \npu@select@windows@fonts
 \else
-    \if@npu@font@adobe                                        % Adobe 字体选项
-        \renewcommand\defaultSog{Adobe Song Std}
-        \renewcommand\defaultHei{Adobe Heiti Std}
-        \renewcommand\defaultKai{Adobe Kaiti Std}
-        \renewcommand\defaultFag{Adobe Fangsong Std}
-    \else
-        \npu@select@auto@fonts
-    \fi
+    \npu@select@auto@fonts
 \fi\fi\fi
 \RequirePackage[SlantFont, BoldFont, CJKchecksingle]{xeCJK} % 设置中文字体
 \defaultfontfeatures{Mapping=tex-text}                      % 启用 TeX Ligatures
