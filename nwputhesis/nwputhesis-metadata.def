@@ -95,7 +95,7 @@
 \cs_new_protected:Npn \nwpu@set@eng@advisor #1
   { \cs_gset:Npn \nwpu@eng@advisor { \blindreview{#1} } }
 \cs_new_protected:Npn \nwpu@set@chs@advisor@rank #1
-  { \cs_gset:Npn \nwpu@chs@advisorAcademicRank { ~~#1 } }
+  { \cs_gset:Npn \nwpu@chs@advisorAcademicRank { \nobreakspace\nobreakspace #1 } }
 \cs_new_protected:Npn \nwpu@set@eng@advisor@rank #1
   { \cs_gset:Npn \nwpu@eng@advisorAcademicRank {#1} }
 \cs_new_protected:Npn \nwpu@set@chs@funding #1
