@@ -56,7 +56,7 @@
 - `fontset`：字体方案，可选 `auto`、`fandol`、`windows`、`local`。非 Windows 系统如果没有 Windows 字体，建议使用 `auto` 或 `fandol`。
 - `academic`：研究生论文是否为学术学位，`true` 为学术学位，`false` 为专业学位。
 - `blindreview`：是否生成盲评版本，`true` 会隐藏作者、导师和学号等信息。
-- `colorcover`：是否生成彩色封面封底，通常用于最终提交电子版。
+- `colorcover`：是否生成彩色封面封底，仅硕博论文支持，通常用于最终提交电子版。本科论文不支持彩色封面；即使设置为 `true` 也会被忽略。
 - `bibstyle`：参考文献标准，可选 `2015`、`2025`。
 
 题目、作者、学院、专业、导师、日期、学号、基金资助等元数据统一写在 `content/thesis/*/info.tex` 或摘要文件中的 `\nwputhesissetup{...}`。例如：

@@ -123,6 +123,17 @@
           }
       }
   }
+\cs_new_protected:Npn \nwpu_colorcover_set:n #1
+  {
+    \nwpu_legacy_bool_set:nn { colorcover } {#1}
+    \if@npu@type@bcl
+      \if@npu@colorcover
+        \ClassWarningNoLine { nwputhesis }
+          { Option~`colorcover'~is~not~supported~for~bachelor~theses;~ignoring~it }
+        \@npu@colorcoverfalse
+      \fi
+    \fi
+  }
 \cs_new_protected:Npn \nwpu_unknown_key:n #1
   {
     \bool_if:NTF \l__nwpu_in_setup_bool
@@ -158,11 +169,18 @@
     font-set    .code:n    = \nwpu_fontset_set:n {#1},
     academic    .code:n    = \nwpu_load_time_key_allowed:nT { academic } { \nwpu_legacy_bool_set:nn { academic } {#1} },
     academic    .default:n = true,
-    colorcover  .code:n    = \nwpu_legacy_bool_set:nn { colorcover } {#1},
+    colorcover  .code:n    = \nwpu_colorcover_set:n {#1},
     colorcover  .default:n = true,
-    color-cover .code:n    = \nwpu_legacy_bool_set:nn { colorcover } {#1},
+    color-cover .code:n    = \nwpu_colorcover_set:n {#1},
     color-cover .default:n = true,
     unknown     .code:n    = \nwpu_unknown_key:n {#1},
   }
 \ProcessKeyOptions [ nwputhesis ]
+\if@npu@type@bcl
+  \if@npu@colorcover
+    \ClassWarningNoLine { nwputhesis }
+      { Option~`colorcover'~is~not~supported~for~bachelor~theses;~ignoring~it }
+    \@npu@colorcoverfalse
+  \fi
+\fi
 \ExplSyntaxOff
