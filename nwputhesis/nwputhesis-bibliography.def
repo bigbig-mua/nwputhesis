@@ -3,13 +3,13 @@
 
 %% 参考文献处理
 %%-----------------------------------------------------------------------------%
+\ExplSyntaxOn
 \setlength{\biblabelsep}{0pt}                              %
 \newlength{\nwpu@bibfirstlineindent}                       %
-\AtBeginDocument{\settowidth{\nwpu@bibfirstlineindent}{汉汉}} %
+\AtBeginDocument{\typeout{NWPUDEBUG bib indent begin}\settowidth{\nwpu@bibfirstlineindent}{汉汉}\typeout{NWPUDEBUG bib indent end}} %
 \newlength{\nwpu@biblabelwidth}                            %
 \newlength{\nwpu@bibfirstlinereserve}                      %
 \setlength{\nwpu@bibfirstlinereserve}{1.5em}               %
-\ExplSyntaxOn
 \tl_new:N \l__nwpu_patent_number_tl
 \cs_new_protected:Npn \nwpu_patent_number_allowbreaks:n #1
   {
@@ -22,7 +22,6 @@
   {
     \nwpu_patent_number_allowbreaks:n {#1}
   }
-\ExplSyntaxOff
 \DeclareFieldFormat[patent]{title}{#1}
 \DeclareFieldFormat[patent]{number}{\nwpuPatentNumberAllowBreaks{#1}}
 \renewbibmacro*{title}{%
@@ -170,7 +169,7 @@
     {\usebibmacro{related:init}\usebibmacro{related}}
     {}%
   \usebibmacro{annotation}\usebibmacro{finentry}}
-\ifbachelor{%
+\nwpu_if_bachelor:TF{%
     \DeclareStyleSourcemap{
         \maps[datatype=bibtex]{
             \map[overwrite]{
@@ -248,14 +247,12 @@
         \usebibmacro{annotation}\usebibmacro{finentry}%
     }
 }{}
-\newcommand{\nwpu@bibitemcmd}{%
+\cs_new_protected:Npn \nwpu@bibitemcmd {%
     \addvspace{\bibitemsep}%
     \leavevmode%
-    \if@npu@type@bcl
-        \hspace*{0pt}%
-    \else
-        \hspace*{\nwpu@bibfirstlineindent}%
-    \fi
+    \nwpu_if_bachelor:TF
+        { \hspace*{0pt} }
+        { \hspace*{\nwpu@bibfirstlineindent} }
     \mkgbnumlabel{\printfield{labelnumber}}\hspace{0.3em}}
 \defbibenvironment{bibliography}
     {\begingroup\setlength{\parindent}{0pt}\setlength{\emergencystretch}{2em}\sloppy}
@@ -266,7 +263,7 @@
     \setlength{\bibitemsep}{0.5ex}                          %
     \setlength{\bibhang}{0pt}                               %
 }                                                           %
-\let\nwpu@oldprintbibliography\printbibliography            %
+\cs_set_eq:NN \nwpu@oldprintbibliography \printbibliography            %
 \RenewDocumentCommand{\printbibliography}{O{}}{             %
     \cleardoublepage                                        %
     \nwpu@oldprintbibliography[                             %
@@ -276,3 +273,4 @@
     ]                                                       %
     \cleardoublepage                                        %
 }                                                           %
+\ExplSyntaxOff
