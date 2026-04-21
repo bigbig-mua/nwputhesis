@@ -20,7 +20,7 @@
 \cs_new_protected:Npn \npu@set@fandol@fonts
   {
     \typeout{[nwputhesis]~Using~Fandol~fonts~(TeX~Live~built-in).}
-    \@npu@using@fandoltrue
+    \bool_set_true:N \l__nwpu_font_using_fandol_bool
     \cs_set:Npn \defaultSog {FandolSong}
     \cs_set:Npn \defaultHei {FandolHei}
     \cs_set:Npn \defaultKai {FandolKai}
@@ -58,7 +58,7 @@
     \cs_set:Npn \defaultFag {FangSong}
     \cs_set:Npn \defaultEngFont {Times~New~Roman}
     \cs_set:Npn \codeFont {Consolas}
-    \@npu@font@localtrue
+    \bool_set_true:N \l__nwpu_font_local_bool
   }
 \cs_new_protected:Npn \npu@set@windows@fonts
   {
@@ -113,11 +113,9 @@
     \nwpu_if_winfonts:TF                                      % 强制使用 Win 字体选项
       { \npu@select@windows@fonts }
       {
-        \if@npu@font@fandol                                   % 强制使用 Fandol 字体选项
-          \npu@set@fandol@fonts
-        \else
-          \npu@select@auto@fonts
-        \fi
+        \nwpu_if_fandol:TF                                     % 强制使用 Fandol 字体选项
+          { \npu@set@fandol@fonts }
+          { \npu@select@auto@fonts }
       }
   }
 \RequirePackage[SlantFont, BoldFont, CJKchecksingle]{xeCJK} % 设置中文字体

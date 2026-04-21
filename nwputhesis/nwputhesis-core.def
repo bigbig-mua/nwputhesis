@@ -13,33 +13,33 @@
 %%=============================================================================%
 %% 盲评版本的文字替换功能
 %%-----------------------------------------------------------------------------%
-\cs_new_protected:Npn \@npu@replaceitwithblank #1
+\cs_new_protected:Npn \__nwpu_replace_blank:n #1
   {
     \setlength{\fboxsep}{0pt}
     \colorbox{white}{\phantom{#1}}
   }
-\cs_new_protected:Npn \@npu@replaceitwithblack #1
+\cs_new_protected:Npn \__nwpu_replace_black:n #1
   {
     \setlength{\fboxsep}{0pt}
     \colorbox{black}{\phantom{#1}}
   }
-\cs_new_protected:Npn \@npu@replaceitwithstars { ~***~ }
+\cs_new_protected:Npn \__nwpu_replace_stars: { ~***~ }
 \cs_new_protected:Npn \blindreview #1
   {
     \nwpu_if_blindreview:TF
-      { \@npu@replaceitwithblank{#1} }
+      { \__nwpu_replace_blank:n {#1} }
       { #1 }
   }
 \cs_new_protected:Npn \blackbox #1
   {
     \nwpu_if_blindreview:TF
-      { \@npu@replaceitwithblack{#1} }
+      { \__nwpu_replace_black:n {#1} }
       { #1 }
   }
 \cs_new_protected:Npn \markname #1
   {
     \nwpu_if_blindreview:TF
-      { \@npu@replaceitwithstars }
+      { \__nwpu_replace_stars: }
       { #1 }
   }
 %%=============================================================================%

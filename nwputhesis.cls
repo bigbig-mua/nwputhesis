@@ -3,9 +3,9 @@
 [2026/03/25 v2.2.0 nwputhesis]
 \input{nwputhesis/nwputhesis-options.def}
 \LoadClass[11pt, a4paper, openany]{book}                    % 本科单面印刷，硕博双面印刷
-\if@npu@type@bcl
-    \@twosidefalse\@mparswitchfalse                         % 本科强制单面印刷
-\fi
+\ExplSyntaxOn
+\nwpu_if_bachelor:T { \@twosidefalse \@mparswitchfalse }    % 本科强制单面印刷
+\ExplSyntaxOff
 \RequirePackage{etoolbox}                                   % LaTeX 补丁工具
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{%
     \cleardoublepage
@@ -20,4 +20,6 @@
 \input{nwputhesis/nwputhesis-bibliography.def}
 \input{nwputhesis/nwputhesis-appendix.def}
 \input{nwputhesis/nwputhesis-backmatter.def}
-\@npu@class@loadedtrue
+\ExplSyntaxOn
+\bool_set_true:N \l__nwpu_class_loaded_bool
+\ExplSyntaxOff
