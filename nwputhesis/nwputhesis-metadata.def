@@ -54,7 +54,29 @@
 \newcommand{\nwpu@set@chs@date}[1]{\renewcommand{\nwpu@chs@date}{#1}}
 \newcommand{\nwpu@set@eng@date}[1]{\renewcommand{\nwpu@eng@date}{#1}}
 \newcommand{\nwpu@set@year}[1]{\renewcommand{\nwpu@year}{#1}}
-\newcommand{\nwpu@set@month}[1]{\setcounter{nwpu@month}{#1}}
+\ExplSyntaxOn
+\cs_new_protected:Npn \nwpu_set_month:n #1
+  {
+    \regex_match:nnTF { \A \s* \d+ \s* \Z } {#1}
+      {
+        \int_compare:nNnTF {#1} < { 1 }
+          { \nwpu_month_error:n {#1} }
+          {
+            \int_compare:nNnTF {#1} > { 12 }
+              { \nwpu_month_error:n {#1} }
+              { \setcounter { nwpu@month } {#1} }
+          }
+      }
+      { \nwpu_month_error:n {#1} }
+  }
+\cs_new_protected:Npn \nwpu_month_error:n #1
+  {
+    \ClassError { nwputhesis } { Invalid~month~`#1' }
+      { Set~month~to~an~integer~from~1~to~12. }
+  }
+\cs_new_protected:Npn \nwpu@set@month #1
+  { \nwpu_set_month:n {#1} }
+\ExplSyntaxOff
 \newcommand{\nwpu@set@school}[1]{\renewcommand{\nwpu@chs@school}{#1}}
 \newcommand{\nwpu@set@chs@major}[1]{\renewcommand{\nwpu@chs@major}{#1}}
 \newcommand{\nwpu@set@eng@major}[1]{\renewcommand{\nwpu@eng@major}{#1}}
