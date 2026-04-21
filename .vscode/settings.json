@@ -37,5 +37,8 @@
             ]
         }
     ],
-    "latex-workshop.latex.recipe.default": "xelatex + biber + xelatex x 2"
+    "latex-workshop.latex.recipe.default": "xelatex + biber + xelatex x 2",
+    "files.associations": {
+        "*.def": "latex"
+    }
 }

@@ -1,0 +1,301 @@
+%% This file is part of nwputhesis.
+%% It is loaded internally by nwputhesis.cls.
+
+%%-----------------------------------------------------------------------------%
+\RequirePackage{indentfirst}                                % 段首空格设置
+\if@npu@type@bcl                                            % 本科论文段首空格
+    \setlength\parindent{26pt}                              % 段首空格长度（本科）
+\else
+    \setlength\parindent{24pt}                              % 段首空格长度（硕博）
+\fi
+\setlength\parskip{0pt}                                     % 段落间距
+\renewcommand{\baselinestretch}{1.0}                        % 行距
+%%-----------------------------------------------------------------------------%
+\RequirePackage{ulem}                                       % 下划线
+\newcommand\dlmu@underline[2][5cm]{\hspace{1pt}\underline{  %
+        \hb@xt@ #1{\hss#2\hss}}\hspace{3pt}}                %
+\let\coverunderline\dlmu@underline                          %
+%%-----------------------------------------------------------------------------%
+% \RequirePackage{layouts}                                    % 页面具体尺寸信息（未使用，已注释）
+%%-----------------------------------------------------------------------------%
+\RequirePackage[sf]{titlesec}                               % 章节标题格式
+\RequirePackage{titletoc}                                   % 目录格式
+\setcounter{secnumdepth}{3}                                 % 标题计数器深度
+\setcounter{tocdepth}{2}                                    % 目录中标题深度
+\if@npu@type@bcl                                            % 本科论文章节格式
+    \renewcommand{\thechapter}{\arabic{chapter}}            % 章节编号保持数字
+    \renewcommand{\chaptername}{第\CJKnumber{\thechapter}章}% 章节名称（中文数字）
+    \titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter\fHei}% 一级：三号黑体不加粗
+    {第\CJKnumber{\thechapter}章}{1em}{\sSanhao}
+    \titleformat{\section}[hang]{\sSihao\fHei}% 二级：四号黑体不加粗
+    {\sSihao\thesection}{0.5em}{}{}
+    \titleformat{\subsection}[hang]{\sXiaosi\fHei}% 三级：小四黑体不加粗
+    {\sXiaosi\thesubsection}{0.5em}{}{}
+    \titleformat{\subsubsection}[hang]{\fHei}%
+    {(\arabic{subsubsection})}{0.5em}{}{}
+    \titlespacing{\chapter}{0pt}{5pt}{23pt}
+    \titlespacing{\section}{0pt}{2pt}{2pt}
+    \titlespacing{\subsection}{0pt}{3pt}{-1pt}
+    \titlespacing{\subsubsection}{0pt}{0.25em}{0em}
+\else                                                       % 硕博论文章节格式
+    \titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter  %
+        \sffamily\fHei}{\sffamily\fHei\sSanhao{\chaptertitlename}}{20pt}{\sSanhao}%
+    \titleformat{\section}[hang]{\sffamily\fHei\sSihao}{%       %
+        \sffamily\fHei\sSihao\thesection}{0.5em}{}{}            %
+    \titleformat{\subsection}[hang]{\sffamily\fHei\sHgXiaosi}{% %
+        \sffamily\fHei\sHgXiaosi\thesubsection}{0.5em}{}{}      %
+    \titleformat{\subsubsection}[hang]{\sffamily\fHei}{%        % 小标题: (4) 标题
+        (\arabic{subsubsection})}{0.5em}{}{}                    %
+    \titlespacing{\chapter}{0pt}{-2pt}{14pt}                    % 缩小标题之间缩进
+    \titlespacing{\section}{0pt}{7pt}{0em}                      %
+    \titlespacing{\subsection}{0pt}{6.5pt}{0em}                 %
+    \titlespacing{\subsubsection}{0pt}{0.25em}{0pt}             %
+    \titlespacing{\paragraph}{0pt}{0.25em}{0pt}                 %
+\fi
+\dottedcontents{section}[1.16cm]{}{1.8em}{5pt}              % 定义目录中各级标题
+\dottedcontents{subsection}[2.00cm]{}{2.7em}{5pt}           % 之间的格式以及缩进
+\dottedcontents{subsubsection}[2.86cm]{}{3.4em}{5pt}        %
+\newcommand{\nwpu@chs@chaptercname}[1]{第 #1 章}            % 目录章节中文标题（硕博）
+\newcommand{\nwpu@eng@chaptercname}[1]{Chapter #1}          % 目录章节英文标题
+\if@npu@type@bcl                                            % 本科论文目录章节格式
+    \newcommand{\nwpu@bcl@chaptercname}[1]{第\CJKnumber{#1}章}% 本科目录章节中文标题
+    \titlecontents{section}[1.16cm]{\fSong\graduatecontentsfont}%
+    {\contentslabel{1.8em}}{}%
+    {\titlerule*[3pt]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
+    \titlecontents{subsection}[2.00cm]{\fSong\graduatecontentsfont}%
+    {\contentslabel{2.7em}}{}%
+    {\titlerule*[3pt]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
+    \titlecontents{subsubsection}[2.86cm]{\fSong\graduatecontentsfont}%
+    {\contentslabel{3.4em}}{}%
+    {\titlerule*[3pt]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
+    \titlecontents{chapter}[0pt]{\graduatecontentsfont\fSong\vspace{0.2\baselineskip}}%
+    {\contentsmargin{1em}\graduatecontentsfont\fSong\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{3.8em}}%
+    {\contentsmargin{1em}\graduatecontentsfont\fSong\bfseries}%
+    {\graduatecontentsfont\normalfont\titlerule*[.3pc]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]
+\else
+    \dottedcontents{section}[1.16cm]{\fSong\graduatecontentsfont}{1.8em}{3pt}   %
+    \dottedcontents{subsection}[2.00cm]{\fSong\graduatecontentsfont}{2.7em}{3pt}%
+    \dottedcontents{subsubsection}[2.86cm]{\fSong\graduatecontentsfont}{3.4em}{3pt}
+    \if@npu@lang@chs                                            % 硕博中文本地化显示
+        \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
+            ][l]{\nwpu@chs@chaptercname{\thecontentslabel}}\hspace{%
+                3.5em}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{\titlerule*[%
+                .3pc]{.}\contentspage}[\vspace{0em}]            %
+    \else                                                       % 硕博英文
+        \newlength{\contents@titlewidth}                        %
+        \newlength{\contents@appendixwidth}                     %
+        \settowidth{\contents@titlewidth}{\graduatecontentsfont Chapter 000} %
+        \settowidth{\contents@appendixwidth}{\graduatecontentsfont Appendix M00}
+        \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
+            ][l]{\nwpu@eng@chaptercname{\thecontentslabel}}\hspace{%
+                \contents@titlewidth}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{
+            \titlerule*[.3pc]{.}\contentspage}[\vspace{0em}]    %
+    \fi\fi                                                      %
+%%-----------------------------------------------------------------------------%
+\RequirePackage{fancyhdr}                                   % 页眉设置
+\newcommand{\npu@headrule}{                                 %
+    \rlap{\rule[.7\baselineskip]{\headwidth}{3.4pt}}        %
+    \vspace{-1.07\baselineskip}                             %
+    \rule[.5\baselineskip]{\headwidth}{0.6pt}               %
+    \vspace{-.8\baselineskip}                               %
+}                                                           %
+\newcommand{\npu@bcl@headrule}{                             % 本科页眉线
+    \makebox[0pt][l]{\rule[.7\baselineskip]{\headwidth}{0.8pt}}%
+    \vskip-.8\baselineskip                                  %
+}                                                           %
+\renewcommand{\headrule}{                                   %
+    \if@fancyplain\let\headrulewidth\plainheadrulewidth\fi  %
+    \if@npu@type@bcl                                        % 本科页眉线
+        \npu@bcl@headrule                                   %
+    \else                                                   % 硕博页眉线
+        \npu@headrule                                       %
+    \fi                                                     %
+}
+\graphicspath{{content/figures/}{figures/}}                % 定义图片文件搜索目录
+\if@npu@type@bcl                                            % 本科论文页眉设置
+    \pagestyle{fancyplain}                                  % 新增版式 fancyplain
+    \fancyhf{}                                              % 清空原有页眉页脚
+    \fancyfoot[C,C]{\sXiaowu~\thepage~}                     % 页脚中央显示页码
+    \chead{\includegraphics[scale=0.15]{nwpuheader.png}}% 页眉居中（图片）
+\else                                                       % 硕博论文页眉设置
+    \if@npu@lang@chs                                        % 中英文章节页眉设置
+        \renewcommand{\chaptermark}[1]{                     %
+            \markboth{\nwpu@chs@chaptercname\thechapter~~ #1}{}}%
+    \else                                                   %
+        \renewcommand{\chaptermark}[1]{                     %
+            \markboth{\nwpu@eng@chaptercname\thechapter~~ #1}{}}%
+    \fi                                                     %
+    \pagestyle{fancyplain}                                  % 新增版式 fancyplain
+    \fancyhf{}                                              % 清空原有页眉页脚
+    \fancyfoot[C, C]{\sXiaowu{\thepage}}                    % 页脚中央显示页码
+    \fancyhead{}                                            % 页眉清除原有设置
+    \fancyhead[COH]{\raisebox{0.5pt}{\sXiaowu{\leftmark}}}  %
+    \if@npu@lang@chs                                        % 中文论文环境
+        \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@chs@header}}}%
+    \else                                                   % 英文论文环境
+        \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@eng@header}}}%
+    \fi                                                     %
+\fi                                                         %
+%%-----------------------------------------------------------------------------%
+\RequirePackage[
+    backend=biber,
+    style=\nwpu@bibstyle,
+    gbpunctin = false,
+    sorting=none
+]{biblatex}                                                 % 参考文献
+\ifgraduate{%
+    \DefineBibliographyStrings{english}{in={}}%
+    \DefineBibliographyStrings{english}{incn={}}%
+}{}
+%%-----------------------------------------------------------------------------% 
+\RequirePackage{enumitem}                                   % 列表格式控制
+\setlist{nosep}                                             % 消除间距
+\setlist{noitemsep}                                         % 消除列表间距
+\setlist{nolistsep}                                         % 消除列表间距
+%%-----------------------------------------------------------------------------%
+\RequirePackage{graphicx}                                   % 插图功能
+\RequirePackage[final]{pdfpages}                            % 插入其他 pdf 文件
+\RequirePackage{xcolor}                                     % 颜色库
+\RequirePackage[labelsep=quad]{caption}                     % 浮动体标题控制
+\RequirePackage{subcaption}                                 % 子图
+\RequirePackage{wrapfig}                                    % 文字环绕
+\RequirePackage{multirow, makecell}                         % 合并单元格
+\RequirePackage{longtable}                                  % 长表格（跨页表格）
+\RequirePackage{booktabs}                                   % 三线表
+\RequirePackage{tabularx}                                   % 定宽表格
+\DeclareCaptionFont{cWuhao}{\sWuhao}                        % 图表标题为五号
+\DeclareCaptionFont{cGradFigureCaption}{%
+    \fontsize{10.5pt}{9.5pt}\selectfont}                   % 研究生图题：五号，收紧行距
+\DeclareCaptionFont{cBclTableCaption}{%
+    \fontsize{10.5pt}{14pt}\selectfont\bfseries}           % 本科表题：五号黑体，增大标题行距
+\DeclareCaptionFont{cBclFigureCaption}{%
+    \fontsize{10.5pt}{11.5pt}\selectfont\fSong}            % 本科图题：五号宋体，行距进一步收紧
+\if@npu@type@bcl
+    \setlength{\textfloatsep}{20pt}                        % 本科图/表/算法与正文前后各空一行
+    \setlength{\floatsep}{20pt}                            %
+    \setlength{\intextsep}{20pt}                           %
+    \captionsetup[table]{%
+        labelfont=cBclTableCaption,
+        textfont=cBclTableCaption,
+        aboveskip=12pt,
+        belowskip=2pt}
+    \captionsetup[figure]{%
+        labelfont=cBclFigureCaption,
+        textfont=cBclFigureCaption,
+        aboveskip=12pt,
+        belowskip=2pt}
+    \captionsetup[subfigure]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
+\else
+    \setlength{\textfloatsep}{8pt}                         % 研究生图/表与正文间距进一步收紧
+    \setlength{\floatsep}{8pt}                             %
+    \setlength{\intextsep}{8pt}                            %
+    \captionsetup[table]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
+    \captionsetup[figure]{labelfont=cGradFigureCaption, textfont=cGradFigureCaption, aboveskip=10pt, belowskip=0pt}
+    \captionsetup[subfigure]{%
+        labelformat=simple,
+        labelfont=cWuhao,
+        textfont=cWuhao,
+        aboveskip=10pt,
+        belowskip=0pt}
+\fi
+\captionsetup[subtable]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
+\AtBeginEnvironment{tabular}{\sWuhao}                       % 表格内容为五号
+\AtBeginEnvironment{tabularx}{\sWuhao}                      %
+\newcolumntype{C}{>{\centering\arraybackslash}X}            % 等宽居中
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}          % 等宽左对齐
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}           % 等宽右对齐
+\newcolumntype{Q}[1]{>{\raggedleft\let\newline\\%           % 指定宽度右对齐
+        \arraybackslash\hspace{0pt}}p{#1}}                  %
+\newcolumntype{O}[1]{>{\centering\let\newline\\%            % 指定宽度居中
+        \arraybackslash\hspace{0pt}}p{#1}}                  %
+\newcolumntype{P}[1]{>{\raggedright\let\newline\\%          % 指定宽度左对齐
+        \arraybackslash\hspace{0pt}}p{#1}}                  %
+\renewcommand{\arraystretch}{1.4}                           % 表格行高为 1.4 倍
+\setlength\heavyrulewidth{1.5pt}                            % 表格上下线宽 1.5 磅
+\setlength\lightrulewidth{1pt}                              % 表格中线宽 1.0 磅
+%%-----------------------------------------------------------------------------%
+\RequirePackage[amsmath,thmmarks]{ntheorem}                 % 定理环境格式
+\theorembodyfont{\normalfont\itshape}                       % 主体文字格式
+\theoremseparator{\quad}                                    % 标题与主体间隔
+\setlength\topsep{0pt}                                      % 设置定理环境间距
+\theorempreskip{0pt}                                        % 节前空白大小
+\theorempostskip{0pt}                                       % 节后空白大小
+\def\thm@space@setup{                                       %
+    \thm@preskip=0pt                                        %
+    \thm@postskip=0pt}                                      %
+\AtBeginDocument{                                           %
+    \setlength{\abovedisplayskip}{0pt}                      %
+    \setlength{\belowdisplayskip}{0pt}                      %
+    \setlength{\abovedisplayshortskip}{0pt}                 %
+    \setlength{\belowdisplayshortskip}{0pt}}                %
+{\theoremsymbol{\ensuremath{\square}}                       % 证明环境 囗
+    \if@npu@lang@chs\newtheorem*{proof}{证明}\else\newtheorem*{proof}{Proof}\fi}
+\newcommand{\qedinEquation}{{\rlap{$\qquad\square$}}}       % 公式中添加证毕符号
+\if@npu@lang@chs                                            % 定制中文定理环境
+    \newtheorem{theorem}{定理}[chapter]                     %
+    \newtheorem{axiom}[theorem]{公理}                       %
+    \newtheorem{corollary}[theorem]{推论}                   %
+    \newtheorem{lemma}[theorem]{引理}                       %
+    \newtheorem{definition}[theorem]{定义}                  %
+    \newtheorem{example}[theorem]{例}                       %
+    \newtheorem{proposition}[theorem]{命题}                 %
+\else                                                       % 定制英文定理环境
+    \newtheorem{theorem}{Theorem}[chapter]                  %
+    \newtheorem{axiom}[theorem]{Axiom}                      %
+    \newtheorem{corollary}[theorem]{Corollary}              %
+    \newtheorem{lemma}[theorem]{Lemma}                      %
+    \newtheorem{definition}[theorem]{Definition}            %
+    \newtheorem{example}[theorem]{Example}                  %
+    \newtheorem{proposition}[theorem]{Proposition}          %
+\fi                                                         %
+%%-----------------------------------------------------------------------------%
+\RequirePackage{listings}                                   % 添加插入代码控制
+\lstset{                                                    % 代码样式
+    basicstyle=\color[HTML]{000000}\small\ttfamily,         % 等宽字体 10pt 字号
+    numbers=left,                                           % 左侧加入行号
+    numberstyle=\tiny,                                      % 行号 6pt 字号
+    numbersep=5pt,                                          % 行号与代码间隔
+    tabsize=4,                                              % 制表符大小
+    extendedchars=true,                                     % 拓展字符集显示汉字
+    breaklines=true,                                        % 允许自动换行
+    keywordstyle=\color[HTML]{0000FF}\bfseries,             % 关键字样式
+    numberstyle=\color[HTML]{ff8000},                       % 数字样式
+    commentstyle=\color[HTML]{008000}\bfseries,             % 注释样式
+    stringstyle=\color[HTML]{A31515}\ttfamily,              % 字符串样式
+    showspaces=false,                                       % 不显示空格字符
+    showtabs=false,                                         % 不显示制表符
+    frame=shadowbox,                                        % 添加阴影边框
+    framexrightmargin=5pt,                                  % 边框右边缩进
+    framexbottommargin=4pt,                                 % 边框底端缩进
+    rulesepcolor=\color[HTML]{C0C0C0},                      % 边框颜色
+    showstringspaces=false,                                 % 显示字符串内空格
+    escapeinside=`',                                        % 逃逸字符以显示公式
+}                                                           %
+\lstloadlanguages{C++, Java, Python, Matlab, R, Mathematica}% 默认加载常用语言
+%%-----------------------------------------------------------------------------%
+\RequirePackage{algorithm}                                  % 算法流程
+\RequirePackage{algpseudocode}                              % 伪代码
+%%-----------------------------------------------------------------------------%
+\RequirePackage{appendix}                                   % 添加附录功能
+%%-----------------------------------------------------------------------------%
+\RequirePackage{nomencl}                                    % 添加符号表功能
+\RequirePackage{multicol}                                   % 页面具体尺寸信息
+\makenomenclature                                           % 单栏符号表
+\@ifundefined{chapter}{\def\npu@nomsec{section}}{\def\npu@nomsec{chapter}}
+\def\thenomenclature{%
+    % \newlength{\npu@columnsep@save}
+    % \setlength{\npu@columnsep@save}{\columnsep}
+    % \setlength{\columnsep}{20pt}
+    % \begin{multicols}{2}[%
+    \csname\npu@nomsec\endcsname*{\nomname}
+    \if@intoc\addcontentsline{toc}{\npu@nomsec}{\nomname}\fi
+    \nompreamble % \raggedcolumns
+    % ]
+    \list{}{\labelsep=15pt\labelwidth\nom@tempdim\leftmargin\labelwidth\advance
+        \leftmargin\labelsep\itemsep\nomitemsep\let\makelabel\nomlabel}%
+}
+\def\endthenomenclature{\endlist
+    % \end{multicols}
+    % \setlength{\columnsep}{\npu@columnsep@save}
+    \nompostamble}
+%%=============================================================================%

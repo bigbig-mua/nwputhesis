@@ -2,6 +2,7 @@
 * text=auto
 *.tex text eol=lf
 *.cls text eol=lf
+*.def text eol=lf
 *.bib text eol=lf
 *.bst text eol=lf
 *.lua text eol=lf

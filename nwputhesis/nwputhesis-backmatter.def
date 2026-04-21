@@ -1,0 +1,40 @@
+%% This file is part of nwputhesis.
+%% It is loaded internally by nwputhesis.cls.
+
+%%-----------------------------------------------------------------------------%
+\newenvironment{acknowledgements}{                          % 致谢
+    \graduatebodyfont                                       %
+    \phantomsection\chapter*{\nwpu@page@ack}                %
+    \markboth{\nwpu@page@ack}{\nwpu@page@ack}               %
+    \addcontentsline{toc}{chapter}{\nwpu@page@ack}          %
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}   %
+}{\par \cleardoublepage}                                    %
+%%-----------------------------------------------------------------------------%
+\newenvironment{thesisappendix}{                             % 附录
+    \graduatebodyfont                                       %
+    \ifnwpu@thesisappendixmode\else                         %
+        \appendix                                           %
+        \global\nwpu@thesisappendixmodetrue                 %
+    \fi                                                     %
+    \stepcounter{nwpu@thesisappendixcount}                  %
+    \refstepcounter{chapter}                                %
+    \phantomsection\chapter*{\nwpu@appendixtitle{\thechapter}}%
+    \markboth{\nwpu@appendixtitle{\thechapter}}{\nwpu@appendixtitle{\thechapter}}%
+    \addcontentsline{toc}{chapter}{\nwpu@appendixtitle{\thechapter}}%
+}{\par \cleardoublepage}                                    %
+%%-----------------------------------------------------------------------------%
+\newenvironment{accomplishments}{                           % 参加科研情况
+    \graduatebodyfont                                       %
+    \phantomsection\chapter*{\nwpu@page@acp}                %
+    \markboth{\nwpu@page@acp}{}                             %
+    \addcontentsline{toc}{chapter}{\nwpu@page@acp}          %
+}{\cleardoublepage}                                       %
+%%-----------------------------------------------------------------------------%
+\newenvironment{designsummary}{                              % 毕业设计小结（本科）
+    \renewcommand{\baselinestretch}{1.0}                    %
+    \sDefault                                               %
+    \phantomsection\chapter*{毕业设计小结}                  %
+    \markboth{毕业设计小结}{毕业设计小结}                   %
+    \addcontentsline{toc}{chapter}{毕业设计小结}            %
+}{\par \cleardoublepage}                                    %
+%%-----------------------------------------------------------------------------%

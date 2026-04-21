@@ -1,0 +1,204 @@
+%% This file is part of nwputhesis.
+%% It is loaded internally by nwputhesis.cls.
+
+%%-----------------------------------------------------------------------------%
+\if@npu@lang@chs                                            % 中文引用提示文字
+    \renewcommand{\figurename}{图}                          %
+    \renewcommand{\figureautorefname}{图}                   %
+    \renewcommand{\tablename}{表}                           %
+    \renewcommand{\tableautorefname}{表}                    %
+    \renewcommand{\bibname}{参考文献}                       %
+    \if@npu@type@bcl                                        % 本科论文目录标题
+        \renewcommand{\contentsname}{\bfseries 目~录}       %
+        \renewcommand{\listfigurename}{插图列表}            %
+        \renewcommand{\listtablename}{表格列表}             %
+    \else                                                   % 硕博论文目录标题
+        \renewcommand{\contentsname}{目{\quad}录}           %
+        \renewcommand{\listfigurename}{图目录}              %
+        \renewcommand{\listtablename}{表目录}               %
+    \fi
+    \renewcommand{\appendixautorefname}{附录}               %
+    \if@npu@type@bcl                                        %
+        \def\equationautorefname#1#2\null{式#1（#2\null）}  %
+    \else                                                   %
+        \def\equationautorefname#1#2\null{式#1(#2\null)}    %
+    \fi                                                     %
+    \def\sectionautorefname#1#2\null{#2\null{ }节}          %
+    \def\subsectionautorefname#1#2\null{#2\null{ }小节}     %
+    \renewcommand{\theoremautorefname}{定理}                %
+    \newcommand{\axiomautorefname}{公理}                    %
+    \newcommand{\corollaryautorefname}{推论}                %
+    \newcommand{\lemmaautorefname}{引理}                    %
+    \newcommand{\definitionautorefname}{定义}               %
+    \newcommand{\exampleautorefname}{例}                    %
+    \newcommand{\propositionautorefname}{命题}              %
+    \newcommand{\algorithmname}{算法}                       %
+    \newcommand{\algorithmautorefname}{算法}                %
+    \floatname{algorithm}{算法}                             %
+    \renewcommand{\lstlistingname}{代码片段}                %
+    \newcommand{\lstlistingautorefname}{代码片段}           %
+    \renewcommand{\nomname}{符号表}                         %
+\else                                                       % 英文引用提示文字
+    \renewcommand{\figureautorefname}{Fig.}                 %
+    \renewcommand{\tableautorefname}{Table}                 %
+    \def\equationautorefname#1#2\null{Eq.#1(#2\null)}       %
+    \renewcommand{\lstlistingname}{Code Snippet}            %
+    \newcommand{\lstlistingautorefname}{Code Snippet}       %
+    \renewcommand{\nomname}{Symbols}                        %
+\fi                                                         %
+%%-----------------------------------------------------------------------------%
+\renewcommand{\chaptername}{第 \thechapter 章}              % 章节名
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}      % 图编号格式
+\renewcommand{\thesubfigure}{(\alph{subfigure})}            % 子图编号格式
+\renewcommand{\thetable}{\thechapter-\arabic{table}}        % 图编号格式
+\renewcommand{\thealgorithm}{\thechapter-\arabic{algorithm}}% 算法编号格式
+\@addtoreset{algorithm}{chapter}                            % 按章节编号
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}  % 公式编号格式
+\if@npu@type@bcl                                            % 本科公式编号样式
+    \def\tagform@#1{\maketag@@@{\fSong （#1）}}             %
+\fi                                                         %
+\renewcommand{\thetheorem}{\thechapter.\arabic{theorem}}    % 定理编号格式
+\renewcommand{\theaxiom}{\thechapter.\arabic{axiom}}        % 公理编号格式
+\renewcommand{\thecorollary}{\thechapter.\arabic{corollary}}% 推论编号格式
+\renewcommand{\thelemma}{\thechapter.\arabic{lemma}}        % 引理编号格式
+\renewcommand{\thedefinition}{\thechapter.\arabic{definition}} % 定义编号格式
+\renewcommand{\theexample}{\thechapter.\arabic{example}}    % 例子编号格式
+%%-----------------------------------------------------------------------------%
+\newcommand{\nwpu@chs@schoolname}{西北工业大学}             % 文档字符串设置
+\newcommand{\nwpu@eng@schoolname}{Northwestern Polytechnical University}
+\if@npu@type@phd                                            % 博士学位名
+    \newcommand{\nwpu@chs@degree}{博士}                     %
+    \newcommand{\nwpu@eng@degree}{Doctor}                   %
+\fi                                                         %
+\if@npu@type@mst                                            % 硕士学位名
+    \newcommand{\nwpu@chs@degree}{硕士}                     %
+    \newcommand{\nwpu@eng@degree}{Master}                   %
+\fi                                                         %
+\if@npu@type@bcl                                            % 学士学位名
+    \newcommand{\nwpu@chs@degree}{学士}                     %
+    \newcommand{\nwpu@eng@degree}{Bachelor}                 %
+\fi                                                         %
+\if@npu@type@bcl                                            % 本科特殊设置
+    \newcommand{\nwpu@chs@doctitle}{本科毕业设计论文}       % 文档名和页眉
+    \newcommand{\nwpu@chs@header}{{\nwpu@chs@schoolname}本科毕业设计论文}
+\else                                                       % 其他页眉统一设置
+    \newcommand{\nwpu@chs@doctitle}{{\nwpu@chs@degree}学位论文}
+    \newcommand{\nwpu@chs@header}{\nwpu@chs@schoolname\nwpu@chs@doctitle}
+\fi                                                         %
+\if@npu@academic											% 控制内封模板的首项名称
+    \newcommand{\nwpu@chs@innerCoverFirstOption}{学科专业}	 % 学术学位应该是学科专业
+    \newcommand{\nwpu@chs@outerCoverFirstOption}{学{\enspace}科{\enspace}专{\enspace}业}
+\else
+    \newcommand{\nwpu@chs@innerCoverFirstOption}{专业领域}	 % 专业学位应该是专业领域
+    \newcommand{\nwpu@chs@outerCoverFirstOption}{专{\enspace}业{\enspace}领{\enspace}域}
+\fi
+\newcommand{\nwpu@eng@doctitle}{\nwpu@eng@degree Thesis}    % 英文文档名和页眉
+\newcommand{\nwpu@eng@header}{\nwpu@eng@doctitle of \nwpu@eng@schoolname}
+
+%%-----------------------------------------------------------------------------%
+\if@npu@lang@chs                                            % 定制中文特殊页面
+    \if@npu@type@bcl                                        % 本科致谢标题
+        \newcommand{\nwpu@page@ack}{致~~谢}                  %
+    \else                                                   % 硕博致谢标题
+        \newcommand{\nwpu@page@ack}{致{\quad}谢}             %
+    \fi
+    \if@npu@type@bcl                                        % 本科致谢标题
+        \newcommand{\nwpu@page@app}{附~~录}                  %
+    \else                                                   % 硕博致谢标题
+        \newcommand{\nwpu@page@app}{附{\quad}录}             %
+    \fi
+    \newcommand{\nwpu@page@acp}{在学期间取得的学术成果和参加%
+        科研情况}                                           %
+\else                                                       % 定制英文特殊页面
+    \newcommand{\nwpu@page@ack}{Acknowledgements}           %
+    \newcommand{\nwpu@page@app}{Appendix}                   %
+    \newcommand{\nwpu@page@acp}{Published Papers and        %
+        Participated in Scientific Research During the Study%
+        for \nwpu@eng@degree Degree}                        %
+\fi                                                         %
+%%=============================================================================%
+%%=============================================================================%
+%% 中文占位符及个人信息填写
+%%-----------------------------------------------------------------------------%
+\newcommand{\chs@colon}{\char"FF1A}                         % 中文冒号
+\newcommand{\chs@space}{\char"3000}                         % 全角空格
+\newcommand{\chs@period}{\char"3002}                        % 中文句号
+\newcommand{\chs@question}{\char"FF1F}                      % 中文问号
+\newcommand{\chs@exclamation}{\char"FF01}                   % 中文感叹号
+\newcommand{\chs@comma}{\char"FF0C}                         % 中文逗号
+\newcommand{\chs@semicolon}{\char"FF1B}                     % 中文分号
+\newcommand{\chs@leftparenthesis}{\char"FF08}               % 左括号
+\newcommand{\chs@rightparenthesis}{\char"FF09}              % 右括号
+%%-----------------------------------------------------------------------------%
+\newcommand{\nwpu@chs@title}{\chs@space}                    % 标题（中文）
+\newcommand{\nwpu@chs@author}{\chs@space}                   % 作者（中文）
+\newcommand{\nwpu@chs@school}{\chs@space}                   % 学院（中文）
+\newcommand{\nwpu@chs@major}{\chs@space}                    % 专业（中文）
+\newcommand{\nwpu@chs@advisor}{\chs@space}                  % 导师（中文）
+\newcommand{\nwpu@chs@advisorAcademicRank}{\chs@space}      % 导师职称（中文）
+\newcommand{\nwpu@chs@funding}{\chs@space}                  % 基金赞助（中文）
+%%-----------------------------------------------------------------------------%
+\newcommand{\nwpu@eng@title}{\chs@space}                    % 标题（英文）
+\newcommand{\nwpu@eng@author}{\chs@space}                   % 作者（英文）
+\newcommand{\nwpu@eng@major}{\chs@space}                    % 专业（英文）
+\newcommand{\nwpu@eng@advisor}{\chs@space}                  % 导师（英文）
+\newcommand{\nwpu@eng@advisorAcademicRank}{\chs@space}      % 导师职称（英文）
+\newcommand{\nwpu@eng@funding}{\chs@space}                  % 基金赞助（英文）
+%%-----------------------------------------------------------------------------%
+\newcounter{nwpu@month}                                        % 月份计数器
+\setcounter{nwpu@month}{1}                                     % 默认1月
+\newcommand{\nwpu@year}{2026}                                  % 默认年份
+\newcommand{\nwpu@eng@monthname}{%                              % 英文月份名称
+    \ifcase\value{nwpu@month}\or
+        January\or February\or March\or April\or May\or June\or
+        July\or August\or September\or October\or November\or December
+    \fi
+}
+\newcommand{\nwpu@chs@date}{\nwpu@year{} 年 \thenwpu@month{} 月}  % 日期（中文）
+\newcommand{\nwpu@eng@date}{\nwpu@eng@monthname/\nwpu@year}       % 日期（英文）
+%%-----------------------------------------------------------------------------%
+\newcommand{\nwpu@uid}{2000123456}                          % default 学号
+\newcommand{\nwpu@schoolcode}{10699}                        % default 学校代码
+\newcommand{\nwpu@classnumber}{O242}                        % default 分类号
+\newcommand{\nwpu@securitylevel}{公开}                      % default 密级
+\newcommand{\nwpu@funding}{\chs@space}                      % 基金资助
+%%-----------------------------------------------------------------------------%
+\renewcommand{\title}[2]{                                   % 设置题目
+    \renewcommand{\nwpu@chs@title}{#1}                      %
+    \renewcommand{\nwpu@eng@title}{#2}                      %
+}                                                           %
+\renewcommand{\author}[2]{                                  % 设置作者
+    \renewcommand{\nwpu@chs@author}{\blindreview{#1}}                     %
+    \renewcommand{\nwpu@eng@author}{\blindreview{#2}}                     %
+}                                                           %
+\renewcommand{\date}[2]{                                    % 设置日期
+    \renewcommand{\nwpu@chs@date}{#1}                       %
+    \renewcommand{\nwpu@eng@date}{#2}                       %
+}                                                           %
+\newcommand{\dateyear}[1]{\renewcommand{\nwpu@year}{#1}}    % 设置年份
+\newcommand{\datemonth}[1]{\setcounter{nwpu@month}{#1}}     % 设置月份
+\newcommand{\school}[1]{\renewcommand{\nwpu@chs@school}{#1}}  % 设置学院
+\newcommand{\major}[2]{                                     % 设置专业
+    \renewcommand{\nwpu@chs@major}{#1}                      %
+    \renewcommand{\nwpu@eng@major}{#2}                      %
+}                                                           %
+\newcommand{\advisor}[2]{                                   % 设置导师
+    \renewcommand{\nwpu@chs@advisor}{\blindreview{#1}}                    %
+    \renewcommand{\nwpu@eng@advisor}{\blindreview{#2}}                    %
+}                                                           %
+\newcommand{\advisorAcademicRank}[2]{                       % 导师学术等级
+    \renewcommand{\nwpu@chs@advisorAcademicRank}{~~#1}        %
+    \renewcommand{\nwpu@eng@advisorAcademicRank}{#2}        %
+}
+\newcommand{\funding}[2]{                                   % 设置基金资助
+    \renewcommand{\nwpu@chs@funding}{#1}                    %
+    \renewcommand{\nwpu@eng@funding}{#2}                    %
+}                                                           %
+\newcommand{\schoolname}[2]{                                % 设置学校名称
+    \renewcommand{\nwpu@chs@schoolname}{#1}                 %
+    \renewcommand{\nwpu@eng@schoolname}{#2}                 %
+}                                                           %
+\newcommand{\studentnumber}[1]{\renewcommand{\nwpu@uid}{\blindreview{#1}}}% 设置学号
+\newcommand{\schoolcode}[1]{\renewcommand{\nwpu@schoolcode}{#1}}% 设置学校代码
+\newcommand{\classnumber}[1]{\renewcommand{\nwpu@classnumber}{#1}}% 设置分类号
+\newcommand{\securitylevel}[1]{\renewcommand{\nwpu@securitylevel}{#1}}% 设置密级

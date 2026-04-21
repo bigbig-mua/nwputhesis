@@ -5,10 +5,16 @@
 module = "nwputhesis"
 
 supportdir = "./testfiles/support"
-checksuppfiles = {"*.tex", "*.bib", "*.cls", "figures/*", "*.ttf"}
+checksuppfiles = {"*.tex", "*.bib", "*.cls", "nwputhesis/*.def", "figures/*", "*.ttf"}
 
-installfiles = {"*.cls"}
-sourcefiles = {"*.cls"}
+installfiles = {"*.cls", "nwputhesis/*.def"}
+sourcefiles = {"*.cls", "nwputhesis/*.def"}
+
+function checkinit_hook()
+  mkdir(testdir .. "/nwputhesis")
+  cp("nwputhesis-*.def", unpackdir, testdir .. "/nwputhesis")
+  return 0
+end
 
 checkengines = {"xetex"}
 stdengine = "xetex"

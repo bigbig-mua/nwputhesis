@@ -1,0 +1,128 @@
+%% This file is part of nwputhesis.
+%% It is loaded internally by nwputhesis.cls.
+
+%%-----------------------------------------------------------------------------%
+\newenvironment{abstract}{                                  %
+    \pagenumbering{Roman}                                       % 页码使用大写罗马字母
+    \setcounter{page}{1}                                        % 页码从 1 开始
+    \if@npu@type@bcl                                            % 本科论文摘要格式
+        \renewcommand{\baselinestretch}{1.345}                  % 行距
+        \fontsize{12pt}{14.4pt}\selectfont                      % 小四，1.2倍行距
+        \newcommand{\sep}{\unskip，\ignorespaces}              % 本科：逗号
+        \titleformat{\chapter}[hang]{\normalfont\sSanhao\fHei\filcenter}{\sSanhao}{1em}{\sSanhao}% 三号不加粗
+        \chapter*{摘~~要}                                        %
+        \markboth{中~文~摘~要}{中~文~摘~要}                     %
+    \else                                                       % 硕博论文摘要格式
+        \newcommand{\sep}{\unskip\!；\ignorespaces}            % 硕博：分号
+        \graduatebodyfont                                       %
+        \chapter[摘{\quad}要]{摘{\quad}要}                      %
+        \markboth{摘{\quad}要}{摘{\quad}要}                     %
+    \fi                                                         %
+}{%
+    \vfill\sWuhao
+    \if@npu@type@bcl
+        \noindent
+    \else
+        \indent
+    \fi
+    \nwpu@chs@funding\par\cleardoublepage
+}
+\newenvironment{keywords}{                                  %
+    \if@npu@type@bcl                                        % 本科关键词格式
+        \vspace{1\baselineskip} \par\noindent{\fHei 关键词：}%
+    \else                                                   % 硕博关键词格式
+        \vspace{1\baselineskip} \par{\fHei 关键词：}         %
+    \fi                                                     %
+    \ignorespaces
+}{}                                                         %
+\ExplSyntaxOn
+\cs_new_protected:Npn \nwpu_keywords_print:nn #1#2
+  {
+    \clist_set:Nn \l_tmpa_clist { #2 }
+    \clist_use:Nn \l_tmpa_clist { #1 }
+  }
+\NewDocumentCommand{\keywordslist}{m}
+  {
+    \begin{keywords}
+      \nwpu_keywords_print:nn { \sep } { #1 }
+    \end{keywords}
+  }
+\ExplSyntaxOff
+%%-----------------------------------------------------------------------------%
+%% 英文摘要及关键词
+%%-----------------------------------------------------------------------------%
+\newenvironment{engabstract}{                               %
+    \if@npu@type@bcl                                        % 本科论文英文摘要格式
+        \renewcommand{\baselinestretch}{1.2}                % 行距
+        \fontsize{12pt}{14.4pt}\selectfont                  % 小四
+        \newcommand{\ensep}{\unskip, \ignorespaces}         % 本科：逗号+空格
+        \titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter}{\sSanhao}{1em}{\sSanhao}% 三号不加粗
+        \chapter*{ABSTRACT}                                 %
+        \markboth{英~文~摘~要}{英~文~摘~要}                 %
+    \else                                                   % 硕博论文英文摘要格式
+        \newcommand{\ensep}{\unskip\!; \ignorespaces}       % 硕博：分号+空格
+        \graduatebodyfont                                   %
+        \chapter[ABSTRACT]{\selectfont\rmfamily\fEng\textbf{Abstract}}%
+        \markboth{Abstract}{ABSTRACT}                       %
+    \fi                                                     %
+}{%
+    \if@npu@type@bcl                                        % 本科：恢复正文章节格式
+        \titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter\fHei}% 三号黑体不加粗
+        {第\CJKnumber{\thechapter}章}{1em}{\sSanhao}%
+    \fi                                                     %
+    \vfill\sWuhao
+    \if@npu@type@bcl
+        \noindent
+    \else
+        \indent
+    \fi
+    \nwpu@eng@funding\par\cleardoublepage%
+}
+\newenvironment{engkeywords}{                               %
+    \if@npu@type@bcl                                        % 本科英文关键词格式
+        \vspace{1\baselineskip} \par\noindent \textbf{KEY WORDS：}%
+    \else                                                   % 硕博英文关键词格式
+        \vspace{1\baselineskip} \par\noindent \textbf{Key words：}%
+    \fi                                                     %
+    \ignorespaces
+}{}                                                         %
+\ExplSyntaxOn
+\NewDocumentCommand{\engkeywordslist}{m}
+  {
+    \begin{engkeywords}
+      \nwpu_keywords_print:nn { \ensep } { #1 }
+    \end{engkeywords}
+  }
+\ExplSyntaxOff
+%%-----------------------------------------------------------------------------% 
+%% 公式变量说明
+%%-----------------------------------------------------------------------------% 
+\newenvironment{eqvariables}{%
+    \par\noindent\sWuhao\ignorespaces
+}{%
+    \par
+}
+%%=============================================================================%
+%%=============================================================================%
+%% 目录页
+%%-----------------------------------------------------------------------------%
+\let\old@toc\tableofcontents                                % 目录
+\renewcommand{\tableofcontents}{                            %
+    \graduatebodyfont\phantomsection                        %
+    % \addcontentsline{toc}{chapter}{\contentsname}           %
+    \bookmark[dest=\HyperLocalCurrentHref, level=0]{\contentsname}
+    {\hfuzz=2pt\old@toc} \cleardoublepage                   %
+}                                                           %
+\let\old@lof\listoffigures                                  % 图目录
+\renewcommand{\listoffigures}{                              %
+    \graduatebodyfont\phantomsection                        %
+    \addcontentsline{toc}{chapter}{\listfigurename}         %
+    \old@lof \cleardoublepage                               %
+}                                                           %
+\let\old@log\listoftables                                   % 表目录
+\renewcommand{\listoftables}{                               %
+    \graduatebodyfont\phantomsection                        %
+    \addcontentsline{toc}{chapter}{\listtablename}          %
+    \old@log \cleardoublepage                               %
+}                                                           %
+\DeclareFieldFormat{labelnumberwidth}{[#1]} %
