@@ -126,6 +126,18 @@
           }
       }
   }
+\cs_new_protected:Npn \nwpu_unknown_key:n #1
+  {
+    \bool_if:NTF \l__nwpu_in_setup_bool
+      {
+        \ClassError { nwputhesis } { Unknown~metadata~key~`\l_keys_key_str' }
+          {
+            The~key~`\l_keys_key_str'~is~not~defined~for~\string\nwputhesissetup.~
+            Check~the~key~name~or~set~load-time~options~in~\string\documentclass[...].
+          }
+      }
+      { \PassOptionsToClass { \CurrentOption } { book } }
+  }
 \DeclareKeys [ nwputhesis ]
   {
     lang        .code:n    = \nwpu_lang_set:n {#1},
@@ -155,7 +167,7 @@
     colorcover  .default:n = true,
     color-cover .code:n    = \nwpu_legacy_bool_set:nn { colorcover } {#1},
     color-cover .default:n = true,
-    unknown     .code:n    = \PassOptionsToClass { \CurrentOption } { book },
+    unknown     .code:n    = \nwpu_unknown_key:n {#1},
   }
 \ProcessKeyOptions [ nwputhesis ]
 \ExplSyntaxOff
