@@ -53,7 +53,7 @@
 常用选项说明：
 
 - `degree`：论文类型，可选 `bachelor`、`master`、`phd`。
-- `fontset`：字体方案，可选 `auto`、`fandol`、`windows`、`adobe`、`local`。非 Windows 系统如果没有 Windows 字体，建议使用 `auto` 或 `fandol`。
+- `fontset`：字体方案，可选 `auto`、`fandol`、`windows`、`local`。非 Windows 系统如果没有 Windows 字体，建议使用 `auto` 或 `fandol`。
 - `academic`：研究生论文是否为学术学位，`true` 为学术学位，`false` 为专业学位。
 - `blindreview`：是否生成盲评版本，`true` 会隐藏作者、导师和学号等信息。
 - `colorcover`：是否生成彩色封面封底，通常用于最终提交电子版。
