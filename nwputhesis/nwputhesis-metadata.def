@@ -1,0 +1,162 @@
+%% This file is part of nwputhesis.
+%% It is loaded internally by nwputhesis.cls.
+
+%%=============================================================================%
+%% 论文元数据填写
+%%-----------------------------------------------------------------------------%
+\newcommand{\chs@colon}{\char"FF1A}                         % 中文冒号
+\newcommand{\chs@space}{\char"3000}                         % 全角空格
+\newcommand{\chs@period}{\char"3002}                        % 中文句号
+\newcommand{\chs@question}{\char"FF1F}                      % 中文问号
+\newcommand{\chs@exclamation}{\char"FF01}                   % 中文感叹号
+\newcommand{\chs@comma}{\char"FF0C}                         % 中文逗号
+\newcommand{\chs@semicolon}{\char"FF1B}                     % 中文分号
+\newcommand{\chs@leftparenthesis}{\char"FF08}               % 左括号
+\newcommand{\chs@rightparenthesis}{\char"FF09}              % 右括号
+%%-----------------------------------------------------------------------------%
+\newcommand{\nwpu@chs@title}{\chs@space}                    % 标题（中文）
+\newcommand{\nwpu@chs@author}{\chs@space}                   % 作者（中文）
+\newcommand{\nwpu@chs@school}{\chs@space}                   % 学院（中文）
+\newcommand{\nwpu@chs@major}{\chs@space}                    % 专业（中文）
+\newcommand{\nwpu@chs@advisor}{\chs@space}                  % 导师（中文）
+\newcommand{\nwpu@chs@advisorAcademicRank}{\chs@space}      % 导师职称（中文）
+\newcommand{\nwpu@chs@funding}{\chs@space}                  % 基金赞助（中文）
+%%-----------------------------------------------------------------------------%
+\newcommand{\nwpu@eng@title}{\chs@space}                    % 标题（英文）
+\newcommand{\nwpu@eng@author}{\chs@space}                   % 作者（英文）
+\newcommand{\nwpu@eng@major}{\chs@space}                    % 专业（英文）
+\newcommand{\nwpu@eng@advisor}{\chs@space}                  % 导师（英文）
+\newcommand{\nwpu@eng@advisorAcademicRank}{\chs@space}      % 导师职称（英文）
+\newcommand{\nwpu@eng@funding}{\chs@space}                  % 基金赞助（英文）
+%%-----------------------------------------------------------------------------%
+\newcounter{nwpu@month}                                     % 月份计数器
+\setcounter{nwpu@month}{1}                                  % 默认1月
+\newcommand{\nwpu@year}{2026}                               % 默认年份
+\newcommand{\nwpu@eng@monthname}{%                          % 英文月份名称
+    \ifcase\value{nwpu@month}\or
+        January\or February\or March\or April\or May\or June\or
+        July\or August\or September\or October\or November\or December
+    \fi
+}
+\newcommand{\nwpu@chs@date}{\nwpu@year{} 年 \thenwpu@month{} 月} % 日期（中文）
+\newcommand{\nwpu@eng@date}{\nwpu@eng@monthname/\nwpu@year}  % 日期（英文）
+%%-----------------------------------------------------------------------------%
+\newcommand{\nwpu@uid}{2000123456}                          % default 学号
+\newcommand{\nwpu@schoolcode}{10699}                        % default 学校代码
+\newcommand{\nwpu@classnumber}{O242}                        % default 分类号
+\newcommand{\nwpu@securitylevel}{公开}                      % default 密级
+\newcommand{\nwpu@funding}{\chs@space}                      % 基金资助
+%%-----------------------------------------------------------------------------%
+\newcommand{\nwpu@set@chs@title}[1]{\renewcommand{\nwpu@chs@title}{#1}}
+\newcommand{\nwpu@set@eng@title}[1]{\renewcommand{\nwpu@eng@title}{#1}}
+\newcommand{\nwpu@set@chs@author}[1]{\renewcommand{\nwpu@chs@author}{\blindreview{#1}}}
+\newcommand{\nwpu@set@eng@author}[1]{\renewcommand{\nwpu@eng@author}{\blindreview{#1}}}
+\newcommand{\nwpu@set@chs@date}[1]{\renewcommand{\nwpu@chs@date}{#1}}
+\newcommand{\nwpu@set@eng@date}[1]{\renewcommand{\nwpu@eng@date}{#1}}
+\newcommand{\nwpu@set@year}[1]{\renewcommand{\nwpu@year}{#1}}
+\newcommand{\nwpu@set@month}[1]{\setcounter{nwpu@month}{#1}}
+\newcommand{\nwpu@set@school}[1]{\renewcommand{\nwpu@chs@school}{#1}}
+\newcommand{\nwpu@set@chs@major}[1]{\renewcommand{\nwpu@chs@major}{#1}}
+\newcommand{\nwpu@set@eng@major}[1]{\renewcommand{\nwpu@eng@major}{#1}}
+\newcommand{\nwpu@set@chs@advisor}[1]{\renewcommand{\nwpu@chs@advisor}{\blindreview{#1}}}
+\newcommand{\nwpu@set@eng@advisor}[1]{\renewcommand{\nwpu@eng@advisor}{\blindreview{#1}}}
+\newcommand{\nwpu@set@chs@advisor@rank}[1]{\renewcommand{\nwpu@chs@advisorAcademicRank}{~~#1}}
+\newcommand{\nwpu@set@eng@advisor@rank}[1]{\renewcommand{\nwpu@eng@advisorAcademicRank}{#1}}
+\newcommand{\nwpu@set@chs@funding}[1]{\renewcommand{\nwpu@chs@funding}{#1}}
+\newcommand{\nwpu@set@eng@funding}[1]{\renewcommand{\nwpu@eng@funding}{#1}}
+\newcommand{\nwpu@set@chs@schoolname}[1]{\renewcommand{\nwpu@chs@schoolname}{#1}}
+\newcommand{\nwpu@set@eng@schoolname}[1]{\renewcommand{\nwpu@eng@schoolname}{#1}}
+\newcommand{\nwpu@set@studentnumber}[1]{\renewcommand{\nwpu@uid}{\blindreview{#1}}}
+\newcommand{\nwpu@set@schoolcode}[1]{\renewcommand{\nwpu@schoolcode}{#1}}
+\newcommand{\nwpu@set@classnumber}[1]{\renewcommand{\nwpu@classnumber}{#1}}
+\newcommand{\nwpu@set@securitylevel}[1]{\renewcommand{\nwpu@securitylevel}{#1}}
+%%-----------------------------------------------------------------------------% 
+\ExplSyntaxOn
+\DeclareKeys [ nwputhesis ]
+  {
+    title                 .code:n = \nwpu@set@chs@title {#1},
+    title*                .code:n = \nwpu@set@eng@title {#1},
+    title-en              .code:n = \nwpu@set@eng@title {#1},
+    author                .code:n = \nwpu@set@chs@author {#1},
+    author*               .code:n = \nwpu@set@eng@author {#1},
+    author-en             .code:n = \nwpu@set@eng@author {#1},
+    date                  .code:n = \nwpu@set@chs@date {#1},
+    date*                 .code:n = \nwpu@set@eng@date {#1},
+    date-en               .code:n = \nwpu@set@eng@date {#1},
+    year                  .code:n = \nwpu@set@year {#1},
+    month                 .code:n = \nwpu@set@month {#1},
+    school                .code:n = \nwpu@set@school {#1},
+    major                 .code:n = \nwpu@set@chs@major {#1},
+    major*                .code:n = \nwpu@set@eng@major {#1},
+    major-en              .code:n = \nwpu@set@eng@major {#1},
+    advisor               .code:n = \nwpu@set@chs@advisor {#1},
+    advisor*              .code:n = \nwpu@set@eng@advisor {#1},
+    advisor-en            .code:n = \nwpu@set@eng@advisor {#1},
+    advisor-rank          .code:n = \nwpu@set@chs@advisor@rank {#1},
+    advisor-rank*         .code:n = \nwpu@set@eng@advisor@rank {#1},
+    advisor-rank-en       .code:n = \nwpu@set@eng@advisor@rank {#1},
+    advisor-title         .code:n = \nwpu@set@chs@advisor@rank {#1},
+    advisor-title*        .code:n = \nwpu@set@eng@advisor@rank {#1},
+    advisor-title-en      .code:n = \nwpu@set@eng@advisor@rank {#1},
+    funding               .code:n = \nwpu@set@chs@funding {#1},
+    funding*              .code:n = \nwpu@set@eng@funding {#1},
+    funding-en            .code:n = \nwpu@set@eng@funding {#1},
+    school-name           .code:n = \nwpu@set@chs@schoolname {#1},
+    school-name*          .code:n = \nwpu@set@eng@schoolname {#1},
+    school-name-en        .code:n = \nwpu@set@eng@schoolname {#1},
+    student-number        .code:n = \nwpu@set@studentnumber {#1},
+    studentnumber         .code:n = \nwpu@set@studentnumber {#1},
+    school-code           .code:n = \nwpu@set@schoolcode {#1},
+    schoolcode            .code:n = \nwpu@set@schoolcode {#1},
+    class-number          .code:n = \nwpu@set@classnumber {#1},
+    classnumber           .code:n = \nwpu@set@classnumber {#1},
+    security-level        .code:n = \nwpu@set@securitylevel {#1},
+    securitylevel         .code:n = \nwpu@set@securitylevel {#1},
+  }
+\NewDocumentCommand \nwputhesissetup { m }
+  {
+    \bool_set_true:N \l__nwpu_in_setup_bool
+    \SetKeys [ nwputhesis ] {#1}
+    \bool_set_false:N \l__nwpu_in_setup_bool
+  }
+\ExplSyntaxOff
+%%-----------------------------------------------------------------------------%
+\renewcommand{\title}[2]{                                   % 设置题目
+    \nwpu@set@chs@title{#1}                                 %
+    \nwpu@set@eng@title{#2}                                 %
+}                                                           %
+\renewcommand{\author}[2]{                                  % 设置作者
+    \nwpu@set@chs@author{#1}                                %
+    \nwpu@set@eng@author{#2}                                %
+}                                                           %
+\renewcommand{\date}[2]{                                    % 设置日期
+    \nwpu@set@chs@date{#1}                                  %
+    \nwpu@set@eng@date{#2}                                  %
+}                                                           %
+\newcommand{\dateyear}[1]{\nwpu@set@year{#1}}               % 设置年份
+\newcommand{\datemonth}[1]{\nwpu@set@month{#1}}             % 设置月份
+\newcommand{\school}[1]{\nwpu@set@school{#1}}               % 设置学院
+\newcommand{\major}[2]{                                     % 设置专业
+    \nwpu@set@chs@major{#1}                                 %
+    \nwpu@set@eng@major{#2}                                 %
+}                                                           %
+\newcommand{\advisor}[2]{                                   % 设置导师
+    \nwpu@set@chs@advisor{#1}                               %
+    \nwpu@set@eng@advisor{#2}                               %
+}                                                           %
+\newcommand{\advisorAcademicRank}[2]{                       % 导师学术等级
+    \nwpu@set@chs@advisor@rank{#1}                          %
+    \nwpu@set@eng@advisor@rank{#2}                          %
+}
+\newcommand{\funding}[2]{                                   % 设置基金资助
+    \nwpu@set@chs@funding{#1}                               %
+    \nwpu@set@eng@funding{#2}                               %
+}                                                           %
+\newcommand{\schoolname}[2]{                                % 设置学校名称
+    \nwpu@set@chs@schoolname{#1}                            %
+    \nwpu@set@eng@schoolname{#2}                            %
+}                                                           %
+\newcommand{\studentnumber}[1]{\nwpu@set@studentnumber{#1}} % 设置学号
+\newcommand{\schoolcode}[1]{\nwpu@set@schoolcode{#1}}       % 设置学校代码
+\newcommand{\classnumber}[1]{\nwpu@set@classnumber{#1}}     % 设置分类号
+\newcommand{\securitylevel}[1]{\nwpu@set@securitylevel{#1}} % 设置密级
