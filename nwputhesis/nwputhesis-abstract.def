@@ -102,10 +102,10 @@
   {
     \nwpu_if_bachelor:TF                                        % 本科英文关键词格式
       {
-        \vspace{1\baselineskip} \par\noindent \textbf{KEY WORDS：}%
+        \vspace{1\baselineskip} \par\noindent \textbf{KEY~WORDS：}%
       }
       {                                                         % 硕博英文关键词格式
-        \vspace{1\baselineskip} \par\noindent \textbf{Key words：}%
+        \vspace{1\baselineskip} \par\noindent \textbf{Key~words：}%
       }
     \ignorespaces
   }
