@@ -11,8 +11,6 @@ on:
       - ".github/ISSUE_TEMPLATE/**"
       - ".vscode/**"
       - "master.pdf"
-      - "data/graduate-info.tex"
-      - "data/ungraduate-info.tex"
   pull_request:
     paths-ignore:
       - "README.md"
@@ -23,8 +21,6 @@ on:
       - ".github/ISSUE_TEMPLATE/**"
       - ".vscode/**"
       - "master.pdf"
-      - "data/graduate-info.tex"
-      - "data/ungraduate-info.tex"
   workflow_dispatch:
 
 env:
