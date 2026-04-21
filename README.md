@@ -38,7 +38,46 @@
 - `master.tex`：硕士学位论文
 - `phd.tex`：博士学位论文
 
-`thesis-setup.tex` 为全局编译配置文件，可在其中调整是否使用本地字体、研究生论文类型、盲评版本和彩色封面等选项。
+论文类型、字体、学术/专业学位、盲评和彩色封面等加载期选项统一写在入口文件的 `\documentclass[...]` 中。例如：
+
+```tex
+\documentclass[
+    degree = master,
+    fontset = auto,
+    academic = false,
+    blindreview = false,
+    colorcover = false,
+]{nwputhesis}
+```
+
+常用选项说明：
+
+- `degree`：论文类型，可选 `bachelor`、`master`、`phd`。
+- `fontset`：字体方案，可选 `auto`、`fandol`、`windows`、`adobe`、`local`。非 Windows 系统如果没有 Windows 字体，建议使用 `auto` 或 `fandol`。
+- `academic`：研究生论文是否为学术学位，`true` 为学术学位，`false` 为专业学位。
+- `blindreview`：是否生成盲评版本，`true` 会隐藏作者、导师和学号等信息。
+- `colorcover`：是否生成彩色封面封底，通常用于最终提交电子版。
+- `bibstyle`：参考文献标准，可选 `2015`、`2025`。
+
+题目、作者、学院、专业、导师、日期、学号、基金资助等元数据统一写在 `content/thesis/*/info.tex` 或摘要文件中的 `\nwputhesissetup{...}`。例如：
+
+```tex
+\nwputhesissetup{
+    title = {论文中文题目},
+    title* = {English Thesis Title},
+    author = {张三},
+    author* = {San Zhang},
+    year = {2026},
+    month = {3},
+    school = {计算机学院},
+    major = {计算机科学与技术},
+    major* = {Computer Science and Technology},
+    advisor = {李四},
+    advisor* = {Si Li},
+}
+```
+
+`thesis-setup.tex` 已不再作为推荐配置入口，仅作为旧工程兼容占位文件保留。
 
 ### 文件修改说明
 用户基本只需要修改 `content/` 下的文件：
