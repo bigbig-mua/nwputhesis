@@ -5,7 +5,6 @@
 %%-----------------------------------------------------------------------------%
 %% 模块级长度变量（由封面页和内封页共享）
 %%-----------------------------------------------------------------------------%
-\dim_new:N \l__nwpu_coverpage_detail_dim
 \dim_new:N \l__nwpu_chstitle_hwidtha_dim
 \dim_new:N \l__nwpu_chstitle_hwidthb_dim
 \dim_new:N \l__nwpu_author_dim
@@ -205,7 +204,6 @@
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \make@nwpu@coverpage {                          % 设置封皮页
     \thispagestyle{empty}                                   % 清空页面格式
-    \settowidth{\l__nwpu_coverpage_detail_dim}{\sSanhao 申请学位日期}
     \begin{titlepage}                                       %
         % 彩色封面背景图
         \nwpu_if_colorcover:TF {
@@ -427,8 +425,7 @@
         \end{tikzpicture}
     }
 }
-\AtEndDocument{\make@nwpu@backcover}                        % 在文档末尾自动插入封底                                                           %
-%%=============================================================================%
+\AtEndDocument{\make@nwpu@backcover}
 %%=============================================================================%
 %% 学位论文评阅人和答辩委员会名单
 %%-----------------------------------------------------------------------------%

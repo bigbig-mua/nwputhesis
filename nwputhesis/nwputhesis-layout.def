@@ -102,9 +102,7 @@
     }
     {                                                           % 硕博英文
         \dim_new:N \l__nwpu_contents_title_dim
-        \dim_new:N \l__nwpu_contents_appendix_dim
         \settowidth{\l__nwpu_contents_title_dim}{\graduatecontentsfont Chapter~000} %
-        \settowidth{\l__nwpu_contents_appendix_dim}{\graduatecontentsfont Appendix~M00}
         \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
             ][l]{\nwpu@eng@chaptercname{\thecontentslabel}}\hspace{%
                 \l__nwpu_contents_title_dim}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{
@@ -272,7 +270,6 @@
         { \newtheorem*{proof}{证明} }
         { \newtheorem*{proof}{Proof} }
 }
-\cs_new_protected:Npn \qedinEquation { {\rlap{$\qquad\square$}} }% 公式中添加证毕符号
 \nwpu_if_chinese:TF                                         % 定制中文定理环境
 {
     \newtheorem{theorem}{定理}[chapter]                     %
