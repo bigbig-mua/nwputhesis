@@ -2,18 +2,11 @@
 \ProvidesClass{nwputhesis}
 [2026/03/25 v2.2.0 nwputhesis]
 \input{nwputhesis/nwputhesis-options.def}
-\ExplSyntaxOn
-\msg_new:nnn { nwputhesis } { patch-chapter }
-  { Failed~to~patch~chapter~pagination. }
-\ExplSyntaxOff
-\LoadClass[a4paper, openany]{book}                          % 本科单面印刷，硕博双面印刷
+\LoadClass[a4paper]{book}                                   % openright 默认：硕博双面从奇数页起排
 \ExplSyntaxOn
 \nwpu_if_bachelor:T { \@twosidefalse \@mparswitchfalse }    % 本科强制单面印刷
 \ExplSyntaxOff
-\RequirePackage{etoolbox}                                   % LaTeX 补丁工具
-\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{%
-    \cleardoublepage
-}{}{\msg_error:nn { nwputhesis } { patch-chapter }}
+\input{nwputhesis/nwputhesis-format-constants.def}
 \input{nwputhesis/nwputhesis-core.def}
 \input{nwputhesis/nwputhesis-fonts.def}
 \input{nwputhesis/nwputhesis-layout.def}

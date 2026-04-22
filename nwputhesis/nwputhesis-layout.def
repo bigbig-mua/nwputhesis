@@ -4,18 +4,14 @@
 %%-----------------------------------------------------------------------------%
 \ExplSyntaxOn
 \RequirePackage{indentfirst}                                % 段首空格设置
-\nwpu_if_bachelor:TF                                        % 本科论文段首空格
-    { \dim_set:Nn \parindent { 26pt } }                     % 段首空格长度（本科）
-    { \dim_set:Nn \parindent { 24pt } }                     % 段首空格长度（硕博）
-\skip_set:Nn \parskip { 0pt }                               % 段落间距
+\dim_set:Nn \parindent { \nwpuParIndent }
+\skip_set:Nn \parskip { \nwpuParSkip }
 \linespread{1.0}                                            % 行距
 %%-----------------------------------------------------------------------------%
 \RequirePackage{ulem}                                       % 下划线
 \NewDocumentCommand \dlmu@underline { O{5cm} m }
     { \hspace{1pt}\underline{ \hb@xt@ #1 { \hss #2 \hss } } \hspace{3pt} }
 \cs_set_eq:NN \coverunderline \dlmu@underline
-%%-----------------------------------------------------------------------------%
-% \RequirePackage{layouts}                                    % 页面具体尺寸信息（未使用，已注释）
 %%-----------------------------------------------------------------------------%
 \RequirePackage[sf]{titlesec}                               % 章节标题格式
 \RequirePackage{titletoc}                                   % 目录格式
@@ -25,31 +21,31 @@
 {
     \renewcommand{\thechapter}{\arabic{chapter}}            % 章节编号保持数字
     \renewcommand{\chaptername}{第\CJKnumber{\thechapter}章}% 章节名称（中文数字）
-    \titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter\fHei}% 一级：三号黑体不加粗
-    {第\CJKnumber{\thechapter}章}{1em}{\sSanhao}
-    \titleformat{\section}[hang]{\sSihao\fHei}% 二级：四号黑体不加粗
-    {\sSihao\thesection}{0.5em}{}{}
-    \titleformat{\subsection}[hang]{\sXiaosi\fHei}% 三级：小四黑体不加粗
-    {\sXiaosi\thesubsection}{0.5em}{}{}
+    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter\fHei}%
+      {第\CJKnumber{\thechapter}章}{1em}{\nwpuChapterSize}
+    \titleformat{\section}[hang]{\nwpuSectionSize\fHei}%
+      {\nwpuSectionSize\thesection}{0.5em}{}{}
+    \titleformat{\subsection}[hang]{\nwpuSubsectionSize\fHei}%
+      {\nwpuSubsectionSize\thesubsection}{0.5em}{}{}
     \titleformat{\subsubsection}[hang]{\fHei}%
-    {(\arabic{subsubsection})}{0.5em}{}{}
-    \titlespacing{\chapter}{0pt}{5pt}{23pt}
-    \titlespacing{\section}{0pt}{2pt}{2pt}
-    \titlespacing{\subsection}{0pt}{3pt}{-1pt}
+      {(\arabic{subsubsection})}{0.5em}{}{}
+    \titlespacing{\chapter}{0pt}{\nwpuChapterBeforeSkip}{\nwpuChapterAfterSkip}
+    \titlespacing{\section}{0pt}{\nwpuSectionBeforeSkip}{\nwpuSectionAfterSkip}
+    \titlespacing{\subsection}{0pt}{\nwpuSubsecBeforeSkip}{\nwpuSubsecAfterSkip}
     \titlespacing{\subsubsection}{0pt}{0.25em}{0em}
 }
 {                                                           % 硕博论文章节格式
-    \titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter  %
-        \sffamily\fHei}{\sffamily\fHei\sSanhao{\chaptertitlename}}{20pt}{\sSanhao}%
-    \titleformat{\section}[hang]{\sffamily\fHei\sSihao}{%       %
-        \sffamily\fHei\sSihao\thesection}{0.5em}{}{}            %
-    \titleformat{\subsection}[hang]{\sffamily\fHei\sHgXiaosi}{% %
-        \sffamily\fHei\sHgXiaosi\thesubsection}{0.5em}{}{}      %
+    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter  %
+        \sffamily\fHei}{\sffamily\fHei\nwpuChapterSize{\chaptertitlename}}{20pt}{\nwpuChapterSize}%
+    \titleformat{\section}[hang]{\sffamily\fHei\nwpuSectionSize}{%       %
+        \sffamily\fHei\nwpuSectionSize\thesection}{0.5em}{}{}            %
+    \titleformat{\subsection}[hang]{\sffamily\fHei\nwpuSubsectionSize}{% %
+        \sffamily\fHei\nwpuSubsectionSize\thesubsection}{0.5em}{}{}      %
     \titleformat{\subsubsection}[hang]{\sffamily\fHei}{%        % 小标题: (4) 标题
         (\arabic{subsubsection})}{0.5em}{}{}                    %
-    \titlespacing{\chapter}{0pt}{-2pt}{14pt}                    % 缩小标题之间缩进
-    \titlespacing{\section}{0pt}{7pt}{0em}                      %
-    \titlespacing{\subsection}{0pt}{6.5pt}{0em}                 %
+    \titlespacing{\chapter}{0pt}{\nwpuChapterBeforeSkip}{\nwpuChapterAfterSkip}
+    \titlespacing{\section}{0pt}{\nwpuSectionBeforeSkip}{\nwpuSectionAfterSkip}
+    \titlespacing{\subsection}{0pt}{\nwpuSubsecBeforeSkip}{\nwpuSubsecAfterSkip}
     \titlespacing{\subsubsection}{0pt}{0.25em}{0pt}             %
     \titlespacing{\paragraph}{0pt}{0.25em}{0pt}                 %
 }
@@ -122,7 +118,7 @@
 {
     \pagestyle{fancyplain}                                  % 新增版式 fancyplain
     \fancyhf{}                                              % 清空原有页眉页脚
-    \fancyfoot[C,C]{\sXiaowu~\thepage~}                     % 页脚中央显示页码
+    \fancyfoot[C,C]{\nwpuHeaderFooterSize~\thepage~}           % 页脚中央显示页码
     \chead{\includegraphics[scale=0.15]{nwpuheader.png}}% 页眉居中（图片）
 }
 {                                                           % 硕博论文页眉设置
@@ -137,12 +133,12 @@
     }
     \pagestyle{fancyplain}                                  % 新增版式 fancyplain
     \fancyhf{}                                              % 清空原有页眉页脚
-    \fancyfoot[C, C]{\sXiaowu{\thepage}}                    % 页脚中央显示页码
+    \fancyfoot[C, C]{\nwpuHeaderFooterSize{\thepage}}          % 页脚中央显示页码
     \fancyhead{}                                            % 页眉清除原有设置
-    \fancyhead[COH]{\raisebox{0.5pt}{\sXiaowu{\leftmark}}}  %
+    \fancyhead[COH]{\raisebox{0.5pt}{\nwpuHeaderFooterSize{\leftmark}}}  %
     \nwpu_if_chinese:TF                                     % 中文论文环境
-        { \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@chs@header}}} }
-        { \fancyhead[CEH]{\raisebox{0.5pt}{\sXiaowu{\nwpu@eng@header}}} }
+        { \fancyhead[CEH]{\raisebox{0.5pt}{\nwpuHeaderFooterSize{\nwpu@chs@header}}} }
+        { \fancyhead[CEH]{\raisebox{0.5pt}{\nwpuHeaderFooterSize{\nwpu@eng@header}}} }
 }
 %%-----------------------------------------------------------------------------%
 \RequirePackage[
@@ -169,7 +165,7 @@
 \RequirePackage{longtable}                                  % 长表格（跨页表格）
 \RequirePackage{booktabs}                                   % 三线表
 \RequirePackage{tabularx}                                   % 定宽表格
-\DeclareCaptionFont{cWuhao}{\sWuhao}                        % 图表标题为五号
+\DeclareCaptionFont{cWuhao}{\nwpuCaptionSize}                % 图表标题为五号
 \DeclareCaptionFont{cGradFigureCaption}{%
     \fontsize{10.5pt}{9.5pt}\selectfont}                   % 研究生图题：五号，收紧行距
 \DeclareCaptionFont{cBclTableCaption}{%
@@ -178,9 +174,9 @@
     \fontsize{10.5pt}{11.5pt}\selectfont\fSong}            % 本科图题：五号宋体，行距进一步收紧
 \nwpu_if_bachelor:TF
 {
-    \setlength{\textfloatsep}{20pt}                        % 本科图/表/算法与正文前后各空一行
-    \setlength{\floatsep}{20pt}                            %
-    \setlength{\intextsep}{20pt}                           %
+    \setlength{\textfloatsep}{\nwpuTextFloatSep}              %
+    \setlength{\floatsep}{\nwpuFloatSep}                      %
+    \setlength{\intextsep}{\nwpuInTextSep}                    %
     \captionsetup[table]{%
         labelfont=cBclTableCaption,
         textfont=cBclTableCaption,
@@ -194,9 +190,9 @@
     \captionsetup[subfigure]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
 }
 {
-    \setlength{\textfloatsep}{8pt}                         % 研究生图/表与正文间距进一步收紧
-    \setlength{\floatsep}{8pt}                             %
-    \setlength{\intextsep}{8pt}                            %
+    \setlength{\textfloatsep}{\nwpuTextFloatSep}              %
+    \setlength{\floatsep}{\nwpuFloatSep}                      %
+    \setlength{\intextsep}{\nwpuInTextSep}                    %
     \captionsetup[table]{labelfont=cWuhao, textfont=cWuhao, aboveskip=10pt, belowskip=0pt}
     \captionsetup[figure]{labelfont=cGradFigureCaption, textfont=cGradFigureCaption, aboveskip=10pt, belowskip=0pt}
     \captionsetup[subfigure]{%
@@ -207,8 +203,8 @@
         belowskip=0pt}
 }
 \captionsetup[subtable]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
-\AtBeginEnvironment{tabular}{\sWuhao}                       % 表格内容为五号
-\AtBeginEnvironment{tabularx}{\sWuhao}                      %
+\AddToHook{env/tabular/begin}{\nwpuCaptionSize}               % 表格内容为五号
+\AddToHook{env/tabularx/begin}{\nwpuCaptionSize}              %
 \newcolumntype{C}{>{\centering\arraybackslash}X}            % 等宽居中
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}          % 等宽左对齐
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}           % 等宽右对齐
@@ -219,8 +215,8 @@
 \newcolumntype{P}[1]{>{\raggedright\let\newline\\%          % 指定宽度左对齐
         \arraybackslash\hspace{0pt}}p{#1}}                  %
 \renewcommand{\arraystretch}{1.4}                           % 表格行高为 1.4 倍
-\dim_set:Nn \heavyrulewidth { 1.5pt }                       % 表格上下线宽 1.5 磅
-\dim_set:Nn \lightrulewidth { 1pt }                         % 表格中线宽 1.0 磅
+\dim_set:Nn \heavyrulewidth { \nwpuHeavyRuleWidth }          % 表格上下线宽
+\dim_set:Nn \lightrulewidth { \nwpuLightRuleWidth }          % 表格中线宽
 %%-----------------------------------------------------------------------------%
 \RequirePackage[amsmath,thmmarks]{ntheorem}                 % 定理环境格式
 \theorembodyfont{\normalfont\itshape}                       % 主体文字格式
@@ -232,12 +228,11 @@
     \thm@preskip=0pt                                        %
     \thm@postskip=0pt}                                      %
 \AtBeginDocument{                                           %
-    \typeout{NWPUDEBUG display skips begin}                 %
     \setlength{\abovedisplayskip}{0pt}                      %
     \setlength{\belowdisplayskip}{0pt}                      %
     \setlength{\abovedisplayshortskip}{0pt}                 %
     \setlength{\belowdisplayshortskip}{0pt}                 %
-    \typeout{NWPUDEBUG display skips end}}                  %
+}                                                           %
 {\theoremsymbol{\ensuremath{\square}}                       % 证明环境 囗
     \nwpu_if_chinese:TF
         { \newtheorem*{proof}{证明} }
@@ -301,20 +296,13 @@
   { \tl_set:Nn \l__nwpu_nom_sec_tl { chapter } }
   { \tl_set:Nn \l__nwpu_nom_sec_tl { section } }
 \cs_set:Npn \thenomenclature {%
-    % \dim_new:N \l__nwpu_columnsep_save_dim
-    % \dim_set:Nn \l__nwpu_columnsep_save_dim \columnsep
-    % \dim_set:Nn \columnsep { 20pt }
-    % \begin{multicols}{2}[%
     \use:c { \l__nwpu_nom_sec_tl } * { \nomname }
     \if@intoc\addcontentsline{toc}{\l__nwpu_nom_sec_tl}{\nomname}\fi
-    \nompreamble % \raggedcolumns
-    % ]
+    \nompreamble
     \list{}{\labelsep=15pt\labelwidth\nom@tempdim\leftmargin\labelwidth\advance
         \leftmargin\labelsep\itemsep\nomitemsep\let\makelabel\nomlabel}%
 }
 \cs_set:Npn \endthenomenclature {\endlist
-    % \end{multicols}
-    % \dim_set:Nn \columnsep { \l__nwpu_columnsep_save_dim }
     \nompostamble}
 \ExplSyntaxOff
 %%=============================================================================%

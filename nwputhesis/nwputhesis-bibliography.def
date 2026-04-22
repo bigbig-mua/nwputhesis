@@ -6,7 +6,7 @@
 \ExplSyntaxOn
 \dim_set:Nn \biblabelsep { 0pt }                             %
 \dim_new:N \l__nwpu_bib_firstline_indent_dim
-\AtBeginDocument{\typeout{NWPUDEBUG bib indent begin}\settowidth{\l__nwpu_bib_firstline_indent_dim}{汉汉}\typeout{NWPUDEBUG bib indent end}} %
+\AtBeginDocument{\settowidth{\l__nwpu_bib_firstline_indent_dim}{汉汉}} %
 \dim_new:N \l__nwpu_bib_label_dim
 \dim_new:N \l__nwpu_bib_firstline_reserve_dim
 \dim_set:Nn \l__nwpu_bib_firstline_reserve_dim { 1.5em }    %

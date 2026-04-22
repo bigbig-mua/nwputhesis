@@ -47,38 +47,15 @@
 %% 格式控制及组件控制
 %%-----------------------------------------------------------------------------%
 \RequirePackage{geometry}                                   % 纸张尺寸及页边距
-\nwpu_if_bachelor:TF                                        % 本科论文页边距
-  {
-    \geometry{a4paper,                                      % A4 纸张
-        left=1.25in, right=1.25in, top=1in, bottom=1in,    % 页边距
-        headheight=0.93cm, headsep=0.4cm, footskip=0.79cm}% 页眉页脚位置
-  }
-  {                                                         % 硕博论文页边距
-    \geometry{a4paper,                                      % A4 纸张
-        left=2.5cm, right=2.5cm, top=2.54cm, bottom=2.54cm, % 页边距
-        headheight=1.0cm, headsep=0.11cm, footskip=0.79cm}  % 页眉页脚位置
-  }
+\geometry{a4paper,
+    left=\nwpuMarginLeft,
+    right=\nwpuMarginRight,
+    top=\nwpuMarginTop,
+    bottom=\nwpuMarginBottom,
+    headheight=\nwpuHeadHeight,
+    headsep=\nwpuHeadSep,
+    footskip=\nwpuFootSkip}
 %%-----------------------------------------------------------------------------%
-\cs_new_protected:Npn \sChuhao { \fontsize{42pt}{63pt}\selectfont }     % 初号，1.5 倍
-\cs_new_protected:Npn \sYihao { \fontsize{26pt}{36pt}\selectfont }      % 一号，1.4 倍
-\cs_new_protected:Npn \sErhao { \fontsize{22pt}{28pt}\selectfont }      % 二号，1.25 倍
-\cs_new_protected:Npn \sXiaoer { \fontsize{18pt}{18pt}\selectfont }     % 小二，单倍
-\cs_new_protected:Npn \sSanhao { \fontsize{16pt}{24pt}\selectfont }     % 三号，1.5 倍
-\cs_new_protected:Npn \sXiaosan { \fontsize{15pt}{22pt}\selectfont }    % 小三，1.5 倍
-\cs_new_protected:Npn \sSihao { \fontsize{14pt}{21pt}\selectfont }      % 四号，1.5 倍
-\cs_new_protected:Npn \sHgXiaosi { \fontsize{13pt}{19pt}\selectfont }   % 半小四，1.5 倍
-\cs_new_protected:Npn \sLgXiaosi { \fontsize{12.5pt}{13pt}\selectfont } % 半小四，约 1 倍
-\cs_new_protected:Npn \sXiaosi { \fontsize{12pt}{14.4pt}\selectfont }   % 小四，1.2 倍
-\cs_new_protected:Npn \graduatecontentsfont { \fontsize{12pt}{19pt}\selectfont } % 硕博目录统一格式
-\cs_new_protected:Npn \sLargeWuhao { \fontsize{11pt}{11pt}\selectfont } % 大五，单倍
-\cs_new_protected:Npn \sWuhao { \fontsize{10.5pt}{10.5pt}\selectfont }  % 五号，单倍
-\cs_new_protected:Npn \sXiaowu { \fontsize{9pt}{9pt}\selectfont }       % 小五，单倍
-\cs_new_protected:Npn \sDefault { \fontsize{12pt}{20pt}\selectfont }    % 小四，1.67 倍
-\cs_new_protected:Npn \graduatebodyfont                              % 研究生正文型页面统一格式
-  {
-    \linespread{1.0}
-    \sDefault
-  }
 \raggedbottom                                               % 避免分页时拉伸竖直空白
 \cs_set_eq:NN \nwpu@oldmainmatter \mainmatter
 \cs_gset_protected:Npn \mainmatter

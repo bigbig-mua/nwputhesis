@@ -1,0 +1,109 @@
+%% This file is part of nwputhesis.
+%% It is loaded internally by nwputhesis.cls.
+%%
+%% 格式常量
+%% 集中定义所有与学校格式规范直接对应的参数。
+%% 当学校发布新规范时，通常只需修改本文件。
+%%=========================================================================
+\ExplSyntaxOn
+
+%%=== 字号（中文字号对应的 pt 值）=========================================
+%% 一般不需要修改，除非学校改用非标准字号。
+\cs_new_protected:Npn \sChuhao   { \fontsize{42pt}{63pt}\selectfont }     % 初号，1.5 倍
+\cs_new_protected:Npn \sYihao    { \fontsize{26pt}{36pt}\selectfont }      % 一号，1.4 倍
+\cs_new_protected:Npn \sErhao    { \fontsize{22pt}{28pt}\selectfont }      % 二号，1.25 倍
+\cs_new_protected:Npn \sXiaoer   { \fontsize{18pt}{18pt}\selectfont }      % 小二，单倍
+\cs_new_protected:Npn \sSanhao   { \fontsize{16pt}{24pt}\selectfont }      % 三号，1.5 倍
+\cs_new_protected:Npn \sXiaosan  { \fontsize{15pt}{22pt}\selectfont }      % 小三，1.5 倍
+\cs_new_protected:Npn \sSihao    { \fontsize{14pt}{21pt}\selectfont }      % 四号，1.5 倍
+\cs_new_protected:Npn \sHgXiaosi { \fontsize{13pt}{19pt}\selectfont }      % 半小四，1.5 倍
+\cs_new_protected:Npn \sLgXiaosi { \fontsize{12.5pt}{13pt}\selectfont }    % 半小四，约 1 倍
+\cs_new_protected:Npn \sXiaosi   { \fontsize{12pt}{14.4pt}\selectfont }    % 小四，1.2 倍
+\cs_new_protected:Npn \sDefault  { \fontsize{12pt}{20pt}\selectfont }      % 小四，1.67 倍
+\cs_new_protected:Npn \sLargeWuhao { \fontsize{11pt}{11pt}\selectfont }    % 大五，单倍
+\cs_new_protected:Npn \sWuhao    { \fontsize{10.5pt}{10.5pt}\selectfont }  % 五号，单倍
+\cs_new_protected:Npn \sXiaowu   { \fontsize{9pt}{9pt}\selectfont }        % 小五，单倍
+
+%%=== 语义化字号别名 =====================================================
+%% 将字号映射到格式规范中的角色。学校改字号要求时，修改这里的映射。
+%%-------------------------------------------------------------------------
+%% 章节标题
+\cs_new_protected:Npn \nwpuChapterSize   { \sSanhao }        % 一级标题（章）
+\cs_new_protected:Npn \nwpuSectionSize   { \sSihao }         % 二级标题（节）
+\nwpu_if_bachelor:TF
+  { \cs_new_protected:Npn \nwpuSubsectionSize { \sXiaosi } }  % 三级标题（本科：小四）
+  { \cs_new_protected:Npn \nwpuSubsectionSize { \sHgXiaosi } } % 三级标题（硕博：半小四）
+
+%% 图表标题
+\cs_new_protected:Npn \nwpuCaptionSize   { \sWuhao }         % 五号
+
+%% 页眉页脚
+\cs_new_protected:Npn \nwpuHeaderFooterSize { \sXiaowu }     % 小五
+
+%% 目录条目
+\cs_new_protected:Npn \nwpuTOCFontSize { \fontsize{12pt}{19pt}\selectfont }
+
+%%=== 正文格式 ===========================================================
+\cs_new_protected:Npn \nwpuBodyFont { \linespread{1.0}\sDefault }
+\cs_new_eq:NN \graduatebodyfont \nwpuBodyFont                 % 向后兼容
+\cs_new_eq:NN \graduatecontentsfont \nwpuTOCFontSize          % 向后兼容
+
+%%=== 页面边距 ===========================================================
+\nwpu_if_bachelor:TF {
+  \cs_new:Npn \nwpuMarginLeft     { 1.25in }
+  \cs_new:Npn \nwpuMarginRight    { 1.25in }
+  \cs_new:Npn \nwpuMarginTop      { 1in }
+  \cs_new:Npn \nwpuMarginBottom   { 1in }
+  \cs_new:Npn \nwpuHeadHeight     { 0.93cm }
+  \cs_new:Npn \nwpuHeadSep        { 0.4cm }
+  \cs_new:Npn \nwpuFootSkip       { 0.79cm }
+} {
+  \cs_new:Npn \nwpuMarginLeft     { 2.5cm }
+  \cs_new:Npn \nwpuMarginRight    { 2.5cm }
+  \cs_new:Npn \nwpuMarginTop      { 2.54cm }
+  \cs_new:Npn \nwpuMarginBottom   { 2.54cm }
+  \cs_new:Npn \nwpuHeadHeight     { 1.0cm }
+  \cs_new:Npn \nwpuHeadSep        { 0.11cm }
+  \cs_new:Npn \nwpuFootSkip       { 0.79cm }
+}
+
+%%=== 段落格式 ===========================================================
+\nwpu_if_bachelor:TF
+  { \cs_new:Npn \nwpuParIndent { 26pt } }
+  { \cs_new:Npn \nwpuParIndent { 24pt } }
+\cs_new:Npn \nwpuParSkip { 0pt }
+
+%%=== 章节标题间距 =======================================================
+%% \titlespacing{<cmd>}{<left>}{<before>}{<after>}[<right>]
+\nwpu_if_bachelor:TF {
+  \cs_new:Npn \nwpuChapterBeforeSkip   { 5pt }
+  \cs_new:Npn \nwpuChapterAfterSkip    { 23pt }
+  \cs_new:Npn \nwpuSectionBeforeSkip   { 2pt }
+  \cs_new:Npn \nwpuSectionAfterSkip    { 2pt }
+  \cs_new:Npn \nwpuSubsecBeforeSkip    { 3pt }
+  \cs_new:Npn \nwpuSubsecAfterSkip     { -1pt }
+} {
+  \cs_new:Npn \nwpuChapterBeforeSkip   { -2pt }
+  \cs_new:Npn \nwpuChapterAfterSkip    { 14pt }
+  \cs_new:Npn \nwpuSectionBeforeSkip   { 7pt }
+  \cs_new:Npn \nwpuSectionAfterSkip    { 0pt }
+  \cs_new:Npn \nwpuSubsecBeforeSkip    { 6.5pt }
+  \cs_new:Npn \nwpuSubsecAfterSkip     { 0pt }
+}
+
+%%=== 浮动体间距 =========================================================
+\nwpu_if_bachelor:TF {
+  \cs_new:Npn \nwpuFloatSep     { 20pt }
+  \cs_new:Npn \nwpuTextFloatSep { 20pt }
+  \cs_new:Npn \nwpuInTextSep    { 20pt }
+} {
+  \cs_new:Npn \nwpuFloatSep     { 8pt }
+  \cs_new:Npn \nwpuTextFloatSep { 8pt }
+  \cs_new:Npn \nwpuInTextSep    { 8pt }
+}
+
+%%=== 表格线宽 ===========================================================
+\cs_new:Npn \nwpuHeavyRuleWidth { 1.5pt }
+\cs_new:Npn \nwpuLightRuleWidth { 1.0pt }
+
+\ExplSyntaxOff
