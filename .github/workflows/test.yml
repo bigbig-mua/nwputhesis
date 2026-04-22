@@ -115,4 +115,6 @@ jobs:
           cache_version: ${{ env.TEXLIVE_CACHE_VERSION }}
 
       - name: Build document
-        run: make
+        run: |
+          sed -i 's/fontset = auto/fontset = fandol/g' master.tex
+          make
