@@ -24,7 +24,6 @@ on:
   workflow_dispatch:
 
 env:
-  NWPU_FONTSET: fandol
   TEXLIVE_CACHE_VERSION: tl2026-2026-04-08-v1
   CORE_PKGS: scheme-basic tools amsmath amsfonts
   XECJK_PKGS: fontspec xecjk ulem iftex
