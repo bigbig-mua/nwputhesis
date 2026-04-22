@@ -116,14 +116,13 @@
         \bool_set_false:N \l__nwpu_font_local_bool
         \str_case:nnF {#1}
           {
-            { auto }    { }
             { fandol }  { \bool_set_true:N \l__nwpu_font_fandol_bool }
             { windows } { \bool_set_true:N \l__nwpu_font_winfonts_bool }
             { local }   { \bool_set_true:N \l__nwpu_font_local_bool }
           }
           {
             \ClassError { nwputhesis } { Unsupported~fontset~`#1' }
-              { Supported~fontset~values~are~auto,~fandol,~windows~and~local. }
+              { Supported~fontset~values~are~fandol,~windows~and~local. }
           }
       }
   }
@@ -163,14 +162,6 @@
     blindreview .default:n = true,
     blind-review .code:n   = { \__nwpu_set_bool:Nn \l__nwpu_blindreview_bool {#1} },
     blind-review .default:n = true,
-    winfonts    .code:n    = { \nwpu_load_time_key_allowed:nT { winfonts } { \__nwpu_set_bool:Nn \l__nwpu_font_winfonts_bool {#1} } },
-    winfonts    .default:n = true,
-    win-fonts   .code:n    = { \nwpu_load_time_key_allowed:nT { win-fonts } { \__nwpu_set_bool:Nn \l__nwpu_font_winfonts_bool {#1} } },
-    win-fonts   .default:n = true,
-    localfonts  .code:n    = { \nwpu_load_time_key_allowed:nT { localfonts } { \__nwpu_set_bool:Nn \l__nwpu_font_local_bool {#1} } },
-    localfonts  .default:n = true,
-    local-fonts .code:n    = { \nwpu_load_time_key_allowed:nT { local-fonts } { \__nwpu_set_bool:Nn \l__nwpu_font_local_bool {#1} } },
-    local-fonts .default:n = true,
     fontset     .code:n    = { \nwpu_fontset_set:n {#1} },
     font-set    .code:n    = { \nwpu_fontset_set:n {#1} },
     academic    .code:n    = { \nwpu_load_time_key_allowed:nT { academic } { \__nwpu_set_bool:Nn \l__nwpu_academic_bool {#1} } },

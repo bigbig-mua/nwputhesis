@@ -26,26 +26,6 @@
     \cs_set:Npn \defaultEngSansFont {TeX~Gyre~Heros}
     \cs_set:Npn \codeFont {DejaVu~Sans~Mono}
   }
-\cs_new_protected:Npn \npu@set@noto@fonts
-  {
-    \typeout{[nwputhesis]~Using~Noto~CJK~fonts.}
-    \cs_set:Npn \defaultSog {Noto~Serif~CJK~SC}
-    \cs_set:Npn \defaultHei {Noto~Sans~CJK~SC}
-    \cs_set:Npn \defaultKai {Noto~Serif~CJK~SC}
-    \cs_set:Npn \defaultFag {Noto~Serif~CJK~SC}
-    \cs_set:Npn \defaultEngFont {TeX~Gyre~Termes}
-    \cs_set:Npn \codeFont {DejaVu~Sans~Mono}
-  }
-\cs_new_protected:Npn \npu@set@mac@fonts
-  {
-    \typeout{[nwputhesis]~Using~macOS~fonts.}
-    \cs_set:Npn \defaultSog {STSongti-SC-Regular}
-    \cs_set:Npn \defaultHei {STHeiti}
-    \cs_set:Npn \defaultKai {STKaiti}
-    \cs_set:Npn \defaultFag {STFangSong}
-    \cs_set:Npn \defaultEngFont {TeX~Gyre~Termes}
-    \cs_set:Npn \codeFont {Menlo}
-  }
 \cs_new_protected:Npn \npu@set@local@fonts
   {
     \typeout{[nwputhesis]~Using~local~fonts~from~fonts/~directory.}
@@ -68,52 +48,13 @@
     \cs_set:Npn \defaultEngSansFont {\defaultHei}             % Windows 无 TeX Gyre，用黑体代替
     \cs_set:Npn \codeFont {Consolas}
   }
-\cs_new_protected:Npn \npu@select@linux@fonts
-  {
-    % Linux: 优先使用常见的 Noto CJK，缺失则回退到 TeX Live 自带 Fandol
-    \IfFontExistsTF {Noto~Serif~CJK~SC}
-      {
-        \IfFontExistsTF {Noto~Sans~CJK~SC}
-          { \npu@set@noto@fonts }
-          { \npu@set@fandol@fonts }
-      }
-      { \npu@set@fandol@fonts }
-  }
-\cs_new_protected:Npn \npu@select@mac@fonts
-  {
-    % macOS: 检测核心中文字体，缺失则回退 Fandol
-    \IfFontExistsTF {STSongti-SC-Regular}
-      { \npu@set@mac@fonts }
-      { \npu@set@fandol@fonts }
-  }
-\cs_new_protected:Npn \npu@select@windows@fonts
-  {
-    % Windows: 检测核心中文字体，缺失则回退 Fandol
-    \IfFontExistsTF {SimSun}
-      { \npu@set@windows@fonts }
-      { \npu@set@fandol@fonts }
-  }
-\cs_new_protected:Npn \npu@select@auto@fonts
-  {
-    \sys_if_platform_windows:TF
-      { \npu@select@windows@fonts }
-      {
-        \IfFontExistsTF {STSongti-SC-Regular}
-          { \npu@select@mac@fonts }
-          { \npu@select@linux@fonts }
-      }
-  }
-% 字体选择主逻辑
-\nwpu_if_local_fonts:TF                                       % 使用本地 fonts 目录字体
+% 字体选择主逻辑：local > windows > fandol > 默认 fandol
+\nwpu_if_local_fonts:TF
   { \npu@set@local@fonts }
   {
-    \nwpu_if_winfonts:TF                                      % 强制使用 Win 字体选项
-      { \npu@select@windows@fonts }
-      {
-        \nwpu_if_fandol:TF                                     % 强制使用 Fandol 字体选项
-          { \npu@set@fandol@fonts }
-          { \npu@select@auto@fonts }
-      }
+    \nwpu_if_winfonts:TF
+      { \npu@set@windows@fonts }
+      { \npu@set@fandol@fonts }
   }
 \RequirePackage[SlantFont, BoldFont, CJKchecksingle]{xeCJK} % 设置中文字体
 \defaultfontfeatures{Ligatures=TeX}                        % 启用 TeX Ligatures

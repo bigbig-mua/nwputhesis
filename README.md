@@ -43,7 +43,7 @@
 ```tex
 \documentclass[
     degree = master,
-    fontset = auto,
+    fontset = windows,
     academic = false,
     blindreview = false,
     colorcover = false,
@@ -53,7 +53,7 @@
 常用选项说明：
 
 - `degree`：论文类型，可选 `bachelor`、`master`、`phd`。
-- `fontset`：字体方案，可选 `auto`、`local`。非 Windows 系统建议下载本仓库中的字体后使用 `local` 选项。
+- `fontset`：字体方案，可选 `windows`、`local`。非 Windows 系统建议下载本仓库中的字体后使用 `local` 选项。
 - `blindreview`：是否生成盲评版本，`true` 会隐藏作者、导师和学号等信息。
 
 研究生特有选项：
