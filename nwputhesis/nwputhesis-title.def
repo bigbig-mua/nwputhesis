@@ -2,8 +2,6 @@
 %% It is loaded internally by nwputhesis.cls.
 
 \ExplSyntaxOn
-\box_new:N \l__nwpu_title_box
-\box_new:N \l__nwpu_underline_box
 %%-----------------------------------------------------------------------------%
 %% 模块级长度变量（由封面页和内封页共享）
 %%-----------------------------------------------------------------------------%
@@ -12,7 +10,11 @@
 \dim_new:N \l__nwpu_chstitle_hwidthb_dim
 \dim_new:N \l__nwpu_author_dim
 \dim_new:N \l__nwpu_advisor_dim
+\dim_new:N \l__nwpu_major_dim
 \dim_new:N \l__nwpu_maxname_dim
+\dim_new:N \l__nwpu_chs_inner_title_value_dim
+\dim_new:N \l__nwpu_chs_inner_title_line_dim
+\dim_new:N \l__nwpu_chs_inner_info_value_dim
 \dim_new:N \l__nwpu_cover_visual_bottom_raise_dim
 \dim_set:Nn \l__nwpu_cover_visual_bottom_raise_dim { 1.5pt }
 \int_new:N \l__nwpu_hbadness_save_int
@@ -44,6 +46,42 @@
     \__nwpu_cover_visual_bottom_cell:nnn { 3.59cm } { 1cm } { \bfseries #1 }
     & \__nwpu_cover_center_cell:nnn { 9cm } { 1cm } { \bfseries #2 }
     \tabularnewline \cline{2-2}
+  }
+\cs_new_protected:Npn \__nwpu_chs_inner_title_row:nn #1#2
+  {
+    #1 & \__nwpu_cover_visual_bottom_cell:nnn
+      { \l__nwpu_chs_inner_title_value_dim } { 1.45cm } {#2}
+    \tabularnewline \cline{2-2}
+  }
+\cs_new_protected:Npn \__nwpu_chs_inner_title:
+  {
+    \begin{tabular}[b]{@{}c@{}c@{}}
+      \__nwpu_chs_inner_title_row:nn
+        { \__nwpu_cover_visual_bottom_cell:nnn { 2.54cm } { 1.45cm } { 题目： } }
+        { \nwpu@chs@coverTitleLineA }
+      \__nwpu_chs_inner_title_row:nn { } { \nwpu@chs@coverTitleLineB }
+    \end{tabular}
+  }
+\cs_new_protected:Npn \__nwpu_chs_inner_info_row:nn #1#2
+  {
+    \__nwpu_cover_visual_bottom_cell:nnn { 2.88cm } { 1cm } {#1}
+    & \__nwpu_cover_visual_bottom_cell:nnn
+      { \l__nwpu_chs_inner_info_value_dim } { 1cm } {#2}
+    \tabularnewline \cline{2-2}
+  }
+\cs_new_protected:Npn \__nwpu_chs_inner_info:
+  {
+    \begin{tabular}[b]{@{}c@{}c@{}}
+      \__nwpu_chs_inner_info_row:nn
+        { \nwpu@chs@innerCoverFirstOption： }
+        { \nwpu@chs@major }
+      \__nwpu_chs_inner_info_row:nn
+        { 作{\qquad}者： }
+        { \makebox[\l__nwpu_maxname_dim][s]{\nwpu@chs@author} }
+      \__nwpu_chs_inner_info_row:nn
+        { 指导教师： }
+        { \makebox[\l__nwpu_maxname_dim][s]{\nwpu@chs@advisor} }
+    \end{tabular}
   }
 
 %% 封皮页
@@ -125,10 +163,23 @@
     % 测量宽度（注意使用相同字体 \sSanhao）
     \settowidth{\l__nwpu_author_dim}{\sSanhao\nwpu@chs@author}
     \settowidth{\l__nwpu_advisor_dim}{\sSanhao\nwpu@chs@advisor}
+    \settowidth{\l__nwpu_major_dim}{\sSanhao\nwpu@chs@major}
     % 取最大值
     \dim_set:Nn \l__nwpu_maxname_dim { \l__nwpu_author_dim }
     \dim_compare:nNnT \l__nwpu_advisor_dim > \l__nwpu_maxname_dim
         { \dim_set:Nn \l__nwpu_maxname_dim { \l__nwpu_advisor_dim } }
+    \dim_set:Nn \l__nwpu_chs_inner_title_value_dim { 7.85cm }
+    \settowidth{\l__nwpu_chs_inner_title_line_dim}{\sErhao\nwpu@chs@coverTitleLineA}
+    \dim_compare:nNnT \l__nwpu_chs_inner_title_line_dim > \l__nwpu_chs_inner_title_value_dim
+        { \dim_set:Nn \l__nwpu_chs_inner_title_value_dim { \l__nwpu_chs_inner_title_line_dim } }
+    \settowidth{\l__nwpu_chs_inner_title_line_dim}{\sErhao\nwpu@chs@coverTitleLineB}
+    \dim_compare:nNnT \l__nwpu_chs_inner_title_line_dim > \l__nwpu_chs_inner_title_value_dim
+        { \dim_set:Nn \l__nwpu_chs_inner_title_value_dim { \l__nwpu_chs_inner_title_line_dim } }
+    \dim_set:Nn \l__nwpu_chs_inner_info_value_dim { 4.34cm }
+    \dim_compare:nNnT \l__nwpu_major_dim > \l__nwpu_chs_inner_info_value_dim
+        { \dim_set:Nn \l__nwpu_chs_inner_info_value_dim { \l__nwpu_major_dim } }
+    \dim_compare:nNnT \l__nwpu_maxname_dim > \l__nwpu_chs_inner_info_value_dim
+        { \dim_set:Nn \l__nwpu_chs_inner_info_value_dim { \l__nwpu_maxname_dim } }
     \begin{titlepage}                                       %
         \linespread{1.4}\selectfont                         %
         \begin{center}                                      %
@@ -139,26 +190,9 @@
             \vspace*{5mm}                                   %
             \sSihao \par \vspace{6\baselineskip}            % 6 * 21pt * 1.5
             \fSong \sErhao                                  % 排版标题
-            \begin{minipage}[t]{2cm} \hfill {题目：} \\ \end{minipage}
-            \hbox_set:Nn \l__nwpu_title_box {                    %
-                \begin{minipage}[t]{12cm}                   %
-                    \begin{center} \nwpu@chs@title \end{center}
-                \end{minipage}                              %
-            }                                               %
-            \hbox_set:Nn \l__nwpu_underline_box {                 %
-                \begin{minipage}[t]{12cm}                   %
-                    \begin{center}                          %
-                        \uline{\hfill\quad\hfill} \\        %
-                        \uline{\hfill\quad\hfill} \\        %
-                    \end{center}                            %
-                \end{minipage}                              %
-            }                                               %
-            \hspace{-1cm}                                   %
-            \box_use:N \l__nwpu_title_box \kern -\box_wd:N \l__nwpu_title_box \box_use_drop:N \l__nwpu_underline_box \fSong \sWuhao \par % 排版结束
+            \__nwpu_chs_inner_title: \fSong \sWuhao \par    % 排版结束
             \vspace{6\baselineskip}                         % 7 * 10.5pt * 1.5
-            \sSanhao \nwpu@chs@innerCoverFirstOption：\coverunderline[5.5cm]{\nwpu@chs@major} \\
-            \sSanhao 作{\qquad}者：\coverunderline[5.5cm]{\makebox[\l__nwpu_maxname_dim][s]{\nwpu@chs@author}} \\
-            \sSanhao 指导教师：\coverunderline[5.5cm]{\makebox[\l__nwpu_maxname_dim][s]{\nwpu@chs@advisor}} \\
+            \sSanhao \__nwpu_chs_inner_info: \\
             \fSong \sWuhao \par                             %
             \vspace{2\baselineskip}                         % 2 * 10.5pt * 1.5
             \fSong \sSanhao \nwpu@chs@date                  %
