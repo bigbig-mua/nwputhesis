@@ -83,7 +83,7 @@
   \cs_new:Npn \nwpuSubsecBeforeSkip    { 3pt }
   \cs_new:Npn \nwpuSubsecAfterSkip     { -1pt }
 } {
-  \cs_new:Npn \nwpuChapterBeforeSkip   { -2pt }
+  \cs_new:Npn \nwpuChapterBeforeSkip   { 4pt }
   \cs_new:Npn \nwpuChapterAfterSkip    { 14pt }
   \cs_new:Npn \nwpuSectionBeforeSkip   { 7pt }
   \cs_new:Npn \nwpuSectionAfterSkip    { 0pt }
