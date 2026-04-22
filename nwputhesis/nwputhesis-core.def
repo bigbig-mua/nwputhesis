@@ -61,6 +61,7 @@
 \cs_gset_protected:Npn \mainmatter
   {
     \nwpu@oldmainmatter
+    \nwpu_enable_table_content_font:
     \graduatebodyfont
   }
 \ExplSyntaxOff

@@ -16,6 +16,8 @@
 \cs_new:Npn \chs@rightparenthesis { \char"FF09 }              % 右括号
 %%-----------------------------------------------------------------------------%
 \cs_new:Npn \nwpu@chs@title { \chs@space }                    % 标题（中文）
+\cs_new:Npn \nwpu@chs@coverTitleLineA { \nwpu@chs@title }     % 封皮标题第一行（中文）
+\cs_new:Npn \nwpu@chs@coverTitleLineB { \chs@space }          % 封皮标题第二行（中文）
 \cs_new:Npn \nwpu@chs@author { \chs@space }                   % 作者（中文）
 \cs_new:Npn \nwpu@chs@school { \chs@space }                   % 学院（中文）
 \cs_new:Npn \nwpu@chs@major { \chs@space }                    % 专业（中文）
@@ -62,6 +64,10 @@
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \nwpu@set@chs@title #1
   { \cs_gset:Npn \nwpu@chs@title {#1} }
+\cs_new_protected:Npn \nwpu@set@chs@cover@title@line@a #1
+  { \cs_gset:Npn \nwpu@chs@coverTitleLineA {#1} }
+\cs_new_protected:Npn \nwpu@set@chs@cover@title@line@b #1
+  { \cs_gset:Npn \nwpu@chs@coverTitleLineB {#1} }
 \cs_new_protected:Npn \nwpu@set@eng@title #1
   { \cs_gset:Npn \nwpu@eng@title {#1} }
 \cs_new_protected:Npn \nwpu@set@chs@author #1
@@ -129,6 +135,12 @@
 \DeclareKeys [ nwputhesis ]
   {
     title                 .code:n = \nwpu@set@chs@title {#1},
+    cover-title-line-1    .code:n = \nwpu@set@chs@cover@title@line@a {#1},
+    cover-title-line1     .code:n = \nwpu@set@chs@cover@title@line@a {#1},
+    cover-title-line-a    .code:n = \nwpu@set@chs@cover@title@line@a {#1},
+    cover-title-line-2    .code:n = \nwpu@set@chs@cover@title@line@b {#1},
+    cover-title-line2     .code:n = \nwpu@set@chs@cover@title@line@b {#1},
+    cover-title-line-b    .code:n = \nwpu@set@chs@cover@title@line@b {#1},
     title*                .code:n = \nwpu@set@eng@title {#1},
     title-en              .code:n = \nwpu@set@eng@title {#1},
     author                .code:n = \nwpu@set@chs@author {#1},

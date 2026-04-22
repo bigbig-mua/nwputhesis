@@ -221,8 +221,22 @@
         belowskip=0pt}
 }
 \captionsetup[subtable]{labelformat=simple, aboveskip=10pt, belowskip=-5pt}
-\AddToHook{env/tabular/begin}{\nwpuCaptionSize}               % 表格内容为五号
-\AddToHook{env/tabularx/begin}{\nwpuCaptionSize}              %
+\nwpu_if_graduate:T
+  {
+    \AddToHook{env/tabular/begin}{\linespread{1}\selectfont}  % 研究生表格为单倍行距
+    \AddToHook{env/tabularx/begin}{\linespread{1}\selectfont} %
+    \AddToHook{env/longtable/begin}{\linespread{1}\selectfont}%
+  }
+\bool_new:N \g__nwpu_table_content_font_hook_bool
+\cs_new_protected:Npn \nwpu_enable_table_content_font:       % 正文表格内容为五号
+  {
+    \bool_if:NF \g__nwpu_table_content_font_hook_bool
+      {
+        \AddToHook{env/tabular/begin}{\nwpuCaptionSize}
+        \AddToHook{env/tabularx/begin}{\nwpuCaptionSize}
+        \bool_gset_true:N \g__nwpu_table_content_font_hook_bool
+      }
+  }
 \newcolumntype{C}{>{\centering\arraybackslash}X}            % 等宽居中
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}          % 等宽左对齐
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}           % 等宽右对齐
@@ -233,6 +247,8 @@
 \newcolumntype{P}[1]{>{\raggedright\let\newline\\%          % 指定宽度左对齐
         \arraybackslash\hspace{0pt}}p{#1}}                  %
 \renewcommand{\arraystretch}{1.4}                           % 表格行高为 1.4 倍
+\dim_set:Nn \arrayrulewidth { 0.5pt }                        % 表格框线宽
+\dim_set:Nn \tabcolsep { 0pt }                               % 表格列内边距
 \dim_set:Nn \heavyrulewidth { \nwpuHeavyRuleWidth }          % 表格上下线宽
 \dim_set:Nn \lightrulewidth { \nwpuLightRuleWidth }          % 表格中线宽
 %%-----------------------------------------------------------------------------%
