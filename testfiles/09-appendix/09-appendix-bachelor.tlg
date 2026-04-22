@@ -2,15 +2,14 @@ This is a generated file for the l3build validation system.
 Don't change this file in any respect.
 第 1章 1.
 Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font 'FandolHei-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
-Package fontspec Info: 
-(fontspec)             Font family 'FandolHei(0)' created for font 'FandolHei' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)             Font family 'SimHei(1)' created for font 'SimHei' with options [Ligatures=TeX,Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;embolden=4;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;embolden=4;slant=0.167;mapping=tex-text;"
 File: nwpuheader.png Graphic file (type bmp)
 <nwpuheader.png>
 Completed box being shipped out [1]
@@ -49,14 +48,14 @@ Completed box being shipped out [1]
 .\vbox(722.98434+2.70003)x434.90039
 ..\glue -37.84177
 ..\vbox(760.82611+2.70003)x416.83289, shifted 18.0675
-...\vbox(26.46085+0.0)x416.83289, glue set 5.02473fil
+...\vbox(26.46085+0.0)x416.83289, glue set 5.34473fil
 ....\glue 0.0 plus 1.0fil
-....\hbox(21.43611+0.0)x416.83289
+....\hbox(21.11612+0.0)x416.83289
 .....\special{color push gray 0}
-.....\hbox(21.43611+0.0)x416.83289
-......\hbox(21.43611+0.0)x416.83289
-.......\vbox(21.43611+0.0)x416.83289
-........\hbox(17.91615+4.08003)x416.83289
+.....\hbox(21.11612+0.0)x416.83289
+......\hbox(21.11612+0.0)x416.83289
+.......\vbox(21.11612+0.0)x416.83289
+........\hbox(17.91615+3.60004)x416.83289
 .........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
 ..........\vbox(0.0+0.0)x416.83289
 ...........\hbox(0.0+0.0)x416.83289, glue set 208.41644fil
@@ -66,14 +65,14 @@ Completed box being shipped out [1]
 ............\glue(\rightskip) 0.0 plus 1.0fil
 ..........\glue 0.0 plus 1.0fil minus 1.0fil
 .........\glue 0.0 plus 1.0fill
-.........\vbox(17.91615+4.08003)x416.83289
-..........\hbox(17.91615+4.08003)x416.83289, glue set 91.8861fil
+.........\vbox(17.91615+3.60004)x416.83289
+..........\hbox(17.91615+3.60004)x416.83289, glue set 91.8861fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
 ...........\hbox(17.91615+0.0)x233.0607
 ............\hbox(17.91615+0.0)x233.0607
 .............\special{pdf:image bbox 0 0 1547.99629 118.99971 clip 0 width 233.0607pt (nwpu\ETC.}
-...........\rule(9.51996+4.08003)x0.0
+...........\rule(8.39996+3.60004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
@@ -91,21 +90,21 @@ Completed box being shipped out [1]
 ........\glue(\parskip) 0.0
 ........\glue(\parskip) 0.0
 ........\glue(\lineskip) 0.0
-........\hbox(10.31996+0.0)x416.83289, glue set 416.83289fil
+........\hbox(9.19997+0.0)x416.83289, glue set 416.83289fil
 .........\hbox(0.0+0.0)x0.0
-.........\hbox(10.31996+0.0)x0.0, glue set - 416.83289fil
-..........\hbox(10.31996+0.0)x416.83289
-...........\rule(10.31996+-9.51996)x416.83289
+.........\hbox(9.19997+0.0)x0.0, glue set - 416.83289fil
+..........\hbox(9.19997+0.0)x416.83289
+...........\rule(9.19997+-8.39996)x416.83289
 ..........\glue 0.0 plus 1.0fil minus 1.0fil
 .........\penalty 10000
 .........\glue(\parfillskip) 0.0 plus 1.0fil
 .........\glue(\rightskip) 0.0
-........\glue -10.88004
+........\glue -9.60004
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\special{color pop}
 ...\glue 11.38092
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 630.23947fil
+...\vbox(700.50687+0.0)x416.83289, glue set 631.23936fil
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
@@ -124,7 +123,7 @@ TC.}
 ....\marks2{\__mark_value:nn {2}{}}
 ....\write1{\@writefile{lof}{\protect \addvspace {10\p@ }}}
 ....\write1{\@writefile{lot}{\protect \addvspace {10\p@ }}}
-....\glue(\topskip) 11.0
+....\glue(\topskip) 10.0
 ....\rule(0.0+0.0)x*
 ....\penalty 10000
 ....\glue 5.0
@@ -132,24 +131,24 @@ TC.}
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 7.20007
-....\hbox(16.79993+7.20007)x416.83289, glue set 131.75244fil
+....\hbox(16.79993+7.20007)x416.83289, glue set 131.75629fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\rule(16.79993+7.20007)x0.0
 .....\hbox(16.79993+7.20007)x64.0
 ......\special{color push gray 0}
-......\TU/FandolHei(0)/m/n/16 第
+......\TU/SimHei(1)/m/n/16 第
 ......\glue 0.0 plus 1.92004
-......\TU/FandolHei(0)/m/n/16 一
+......\TU/SimHei(1)/m/n/16 一
 ......\glue 0.0 plus 1.92004
-......\TU/FandolHei(0)/m/n/16 章
+......\TU/SimHei(1)/m/n/16 章
 ......\kern -0.00017
 ......\kern 0.00017
 ......\rule(16.79993+7.20007)x0.0
 ......\glue 16.0
 ......\special{color pop}
-.....\TU/TeXGyreTermes(1)/m/n/16 Body
+.....\TU/TimesNewRoman(0)/m/n/16 Body
 .....\glue 4.0 plus 2.0 minus 1.33333
-.....\TU/TeXGyreTermes(1)/m/n/16 Chapter
+.....\TU/TimesNewRoman(0)/m/n/16 Chapter
 .....\kern -0.0002
 .....\kern 0.0002
 .....\kern 0.0
@@ -169,14 +168,14 @@ TC.}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ....\glue 0.0 plus 0.0001fil
-...\glue(\baselineskip) 12.09747
-...\hbox(10.38+2.70003)x416.83289
+...\glue(\baselineskip) 12.57747
+...\hbox(9.90001+2.70003)x416.83289
 ....\special{color push gray 0}
-....\hbox(10.38+2.70003)x416.83289
-.....\hbox(10.38+2.70003)x416.83289
-......\vbox(10.38+2.70003)x416.83289
+....\hbox(9.90001+2.70003)x416.83289
+.....\hbox(9.90001+2.70003)x416.83289
+......\vbox(9.90001+2.70003)x416.83289
 .......\rule(0.0+0.0)x416.83289
-.......\glue 4.08003
+.......\glue 3.60004
 .......\hbox(6.29997+2.70003)x416.83289
 ........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
 .........\vbox(0.0+0.0)x416.83289
@@ -188,16 +187,12 @@ TC.}
 .........\glue 0.0 plus 1.0fil minus 1.0fil
 ........\glue 0.0 plus 1.0fill
 ........\vbox(6.29997+2.70003)x416.83289
-.........\hbox(6.29997+2.70003)x416.83289, glue set 203.91644fil
+.........\hbox(6.29997+2.70003)x416.83289, glue set 206.16644fil
 ..........\glue(\leftskip) 0.0 plus 1.0fil
 ..........\hbox(0.0+0.0)x0.0
-..........\penalty 10000
-..........\glue 2.25 plus 1.125 minus 0.75
-..........\TU/TeXGyreTermes(1)/m/n/9 1
+..........\TU/TimesNewRoman(0)/m/n/9 1
 ..........\kern -0.0002
 ..........\kern 0.0002
-..........\penalty 10000
-..........\glue 2.25 plus 1.125 minus 0.75
 ..........\rule(6.29997+2.70003)x0.0
 ..........\penalty 10000
 ..........\glue(\parfillskip) 0.0
@@ -228,22 +223,23 @@ TC.}
 .\kern 725.68437
 .\kern 0.0
 .\kern 0.0
-APPENDIX-TITLE=附~~录
+APPENDIX-TITLE=\nwpu@appendixtitle {A}
 Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font 'FandolSong-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
-Package fontspec Info: 
-(fontspec)             Font family 'FandolSong(1)' created for font 'FandolSong' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)             Font family 'SimSun(1)' created for font 'SimSun' with options [Ligatures=TeX,Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
-APPENDIX-FIGURE=附1
-APPENDIX-TABLE=附1
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;embolden=4;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;embolden=4;slant=0.167;mapping=tex-text;"
+APPENDIX-FIGURE=\thefigure 
+APPENDIX-TABLE=\thetable 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line ....
-APPENDIX-ALGORITHM=附1
-APPENDIX-EQUATION=附1
+APPENDIX-ALGORITHM=\thealgorithm 
+LaTeX Font Info:    Trying to load font information for U+msa on input line ....
+LaTeX Font Info:    Trying to load font information for U+msb on input line ....
+APPENDIX-EQUATION=\theequation 
 File: nwpuheader.png Graphic file (type bmp)
 <nwpuheader.png>
 Completed box being shipped out [2]
@@ -278,14 +274,14 @@ Completed box being shipped out [2]
 .\vbox(722.98434+2.70003)x434.90039
 ..\glue -37.84177
 ..\vbox(760.82611+2.70003)x416.83289, shifted 18.0675
-...\vbox(26.46085+0.0)x416.83289, glue set 5.02473fil
+...\vbox(26.46085+0.0)x416.83289, glue set 5.34473fil
 ....\glue 0.0 plus 1.0fil
-....\hbox(21.43611+0.0)x416.83289
+....\hbox(21.11612+0.0)x416.83289
 .....\special{color push gray 0}
-.....\hbox(21.43611+0.0)x416.83289
-......\hbox(21.43611+0.0)x416.83289
-.......\vbox(21.43611+0.0)x416.83289
-........\hbox(17.91615+4.08003)x416.83289
+.....\hbox(21.11612+0.0)x416.83289
+......\hbox(21.11612+0.0)x416.83289
+.......\vbox(21.11612+0.0)x416.83289
+........\hbox(17.91615+3.60004)x416.83289
 .........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
 ..........\vbox(0.0+0.0)x416.83289
 ...........\hbox(0.0+0.0)x416.83289, glue set 208.41644fil
@@ -295,14 +291,14 @@ Completed box being shipped out [2]
 ............\glue(\rightskip) 0.0 plus 1.0fil
 ..........\glue 0.0 plus 1.0fil minus 1.0fil
 .........\glue 0.0 plus 1.0fill
-.........\vbox(17.91615+4.08003)x416.83289
-..........\hbox(17.91615+4.08003)x416.83289, glue set 91.8861fil
+.........\vbox(17.91615+3.60004)x416.83289
+..........\hbox(17.91615+3.60004)x416.83289, glue set 91.8861fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
 ...........\hbox(17.91615+0.0)x233.0607
 ............\hbox(17.91615+0.0)x233.0607
 .............\special{pdf:image bbox 0 0 1547.99629 118.99971 clip 0 width 233.0607pt (nwpu\ETC.}
-...........\rule(9.51996+4.08003)x0.0
+...........\rule(8.39996+3.60004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
@@ -320,24 +316,24 @@ Completed box being shipped out [2]
 ........\glue(\parskip) 0.0
 ........\glue(\parskip) 0.0
 ........\glue(\lineskip) 0.0
-........\hbox(10.31996+0.0)x416.83289, glue set 416.83289fil
+........\hbox(9.19997+0.0)x416.83289, glue set 416.83289fil
 .........\hbox(0.0+0.0)x0.0
-.........\hbox(10.31996+0.0)x0.0, glue set - 416.83289fil
-..........\hbox(10.31996+0.0)x416.83289
-...........\rule(10.31996+-9.51996)x416.83289
+.........\hbox(9.19997+0.0)x0.0, glue set - 416.83289fil
+..........\hbox(9.19997+0.0)x416.83289
+...........\rule(9.19997+-8.39996)x416.83289
 ..........\glue 0.0 plus 1.0fil minus 1.0fil
 .........\penalty 10000
 .........\glue(\parfillskip) 0.0 plus 1.0fil
 .........\glue(\rightskip) 0.0
-........\glue -10.88004
+........\glue -9.60004
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\special{color pop}
 ...\glue 11.38092
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 401.22212fil
+...\vbox(700.50687+0.0)x416.83289, glue set 400.8578fil
 ....\write-{}
 ....\special{pdf:dest (appendix*.4) [@thispage /XYZ @xpos @ypos null]}
-....\glue(\topskip) 11.0
+....\glue(\topskip) 10.0
 ....\rule(0.0+0.0)x*
 ....\penalty 10000
 ....\glue 5.0
@@ -345,17 +341,12 @@ Completed box being shipped out [2]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\baselineskip) 7.20007
-....\hbox(16.79993+7.20007)x416.83289, glue set 188.41644fil
+....\hbox(16.79993+7.20007)x416.83289, glue set 192.41644fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\rule(16.79993+7.20007)x0.0
-.....\TU/FandolHei(0)/m/n/16 附
-.....\kern -0.00017
-.....\kern 0.00017
-.....\penalty 10000
-.....\glue 4.0 plus 2.0 minus 1.33333
-.....\penalty 10000
-.....\glue 4.0 plus 2.0 minus 1.33333
-.....\TU/FandolHei(0)/m/n/16 录
+.....\TU/SimHei(1)/m/n/16 附
+.....\glue 0.0 plus 1.92004
+.....\TU/SimHei(1)/m/n/16 录
 .....\kern -0.00017
 .....\kern 0.00017
 .....\kern 0.0
@@ -366,30 +357,29 @@ Completed box being shipped out [2]
 ....\penalty 10000
 ....\glue 23.0
 ....\glue 0.0
-....\marks1{\__mark_value:nn {3}{附~~录}}
+....\marks1{\__mark_value:nn {3}{\nwpu@appendixtitle {A}}}
 ....\penalty 10000
-....\marks2{\__mark_value:nn {4}{附~~录}}
+....\marks2{\__mark_value:nn {4}{\nwpu@appendixtitle {A}}}
 ....\penalty 10000
-....\marks3{\__mark_value:nn {5}{附~~录}}
+....\marks3{\__mark_value:nn {5}{\nwpu@appendixtitle {A}}}
 ....\penalty 10000
-....\special{pdf:out [-] 1<</Title(\376\377\226\104\000\040\000\040\137\125)/A<</S\ETC.}
-....\write1{\@writefile{toc}{\protect \contentsline {chapter}{附~~录}{\thepage \E
-TC.}
+....\special{pdf:out [-] 1<</Title(\376\377\226\104\137\125\000\040\000A)/A<</S/Go\ETC.}
+....\write1{\@writefile{toc}{\protect \contentsline {chapter}{\nwpu@appendixtitle \ETC.}
 ....\penalty 10000
 ....\penalty 10000
 ....\glue 20.0
-....\vbox(25.49998+0.0)x416.83289
+....\vbox(25.94026+0.0)x416.83289
 .....\special{color push gray 0}
-.....\vbox(25.49998+0.0)x416.83289
+.....\vbox(25.94026+0.0)x416.83289
 ......\rule(0.0+0.0)x*
 ......\penalty 10000
-......\glue -6.8
+......\glue -6.0
 ......\glue 0.0
 ......\special{pdf:dest (figure.caption.5) [@thispage /XYZ @xpos @ypos null]}
 ......\penalty 10000
 ......\rule(0.0+0.0)x*
 ......\penalty 10000
-......\glue 6.8
+......\glue 6.0
 ......\glue 0.0
 ......\write1{\@writefile{lof}{\protect \contentsline {figure}{\protect \numberline \ETC.}
 ......\special{color push gray 0}
@@ -397,32 +387,32 @@ TC.}
 ......\glue 12.0
 ......\glue(\parskip) 0.0
 ......\glue(\parskip) 0.0
-......\hbox(8.04996+3.45003)x416.83289
+......\hbox(8.49023+3.45003)x416.83289
 .......\hbox(0.0+0.0)x0.0
 .......\glue 0.0
-.......\vbox(8.04996+3.45003)x416.83289
-........\hbox(8.04996+3.45003)x416.83289, glue set 131.3577fil
+.......\vbox(8.49023+3.45003)x416.83289
+........\hbox(8.49023+3.45003)x416.83289, glue set 131.68011fil
 .........\glue(\leftskip) 0.0 plus 1.0fil
 .........\hbox(0.0+0.0)x0.0
-.........\TU/FandolSong(1)/m/n/10.5 图
+.........\TU/SimSun(1)/m/n/10.5 图
 .........\kern -0.00017
 .........\kern 0.00017
 .........\penalty 10000
 .........\glue 2.625 plus 1.3125 minus 0.875
-.........\TU/FandolSong(1)/m/n/10.5 附
+.........\TU/SimSun(1)/m/n/10.5 附
 .........\glue 2.625 plus 1.3125 minus 0.875
-.........\TU/TeXGyreTermes(1)/m/n/10.5 1
+.........\TU/TimesNewRoman(0)/m/n/10.5 1
 .........\kern -0.0002
 .........\kern 0.0002
-.........\glue 10.95
+.........\glue 10.0
 .........\rule(8.04996+*)x0.0
 .........\penalty 10000
 .........\glue 0.0
-.........\TU/TeXGyreTermes(1)/m/n/10.5 Bachelor
+.........\TU/TimesNewRoman(0)/m/n/10.5 Bachelor
 .........\glue 2.625 plus 1.3125 minus 0.875
-.........\TU/TeXGyreTermes(1)/m/n/10.5 Appendix
+.........\TU/TimesNewRoman(0)/m/n/10.5 Appendix
 .........\glue 2.625 plus 1.3125 minus 0.875
-.........\TU/TeXGyreTermes(1)/m/n/10.5 Figure
+.........\TU/TimesNewRoman(0)/m/n/10.5 Figure
 .........\kern -0.0002
 .........\kern 0.0002
 .........\penalty 10000
@@ -448,13 +438,13 @@ TC.}
 .....\vbox(28.0+0.0)x416.83289
 ......\rule(0.0+0.0)x*
 ......\penalty 10000
-......\glue -6.8
+......\glue -6.0
 ......\glue 0.0
 ......\special{pdf:dest (table.caption.6) [@thispage /XYZ @xpos @ypos null]}
 ......\penalty 10000
 ......\rule(0.0+0.0)x*
 ......\penalty 10000
-......\glue 6.8
+......\glue 6.0
 ......\glue 0.0
 ......\write1{\@writefile{lot}{\protect \contentsline {table}{\protect \numberline \ETC.}
 ......\special{color push gray 0}
@@ -466,28 +456,28 @@ TC.}
 .......\hbox(0.0+0.0)x0.0
 .......\glue 0.0
 .......\vbox(9.79996+4.20004)x416.83289
-........\hbox(9.79996+4.20004)x416.83289, glue set 130.14494fil
+........\hbox(9.79996+4.20004)x416.83289, glue set 130.68292fil
 .........\glue(\leftskip) 0.0 plus 1.0fil
 .........\hbox(0.0+0.0)x0.0
-.........\TU/FandolSong(0)/b/n/10.5 表
+.........\TU/SimSun(0)/b/n/10.5 表
 .........\kern -0.00017
 .........\kern 0.00017
 .........\penalty 10000
 .........\glue 2.625 plus 1.3125 minus 0.875
-.........\TU/FandolSong(0)/b/n/10.5 附
+.........\TU/SimSun(0)/b/n/10.5 附
 .........\glue 2.625 plus 1.3125 minus 0.875
-.........\TU/TeXGyreTermes(1)/b/n/10.5 1
+.........\TU/TimesNewRoman(0)/b/n/10.5 1
 .........\kern -0.0002
 .........\kern 0.0002
-.........\glue 10.95
+.........\glue 10.0
 .........\rule(9.79996+*)x0.0
 .........\penalty 10000
 .........\glue 0.0
-.........\TU/TeXGyreTermes(1)/b/n/10.5 Bachelor
+.........\TU/TimesNewRoman(0)/b/n/10.5 Bachelor
 .........\glue 2.625 plus 1.3125 minus 0.875
-.........\TU/TeXGyreTermes(1)/b/n/10.5 Appendix
+.........\TU/TimesNewRoman(0)/b/n/10.5 Appendix
 .........\glue 2.625 plus 1.3125 minus 0.875
-.........\TU/TeXGyreTermes(1)/b/n/10.5 Table
+.........\TU/TimesNewRoman(0)/b/n/10.5 Table
 .........\kern -0.0002
 .........\kern 0.0002
 .........\penalty 10000
@@ -508,7 +498,7 @@ TC.}
 ....\penalty 10000
 ....\penalty 0
 ....\glue 20.0
-....\vbox(20.34192+0.0)x416.83289
+....\vbox(22.40038+0.0)x416.83289
 .....\rule(0.0+0.0)x*
 .....\penalty 10000
 .....\glue -10.0
@@ -519,36 +509,36 @@ TC.}
 .....\penalty 10000
 .....\glue 10.0
 .....\glue 0.0
-.....\rule(0.8+0.0)x*
+.....\rule(1.5+0.0)x*
 .....\kern 2.0
 .....\special{color push gray 0}
 .....\glue(\parskip) 0.0
 .....\glue(\parskip) 0.0
-.....\hbox(8.35484+2.38708)x416.83289
+.....\hbox(8.24219+2.15819)x416.83289
 ......\hbox(0.0+0.0)x0.0
 ......\glue 0.0
-......\vbox(8.35484+2.38708)x416.83289
-.......\hbox(8.35484+2.38708)x416.83289, glue set 236.4207fil
+......\vbox(8.24219+2.15819)x416.83289
+.......\hbox(8.24219+2.15819)x416.83289, glue set 252.13562fil
 ........\hbox(0.0+0.0)x0.0
-........\TU/FandolSong(0)/b/n/10.95 算
-........\glue 0.0 plus 1.08801
-........\TU/FandolSong(0)/b/n/10.95 法
+........\TU/SimSun(0)/b/n/10 算
+........\glue 0.0 plus 0.96002
+........\TU/SimSun(0)/b/n/10 法
 ........\kern -0.00017
 ........\kern 0.00017
-........\glue 2.7375 plus 1.36874 minus 0.91249
-........\TU/FandolSong(0)/b/n/10.95 附
-........\glue 2.7375 plus 1.36874 minus 0.91249
-........\TU/TeXGyreTermes(1)/b/n/10.95 1
+........\glue 2.5 plus 1.25 minus 0.83333
+........\TU/SimSun(0)/b/n/10 附
+........\glue 2.5 plus 1.25 minus 0.83333
+........\TU/TimesNewRoman(0)/b/n/10 1
 ........\kern -0.0002
 ........\kern 0.0002
-........\glue 2.7375 plus 1.36874 minus 0.91249
+........\glue 2.5 plus 1.25 minus 0.83333
 ........\penalty 10000
 ........\glue 0.0
-........\TU/TeXGyreTermes(1)/m/n/10.95 Bachelor
-........\glue 2.7375 plus 1.36874 minus 0.91249
-........\TU/TeXGyreTermes(1)/m/n/10.95 Appendix
-........\glue 2.7375 plus 1.36874 minus 0.91249
-........\TU/TeXGyreTermes(1)/m/n/10.95 Algorithm
+........\TU/TimesNewRoman(0)/m/n/10 Bachelor
+........\glue 2.5 plus 1.25 minus 0.83333
+........\TU/TimesNewRoman(0)/m/n/10 Appendix
+........\glue 2.5 plus 1.25 minus 0.83333
+........\TU/TimesNewRoman(0)/m/n/10 Algorithm
 ........\kern -0.0002
 ........\kern 0.0002
 ........\penalty 10000
@@ -559,7 +549,7 @@ TC.}
 ......\glue(\rightskip) 0.0
 .....\special{color pop}
 .....\kern 2.0
-.....\rule(0.4+0.0)x*
+.....\rule(1.0+0.0)x*
 .....\kern 2.0
 .....\special{color push gray 0}
 .....\vbox(0.0+0.0)x0.0
@@ -567,7 +557,7 @@ TC.}
 ......\glue 0.0
 .....\special{color pop}
 .....\kern 2.0
-.....\rule(0.4+0.0)x*
+.....\rule(1.5+0.0)x*
 .....\glue 0.0
 ....\penalty 0
 ....\glue 20.0
@@ -585,30 +575,30 @@ TC.}
 .....\glue(\rightskip) 0.0
 ....\penalty 10000
 ....\glue(\abovedisplayshortskip) 0.0
-....\glue(\baselineskip) 10.4
-....\hbox(9.6+2.39998)x221.90099, shifted 194.9319
+....\glue(\baselineskip) 10.29688
+....\hbox(9.70313+1.26561)x221.90099, shifted 194.9319
 .....\hbox(8.33331+0.0)x26.9691, display
 ......\OML/cmm/m/it/12 a
 ......\glue(\thickmuskip) 3.33328 plus 3.33328
 ......\OT1/cmr/m/n/12 =
 ......\glue(\thickmuskip) 3.33328 plus 3.33328
 ......\OML/cmm/m/it/12 b
-.....\kern157.53989
-.....\hbox(9.6+2.39998)x37.392, display
-......\hbox(9.6+2.39998)x37.392
+.....\kern156.72876
+.....\hbox(9.70313+1.26561)x38.20313, display
+......\hbox(9.70313+1.26561)x38.20313
 .......\glue 0.0
-.......\rule(0.0+0.0)x-7.608
-.......\TU/FandolSong(1)/m/n/12 （附
+.......\rule(0.0+0.0)x-6.79688
+.......\TU/SimSun(1)/m/n/12 （附
 .......\glue 3.0 plus 1.5 minus 1.0
-.......\TU/TeXGyreTermes(1)/m/n/12 1
+.......\TU/TimesNewRoman(0)/m/n/12 1
 .......\penalty 10000
-.......\TU/FandolSong(1)/m/n/12 ）
-.......\rule(0.0+0.0)x-7.608
-.......\kern 0.00046
-.......\kern -0.00046
+.......\TU/SimSun(1)/m/n/12 ）
+.......\rule(0.0+0.0)x-6.79688
+.......\kern 0.00041
+.......\kern -0.00041
 .......\kern -0.99623
 .......\kern 0.99623
-.......\glue 7.608 minus 6.0
+.......\glue 6.79688 minus 5.0625
 .......\hbox(0.0+0.0)x0.0, glue set - 1.5fil
 ........\glue 0.0 plus 1.0fil minus 1.0fil
 ........\glue 0.0 plus 1.0fil minus 1.0fil
@@ -618,14 +608,14 @@ TC.}
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ....\glue 0.0 plus 0.0001fil
-...\glue(\baselineskip) 12.09747
-...\hbox(10.38+2.70003)x416.83289
+...\glue(\baselineskip) 12.57747
+...\hbox(9.90001+2.70003)x416.83289
 ....\special{color push gray 0}
-....\hbox(10.38+2.70003)x416.83289
-.....\hbox(10.38+2.70003)x416.83289
-......\vbox(10.38+2.70003)x416.83289
+....\hbox(9.90001+2.70003)x416.83289
+.....\hbox(9.90001+2.70003)x416.83289
+......\vbox(9.90001+2.70003)x416.83289
 .......\rule(0.0+0.0)x416.83289
-.......\glue 4.08003
+.......\glue 3.60004
 .......\hbox(6.29997+2.70003)x416.83289
 ........\hbox(0.0+0.0)x0.0, glue set - 416.83289fil
 .........\vbox(0.0+0.0)x416.83289
@@ -637,16 +627,12 @@ TC.}
 .........\glue 0.0 plus 1.0fil minus 1.0fil
 ........\glue 0.0 plus 1.0fill
 ........\vbox(6.29997+2.70003)x416.83289
-.........\hbox(6.29997+2.70003)x416.83289, glue set 203.91644fil
+.........\hbox(6.29997+2.70003)x416.83289, glue set 206.16644fil
 ..........\glue(\leftskip) 0.0 plus 1.0fil
 ..........\hbox(0.0+0.0)x0.0
-..........\penalty 10000
-..........\glue 2.25 plus 1.125 minus 0.75
-..........\TU/TeXGyreTermes(1)/m/n/9 2
+..........\TU/TimesNewRoman(0)/m/n/9 2
 ..........\kern -0.0002
 ..........\kern 0.0002
-..........\penalty 10000
-..........\glue 2.25 plus 1.125 minus 0.75
 ..........\rule(6.29997+2.70003)x0.0
 ..........\penalty 10000
 ..........\glue(\parfillskip) 0.0

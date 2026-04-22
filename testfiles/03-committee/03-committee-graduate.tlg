@@ -1,26 +1,26 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
 Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font 'FandolHei-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
-Package fontspec Info: 
-(fontspec)             Font family 'FandolHei(0)' created for font 'FandolHei' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)             Font family 'SimHei(1)' created for font 'SimHei' with options [Ligatures=TeX,Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;embolden=4;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;embolden=4;slant=0.167;mapping=tex-text;"
 Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font 'FandolSong-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
-Package fontspec Info: 
-(fontspec)             Font family 'FandolSong(1)' created for font 'FandolSong' with options [Mapping=tex-text,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)             Font family 'SimSun(1)' created for font 'SimSun' with options [Ligatures=TeX,Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line ....
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;embolden=4;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;embolden=4;slant=0.167;mapping=tex-text;"
+LaTeX Font Info:    Calculating math sizes for size <14> on input line ....
+LaTeX Font Info:    Trying to load font information for U+msa on input line ....
+LaTeX Font Info:    Trying to load font information for U+msb on input line ....
 Completed box being shipped out [1]
 \vbox(722.98453+0.0)x454.106
 .\hbox(0.0+0.0)x0.0
@@ -65,7 +65,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x455.24411, glue set 168.07599fil
+...\vbox(700.50723+0.0)x455.24411, glue set 93.75331fil
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
@@ -75,46 +75,46 @@ Completed box being shipped out [1]
 ....\special{pdf:dest (Doc-Start) [@thispage /XYZ @xpos @ypos null]}
 ....\write-{}
 ....\glue(\topskip) 0.0
-....\hbox(12.656+2.94398)x455.24411, glue set 107.62206fil
+....\hbox(13.25+1.74998)x455.24411, glue set 107.62206fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
 ......\glue 0.0
 ......\glue 0.0
-......\glue -5.47499
+......\glue -5.0
 ......\hbox(0.0+0.0)x0.0
 .......\special{color push gray 0}
 .......\special{color pop}
-......\glue 5.47499
+......\glue 5.0
 .....\penalty 0
-.....\TU/FandolHei(0)/m/n/16 学
+.....\TU/SimHei(1)/m/n/16 学
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 位
+.....\TU/SimHei(1)/m/n/16 位
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 论
+.....\TU/SimHei(1)/m/n/16 论
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 文
+.....\TU/SimHei(1)/m/n/16 文
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 评
+.....\TU/SimHei(1)/m/n/16 评
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 阅
+.....\TU/SimHei(1)/m/n/16 阅
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 人
+.....\TU/SimHei(1)/m/n/16 人
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 和
+.....\TU/SimHei(1)/m/n/16 和
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 答
+.....\TU/SimHei(1)/m/n/16 答
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 辩
+.....\TU/SimHei(1)/m/n/16 辩
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 委
+.....\TU/SimHei(1)/m/n/16 委
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 员
+.....\TU/SimHei(1)/m/n/16 员
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 会
+.....\TU/SimHei(1)/m/n/16 会
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 名
+.....\TU/SimHei(1)/m/n/16 名
 .....\glue 0.0 plus 2.30405
-.....\TU/FandolHei(0)/m/n/16 单
+.....\TU/SimHei(1)/m/n/16 单
 .....\kern -0.00017
 .....\kern 0.00017
 .....\penalty 10000
@@ -126,29 +126,32 @@ Completed box being shipped out [1]
 ....\glue 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 11.18195
-....\hbox(11.074+2.54799)x455.24411, glue set 164.62206fil
+....\glue(\baselineskip) 11.8562
+....\hbox(11.59375+1.53123)x455.24411
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
-.....\TU/FandolHei(0)/m/n/14 学
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 位
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 论
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 文
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 评
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 阅
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 人
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 名
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 单
-.....\kern -0.00017
-.....\kern 0.00017
+.....\hbox(11.59375+1.53123)x455.24411, glue set 164.62206fil
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\TU/SimHei(1)/m/n/14 学
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 位
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 论
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 文
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 评
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 阅
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 人
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 名
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 单
+......\kern -0.00017
+......\kern 0.00017
+......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
@@ -157,409 +160,386 @@ Completed box being shipped out [1]
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(95.23482+89.9848)x455.24411, glue set 4.38522fil
+....\hbox(106.3995+99.39949)x455.24411, glue set 10.38522fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
-.....\hbox(95.23482+89.9848)x446.47368
+.....\hbox(106.3995+99.39949)x434.47368
 ......\mathon
-......\vbox(95.23482+89.9848)x446.47368
-.......\hbox(18.5219+7.93805)x446.47368
+......\vbox(106.3995+99.39949)x434.47368
+.......\hbox(20.57982+8.82004)x434.47368
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x109.5599
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x105.5599
-..........\hbox(18.5219+7.93805)x105.5599, glue set 40.77995fil
+........\hbox(20.57982+8.82004)x105.5599
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x105.5599
+..........\hbox(20.57982+8.82004)x105.5599, glue set 40.77995fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 姓
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 名
+...........\TU/SimSun(1)/b/n/12 姓
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 名
 ...........\kern 0.0
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x84.52135
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x80.52135
-..........\hbox(18.5219+7.93805)x80.52135, glue set 28.26068fil
+........\hbox(20.57982+8.82004)x80.52135
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x80.52135
+..........\hbox(20.57982+8.82004)x80.52135, glue set 28.26068fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 职
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 称
+...........\TU/SimSun(1)/b/n/12 职
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 称
 ...........\kern 0.0
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x252.39243
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x248.39243
-..........\hbox(18.5219+7.93805)x248.39243, glue set 100.19621fil
+........\hbox(20.57982+8.82004)x248.39243
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x248.39243
+..........\hbox(20.57982+8.82004)x248.39243, glue set 100.19621fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 工
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 作
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 单
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 位
+...........\TU/SimSun(1)/b/n/12 工
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 作
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 单
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 位
 ...........\kern 0.0
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x446.47368
+.......\hbox(20.57982+8.82004)x434.47368
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x109.5599
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x105.5599
-..........\hbox(18.5219+7.93805)x105.5599, glue set 28.77995fil
+........\hbox(20.57982+8.82004)x105.5599
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x105.5599
+..........\hbox(20.57982+8.82004)x105.5599, glue set 28.77995fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 全
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 盲
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 评
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 阅
+...........\TU/SimSun(1)/m/n/12 全
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 盲
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 评
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 阅
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x84.52135
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x80.52135
-..........\hbox(18.5219+7.93805)x80.52135, glue set 34.26068fil
+........\hbox(20.57982+8.82004)x80.52135
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x80.52135
+..........\hbox(20.57982+8.82004)x80.52135, glue set 34.26068fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 无
+...........\TU/SimSun(1)/m/n/12 无
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x252.39243
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x248.39243
-..........\hbox(18.5219+7.93805)x248.39243, glue set 118.19621fil
+........\hbox(20.57982+8.82004)x248.39243
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x248.39243
+..........\hbox(20.57982+8.82004)x248.39243, glue set 118.19621fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 无
+...........\TU/SimSun(1)/m/n/12 无
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x446.47368
+.......\hbox(20.57982+8.82004)x434.47368
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x109.5599
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x105.5599
-..........\hbox(18.5219+7.93805)x105.5599, glue set 28.77995fil
+........\hbox(20.57982+8.82004)x105.5599
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x105.5599
+..........\hbox(20.57982+8.82004)x105.5599, glue set 28.77995fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 全
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 盲
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 评
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 阅
+...........\TU/SimSun(1)/m/n/12 全
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 盲
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 评
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 阅
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x84.52135
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x80.52135
-..........\hbox(18.5219+7.93805)x80.52135, glue set 34.26068fil
+........\hbox(20.57982+8.82004)x80.52135
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x80.52135
+..........\hbox(20.57982+8.82004)x80.52135, glue set 34.26068fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 无
+...........\TU/SimSun(1)/m/n/12 无
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x252.39243
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x248.39243
-..........\hbox(18.5219+7.93805)x248.39243, glue set 118.19621fil
+........\hbox(20.57982+8.82004)x248.39243
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x248.39243
+..........\hbox(20.57982+8.82004)x248.39243, glue set 118.19621fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 无
+...........\TU/SimSun(1)/m/n/12 无
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x446.47368
+.......\hbox(20.57982+8.82004)x434.47368
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x109.5599
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x105.5599
-..........\hbox(18.5219+7.93805)x105.5599, glue set 52.77995fil
+........\hbox(20.57982+8.82004)x105.5599
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x105.5599
+..........\hbox(20.57982+8.82004)x105.5599, glue set 52.77995fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x84.52135
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x80.52135
-..........\hbox(18.5219+7.93805)x80.52135, glue set 40.26068fil
+........\hbox(20.57982+8.82004)x80.52135
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x80.52135
+..........\hbox(20.57982+8.82004)x80.52135, glue set 40.26068fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x252.39243
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x248.39243
-..........\hbox(18.5219+7.93805)x248.39243, glue set 124.19621fil
+........\hbox(20.57982+8.82004)x248.39243
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x248.39243
+..........\hbox(20.57982+8.82004)x248.39243, glue set 124.19621fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x446.47368
+.......\hbox(20.57982+8.82004)x434.47368
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x109.5599
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x105.5599
-..........\hbox(18.5219+7.93805)x105.5599, glue set 52.77995fil
+........\hbox(20.57982+8.82004)x105.5599
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x105.5599
+..........\hbox(20.57982+8.82004)x105.5599, glue set 52.77995fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x84.52135
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x80.52135
-..........\hbox(18.5219+7.93805)x80.52135, glue set 40.26068fil
+........\hbox(20.57982+8.82004)x80.52135
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x80.52135
+..........\hbox(20.57982+8.82004)x80.52135, glue set 40.26068fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x252.39243
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x248.39243
-..........\hbox(18.5219+7.93805)x248.39243, glue set 124.19621fil
+........\hbox(20.57982+8.82004)x248.39243
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x248.39243
+..........\hbox(20.57982+8.82004)x248.39243, glue set 124.19621fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x446.47368
+.......\hbox(20.57982+8.82004)x434.47368
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x109.5599
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x105.5599
-..........\hbox(18.5219+7.93805)x105.5599, glue set 52.77995fil
+........\hbox(20.57982+8.82004)x105.5599
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x105.5599
+..........\hbox(20.57982+8.82004)x105.5599, glue set 52.77995fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x84.52135
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x80.52135
-..........\hbox(18.5219+7.93805)x80.52135, glue set 40.26068fil
+........\hbox(20.57982+8.82004)x80.52135
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x80.52135
+..........\hbox(20.57982+8.82004)x80.52135, glue set 40.26068fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x252.39243
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x248.39243
-..........\hbox(18.5219+7.93805)x248.39243, glue set 124.19621fil
+........\hbox(20.57982+8.82004)x248.39243
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x248.39243
+..........\hbox(20.57982+8.82004)x248.39243, glue set 124.19621fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x446.47368
+.......\hbox(20.57982+8.82004)x434.47368
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x109.5599
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x105.5599
-..........\hbox(18.5219+7.93805)x105.5599, glue set 52.77995fil
+........\hbox(20.57982+8.82004)x105.5599
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x105.5599
+..........\hbox(20.57982+8.82004)x105.5599, glue set 52.77995fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 ......\mathoff
-.....\glue(\rightskip) 0.0 plus 1.0fil
-....\penalty 300
-....\glue(\lineskip) 1.0
-....\hbox(11.074+2.57599)x455.24411, glue set 176.87206fil
-.....\glue(\leftskip) 0.0 plus 1.0fil
-.....\penalty 10000
-.....\glue 0.0
-.....\glue 3.5 plus 1.75 minus 1.16666
-.....\TU/FandolHei(0)/m/n/14 答
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 辩
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 委
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 员
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 会
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 名
-.....\glue 0.0 plus 2.01604
-.....\TU/FandolHei(0)/m/n/14 单
-.....\kern -0.00017
-.....\kern 0.00017
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
@@ -567,772 +547,796 @@ Completed box being shipped out [1]
 ....\glue 0.0
 ....\glue 7.56004
 ....\glue 0.0
-....\glue -22.67978
+....\glue(\parskip) 0.0
+....\glue(\parskip) 0.0
+....\glue(\lineskip) 1.0
+....\hbox(11.59375+1.53123)x455.24411
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\hbox(0.0+0.0)x0.0
+.....\hbox(11.59375+1.53123)x455.24411, glue set 178.62206fil
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\TU/SimHei(1)/m/n/14 答
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 辩
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 委
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 员
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 会
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 名
+......\glue 0.0 plus 2.01604
+......\TU/SimHei(1)/m/n/14 单
+......\kern -0.00017
+......\kern 0.00017
+......\glue 0.0 plus 1.0fil minus 1.0fil
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+....\glue 7.56004
 ....\glue 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
 ....\glue(\lineskip) 1.0
-....\hbox(121.69476+116.44475)x455.24411
+....\hbox(135.79936+128.79935)x455.24411, glue set 7.96698fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
-.....\hbox(121.69476+116.44475)x455.31015
+.....\hbox(135.79936+128.79935)x439.31015
 ......\mathon
-......\vbox(121.69476+116.44475)x455.31015
-.......\hbox(18.5219+7.93805)x455.31015
+......\vbox(135.79936+128.79935)x439.31015
+.......\hbox(20.57982+8.82004)x439.31015
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x110.9822
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x106.9822
-..........\hbox(18.5219+7.93805)x106.9822, glue set 29.4911fil
+........\hbox(20.57982+8.82004)x106.9822
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x106.9822
+..........\hbox(20.57982+8.82004)x106.9822, glue set 29.4911fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 答
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 辩
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 日
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 期
+...........\TU/SimSun(1)/b/n/12 答
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 辩
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 日
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 期
 ...........\kern 0.0
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x80.25317, glue set 121.33597fil
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
+........\hbox(20.57982+8.82004)x76.25317, glue set 117.33194fil
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
 .........\glue 0.0 plus 1.0fil
 .........\glue 0.00002
-.........\TU/TeXGyreTermes(1)/m/n/12 20XX
+.........\TU/TimesNewRoman(0)/m/n/12 20XX
 .........\glue 3.0 plus 1.49849 minus 1.00099
-.........\TU/FandolSong(1)/m/n/12 年
+.........\TU/SimSun(1)/m/n/12 年
 .........\glue 3.0 plus 1.49849 minus 1.00099
-.........\TU/TeXGyreTermes(1)/m/n/12 X
+.........\TU/TimesNewRoman(0)/m/n/12 X
 .........\glue 3.0 plus 1.49849 minus 1.00099
-.........\TU/FandolSong(1)/m/n/12 月
+.........\TU/SimSun(1)/m/n/12 月
 .........\glue 3.0 plus 1.49849 minus 1.00099
-.........\TU/TeXGyreTermes(1)/m/n/12 X
+.........\TU/TimesNewRoman(0)/m/n/12 X
 .........\glue 3.0 plus 1.49849 minus 1.00099
-.........\TU/FandolSong(1)/m/n/12 日
+.........\TU/SimSun(1)/m/n/12 日
 .........\kern -0.00017
 .........\kern 0.00017
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 .........\hbox(0.0+0.0)x0.0
 ........\glue(\tabskip) 0.0
-........\hbox(0.0+0.0)x68.01869
+........\hbox(0.0+0.0)x64.01869
 ........\glue(\tabskip) 0.0
-........\hbox(0.0+0.0)x196.05609
-........\glue(\tabskip) 0.0
-.......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x455.31015
-........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x110.9822
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x106.9822
-..........\hbox(18.5219+7.93805)x106.9822, glue set 23.4911fil
-...........\glue(\leftskip) 0.0 plus 1.0fil
-...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
-...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 答
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 辩
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 委
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 员
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 会
-...........\kern 0.0
-...........\kern -0.00018
-...........\kern 0.00018
-...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
-...........\penalty 10000
-...........\glue(\parfillskip) 0.0
-...........\glue(\rightskip) 0.0 plus 1.0fil
-.........\glue 0.0 plus 1.0fil
-.........\glue 2.0
-........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x80.25317
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x76.25317
-..........\hbox(18.5219+7.93805)x76.25317, glue set 26.12659fil
-...........\glue(\leftskip) 0.0 plus 1.0fil
-...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
-...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 姓
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 名
-...........\kern 0.0
-...........\kern -0.00017
-...........\kern 0.00017
-...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
-...........\penalty 10000
-...........\glue(\parfillskip) 0.0
-...........\glue(\rightskip) 0.0 plus 1.0fil
-.........\glue 0.0 plus 1.0fil
-.........\glue 2.0
-........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x68.01869
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x64.01869
-..........\hbox(18.5219+7.93805)x64.01869, glue set 20.00935fil
-...........\glue(\leftskip) 0.0 plus 1.0fil
-...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
-...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 职
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 称
-...........\kern 0.0
-...........\kern -0.00017
-...........\kern 0.00017
-...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
-...........\penalty 10000
-...........\glue(\parfillskip) 0.0
-...........\glue(\rightskip) 0.0 plus 1.0fil
-.........\glue 0.0 plus 1.0fil
-.........\glue 2.0
-........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x196.05609
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x192.05609
-..........\hbox(18.5219+7.93805)x192.05609, glue set 72.02805fil
-...........\glue(\leftskip) 0.0 plus 1.0fil
-...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
-...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 工
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 作
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 单
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 位
-...........\kern 0.0
-...........\kern -0.00017
-...........\kern 0.00017
-...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
-...........\penalty 10000
-...........\glue(\parfillskip) 0.0
-...........\glue(\rightskip) 0.0 plus 1.0fil
-.........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+........\hbox(0.0+0.0)x192.05609
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x455.31015
+.......\hbox(20.57982+8.82004)x439.31015
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x110.9822
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x106.9822
-..........\hbox(18.5219+7.93805)x106.9822, glue set 41.4911fil
+........\hbox(20.57982+8.82004)x106.9822
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x106.9822
+..........\hbox(20.57982+8.82004)x106.9822, glue set 23.4911fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 主
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 席
+...........\TU/SimSun(1)/b/n/12 答
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 辩
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 委
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 员
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 会
 ...........\kern 0.0
-...........\kern -0.00018
-...........\kern 0.00018
+...........\kern -0.00017
+...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x80.25317
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x76.25317
-..........\hbox(18.5219+7.93805)x76.25317, glue set 25.13058fil
+........\hbox(20.57982+8.82004)x76.25317
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x76.25317
+..........\hbox(20.57982+8.82004)x76.25317, glue set 26.12659fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/TeXGyreTermes(1)/m/n/12 XXX
+...........\TU/SimSun(1)/b/n/12 姓
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 名
+...........\kern 0.0
+...........\kern -0.00017
+...........\kern 0.00017
+...........\penalty 10000
+...........\rule(0.0+8.82004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil
+.........\glue 0.0
+........\glue(\tabskip) 0.0
+........\hbox(20.57982+8.82004)x64.01869
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x64.01869
+..........\hbox(20.57982+8.82004)x64.01869, glue set 20.00935fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(20.57982+*)x0.0
+...........\glue 0.0
+...........\TU/SimSun(1)/b/n/12 职
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 称
+...........\kern 0.0
+...........\kern -0.00017
+...........\kern 0.00017
+...........\penalty 10000
+...........\rule(0.0+8.82004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil
+.........\glue 0.0
+........\glue(\tabskip) 0.0
+........\hbox(20.57982+8.82004)x192.05609
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x192.05609
+..........\hbox(20.57982+8.82004)x192.05609, glue set 72.02805fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(20.57982+*)x0.0
+...........\glue 0.0
+...........\TU/SimSun(1)/b/n/12 工
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 作
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 单
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 位
+...........\kern 0.0
+...........\kern -0.00017
+...........\kern 0.00017
+...........\penalty 10000
+...........\rule(0.0+8.82004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil
+.........\glue 0.0
+........\glue(\tabskip) 0.0
+.......\glue(\lineskip) 0.0
+.......\hbox(20.57982+8.82004)x439.31015
+........\glue(\tabskip) 0.0
+........\hbox(20.57982+8.82004)x106.9822
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x106.9822
+..........\hbox(20.57982+8.82004)x106.9822, glue set 41.4911fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(20.57982+*)x0.0
+...........\glue 0.0
+...........\TU/SimSun(1)/b/n/12 主
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 席
+...........\kern 0.0
+...........\kern -0.00017
+...........\kern 0.00017
+...........\penalty 10000
+...........\rule(0.0+8.82004)x0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0
+...........\glue(\rightskip) 0.0 plus 1.0fil
+.........\glue 0.0 plus 1.0fil
+.........\glue 0.0
+........\glue(\tabskip) 0.0
+........\hbox(20.57982+8.82004)x76.25317
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x76.25317
+..........\hbox(20.57982+8.82004)x76.25317, glue set 25.12756fil
+...........\glue(\leftskip) 0.0 plus 1.0fil
+...........\hbox(0.0+0.0)x0.0
+...........\rule(20.57982+*)x0.0
+...........\glue 0.0
+...........\TU/TimesNewRoman(0)/m/n/12 XXX
 ...........\kern -0.0002
 ...........\kern 0.0002
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x68.01869
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x64.01869
-..........\hbox(18.5219+7.93805)x64.01869, glue set 20.00935fil
+........\hbox(20.57982+8.82004)x64.01869
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x64.01869
+..........\hbox(20.57982+8.82004)x64.01869, glue set 20.00935fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 教
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 授
+...........\TU/SimSun(1)/m/n/12 教
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 授
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x196.05609
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x192.05609
-..........\hbox(18.5219+7.93805)x192.05609, glue set 60.02805fil
+........\hbox(20.57982+8.82004)x192.05609
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x192.05609
+..........\hbox(20.57982+8.82004)x192.05609, glue set 60.02805fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 西
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 北
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 工
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 业
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 大
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 学
+...........\TU/SimSun(1)/m/n/12 西
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 北
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 工
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 业
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 大
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 学
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x455.31015
+.......\hbox(20.57982+8.82004)x439.31015
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x110.9822
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x106.9822
-..........\hbox(18.5219+7.93805)x106.9822, glue set 41.4911fil
+........\hbox(20.57982+8.82004)x106.9822
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x106.9822
+..........\hbox(20.57982+8.82004)x106.9822, glue set 41.4911fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 委
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 员
+...........\TU/SimSun(1)/b/n/12 委
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 员
 ...........\kern 0.0
-...........\kern -0.00018
-...........\kern 0.00018
+...........\kern -0.00017
+...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x80.25317
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x76.25317
-..........\hbox(18.5219+7.93805)x76.25317, glue set 25.13058fil
+........\hbox(20.57982+8.82004)x76.25317
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x76.25317
+..........\hbox(20.57982+8.82004)x76.25317, glue set 25.12756fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/TeXGyreTermes(1)/m/n/12 XXX
+...........\TU/TimesNewRoman(0)/m/n/12 XXX
 ...........\kern -0.0002
 ...........\kern 0.0002
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x68.01869
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x64.01869
-..........\hbox(18.5219+7.93805)x64.01869, glue set 20.00935fil
+........\hbox(20.57982+8.82004)x64.01869
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x64.01869
+..........\hbox(20.57982+8.82004)x64.01869, glue set 20.00935fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 教
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 授
+...........\TU/SimSun(1)/m/n/12 教
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 授
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x196.05609
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x192.05609
-..........\hbox(18.5219+7.93805)x192.05609, glue set 60.02805fil
+........\hbox(20.57982+8.82004)x192.05609
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x192.05609
+..........\hbox(20.57982+8.82004)x192.05609, glue set 60.02805fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 西
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 北
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 工
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 业
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 大
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 学
+...........\TU/SimSun(1)/m/n/12 西
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 北
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 工
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 业
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 大
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 学
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x455.31015
+.......\hbox(20.57982+8.82004)x439.31015
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x110.9822
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x106.9822
-..........\hbox(18.5219+7.93805)x106.9822, glue set 41.4911fil
+........\hbox(20.57982+8.82004)x106.9822
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x106.9822
+..........\hbox(20.57982+8.82004)x106.9822, glue set 41.4911fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 委
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 员
+...........\TU/SimSun(1)/b/n/12 委
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 员
 ...........\kern 0.0
-...........\kern -0.00018
-...........\kern 0.00018
+...........\kern -0.00017
+...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x80.25317
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x76.25317
-..........\hbox(18.5219+7.93805)x76.25317, glue set 25.13058fil
+........\hbox(20.57982+8.82004)x76.25317
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x76.25317
+..........\hbox(20.57982+8.82004)x76.25317, glue set 25.12756fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/TeXGyreTermes(1)/m/n/12 XXX
+...........\TU/TimesNewRoman(0)/m/n/12 XXX
 ...........\kern -0.0002
 ...........\kern 0.0002
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x68.01869
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x64.01869
-..........\hbox(18.5219+7.93805)x64.01869, glue set 20.00935fil
+........\hbox(20.57982+8.82004)x64.01869
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x64.01869
+..........\hbox(20.57982+8.82004)x64.01869, glue set 20.00935fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 教
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 授
+...........\TU/SimSun(1)/m/n/12 教
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 授
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x196.05609
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x192.05609
-..........\hbox(18.5219+7.93805)x192.05609, glue set 60.02805fil
+........\hbox(20.57982+8.82004)x192.05609
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x192.05609
+..........\hbox(20.57982+8.82004)x192.05609, glue set 60.02805fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 西
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 北
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 工
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 业
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 大
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 学
+...........\TU/SimSun(1)/m/n/12 西
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 北
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 工
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 业
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 大
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 学
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x455.31015
+.......\hbox(20.57982+8.82004)x439.31015
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x110.9822
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x106.9822
-..........\hbox(18.5219+7.93805)x106.9822, glue set 41.4911fil
+........\hbox(20.57982+8.82004)x106.9822
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x106.9822
+..........\hbox(20.57982+8.82004)x106.9822, glue set 41.4911fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 委
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 员
+...........\TU/SimSun(1)/b/n/12 委
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 员
 ...........\kern 0.0
-...........\kern -0.00018
-...........\kern 0.00018
+...........\kern -0.00017
+...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x80.25317
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x76.25317
-..........\hbox(18.5219+7.93805)x76.25317, glue set 25.13058fil
+........\hbox(20.57982+8.82004)x76.25317
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x76.25317
+..........\hbox(20.57982+8.82004)x76.25317, glue set 25.12756fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/TeXGyreTermes(1)/m/n/12 XXX
+...........\TU/TimesNewRoman(0)/m/n/12 XXX
 ...........\kern -0.0002
 ...........\kern 0.0002
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x68.01869
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x64.01869
-..........\hbox(18.5219+7.93805)x64.01869, glue set 20.00935fil
+........\hbox(20.57982+8.82004)x64.01869
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x64.01869
+..........\hbox(20.57982+8.82004)x64.01869, glue set 20.00935fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 教
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 授
+...........\TU/SimSun(1)/m/n/12 教
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 授
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x196.05609
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x192.05609
-..........\hbox(18.5219+7.93805)x192.05609, glue set 60.02805fil
+........\hbox(20.57982+8.82004)x192.05609
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x192.05609
+..........\hbox(20.57982+8.82004)x192.05609, glue set 60.02805fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 西
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 北
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 工
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 业
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 大
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 学
+...........\TU/SimSun(1)/m/n/12 西
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 北
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 工
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 业
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 大
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 学
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x455.31015
+.......\hbox(20.57982+8.82004)x439.31015
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x110.9822
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x106.9822
-..........\hbox(18.5219+7.93805)x106.9822, glue set 41.4911fil
+........\hbox(20.57982+8.82004)x106.9822
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x106.9822
+..........\hbox(20.57982+8.82004)x106.9822, glue set 41.4911fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 委
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 员
+...........\TU/SimSun(1)/b/n/12 委
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 员
 ...........\kern 0.0
-...........\kern -0.00018
-...........\kern 0.00018
+...........\kern -0.00017
+...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x80.25317
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x76.25317
-..........\hbox(18.5219+7.93805)x76.25317, glue set 25.13058fil
+........\hbox(20.57982+8.82004)x76.25317
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x76.25317
+..........\hbox(20.57982+8.82004)x76.25317, glue set 25.12756fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/TeXGyreTermes(1)/m/n/12 XXX
+...........\TU/TimesNewRoman(0)/m/n/12 XXX
 ...........\kern -0.0002
 ...........\kern 0.0002
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x68.01869
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x64.01869
-..........\hbox(18.5219+7.93805)x64.01869, glue set 20.00935fil
+........\hbox(20.57982+8.82004)x64.01869
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x64.01869
+..........\hbox(20.57982+8.82004)x64.01869, glue set 20.00935fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 教
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 授
+...........\TU/SimSun(1)/m/n/12 教
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 授
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x196.05609
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x192.05609
-..........\hbox(18.5219+7.93805)x192.05609, glue set 60.02805fil
+........\hbox(20.57982+8.82004)x192.05609
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x192.05609
+..........\hbox(20.57982+8.82004)x192.05609, glue set 60.02805fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 西
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 北
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 工
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 业
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 大
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 学
+...........\TU/SimSun(1)/m/n/12 西
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 北
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 工
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 业
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 大
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 学
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x455.31015
+.......\hbox(20.57982+8.82004)x439.31015
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x110.9822
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x106.9822
-..........\hbox(18.5219+7.93805)x106.9822, glue set 41.4911fil
+........\hbox(20.57982+8.82004)x106.9822
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x106.9822
+..........\hbox(20.57982+8.82004)x106.9822, glue set 41.4911fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/b/n/12 秘
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/b/n/12 书
+...........\TU/SimSun(1)/b/n/12 秘
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/b/n/12 书
 ...........\kern 0.0
-...........\kern -0.00018
-...........\kern 0.00018
+...........\kern -0.00017
+...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x80.25317
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x76.25317
-..........\hbox(18.5219+7.93805)x76.25317, glue set 25.13058fil
+........\hbox(20.57982+8.82004)x76.25317
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x76.25317
+..........\hbox(20.57982+8.82004)x76.25317, glue set 25.12756fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/TeXGyreTermes(1)/m/n/12 XXX
+...........\TU/TimesNewRoman(0)/m/n/12 XXX
 ...........\kern -0.0002
 ...........\kern 0.0002
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x68.01869
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x64.01869
-..........\hbox(18.5219+7.93805)x64.01869, glue set 20.00935fil
+........\hbox(20.57982+8.82004)x64.01869
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x64.01869
+..........\hbox(20.57982+8.82004)x64.01869, glue set 20.00935fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 讲
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 师
+...........\TU/SimSun(1)/m/n/12 讲
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 师
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x196.05609
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x192.05609
-..........\hbox(18.5219+7.93805)x192.05609, glue set 60.02805fil
+........\hbox(20.57982+8.82004)x192.05609
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x192.05609
+..........\hbox(20.57982+8.82004)x192.05609, glue set 60.02805fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\glue 0.0
-...........\TU/FandolSong(1)/m/n/12 西
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 北
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 工
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 业
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 大
-...........\glue 0.0 plus 1.92003
-...........\TU/FandolSong(1)/m/n/12 学
+...........\TU/SimSun(1)/m/n/12 西
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 北
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 工
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 业
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 大
+...........\glue 0.0 plus 1.60004
+...........\TU/SimSun(1)/m/n/12 学
 ...........\kern -0.00017
 ...........\kern 0.00017
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 .......\glue(\lineskip) 0.0
-.......\hbox(18.5219+7.93805)x455.31015
+.......\hbox(20.57982+8.82004)x439.31015
 ........\glue(\tabskip) 0.0
-........\hbox(18.5219+7.93805)x110.9822
-.........\rule(18.5219+7.93805)x0.0
-.........\glue 2.0
-.........\vbox(18.5219+7.93805)x106.9822
-..........\hbox(18.5219+7.93805)x106.9822, glue set 53.4911fil
+........\hbox(20.57982+8.82004)x106.9822
+.........\rule(20.57982+8.82004)x0.0
+.........\glue 0.0
+.........\vbox(20.57982+8.82004)x106.9822
+..........\hbox(20.57982+8.82004)x106.9822, glue set 53.4911fil
 ...........\glue(\leftskip) 0.0 plus 1.0fil
 ...........\hbox(0.0+0.0)x0.0
-...........\rule(18.5219+*)x0.0
+...........\rule(20.57982+*)x0.0
 ...........\penalty 10000
-...........\rule(0.0+7.93805)x0.0
+...........\rule(0.0+8.82004)x0.0
 ...........\penalty 10000
 ...........\glue(\parfillskip) 0.0
 ...........\glue(\rightskip) 0.0 plus 1.0fil
 .........\glue 0.0 plus 1.0fil
-.........\glue 2.0
+.........\glue 0.0
 ........\glue(\tabskip) 0.0
 ......\mathoff
-.....\glue(\rightskip) 0.0 plus 1.0fil
-....\penalty 300
-....\glue(\lineskip) 1.0
-....\hbox(0.0+0.0)x455.24411, glue set 227.62206fil
-.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
 ....\penalty -51
-....\glue 3.0 plus 1.0 minus 1.0
+....\glue 2.0 plus 1.0 minus 1.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ....\glue 0.0 plus 0.0001fil
@@ -1395,9 +1399,9 @@ Completed box being shipped out [2]
 .....\special{color pop}
 ...\glue 3.1298
 ...\glue(\lineskip) 0.0
-...\vbox(700.50723+0.0)x0.0, glue set 689.4336fil
+...\vbox(700.50723+0.0)x0.0, glue set 690.43349fil
 ....\write-{}
-....\glue(\topskip) 11.0
+....\glue(\topskip) 10.0
 ....\hbox(0.0+0.0)x0.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
