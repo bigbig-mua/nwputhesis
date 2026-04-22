@@ -24,7 +24,7 @@ else
 	RM = rm -f
 endif
 
-.PHONY: all doc thesis clean cleanall distclean view viewthesis test
+.PHONY: all doc thesis clean cleanall distclean view viewthesis test wordcount
 
 # 默认目标：构建示例论文
 all: thesis
@@ -52,6 +52,10 @@ clean:
 # 清理所有生成文件
 cleanall: clean
 	-@$(RM) -f $(SAMPLE).pdf $(PACKAGE).pdf 2>/dev/null || true
+
+# 字数统计
+wordcount: thesis
+	texcount -inc -chinese -utf8 $(SAMPLE).tex
 
 # 测试目标（用于 CI，使用 l3build）
 test:
