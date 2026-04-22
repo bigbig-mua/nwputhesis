@@ -3,34 +3,26 @@ Don't change this file in any respect.
 File: nwpulogo.png Graphic file (type bmp)
 <nwpulogo.png>
 Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font 'FandolSong-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
-Package fontspec Info: 
-(fontspec)             Font family 'FandolSong(1)' created for font 'FandolSong' with options [Ligatures=TeX,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)             Font family 'SimSun(1)' created for font 'SimSun' with options [Ligatures=TeX,Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;embolden=4;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SimSun/OT:script=hani;language=dflt;embolden=4;slant=0.167;mapping=tex-text;"
 Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font 'FandolHei-Regular'. Check the typeset output, and if it is okay then ignore this warning. Otherwise a different font should be chosen.
-Package fontspec Info: 
-(fontspec)             Font family 'FandolHei(0)' created for font 'FandolHei' with options [Ligatures=TeX,Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldFont={*-Bold},AutoFakeSlant={0.167}].
+(fontspec)             Font family 'SimHei(1)' created for font 'SimHei' with options [Ligatures=TeX,Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;embolden=4;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;slant=0.167;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SimHei/OT:script=hani;language=dflt;embolden=4;slant=0.167;mapping=tex-text;"
 LaTeX Font Info:    Calculating math sizes for size <16> on input line ....
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line ....
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line ....
 LaTeX Font Info:    Trying to load font information for U+msa on input line ....
 LaTeX Font Info:    Trying to load font information for U+msb on input line ....
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line ....
 LaTeX Font Info:    Calculating math sizes for size <14> on input line ....
 Completed box being shipped out [1]
 \vbox(722.98434+0.0)x434.90039
@@ -76,7 +68,7 @@ Completed box being shipped out [1]
 .....\special{color pop}
 ...\glue 11.38092
 ...\glue(\lineskip) 0.0
-...\vbox(700.50687+0.0)x416.83289, glue set 73.14384fill
+...\vbox(700.50687+0.0)x416.83289, glue set 76.10197fill
 ....\write-{}
 ....\special{color push gray 0}
 ....\special{pdf:majorversion 1}
@@ -85,7 +77,7 @@ Completed box being shipped out [1]
 ....\special{pdf:docview<</OpenAction[@page1/FitH]/PageMode/UseOutlines/ViewerPref\ETC.}
 ....\special{pdf:dest (Doc-Start) [@thispage /XYZ @xpos @ypos null]}
 ....\write-{}
-....\glue(\topskip) 11.0
+....\glue(\topskip) 10.0
 ....\rule(0.0+0.0)x*
 ....\penalty 10000
 ....\glue 65.44142
@@ -98,11 +90,11 @@ Completed box being shipped out [1]
 .....\hbox(0.0+0.0)x0.0
 ......\glue 0.0
 ......\glue 0.0
-......\glue -5.47499
+......\glue -5.0
 ......\hbox(0.0+0.0)x0.0
 .......\special{color push gray 0}
 .......\special{color pop}
-......\glue 5.47499
+......\glue 5.0
 .....\penalty 0
 .....\hbox(58.59467+0.0)x284.52756
 ......\special{pdf:image bbox 0 0 1446.9965 297.99927 clip 0 width 284.52756pt (nwpu\ETC.}
@@ -112,253 +104,229 @@ Completed box being shipped out [1]
 ....\glue 36.98866
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 29.442
-....\hbox(33.558+8.39998)x416.83289, glue set - 0.07541
+....\glue(\baselineskip) 28.54688
+....\hbox(34.45313+4.42967)x416.83289, glue set 10.31097fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
-.....\TU/FandolSong(1)/b/n/42 本
+.....\TU/SimSun(1)/b/n/42 本
 .....\glue 0.0 plus 5.04012
-.....\TU/FandolSong(1)/b/n/42 科
+.....\TU/SimSun(1)/b/n/42 科
 .....\glue 0.0 plus 5.04012
-.....\TU/FandolSong(1)/b/n/42 毕
+.....\TU/SimSun(1)/b/n/42 毕
 .....\glue 0.0 plus 5.04012
-.....\TU/FandolSong(1)/b/n/42 业
+.....\TU/SimSun(1)/b/n/42 业
 .....\glue 0.0 plus 5.04012
-.....\TU/FandolSong(1)/b/n/42 设
+.....\TU/SimSun(1)/b/n/42 设
 .....\glue 0.0 plus 5.04012
-.....\TU/FandolSong(1)/b/n/42 计
+.....\TU/SimSun(1)/b/n/42 计
 .....\glue 0.0 plus 5.04012
-.....\glue 26.46 minus 21.0
-.....\rule(0.0+0.0)x-26.46
-.....\TU/FandolSong(1)/b/n/42 （论
+.....\glue 23.78906 minus 17.71875
+.....\rule(0.0+0.0)x-23.78906
+.....\TU/SimSun(1)/b/n/42 （论
 .....\glue 0.0 plus 5.04012
-.....\TU/FandolSong(1)/b/n/42 文
+.....\TU/SimSun(1)/b/n/42 文
 .....\penalty 10000
-.....\TU/FandolSong(1)/b/n/42 ）
-.....\rule(0.0+0.0)x-26.46
-.....\kern 0.00162
-.....\kern -0.00162
+.....\TU/SimSun(1)/b/n/42 ）
+.....\rule(0.0+0.0)x-23.78906
+.....\kern 0.00145
+.....\kern -0.00145
 .....\kern -0.99623
 .....\kern 0.99623
-.....\glue 26.46 minus 21.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
 ....\glue 99.58464
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 42.26402
-....\hbox(12.336+6.6719)x416.83289, glue set 63.7602fil
+....\glue(\baselineskip) 45.50783
+....\hbox(13.0625+6.62178)x416.83289, glue set 75.2602fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
-.....\TU/FandolHei(0)/m/n/16 题
+.....\TU/SimHei(1)/m/n/16 题
+.....\glue 0.0 plus 1.92004
+.....\TU/SimHei(1)/m/n/16 目
 .....\kern -0.00017
 .....\kern 0.00017
-.....\penalty 10000
-.....\glue 4.0 plus 2.0 minus 1.33333
-.....\penalty 10000
-.....\glue 4.0 plus 2.0 minus 1.33333
-.....\TU/FandolHei(0)/m/n/16 目
-.....\kern -0.00018
-.....\kern 0.00018
-.....\glue 4.0 plus 2.0 minus 1.33333
 .....\glue 5.69046
 .....\glue 1.0
 .....\mathon
-.....\vbox(12.336+6.6719)x231.62204
-......\hbox(12.336+3.47198)x231.62204
-.......\glue 4.0 plus 2.0 minus 1.33333
-.......\hbox(12.336+3.47198)x227.62204, glue set 35.82703fil
+.....\vbox(13.0625+6.62178)x227.62204
+......\hbox(13.0625+3.42186)x227.62204
+.......\hbox(13.0625+3.42186)x227.62204, glue set 35.58836fil
 ........\glue 0.0 plus 1.0fil minus 1.0fil
-........\TU/TeXGyreTermes(1)/m/n/16 Github
+........\TU/TimesNewRoman(0)/m/n/16 Github
 ........\glue 4.0 plus 2.0 minus 1.33333
-........\TU/FandolHei(0)/m/n/16 模
+........\TU/SimHei(1)/m/n/16 模
 ........\glue 0.0 plus 1.92004
-........\TU/FandolHei(0)/m/n/16 板
+........\TU/SimHei(1)/m/n/16 板
 ........\glue 4.0 plus 2.0 minus 1.33333
-........\TU/TeXGyreTermes(1)/m/n/16 nwputhesis
+........\TU/TimesNewRoman(0)/m/n/16 nwputhesis
 ........\kern -0.0002
 ........\kern 0.0002
 ........\glue 0.0 plus 1.0fil minus 1.0fil
 ......\kern1.91995
 ......\rule(0.63998+0.0)x*
 .....\mathoff
-.....\glue 3.0
-.....\glue 4.0 plus 2.0 minus 1.33333
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
 ....\glue 42.67912
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 3.28209
-....\hbox(11.046+5.4599)x416.83289, glue set 98.42137fil
+....\glue(\baselineskip) 2.83916
+....\hbox(11.53906+4.27646)x416.83289, glue set 101.67137fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
-.....\TU/FandolSong(1)/m/n/14 专
+.....\TU/SimSun(1)/m/n/14 专
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 业
+.....\TU/SimSun(1)/m/n/14 业
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 名
+.....\TU/SimSun(1)/m/n/14 名
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 称
+.....\TU/SimSun(1)/m/n/14 称
 .....\kern -0.00017
 .....\kern 0.00017
 .....\glue 1.0
 .....\mathon
-.....\vbox(11.046+5.4599)x159.99014
-......\hbox(11.046+2.65999)x159.99014
-.......\glue 3.5 plus 1.75 minus 1.16666
-.......\hbox(11.046+2.65999)x156.49014, glue set 22.24507fil
+.....\vbox(11.53906+4.27646)x156.49014
+......\hbox(11.53906+1.47655)x156.49014
+.......\hbox(11.53906+1.47655)x156.49014, glue set 22.24507fil
 ........\glue 0.0 plus 1.0fil minus 1.0fil
-........\TU/FandolSong(1)/m/n/14 计
+........\TU/SimSun(1)/m/n/14 计
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 算
+........\TU/SimSun(1)/m/n/14 算
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 机
+........\TU/SimSun(1)/m/n/14 机
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 科
+........\TU/SimSun(1)/m/n/14 科
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 学
+........\TU/SimSun(1)/m/n/14 学
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 与
+........\TU/SimSun(1)/m/n/14 与
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 技
+........\TU/SimSun(1)/m/n/14 技
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 术
+........\TU/SimSun(1)/m/n/14 术
 ........\kern -0.00017
 ........\kern 0.00017
 ........\glue 0.0 plus 1.0fil minus 1.0fil
 ......\kern1.67995
 ......\rule(0.55998+0.0)x*
 .....\mathoff
-.....\glue 3.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
 ....\glue 31.2982
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 4.7041
-....\hbox(10.836+5.3199)x416.83289, glue set 98.42137fil
+....\glue(\baselineskip) 5.18448
+....\hbox(11.53906+4.16708)x416.83289, glue set 101.67137fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
-.....\TU/FandolSong(1)/m/n/14 学
+.....\TU/SimSun(1)/m/n/14 学
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 生
+.....\TU/SimSun(1)/m/n/14 生
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 姓
+.....\TU/SimSun(1)/m/n/14 姓
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 名
+.....\TU/SimSun(1)/m/n/14 名
 .....\kern -0.00017
 .....\kern 0.00017
 .....\glue 1.0
 .....\mathon
-.....\vbox(10.822+5.3199)x159.99014
-......\hbox(10.822+2.51999)x159.99014
-.......\glue 3.5 plus 1.75 minus 1.16666
-.......\hbox(10.822+2.51999)x156.49014, glue set 57.24507fil
+.....\vbox(11.53906+4.16708)x156.49014
+......\hbox(11.53906+1.36717)x156.49014
+.......\hbox(11.53906+1.36717)x156.49014, glue set 57.24507fil
 ........\glue 0.0 plus 1.0fil minus 1.0fil
-........\TU/FandolSong(1)/m/n/14 航
+........\TU/SimSun(1)/m/n/14 航
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 小
+........\TU/SimSun(1)/m/n/14 小
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 天
+........\TU/SimSun(1)/m/n/14 天
 ........\kern -0.00017
 ........\kern 0.00017
 ........\glue 0.0 plus 1.0fil minus 1.0fil
 ......\kern1.67995
 ......\rule(0.55998+0.0)x*
 .....\mathoff
-.....\glue 3.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
 ....\glue 31.2982
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 4.8581
-....\hbox(10.822+4.9139)x416.83289, glue set 98.42137fil
+....\glue(\baselineskip) 5.34854
+....\hbox(11.48438+4.05771)x416.83289, glue set 101.67137fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
-.....\TU/FandolSong(1)/m/n/14 指
+.....\TU/SimSun(1)/m/n/14 指
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 导
+.....\TU/SimSun(1)/m/n/14 导
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 教
+.....\TU/SimSun(1)/m/n/14 教
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 师
+.....\TU/SimSun(1)/m/n/14 师
 .....\kern -0.00017
 .....\kern 0.00017
 .....\glue 1.0
 .....\mathon
-.....\vbox(10.64+4.9139)x159.99014
-......\hbox(10.64+2.11398)x159.99014
-.......\glue 3.5 plus 1.75 minus 1.16666
-.......\hbox(10.64+2.11398)x156.49014, glue set 64.24507fil
+.....\vbox(11.32031+4.05771)x156.49014
+......\hbox(11.32031+1.2578)x156.49014
+.......\hbox(11.32031+1.2578)x156.49014, glue set 64.24507fil
 ........\glue 0.0 plus 1.0fil minus 1.0fil
-........\TU/FandolSong(1)/m/n/14 张
+........\TU/SimSun(1)/m/n/14 张
 ........\glue 0.0 plus 1.68004
-........\TU/FandolSong(1)/m/n/14 三
+........\TU/SimSun(1)/m/n/14 三
 ........\kern -0.00017
 ........\kern 0.00017
 ........\glue 0.0 plus 1.0fil minus 1.0fil
 ......\kern1.67995
 ......\rule(0.55998+0.0)x*
 .....\mathoff
-.....\glue 3.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
 ....\glue 31.2982
 ....\glue(\parskip) 0.0
 ....\glue(\parskip) 0.0
-....\glue(\baselineskip) 5.2641
-....\hbox(10.822+5.1799)x416.83289, glue set 98.42137fil
+....\glue(\baselineskip) 5.40323
+....\hbox(11.53906+4.22177)x416.83289, glue set 101.67137fil
 .....\glue(\leftskip) 0.0 plus 1.0fil
 .....\hbox(0.0+0.0)x0.0
-.....\TU/FandolSong(1)/m/n/14 毕
+.....\TU/SimSun(1)/m/n/14 毕
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 业
+.....\TU/SimSun(1)/m/n/14 业
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 时
+.....\TU/SimSun(1)/m/n/14 时
 .....\glue 0.0 plus 1.68004
-.....\TU/FandolSong(1)/m/n/14 间
+.....\TU/SimSun(1)/m/n/14 间
 .....\kern -0.00017
 .....\kern 0.00017
 .....\glue 1.0
 .....\mathon
-.....\vbox(10.808+5.1799)x159.99014
-......\hbox(10.808+2.37999)x159.99014
-.......\glue 3.5 plus 1.75 minus 1.16666
-.......\hbox(10.808+2.37999)x156.49014, glue set 41.49507fil
+.....\vbox(11.53906+4.22177)x156.49014
+......\hbox(11.53906+1.42186)x156.49014
+.......\hbox(11.53906+1.42186)x156.49014, glue set 41.49507fil
 ........\glue 0.0 plus 1.0fil minus 1.0fil
-........\TU/TeXGyreTermes(1)/m/n/14 2026
-........\kern -0.0002
-........\kern 0.0002
+........\TU/TimesNewRoman(0)/m/n/14 2026
 ........\glue 3.5 plus 1.75 minus 1.16666
-........\TU/FandolSong(1)/m/n/14 年
-........\kern -0.00018
-........\kern 0.00018
+........\TU/SimSun(1)/m/n/14 年
 ........\glue 3.5 plus 1.75 minus 1.16666
-........\TU/TeXGyreTermes(1)/m/n/14 6
-........\kern -0.0002
-........\kern 0.0002
+........\TU/TimesNewRoman(0)/m/n/14 6
 ........\glue 3.5 plus 1.75 minus 1.16666
-........\TU/FandolSong(1)/m/n/14 月
+........\TU/SimSun(1)/m/n/14 月
 ........\kern -0.00017
 ........\kern 0.00017
 ........\glue 0.0 plus 1.0fil minus 1.0fil
 ......\kern1.67995
 ......\rule(0.55998+0.0)x*
 .....\mathoff
-.....\glue 3.0
 .....\penalty 10000
 .....\glue(\parfillskip) 0.0
 .....\glue(\rightskip) 0.0 plus 1.0fil
 ....\glue 0.0 plus 1.0fill
 ....\penalty -51
-....\glue 3.0 plus 1.0 minus 1.0
+....\glue 2.0 plus 1.0 minus 1.0
 ....\glue 0.0 plus 1.0fil
 ....\glue 0.0
 ....\glue 0.0 plus 0.0001fil
