@@ -14,6 +14,8 @@
 \dim_new:N \l__nwpu_author_dim
 \dim_new:N \l__nwpu_advisor_dim
 \dim_new:N \l__nwpu_maxname_dim
+\int_new:N \l__nwpu_hbadness_save_int
+\int_new:N \l__nwpu_vbadness_save_int
 
 %% 封皮页
 %%-----------------------------------------------------------------------------%
@@ -27,15 +29,15 @@
             \begin{tikzpicture}[remember picture,overlay]
                 \node[at=(current page.center),inner sep=0pt] {
                     \nwpu_if_phd:TF {
-                        \includegraphics[width=\paperwidth,height=\paperheight]{博士论文封面.jpg}
+                        \includegraphics[width=\paperwidth,height=\paperheight]{cover-phd.jpg}
                     } {
                         \nwpu_if_bachelor:TF {
-                            \includegraphics[width=\paperwidth,height=\paperheight]{本科论文封面.jpg}
+                            \includegraphics[width=\paperwidth,height=\paperheight]{cover-bachelor.jpg}
                         } {
                             \nwpu_if_academic:TF {
-                                \includegraphics[width=\paperwidth,height=\paperheight]{学硕论文封面.jpg}
+                                \includegraphics[width=\paperwidth,height=\paperheight]{cover-master-academic.jpg}
                             } {
-                                \includegraphics[width=\paperwidth,height=\paperheight]{专硕论文封面.jpg}
+                                \includegraphics[width=\paperwidth,height=\paperheight]{cover-master-professional.jpg}
                             }
                         }
                     }
@@ -211,6 +213,8 @@
 %% 生成标题页
 %%-----------------------------------------------------------------------------%
 \cs_gset_protected:Npn \maketitle {
+    \int_set:Nn \l__nwpu_hbadness_save_int { \hbadness }
+    \int_set:Nn \l__nwpu_vbadness_save_int { \vbadness }
     \hbadness=10000
     \vbadness=10000
     \nwpu_if_bachelor:TF {                                      % 本科封面
@@ -220,6 +224,8 @@
         \make@nwpu@chs@title                                % 中文内封
         \make@nwpu@eng@title                                % 英文内封
     }
+    \hbadness=\l__nwpu_hbadness_save_int
+    \vbadness=\l__nwpu_vbadness_save_int
 }                                                           %
 %%-----------------------------------------------------------------------------%
 %% 彩色封底
@@ -231,15 +237,15 @@
         \begin{tikzpicture}[remember picture,overlay]
             \node[at=(current page.center),inner sep=0pt] {
                 \nwpu_if_phd:TF {
-                    \includegraphics[width=\paperwidth,height=\paperheight]{博士论文封底.jpg}
+                    \includegraphics[width=\paperwidth,height=\paperheight]{backcover-phd.jpg}
                 } {
                     \nwpu_if_bachelor:TF {
-                        \includegraphics[width=\paperwidth,height=\paperheight]{本科论文封底.jpg}
+                        \includegraphics[width=\paperwidth,height=\paperheight]{backcover-bachelor.jpg}
                     } {
                         \nwpu_if_academic:TF {
-                            \includegraphics[width=\paperwidth,height=\paperheight]{学硕论文封底.jpg}
+                            \includegraphics[width=\paperwidth,height=\paperheight]{backcover-master-academic.jpg}
                         } {
-                            \includegraphics[width=\paperwidth,height=\paperheight]{专硕论文封底.jpg}
+                            \includegraphics[width=\paperwidth,height=\paperheight]{backcover-master-professional.jpg}
                         }
                     }
                 }
