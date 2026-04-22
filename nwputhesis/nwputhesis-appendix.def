@@ -68,6 +68,9 @@
 \cs_new_protected:Npn \nwpu@appendixtitle #1{%              % 附录显示标题
     \nwpu@ifappendixletter{\nwpu@appendixname{#1}}{\nwpu@page@app}%
 }
+\nwpu_if_chinese:TF                                        % 附录 PDF 书签标题
+  { \cs_new:Npn \nwpu@appendixpdftitle #1 {附录~#1} }
+  { \cs_new:Npn \nwpu@appendixpdftitle #1 {Appendix~#1} }
 \cs_new_protected:Npn \nwpu@appendixprefix {%               % 附录编号前缀
     \nwpu@ifappendixletter{\Alph{chapter}}{}%
 }

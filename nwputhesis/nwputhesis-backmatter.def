@@ -5,9 +5,9 @@
 %%-----------------------------------------------------------------------------%
 \NewDocumentEnvironment{acknowledgements}{}{%               % 致谢
     \graduatebodyfont                                       %
-    \phantomsection\chapter*{\nwpu@page@ack}                %
+    \phantomsection\chapter*{\texorpdfstring{\nwpu@page@ack}{\nwpu@page@ack@pdf}}%
     \markboth{\nwpu@page@ack}{\nwpu@page@ack}               %
-    \addcontentsline{toc}{chapter}{\nwpu@page@ack}          %
+    \addcontentsline{toc}{chapter}{\texorpdfstring{\nwpu@page@ack}{\nwpu@page@ack@pdf}}%
     \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}   %
 }{\par \cleardoublepage}                                    %
 %%-----------------------------------------------------------------------------%
@@ -20,16 +20,16 @@
       }
     \int_gincr:N \l__nwpu_thesis_appendix_count_int           %
     \refstepcounter{chapter}                                %
-    \phantomsection\chapter*{\nwpu@appendixtitle{\thechapter}}%
+    \phantomsection\chapter*{\texorpdfstring{\nwpu@appendixtitle{\thechapter}}{\nwpu@appendixpdftitle{\thechapter}}}%
     \markboth{\nwpu@appendixtitle{\thechapter}}{\nwpu@appendixtitle{\thechapter}}%
-    \addcontentsline{toc}{chapter}{\nwpu@appendixtitle{\thechapter}}%
+    \addcontentsline{toc}{chapter}{\texorpdfstring{\nwpu@appendixtitle{\thechapter}}{\nwpu@appendixpdftitle{\thechapter}}}%
 }{\par \cleardoublepage}                                    %
 %%-----------------------------------------------------------------------------%
 \NewDocumentEnvironment{accomplishments}{}{%                 % 参加科研情况
     \graduatebodyfont                                       %
-    \phantomsection\chapter*{\nwpu@page@acp}                %
+    \phantomsection\chapter*{\texorpdfstring{\nwpu@page@acp}{\nwpu@page@acp@pdf}}%
     \markboth{\nwpu@page@acp}{}                             %
-    \addcontentsline{toc}{chapter}{\nwpu@page@acp}          %
+    \addcontentsline{toc}{chapter}{\texorpdfstring{\nwpu@page@acp}{\nwpu@page@acp@pdf}}%
 }{\cleardoublepage}                                       %
 %%-----------------------------------------------------------------------------%
 \NewDocumentEnvironment{designsummary}{}{%                   % 毕业设计小结（本科）

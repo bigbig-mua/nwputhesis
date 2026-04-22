@@ -3,7 +3,6 @@
 
 %%-----------------------------------------------------------------------------%
 \ExplSyntaxOn
-\RequirePackage{ifplatform}                                 % 跨平台字体控制依赖
 \RequirePackage{fontspec}                                   % 设置字体（提前加载以支持字体检测）
 %% 定义默认字体（Windows 字体）
 \cs_new:Npn \defaultSog {SimSun}                            % 宋体，用于正文
@@ -96,13 +95,13 @@
   }
 \cs_new_protected:Npn \npu@select@auto@fonts
   {
-    \ifwindows
-      \npu@select@windows@fonts
-    \else\ifmacosx
-      \npu@select@mac@fonts
-    \else
-      \npu@select@linux@fonts
-    \fi\fi
+    \sys_if_platform_windows:TF
+      { \npu@select@windows@fonts }
+      {
+        \IfFontExistsTF {STSongti-SC-Regular}
+          { \npu@select@mac@fonts }
+          { \npu@select@linux@fonts }
+      }
   }
 % 字体选择主逻辑
 \nwpu_if_local_fonts:TF                                       % 使用本地 fonts 目录字体

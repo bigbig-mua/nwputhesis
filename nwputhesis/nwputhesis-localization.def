@@ -112,17 +112,24 @@
     \nwpu_if_bachelor:TF                                    % 本科致谢标题
       { \cs_new_protected:Npn \nwpu@page@ack {致~~谢}      }
       { \cs_new_protected:Npn \nwpu@page@ack {致{\quad}谢}  }
+    \cs_new:Npn \nwpu@page@ack@pdf {致谢}
     \nwpu_if_bachelor:TF                                    % 本科附录标题
       { \cs_new_protected:Npn \nwpu@page@app {附~~录}       }
       { \cs_new_protected:Npn \nwpu@page@app {附{\quad}录}  }
+    \cs_new:Npn \nwpu@page@app@pdf {附录}
     \cs_new_protected:Npn \nwpu@page@acp {在学期间取得的学术成果和参加%
         科研情况}                                          %
+    \cs_new:Npn \nwpu@page@acp@pdf {在学期间取得的学术成果和参加科研情况}
   }
   {                                                         % 定制英文特殊页面
     \cs_new_protected:Npn \nwpu@page@ack {Acknowledgements} %
+    \cs_new:Npn \nwpu@page@ack@pdf {Acknowledgements}
     \cs_new_protected:Npn \nwpu@page@app {Appendix}         %
+    \cs_new:Npn \nwpu@page@app@pdf {Appendix}
     \cs_new_protected:Npn \nwpu@page@acp {Published~Papers~and~%
         Participated~in~Scientific~Research~During~the~Study%
         ~for~\nwpu@eng@degree~Degree}                       %
+    \cs_new:Npn \nwpu@page@acp@pdf
+      {Published~Papers~and~Participated~in~Scientific~Research~During~the~Study~for~\nwpu@eng@degree~Degree}
   }
 \ExplSyntaxOff
