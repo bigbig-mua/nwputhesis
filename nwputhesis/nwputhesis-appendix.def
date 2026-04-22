@@ -100,7 +100,7 @@
 \cs_gset_protected:Npn \appendix {%                          % 在原有基础上定制
     \nwpu@old@appendix                                       %
     \setcounter{chapter}{0}                                  % 重置章节编号
-    \cs_gset_protected:Npn \thechapter {\Alph{chapter}}      %
+    \cs_gset:Npn \thechapter {\Alph{chapter}}                %
     \cs_gset_protected:Npn \thesection {%
         \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{section}}
     \cs_gset_protected:Npn \theequation {%
