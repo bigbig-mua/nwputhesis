@@ -318,6 +318,15 @@
 \lstloadlanguages{C++, Java, Python, Matlab, R, Mathematica}% 默认加载常用语言
 %%-----------------------------------------------------------------------------%
 \RequirePackage{algorithm}                                  % 算法流程
+\cs_set_protected:Npn \fs@ruled {                           %
+    \cs_set:Npn \@fs@cfont { \bfseries }                    %
+    \cs_set_eq:NN \@fs@capt \floatc@ruled                   %
+    \cs_set:Npn \@fs@pre { \hrule height \nwpuHeavyRuleWidth depth 0pt \kern 2pt }%
+    \cs_set:Npn \@fs@post { \kern 2pt \hrule height \nwpuHeavyRuleWidth depth 0pt \relax }%
+    \cs_set:Npn \@fs@mid { \kern 2pt \hrule height \nwpuLightRuleWidth depth 0pt \kern 2pt }%
+    \cs_set_eq:NN \@fs@iftopcapt \iftrue                    %
+}                                                           %
+\restylefloat{algorithm}                                    %
 \RequirePackage{algpseudocode}                              % 伪代码
 %%-----------------------------------------------------------------------------%
 \RequirePackage{appendix}                                   % 添加附录功能
