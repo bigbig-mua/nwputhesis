@@ -48,12 +48,37 @@
     \cs_set:Npn \defaultEngSansFont {\defaultHei}             % Windows 无 TeX Gyre，用黑体代替
     \cs_set:Npn \codeFont {Consolas}
   }
+\bool_new:N \l__nwpu_windows_fonts_available_bool
+\cs_new_protected:Npn \__nwpu_check_windows_font:n #1
+  {
+    \IfFontExistsTF {#1}
+      { }
+      { \bool_set_false:N \l__nwpu_windows_fonts_available_bool }
+  }
+\cs_new_protected:Npn \npu@set@windows@fonts@with@fallback
+  {
+    \bool_set_true:N \l__nwpu_windows_fonts_available_bool
+    \__nwpu_check_windows_font:n { SimSun }
+    \__nwpu_check_windows_font:n { SimHei }
+    \__nwpu_check_windows_font:n { KaiTi }
+    \__nwpu_check_windows_font:n { FangSong }
+    \__nwpu_check_windows_font:n { Times~New~Roman }
+    \__nwpu_check_windows_font:n { Consolas }
+    \bool_if:NTF \l__nwpu_windows_fonts_available_bool
+      { \npu@set@windows@fonts }
+      {
+        \ClassWarningNoLine { nwputhesis }
+          { Windows~fonts~not~found;~falling~back~to~Fandol~fonts }
+        \bool_set_false:N \l__nwpu_font_winfonts_bool
+        \npu@set@fandol@fonts
+      }
+  }
 % 字体选择主逻辑：local > windows > fandol > 默认 fandol
 \nwpu_if_local_fonts:TF
   { \npu@set@local@fonts }
   {
     \nwpu_if_winfonts:TF
-      { \npu@set@windows@fonts }
+      { \npu@set@windows@fonts@with@fallback }
       { \npu@set@fandol@fonts }
   }
 \RequirePackage[SlantFont, BoldFont, CJKchecksingle]{xeCJK} % 设置中文字体
