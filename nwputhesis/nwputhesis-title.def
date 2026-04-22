@@ -2,17 +2,25 @@
 %% It is loaded internally by nwputhesis.cls.
 
 \ExplSyntaxOn
-\newbox\nwpu@titlebox
-\newbox\nwpu@underlinebox
+\box_new:N \l__nwpu_title_box
+\box_new:N \l__nwpu_underline_box
+%%-----------------------------------------------------------------------------%
+%% 模块级长度变量（由封面页和内封页共享）
+%%-----------------------------------------------------------------------------%
+\dim_new:N \l__nwpu_coverpage_info_dim
+\dim_new:N \l__nwpu_coverpage_detail_dim
+\dim_new:N \l__nwpu_chstitle_hwidtha_dim
+\dim_new:N \l__nwpu_chstitle_hwidthb_dim
+\dim_new:N \l__nwpu_author_dim
+\dim_new:N \l__nwpu_advisor_dim
+\dim_new:N \l__nwpu_maxname_dim
 
 %% 封皮页
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \make@nwpu@coverpage {                          % 设置封皮页
     \thispagestyle{empty}                                   % 清空页面格式
-    \newlength{\coverpage@infowidth}                        % 基本信息表格宽度
-    \settowidth{\coverpage@infowidth}{\sWuhao 学校代码~:~ 2000000000}
-    \newlength{\coverpage@detailwidth}                      % 具体信息对齐宽度
-    \settowidth{\coverpage@detailwidth}{\sSanhao 申请学位日期}
+    \settowidth{\l__nwpu_coverpage_info_dim}{\sWuhao 学校代码~:~ 2000000000}
+    \settowidth{\l__nwpu_coverpage_detail_dim}{\sSanhao 申请学位日期}
     \begin{titlepage}                                       %
         % 彩色封面背景图
         \nwpu_if_colorcover:TF {
@@ -35,11 +43,11 @@
             \end{tikzpicture}
         }
         \bfseries                                           %
-        \renewcommand{\baselinestretch}{1.25}               % 1.25 倍行距
+        \linespread{1.25}\selectfont                        % 1.25 倍行距
         \begin{center}                                      %
             \hfill \fHei \sWuhao                            %
-            \begin{minipage}{\coverpage@infowidth}          % 排版基本信息表
-                \setlength{\hfuzz}{15pt}
+            \begin{minipage}{\l__nwpu_coverpage_info_dim}          % 排版基本信息表
+                \dim_set:Nn \hfuzz { 15pt }
                 \vspace{.5cm}                               %
                 \renewcommand\arraystretch{1.3}             %
                 \begin{tabular}{|c|c|}\hline                %
@@ -53,12 +61,12 @@
             \fSong \sErhao \begin{minipage}[t]{2cm}         % 排版标题
                 \hfill {\fHei \sErhao 题目} \\              %
             \end{minipage}                                  %
-            \fHei \sErhao \setbox\nwpu@titlebox=\hbox{      %
+            \fHei \sErhao \hbox_set:Nn \l__nwpu_title_box {      %
                 \begin{minipage}[t]{12cm}                   %
                     \begin{center} \nwpu@chs@title \end{center}
                 \end{minipage}                              %
             }                                               %
-            \setbox\nwpu@underlinebox=\hbox{                %
+            \hbox_set:Nn \l__nwpu_underline_box {                %
                 \begin{minipage}[t]{12cm}                   %
                     \begin{center}                          %
                         \uline{\hfill\quad\hfill} \\        %
@@ -67,7 +75,7 @@
                 \end{minipage}                              %
             }                                               %
             \hspace{-0.5cm}                                 %
-            \copy\nwpu@titlebox\kern-\wd\nwpu@titlebox\box\nwpu@underlinebox\par % 排版结束
+            \box_use:N \l__nwpu_title_box \kern -\box_wd:N \l__nwpu_title_box \box_use_drop:N \l__nwpu_underline_box \par % 排版结束
             \sWuhao \vspace{3\baselineskip}                 % 2 * 10.5pt * 1.25
             \sSanhao \fSong \begin{minipage}{5cm}           % 排版具体信息
                 {\bf 作者} \uline{\hfill \bf \nwpu@chs@author \hfill}
@@ -75,16 +83,16 @@
             \sWuhao \vspace{4\baselineskip}                 % 3 * 10.5pt * 1.25
             \sSanhao \fSong \begin{minipage}{12.5cm}        %
                 \noindent                                   %
-                \makebox[\coverpage@detailwidth][s]{        %
+                \makebox[\l__nwpu_coverpage_detail_dim][s]{        %
                     \bf \nwpu@chs@outerCoverFirstOption}{%
                     \uline{\hfill \makebox{\bf \nwpu@chs@major} \hfill}} \par
-                \makebox[\coverpage@detailwidth][s]{        %
+                \makebox[\l__nwpu_coverpage_detail_dim][s]{        %
                 \bf 指{\enspace}导{\enspace}教{\enspace}师}{%
                 \uline{\hfill \makebox{\bf \nwpu@chs@advisor\nwpu@chs@advisorAcademicRank} \hfill}} \par
-                \makebox[\coverpage@detailwidth][s]{        %
+                \makebox[\l__nwpu_coverpage_detail_dim][s]{        %
                 \bf 培{\enspace}养{\enspace}单{\enspace}位}{%
                 \uline{\hfill \makebox{\bf \nwpu@chs@school} \hfill}} \par
-                \makebox[\coverpage@detailwidth][s]{        %
+                \makebox[\l__nwpu_coverpage_detail_dim][s]{        %
                 \bf 申{\enspace}请{\enspace}日{\enspace}期}{%
                 \uline{\hfill \makebox{\bf \nwpu@chs@date} \hfill}}
             \end{minipage}                                  % 排版结束
@@ -97,39 +105,32 @@
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \make@nwpu@chs@title {                          % 设置中文内封
     \thispagestyle{empty}                                   % 清空页面格式
-    \newlength{\chstitle@hwidtha}                           % 大标题宽度
-    \settowidth{\chstitle@hwidtha}{\sSanhao\nwpu@chs@schoolname}
-    \newlength{\chstitle@hwidthb}                           % 小标题宽度
-    \settowidth{\chstitle@hwidthb}{\sYihao\nwpu@chs@doctitle}
-    % 定义长度变量
-    \newlength{\author@width}
-    \newlength{\advisor@width}
-    \newlength{\maxname@width}
+    \settowidth{\l__nwpu_chstitle_hwidtha_dim}{\sSanhao\nwpu@chs@schoolname}
+    \settowidth{\l__nwpu_chstitle_hwidthb_dim}{\sYihao\nwpu@chs@doctitle}
     % 测量宽度（注意使用相同字体 \sSanhao）
-    \settowidth{\author@width}{\sSanhao\nwpu@chs@author}
-    \settowidth{\advisor@width}{\sSanhao\nwpu@chs@advisor}
+    \settowidth{\l__nwpu_author_dim}{\sSanhao\nwpu@chs@author}
+    \settowidth{\l__nwpu_advisor_dim}{\sSanhao\nwpu@chs@advisor}
     % 取最大值
-    \setlength{\maxname@width}{\author@width}
-    \ifdim\advisor@width>\maxname@width
-        \setlength{\maxname@width}{\advisor@width}
-    \fi
+    \dim_set:Nn \l__nwpu_maxname_dim { \l__nwpu_author_dim }
+    \dim_compare:nNnT \l__nwpu_advisor_dim > \l__nwpu_maxname_dim
+        { \dim_set:Nn \l__nwpu_maxname_dim { \l__nwpu_advisor_dim } }
     \begin{titlepage}                                       %
-        \renewcommand{\baselinestretch}{1.4}                %
+        \linespread{1.4}\selectfont                         %
         \begin{center}                                      %
             \fSong \sSanhao \par \vspace*{1\baselineskip}   %
-            \makebox[1.41667\chstitle@hwidtha][s]{\sSanhao\nwpu@chs@schoolname} \par
+            \makebox[1.41667\l__nwpu_chstitle_hwidtha_dim][s]{\sSanhao\nwpu@chs@schoolname} \par
             \vspace*{5mm}                                   %
-            \makebox[1.41667\chstitle@hwidthb][s]{\sYihao\nwpu@chs@doctitle} \par
+            \makebox[1.41667\l__nwpu_chstitle_hwidthb_dim][s]{\sYihao\nwpu@chs@doctitle} \par
             \vspace*{5mm}                                   %
             \sSihao \par \vspace{6\baselineskip}            % 6 * 21pt * 1.5
             \fSong \sErhao                                  % 排版标题
             \begin{minipage}[t]{2cm} \hfill {题目：} \\ \end{minipage}
-            \setbox\nwpu@titlebox=\hbox{                    %
+            \hbox_set:Nn \l__nwpu_title_box {                    %
                 \begin{minipage}[t]{12cm}                   %
                     \begin{center} \nwpu@chs@title \end{center}
                 \end{minipage}                              %
             }                                               %
-            \setbox\nwpu@underlinebox=\hbox{                %
+            \hbox_set:Nn \l__nwpu_underline_box {                 %
                 \begin{minipage}[t]{12cm}                   %
                     \begin{center}                          %
                         \uline{\hfill\quad\hfill} \\        %
@@ -138,11 +139,11 @@
                 \end{minipage}                              %
             }                                               %
             \hspace{-1cm}                                   %
-            \copy\nwpu@titlebox\kern-\wd\nwpu@titlebox\box\nwpu@underlinebox \fSong \sWuhao \par % 排版结束
+            \box_use:N \l__nwpu_title_box \kern -\box_wd:N \l__nwpu_title_box \box_use_drop:N \l__nwpu_underline_box \fSong \sWuhao \par % 排版结束
             \vspace{6\baselineskip}                         % 7 * 10.5pt * 1.5
             \sSanhao \nwpu@chs@innerCoverFirstOption：\coverunderline[5.5cm]{\nwpu@chs@major} \\
-            \sSanhao 作{\qquad}者：\coverunderline[5.5cm]{\makebox[\maxname@width][s]{\nwpu@chs@author}} \\
-            \sSanhao 指导教师：\coverunderline[5.5cm]{\makebox[\maxname@width][s]{\nwpu@chs@advisor}} \\
+            \sSanhao 作{\qquad}者：\coverunderline[5.5cm]{\makebox[\l__nwpu_maxname_dim][s]{\nwpu@chs@author}} \\
+            \sSanhao 指导教师：\coverunderline[5.5cm]{\makebox[\l__nwpu_maxname_dim][s]{\nwpu@chs@advisor}} \\
             \fSong \sWuhao \par                             %
             \vspace{2\baselineskip}                         % 2 * 10.5pt * 1.5
             \fSong \sSanhao \nwpu@chs@date                  %
@@ -251,29 +252,14 @@
 %%=============================================================================%
 %% 学位论文评阅人和答辩委员会名单
 %%-----------------------------------------------------------------------------%
-\def\npu@replicate#1{\expandafter\npu@replicate@aux\romannumeral\number #1000Q{}}
-\def\npu@replicate@aux#1{\csname npu@replicate@aux@#1\endcsname}
-\long\def\npu@replicate@aux@m#1Q#2#3{\npu@replicate@aux#1Q{#2#3}{#3}}
-\long\def\npu@replicate@aux@Q#1#2{#1}
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \npu@text #1 {\relax\sDefault{#1}}
 \cs_new_protected:Npn \expert #1 #2 #3 {\npu@text{#1} & \npu@text{#2} & \npu@text{#3} \\ }
 \cs_new_protected:Npn \expertBlindReview {\expert{全盲评阅}{无}{无}}
 \cs_new_protected:Npn \expertEmpty {\expert{}{}{}}
 \cs_new_protected:Npn \fullBlindReview #1 {%
-    \ifcase#1\or
-        \expertBlindReview\expertEmpty\expertEmpty\expertEmpty\expertEmpty
-    \or
-        \expertBlindReview\expertBlindReview\expertEmpty\expertEmpty\expertEmpty
-    \or
-        \expertBlindReview\expertBlindReview\expertBlindReview\expertEmpty\expertEmpty
-    \or
-        \expertBlindReview\expertBlindReview\expertBlindReview\expertBlindReview\expertEmpty
-    \or
-        \expertBlindReview\expertBlindReview\expertBlindReview\expertBlindReview\expertBlindReview
-    \else
-        \npu@replicate{#1}{\expertBlindReview}%
-    \fi
+    \prg_replicate:nn {#1} {\expertBlindReview}%
+    \prg_replicate:nn { \int_max:nn { 5 - #1 } { 0 } } {\expertEmpty}%
 }
 \cs_new_protected:Npn \defenseDate #1 {\sDefault\textbf{答辩日期}%
     & \multicolumn{3}{c}{\sDefault{#1}} \\ }

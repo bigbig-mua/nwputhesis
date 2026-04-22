@@ -2,6 +2,10 @@
 \ProvidesClass{nwputhesis}
 [2026/03/25 v2.2.0 nwputhesis]
 \input{nwputhesis/nwputhesis-options.def}
+\ExplSyntaxOn
+\msg_new:nnn { nwputhesis } { patch-chapter }
+  { Failed~to~patch~chapter~pagination. }
+\ExplSyntaxOff
 \LoadClass[11pt, a4paper, openany]{book}                    % 本科单面印刷，硕博双面印刷
 \ExplSyntaxOn
 \nwpu_if_bachelor:T { \@twosidefalse \@mparswitchfalse }    % 本科强制单面印刷
@@ -9,7 +13,7 @@
 \RequirePackage{etoolbox}                                   % LaTeX 补丁工具
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{%
     \cleardoublepage
-}{}{\errmessage{failed to patch chapter pagination}}
+}{}{\msg_error:nn { nwputhesis } { patch-chapter }}
 \input{nwputhesis/nwputhesis-core.def}
 \input{nwputhesis/nwputhesis-fonts.def}
 \input{nwputhesis/nwputhesis-layout.def}

@@ -4,6 +4,12 @@
 %% 附录处理
 %%-----------------------------------------------------------------------------%
 \ExplSyntaxOn
+\msg_new:nnn { nwputhesis } { patch-hyperref }
+  { Failed~to~patch~hyper@makecurrent~for~appendix~references. }
+\msg_new:nnn { nwputhesis } { patch-appendix-toggle }
+  { Failed~to~patch~appendix~toggle. }
+\msg_new:nnn { nwputhesis } { patch-subappendices-toggle }
+  { Failed~to~patch~subappendices~toggle. }
 %% \patchcmd 和 \apptocmd 需要在标准 catcode 下运行
 \ExplSyntaxOff
 \patchcmd{\hyper@makecurrent}{%                             % 附录章节引用补丁
@@ -15,17 +21,18 @@
         \@checkappendixparam{subsubsection}%                %
         \@checkappendixparam{paragraph}%                    %
         \@checkappendixparam{subparagraph}%                 %
-    }{}}{}{\errmessage{failed to patch}}                    %
+    }{}}{}{\ClassError{nwputhesis}{Failed~to~patch~hyper@makecurrent}{}}
 \ExplSyntaxOn
+\tl_new:N \l__nwpu_check_appendix_param_tmp_tl
 \cs_new_protected:Npn \@checkappendixparam #1{%             %
-    \def\@checkappendixparamtmp{#1}%                        %
-    \ifx\Hy@param\@checkappendixparamtmp                    %
-        \let\Hy@param\Hy@appendixstring                     %
-    \fi}                                                    %
+    \tl_set:Nn \l__nwpu_check_appendix_param_tmp_tl {#1}%   %
+    \tl_if_eq:NNT \Hy@param \l__nwpu_check_appendix_param_tmp_tl %
+        { \tl_set_eq:NN \Hy@param \Hy@appendixstring }      %
+}                                                           %
 \ExplSyntaxOff
 \newtoggle{inappendix}\togglefalse{inappendix}              %
-\apptocmd{\appendix}{\toggletrue{inappendix}}{}{\errmessage{failed to patch}}
-\apptocmd{\subappendices}{\toggletrue{inappendix}}{}{\errmessage{failed to patch}}
+\apptocmd{\appendix}{\toggletrue{inappendix}}{}{\ClassError{nwputhesis}{Failed~to~patch~appendix~toggle}{}}
+\apptocmd{\subappendices}{\toggletrue{inappendix}}{}{\ClassError{nwputhesis}{Failed~to~patch~subappendices~toggle}{}}
 \appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
 \appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
 \appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
@@ -33,11 +40,11 @@
 \ExplSyntaxOn%
 \bool_new:N \l__nwpu_thesis_appendix_mode_bool
 \bool_set_false:N \l__nwpu_thesis_appendix_mode_bool
-\newcounter{nwpu@thesisappendixcount}
-\newcounter{nwpu@thesisappendixtotal}
-\setcounter{nwpu@thesisappendixtotal}{1}
+\int_new:N \l__nwpu_thesis_appendix_count_int
+\int_new:N \l__nwpu_thesis_appendix_total_int
+\int_set:Nn \l__nwpu_thesis_appendix_total_int { 1 }
 \cs_new_protected:Npn \nwpu@setappendixtotal #1{%
-    \setcounter{nwpu@thesisappendixtotal}{#1}%
+    \int_set:Nn \l__nwpu_thesis_appendix_total_int {#1}%
 }
 \cs_new_protected:Npn \nwpuSetAppendixTotal #1{%
     \nwpu@setappendixtotal{#1}%
@@ -52,11 +59,9 @@
 \cs_new_protected:Npn \nwpu@ifappendixletter #1#2{%         % 附录是否显示字母
     \nwpu_if_bachelor:TF
       {
-        \ifnum\value{nwpu@thesisappendixtotal}>1
-            #1%
-        \else
-            #2%
-        \fi
+        \int_compare:nNnTF { \l__nwpu_thesis_appendix_total_int } > { 1 }
+            { #1 }
+            { #2 }
       }
       { #1 }
 }
@@ -76,7 +81,7 @@
         { 附 }
         { \nwpu@ifappendixletter{\nwpu@appendixprefix-}{} }
 }
-\cs_new_protected:Npn \nwpu@appendixfigureprefix {%         % 附录图编号前缀
+\cs_new_protected:Npn \nwpu@appendixfigureprefix {%          % 附录图编号前缀
     \nwpu_if_bachelor:TF
         { 附 }
         { \nwpu@ifappendixletter{\nwpu@appendixprefix-}{} }
@@ -88,7 +93,7 @@
 }
 \AtEndDocument{%
     \protected@write\@auxout{}{%
-        \string\nwpuSetAppendixTotal{\arabic{nwpu@thesisappendixcount}}%
+        \string\nwpuSetAppendixTotal{\int_use:N \l__nwpu_thesis_appendix_count_int}%
     }%
 }
 \cs_set_eq:NN \nwpu@old@appendix \appendix                   % 保护原有附录环境
