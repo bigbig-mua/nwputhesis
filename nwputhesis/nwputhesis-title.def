@@ -12,11 +12,23 @@
 \dim_new:N \l__nwpu_major_dim
 \dim_new:N \l__nwpu_maxname_dim
 \dim_new:N \l__nwpu_chs_inner_title_value_dim
-\dim_new:N \l__nwpu_chs_inner_title_line_dim
 \dim_new:N \l__nwpu_chs_inner_info_value_dim
 \dim_new:N \l__nwpu_cover_visual_bottom_raise_dim
+\dim_new:N \l__nwpu_title_split_width_dim
+\dim_new:N \l__nwpu_title_split_target_dim
 \int_new:N \l__nwpu_hbadness_save_int
 \int_new:N \l__nwpu_vbadness_save_int
+\box_new:N \l__nwpu_title_measure_box
+\bool_new:N \l__nwpu_title_split_overflow_bool
+\bool_new:N \l__nwpu_title_break_seen_bool
+\tl_new:N \l__nwpu_title_source_tl
+\tl_new:N \l__nwpu_title_probe_tl
+\tl_new:N \l__nwpu_title_best_line_tl
+\tl_new:N \l__nwpu_title_since_break_tl
+\tl_new:N \l__nwpu_cover_title_line_a_tl
+\tl_new:N \l__nwpu_cover_title_line_b_tl
+\tl_new:N \l__nwpu_chs_inner_title_line_a_tl
+\tl_new:N \l__nwpu_chs_inner_title_line_b_tl
 %%-----------------------------------------------------------------------------%
 %% 标题页尺寸常量
 %%-----------------------------------------------------------------------------%
@@ -151,6 +163,119 @@
       { \bfseries #2 }
     \tabularnewline \cline{2-2}
   }
+\cs_new_protected:Npn \__nwpu_title_tl_put_right:Nnnn #1#2#3#4
+  { \tl_put_right:Nx #1 {#2} }
+\prg_new_conditional:Npnn \__nwpu_title_if_break_token:nnn #1#2#3
+  { T , F , TF }
+  {
+    \str_if_eq:nnTF {#3} { A }
+      { \prg_return_true: }
+      { \prg_return_false: }
+  }
+\cs_new_protected:Npn \__nwpu_title_split:NnNN #1#2#3#4
+  { \exp_args:No \__nwpu_title_split:nnNN {#1} {#2} #3 #4 }
+\cs_new_protected:Npn \__nwpu_title_split:nnNN #1#2#3#4
+  {
+    \tl_set:Nn \l__nwpu_title_source_tl {#1}
+    \tl_clear:N #3
+    \tl_clear:N #4
+    \tl_clear:N \l__nwpu_title_best_line_tl
+    \tl_clear:N \l__nwpu_title_since_break_tl
+    \bool_set_false:N \l__nwpu_title_split_overflow_bool
+    \bool_set_false:N \l__nwpu_title_break_seen_bool
+    \hbox_set:Nn \l__nwpu_title_measure_box { \tl_use:N \l__nwpu_title_source_tl }
+    \dim_compare:nNnTF { \box_wd:N \l__nwpu_title_measure_box } > {#2}
+      {
+        \tl_analysis_map_inline:Nn \l__nwpu_title_source_tl
+          {
+            \bool_if:NTF \l__nwpu_title_split_overflow_bool
+              { \__nwpu_title_tl_put_right:Nnnn #4 {##1} {##2} {##3} }
+              {
+                \tl_set_eq:NN \l__nwpu_title_probe_tl #3
+                \__nwpu_title_tl_put_right:Nnnn
+                  \l__nwpu_title_probe_tl {##1} {##2} {##3}
+                \hbox_set:Nn \l__nwpu_title_measure_box
+                  { \tl_use:N \l__nwpu_title_probe_tl }
+                \dim_compare:nNnTF
+                  { \box_wd:N \l__nwpu_title_measure_box } > {#2}
+                  {
+                    \bool_set_true:N \l__nwpu_title_split_overflow_bool
+                    \bool_if:NTF \l__nwpu_title_break_seen_bool
+                      {
+                        \tl_set_eq:NN #3 \l__nwpu_title_best_line_tl
+                        \tl_set_eq:NN #4 \l__nwpu_title_since_break_tl
+                        \__nwpu_title_tl_put_right:Nnnn #4 {##1} {##2} {##3}
+                      }
+                      { \__nwpu_title_tl_put_right:Nnnn #4 {##1} {##2} {##3} }
+                  }
+                  {
+                    \__nwpu_title_tl_put_right:Nnnn #3 {##1} {##2} {##3}
+                    \__nwpu_title_if_break_token:nnnTF {##1} {##2} {##3}
+                      {
+                        \bool_set_true:N \l__nwpu_title_break_seen_bool
+                        \tl_set_eq:NN \l__nwpu_title_best_line_tl #3
+                        \tl_clear:N \l__nwpu_title_since_break_tl
+                      }
+                      {
+                        \bool_if:NT \l__nwpu_title_break_seen_bool
+                          {
+                            \__nwpu_title_tl_put_right:Nnnn
+                              \l__nwpu_title_since_break_tl {##1} {##2} {##3}
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      { \tl_set_eq:NN #3 \l__nwpu_title_source_tl }
+  }
+\cs_new_protected:Npn \__nwpu_prepare_cover_title:
+  {
+    \fHei \sErhao
+    \hbox_set:Nn \l__nwpu_title_measure_box { \nwpu@chs@title }
+    \dim_compare:nNnTF { \box_wd:N \l__nwpu_title_measure_box } >
+      { \l__nwpu_cover_title_value_width_dim }
+      {
+        \dim_set:Nn \l__nwpu_title_split_target_dim
+          { .5 \box_wd:N \l__nwpu_title_measure_box }
+        \__nwpu_title_split:NnNN \nwpu@chs@title
+          { \l__nwpu_title_split_target_dim }
+          \l__nwpu_cover_title_line_a_tl
+          \l__nwpu_cover_title_line_b_tl
+      }
+      {
+        \tl_set:No \l__nwpu_cover_title_line_a_tl { \nwpu@chs@title }
+        \tl_clear:N \l__nwpu_cover_title_line_b_tl
+      }
+  }
+\cs_new_protected:Npn \__nwpu_prepare_chs_inner_title:
+  {
+    \dim_set:Nn \l__nwpu_chs_inner_title_value_dim
+      { \l__nwpu_chs_inner_title_value_min_width_dim }
+    \fSong \sErhao
+    \__nwpu_title_split:NnNN \nwpu@chs@title
+      { \l__nwpu_chs_inner_title_value_dim }
+      \l__nwpu_chs_inner_title_line_a_tl
+      \l__nwpu_chs_inner_title_line_b_tl
+    \hbox_set:Nn \l__nwpu_title_measure_box
+      { \tl_use:N \l__nwpu_chs_inner_title_line_a_tl }
+    \dim_set:Nn \l__nwpu_title_split_width_dim
+      { \box_wd:N \l__nwpu_title_measure_box }
+    \hbox_set:Nn \l__nwpu_title_measure_box
+      { \tl_use:N \l__nwpu_chs_inner_title_line_b_tl }
+    \dim_compare:nNnT { \box_wd:N \l__nwpu_title_measure_box } >
+      { \l__nwpu_title_split_width_dim }
+      {
+        \dim_set:Nn \l__nwpu_title_split_width_dim
+          { \box_wd:N \l__nwpu_title_measure_box }
+      }
+    \dim_compare:nNnT { \l__nwpu_title_split_width_dim } >
+      { \l__nwpu_chs_inner_title_value_dim }
+      {
+        \dim_set:Nn \l__nwpu_chs_inner_title_value_dim
+          { \l__nwpu_title_split_width_dim }
+      }
+  }
 \cs_new_protected:Npn \__nwpu_chs_inner_title_row:nn #1#2
   {
     #1 & \__nwpu_cover_visual_bottom_cell:nnn
@@ -169,8 +294,10 @@
             { \l__nwpu_chs_inner_title_row_height_dim }
             { 题目： }
         }
-        { \nwpu@chs@coverTitleLineA }
-      \__nwpu_chs_inner_title_row:nn { } { \nwpu@chs@coverTitleLineB }
+        { \tl_use:N \l__nwpu_chs_inner_title_line_a_tl }
+      \__nwpu_chs_inner_title_row:nn
+        { }
+        { \tl_use:N \l__nwpu_chs_inner_title_line_b_tl }
     \end{tabular}
   }
 \cs_new_protected:Npn \__nwpu_chs_inner_info_row:nn #1#2
@@ -228,6 +355,7 @@
         \bfseries                                           %
         \linespread{1.25}\selectfont                        % 1.25 倍行距
         \begin{center}                                      %
+            \__nwpu_prepare_cover_title:
             \hfill \fHei \sWuhao                            %
             \begin{tabular}{
                 |>{\centering\arraybackslash}p{\l__nwpu_cover_detail_label_width_dim}|
@@ -248,8 +376,10 @@
                         { \l__nwpu_cover_title_row_height_dim }
                         { 题目 }
                     }
-                    { \nwpu@chs@coverTitleLineA }
-                \__nwpu_cover_title_row:nn { } { \nwpu@chs@coverTitleLineB }
+                    { \tl_use:N \l__nwpu_cover_title_line_a_tl }
+                \__nwpu_cover_title_row:nn
+                    { }
+                    { \tl_use:N \l__nwpu_cover_title_line_b_tl }
             \end{tabular}\par                                   % 排版结束
             \sWuhao \vspace{\__nwpu_cover_after_title_skip:}%
             \sSanhao \fSong                                 %
@@ -291,14 +421,7 @@
     \dim_set:Nn \l__nwpu_maxname_dim { \l__nwpu_author_dim }
     \dim_compare:nNnT \l__nwpu_advisor_dim > \l__nwpu_maxname_dim
         { \dim_set:Nn \l__nwpu_maxname_dim { \l__nwpu_advisor_dim } }
-    \dim_set:Nn \l__nwpu_chs_inner_title_value_dim
-        { \l__nwpu_chs_inner_title_value_min_width_dim }
-    \settowidth{\l__nwpu_chs_inner_title_line_dim}{\sErhao\nwpu@chs@coverTitleLineA}
-    \dim_compare:nNnT \l__nwpu_chs_inner_title_line_dim > \l__nwpu_chs_inner_title_value_dim
-        { \dim_set:Nn \l__nwpu_chs_inner_title_value_dim { \l__nwpu_chs_inner_title_line_dim } }
-    \settowidth{\l__nwpu_chs_inner_title_line_dim}{\sErhao\nwpu@chs@coverTitleLineB}
-    \dim_compare:nNnT \l__nwpu_chs_inner_title_line_dim > \l__nwpu_chs_inner_title_value_dim
-        { \dim_set:Nn \l__nwpu_chs_inner_title_value_dim { \l__nwpu_chs_inner_title_line_dim } }
+    \__nwpu_prepare_chs_inner_title:
     \dim_set:Nn \l__nwpu_chs_inner_info_value_dim
         { \l__nwpu_chs_inner_info_value_min_width_dim }
     \dim_compare:nNnT \l__nwpu_major_dim > \l__nwpu_chs_inner_info_value_dim
