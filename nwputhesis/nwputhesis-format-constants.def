@@ -30,9 +30,7 @@
 %% 章节标题
 \cs_new_protected:Npn \nwpuChapterSize   { \sSanhao }        % 一级标题（章）
 \cs_new_protected:Npn \nwpuSectionSize   { \sSihao }         % 二级标题（节）
-\nwpu_if_bachelor:TF
-  { \cs_new_protected:Npn \nwpuSubsectionSize { \sXiaosi } }  % 三级标题（本科：小四）
-  { \cs_new_protected:Npn \nwpuSubsectionSize { \sHgXiaosi } } % 三级标题（硕博：半小四）
+\cs_new_protected:Npn \nwpuSubsectionSize { \sXiaosi }       % 三级标题（小四）
 
 %% 图表标题
 \cs_new_protected:Npn \nwpuCaptionSize   { \sWuhao }         % 五号
