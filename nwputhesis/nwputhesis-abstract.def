@@ -12,8 +12,7 @@
         \linespread{1.345}\selectfont                            % 行距
         \fontsize{12pt}{14.4pt}\selectfont                      % 小四，1.2倍行距
         \cs_set_protected:Npn \sep {\unskip，\ignorespaces}     % 本科：逗号
-        \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\fHei\filcenter}%
-          {\nwpuChapterSize}{1em}{\nwpuChapterSize}%             % 摘要标题：无章节号
+        \nwpu@apply@abstract@chs@format
         \chapter*{摘~~要}                                        %
         \markboth{中~文~摘~要}{中~文~摘~要}                     %
       }
@@ -27,8 +26,7 @@
   {
     \nwpu_if_bachelor:TF                                        % 本科：恢复正文章节格式
       {
-        \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter\fHei}%
-          {第\CJKnumber{\thechapter}章}{1em}{\nwpuChapterSize}%
+        \nwpu@apply@chapter@format
       }
       {}
     \vfill\sWuhao
@@ -74,8 +72,7 @@
         \linespread{1.2}\selectfont                             % 行距
         \fontsize{12pt}{14.4pt}\selectfont                      % 小四
         \cs_set_protected:Npn \ensep {\unskip, ~\ignorespaces}  % 本科：逗号+空格
-        \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter}%
-          {\nwpuChapterSize}{1em}{\nwpuChapterSize}%             % 英文摘要标题：无章节号
+        \nwpu@apply@abstract@eng@format
         \chapter*{ABSTRACT}                                     %
         \markboth{英~文~摘~要}{英~文~摘~要}                    %
       }
@@ -89,8 +86,7 @@
   {
     \nwpu_if_bachelor:TF                                        % 本科：恢复正文章节格式
       {
-        \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter\fHei}%
-          {第\CJKnumber{\thechapter}章}{1em}{\nwpuChapterSize}%
+        \nwpu@apply@chapter@format
       }
       {}
     \vfill\sWuhao

@@ -17,12 +17,31 @@
 \RequirePackage{titletoc}                                   % 目录格式
 \setcounter{secnumdepth}{3}                                 % 标题计数器深度
 \setcounter{tocdepth}{2}                                    % 目录中标题深度
+%% 正文章节格式（可复用命令，abstract.def 退出时调用恢复）
+\cs_new_protected:Npn \nwpu@apply@chapter@format {
+  \nwpu_if_bachelor:TF {
+    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter\fHei}%
+      {第\CJKnumber{\thechapter}章}{1em}{\nwpuChapterSize}
+  } {
+    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter  %
+      \sffamily\fHei}{\sffamily\fHei\nwpuChapterSize{\chaptertitlename}}{20pt}{\nwpuChapterSize}
+  }
+}
+%% 摘要章节格式（本科 \chapter* 无编号标题）
+\cs_new_protected:Npn \nwpu@apply@abstract@chs@format {
+  \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter\fHei}%
+    {\nwpuChapterSize}{1em}{\nwpuChapterSize}
+}
+\cs_new_protected:Npn \nwpu@apply@abstract@eng@format {
+  \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter}%
+    {\nwpuChapterSize}{1em}{\nwpuChapterSize}
+}
+%%-----------------------------------------------------------------------------
 \nwpu_if_bachelor:TF                                        % 本科论文章节格式
 {
     \renewcommand{\thechapter}{\arabic{chapter}}            % 章节编号保持数字
     \renewcommand{\chaptername}{第\CJKnumber{\thechapter}章}% 章节名称（中文数字）
-    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter\fHei}%
-      {第\CJKnumber{\thechapter}章}{1em}{\nwpuChapterSize}
+    \nwpu@apply@chapter@format
     \titleformat{\section}[hang]{\nwpuSectionSize\fHei}%
       {\nwpuSectionSize\thesection}{0.5em}{}{}
     \titleformat{\subsection}[hang]{\nwpuSubsectionSize\fHei}%
@@ -35,19 +54,18 @@
     \titlespacing{\subsubsection}{0pt}{0.25em}{0em}
 }
 {                                                           % 硕博论文章节格式
-    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter  %
-        \sffamily\fHei}{\sffamily\fHei\nwpuChapterSize{\chaptertitlename}}{20pt}{\nwpuChapterSize}%
-    \titleformat{\section}[hang]{\sffamily\fHei\nwpuSectionSize}{%       %
-        \sffamily\fHei\nwpuSectionSize\thesection}{0.5em}{}{}            %
-    \titleformat{\subsection}[hang]{\sffamily\fHei\nwpuSubsectionSize}{% %
-        \sffamily\fHei\nwpuSubsectionSize\thesubsection}{0.5em}{}{}      %
-    \titleformat{\subsubsection}[hang]{\sffamily\fHei}{%        % 小标题: (4) 标题
-        (\arabic{subsubsection})}{0.5em}{}{}                    %
+    \nwpu@apply@chapter@format
+    \titleformat{\section}[hang]{\sffamily\fHei\nwpuSectionSize}{%
+      \sffamily\fHei\nwpuSectionSize\thesection}{0.5em}{}{}
+    \titleformat{\subsection}[hang]{\sffamily\fHei\nwpuSubsectionSize}{%
+      \sffamily\fHei\nwpuSubsectionSize\thesubsection}{0.5em}{}{}
+    \titleformat{\subsubsection}[hang]{\sffamily\fHei}{%
+      (\arabic{subsubsection})}{0.5em}{}{}
     \titlespacing{\chapter}{0pt}{\nwpuChapterBeforeSkip}{\nwpuChapterAfterSkip}
     \titlespacing{\section}{0pt}{\nwpuSectionBeforeSkip}{\nwpuSectionAfterSkip}
     \titlespacing{\subsection}{0pt}{\nwpuSubsecBeforeSkip}{\nwpuSubsecAfterSkip}
-    \titlespacing{\subsubsection}{0pt}{0.25em}{0pt}             %
-    \titlespacing{\paragraph}{0pt}{0.25em}{0pt}                 %
+    \titlespacing{\subsubsection}{0pt}{0.25em}{0pt}
+    \titlespacing{\paragraph}{0pt}{0.25em}{0pt}
 }
 \dottedcontents{section}[1.16cm]{}{1.8em}{5pt}              % 定义目录中各级标题
 \dottedcontents{subsection}[2.00cm]{}{2.7em}{5pt}           % 之间的格式以及缩进
