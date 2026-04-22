@@ -5,15 +5,7 @@
 %% 论文元数据填写
 %%-----------------------------------------------------------------------------%
 \ExplSyntaxOn
-\cs_new:Npn \chs@colon { \char"FF1A }                         % 中文冒号
 \cs_new:Npn \chs@space { \char"3000 }                         % 全角空格
-\cs_new:Npn \chs@period { \char"3002 }                        % 中文句号
-\cs_new:Npn \chs@question { \char"FF1F }                      % 中文问号
-\cs_new:Npn \chs@exclamation { \char"FF01 }                   % 中文感叹号
-\cs_new:Npn \chs@comma { \char"FF0C }                         % 中文逗号
-\cs_new:Npn \chs@semicolon { \char"FF1B }                     % 中文分号
-\cs_new:Npn \chs@leftparenthesis { \char"FF08 }               % 左括号
-\cs_new:Npn \chs@rightparenthesis { \char"FF09 }              % 右括号
 %%-----------------------------------------------------------------------------%
 \cs_new:Npn \nwpu@chs@title { \chs@space }                    % 标题（中文）
 \cs_new:Npn \nwpu@chs@coverTitleLineA { \nwpu@chs@title }     % 封皮标题第一行（中文）
@@ -60,7 +52,6 @@
 \cs_new:Npn \nwpu@schoolcode { 10699 }                        % default 学校代码
 \cs_new:Npn \nwpu@classnumber { O242 }                        % default 分类号
 \cs_new:Npn \nwpu@securitylevel { 公开 }                      % default 密级
-\cs_new:Npn \nwpu@funding { \chs@space }                      % 基金资助
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \nwpu@set@chs@title #1
   { \cs_gset:Npn \nwpu@chs@title {#1} }
