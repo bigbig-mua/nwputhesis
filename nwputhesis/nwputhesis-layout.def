@@ -143,11 +143,11 @@
     \nwpu_if_chinese:TF                                     % 中英文章节页眉设置
     {
         \renewcommand{\chaptermark}[1]{                     %
-            \markboth{\nwpu@chs@chaptercname\thechapter~~ #1}{}}
+            \markboth{\nwpu@chs@chaptercname{\thechapter}\quad #1}{}}
     }
     {                                                       %
         \renewcommand{\chaptermark}[1]{                     %
-            \markboth{\nwpu@eng@chaptercname\thechapter~~ #1}{}}
+            \markboth{\nwpu@eng@chaptercname{\thechapter}\quad #1}{}}
     }
     \pagestyle{fancyplain}                                  % 新增版式 fancyplain
     \fancyhf{}                                              % 清空原有页眉页脚
