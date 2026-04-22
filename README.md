@@ -53,31 +53,13 @@
 常用选项说明：
 
 - `degree`：论文类型，可选 `bachelor`、`master`、`phd`。
-- `fontset`：字体方案，可选 `auto`、`fandol`、`windows`、`local`。非 Windows 系统如果没有 Windows 字体，建议使用 `auto` 或 `fandol`。
-- `academic`：研究生论文是否为学术学位，`true` 为学术学位，`false` 为专业学位。
+- `fontset`：字体方案，可选 `auto`、`local`。非 Windows 系统建议下载本仓库中的字体后使用 `local` 选项。
 - `blindreview`：是否生成盲评版本，`true` 会隐藏作者、导师和学号等信息。
-- `colorcover`：是否生成彩色封面封底，仅硕博论文支持，通常用于最终提交电子版。本科论文不支持彩色封面；即使设置为 `true` 也会被忽略。
-- `bibstyle`：参考文献标准，可选 `2015`、`2025`。
 
-题目、作者、学院、专业、导师、日期、学号、基金资助等元数据统一写在 `content/thesis/*/info.tex` 或摘要文件中的 `\nwputhesissetup{...}`。例如：
+研究生特有选项：
 
-```tex
-\nwputhesissetup{
-    title = {论文中文题目},
-    title* = {English Thesis Title},
-    author = {张三},
-    author* = {San Zhang},
-    year = {2026},
-    month = {3},
-    school = {计算机学院},
-    major = {计算机科学与技术},
-    major* = {Computer Science and Technology},
-    advisor = {李四},
-    advisor* = {Si Li},
-}
-```
-
-旧版 `thesis-setup.tex` 配置入口已经移除；请直接修改入口文件的 `\documentclass[...]` 选项。
+- `academic`：研究生论文是否为学术学位，`true` 为学术学位，`false` 为专业学位。
+- `colorcover`：是否生成彩色封面封底，用于最终提交电子版。
 
 ### 文件修改说明
 用户基本只需要修改 `content/` 下的文件：
@@ -97,6 +79,7 @@
 
 ## 推荐项目
 [awesome-ai-research-writing](https://github.com/Leey21/awesome-ai-research-writing)
+
 [AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs)
 
 ## 许可证
