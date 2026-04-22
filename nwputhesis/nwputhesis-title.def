@@ -13,8 +13,38 @@
 \dim_new:N \l__nwpu_author_dim
 \dim_new:N \l__nwpu_advisor_dim
 \dim_new:N \l__nwpu_maxname_dim
+\dim_new:N \l__nwpu_cover_visual_bottom_raise_dim
+\dim_set:Nn \l__nwpu_cover_visual_bottom_raise_dim { 1.5pt }
 \int_new:N \l__nwpu_hbadness_save_int
 \int_new:N \l__nwpu_vbadness_save_int
+\cs_new_protected:Npn \__nwpu_cover_cell:nnnnn #1#2#3#4#5
+  { \parbox[#1][#3][#2]{#4}{\centering #5\par} }
+\cs_new_protected:Npn \__nwpu_cover_bottom_cell:nnn #1#2#3
+  { \__nwpu_cover_cell:nnnnn { b } { b } {#2} {#1} {#3} }
+\cs_new_protected:Npn \__nwpu_cover_visual_bottom_cell:nnn #1#2#3
+  {
+    \__nwpu_cover_cell:nnnnn { c } { b } {#2} {#1}
+      { #3 \vspace{ \l__nwpu_cover_visual_bottom_raise_dim } }
+  }
+\cs_new_protected:Npn \__nwpu_cover_center_cell:nnn #1#2#3
+  { \__nwpu_cover_cell:nnnnn { c } { c } {#2} {#1} {#3} }
+\cs_new_protected:Npn \__nwpu_cover_title_row:nn #1#2
+  {
+    #1 & \__nwpu_cover_visual_bottom_cell:nnn { 12.13cm } { 1.45cm } {#2}
+    \tabularnewline \cline{2-2}
+  }
+\cs_new_protected:Npn \__nwpu_cover_author_row:n #1
+  {
+    \__nwpu_cover_visual_bottom_cell:nnn { 1.56cm } { 1.28cm } { \bfseries 作者 }
+    & \__nwpu_cover_visual_bottom_cell:nnn { 3.72cm } { 1.28cm } { \bfseries #1 }
+    \tabularnewline \cline{2-2}
+  }
+\cs_new_protected:Npn \__nwpu_cover_info_row:nn #1#2
+  {
+    \__nwpu_cover_visual_bottom_cell:nnn { 3.59cm } { 1cm } { \bfseries #1 }
+    & \__nwpu_cover_center_cell:nnn { 9cm } { 1cm } { \bfseries #2 }
+    \tabularnewline \cline{2-2}
+  }
 
 %% 封皮页
 %%-----------------------------------------------------------------------------%
@@ -54,35 +84,32 @@
             \end{tabular}\par                               % 排版基本信息表
             \vspace{21\baselineskip}                        % 21 * 10.5pt * 1.25
             \fHei \sErhao
-            \begin{tabular}[t]{>{\centering\arraybackslash}p{2.34cm}p{12.13cm}}
-                \begin{minipage}[c][1.45cm][c]{2.34cm}\centering 题目\end{minipage}
-                & \begin{minipage}[c][1.45cm][c]{12.13cm}\centering\nwpu@chs@coverTitleLineA\par\end{minipage} \tabularnewline
-                \cline{2-2}
-                & \begin{minipage}[c][1.45cm][c]{12.13cm}\centering\nwpu@chs@coverTitleLineB\par\end{minipage} \tabularnewline
-                \cline{2-2}
+            \begin{tabular}[b]{@{}c@{}c@{}}
+                \__nwpu_cover_title_row:nn
+                    { \__nwpu_cover_visual_bottom_cell:nnn { 2.34cm } { 1.45cm } { 题目 } }
+                    { \nwpu@chs@coverTitleLineA }
+                \__nwpu_cover_title_row:nn { } { \nwpu@chs@coverTitleLineB }
             \end{tabular}\par                                   % 排版结束
             \sWuhao \vspace{3\baselineskip}                 % 2 * 10.5pt * 1.25
             \sSanhao \fSong                                 %
-            \begin{tabular}[t]{>{\centering\arraybackslash}p{1.56cm}p{3.72cm}}
-                \begin{minipage}[c][1.28cm][c]{1.56cm}\centering\bf 作者\end{minipage}
-                & \begin{minipage}[c][1.28cm][c]{3.72cm}\centering\bf\nwpu@chs@author\par\end{minipage} \tabularnewline
-                \cline{2-2}
+            \begin{tabular}[b]{@{}c@{}c@{}}
+                \__nwpu_cover_author_row:n { \nwpu@chs@author }
             \end{tabular}\par                               % 排版作者信息
             \sWuhao \vspace{4\baselineskip}                 % 3 * 10.5pt * 1.25
             \sSanhao \fSong
-            \begin{tabular}[t]{>{\centering\arraybackslash}p{3.59cm}p{9cm}}
-                \begin{minipage}[c][1cm][c]{3.59cm}\centering\bf \nwpu@chs@outerCoverFirstOption\end{minipage}
-                & \begin{minipage}[c][1cm][c]{9cm}\centering\bf\nwpu@chs@major\par\end{minipage} \tabularnewline
-                \cline{2-2}
-                \begin{minipage}[c][1cm][c]{3.59cm}\centering\bf 指{\enspace}导{\enspace}教{\enspace}师\end{minipage}
-                & \begin{minipage}[c][1cm][c]{9cm}\centering\bf\nwpu@chs@advisor\nwpu@chs@advisorAcademicRank\par\end{minipage} \tabularnewline
-                \cline{2-2}
-                \begin{minipage}[c][1cm][c]{3.59cm}\centering\bf 培{\enspace}养{\enspace}单{\enspace}位\end{minipage}
-                & \begin{minipage}[c][1cm][c]{9cm}\centering\bf\nwpu@chs@school\par\end{minipage} \tabularnewline
-                \cline{2-2}
-                \begin{minipage}[c][1cm][c]{3.59cm}\centering\bf 申{\enspace}请{\enspace}日{\enspace}期\end{minipage}
-                & \begin{minipage}[c][1cm][c]{9cm}\centering\bf\nwpu@chs@date\par\end{minipage} \tabularnewline
-                \cline{2-2}
+            \begin{tabular}[t]{@{}c@{}c@{}}
+                \__nwpu_cover_info_row:nn
+                    { \nwpu@chs@outerCoverFirstOption }
+                    { \nwpu@chs@major }
+                \__nwpu_cover_info_row:nn
+                    { 指{\enspace}导{\enspace}教{\enspace}师 }
+                    { \nwpu@chs@advisor\nwpu@chs@advisorAcademicRank }
+                \__nwpu_cover_info_row:nn
+                    { 培{\enspace}养{\enspace}单{\enspace}位 }
+                    { \nwpu@chs@school }
+                \__nwpu_cover_info_row:nn
+                    { 申{\enspace}请{\enspace}日{\enspace}期 }
+                    { \nwpu@chs@date }
             \end{tabular}                                   % 排版结束
             \vspace{2.5\baselineskip}                       % 2.5 * 24pt * 1.25
         \end{center}                                        %
