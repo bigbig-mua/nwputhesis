@@ -23,10 +23,10 @@
       }
     \renewcommand{\appendixautorefname}{附录}               %
     \nwpu_if_bachelor:TF
-      { \def\equationautorefname#1#2\null{式#1（#2\null）} }
-      { \def\equationautorefname#1#2\null{式#1(#2\null)}   }
-    \def\sectionautorefname#1#2\null{#2\null{ }节}          %
-    \def\subsectionautorefname#1#2\null{#2\null{ }小节}     %
+      { \def\equationautorefname#1#2\null{式#1（#2\null）} }% ~(\def required: delimited args, no expl3 equivalent)
+      { \def\equationautorefname#1#2\null{式#1(#2\null)}   }% ~(\def required: delimited args, no expl3 equivalent)
+    \def\sectionautorefname#1#2\null{#2\null{ }节}          % (\def required: delimited args, no expl3 equivalent)
+    \def\subsectionautorefname#1#2\null{#2\null{ }小节}     % (\def required: delimited args, no expl3 equivalent)
     \renewcommand{\theoremautorefname}{定理}                %
     \cs_new_protected:Npn \axiomautorefname {公理}          %
     \cs_new_protected:Npn \corollaryautorefname {推论}      %
@@ -44,7 +44,7 @@
   {                                                        % 英文引用提示文字
     \renewcommand{\figureautorefname}{Fig.}                 %
     \renewcommand{\tableautorefname}{Table}                 %
-    \def\equationautorefname#1#2\null{Eq.#1(#2\null)}       %
+    \def\equationautorefname#1#2\null{Eq.#1(#2\null)}       % (\def required: delimited args, no expl3 equivalent)
     \renewcommand{\lstlistingname}{Code~Snippet}            %
     \cs_new_protected:Npn \lstlistingautorefname {Code~Snippet} %
     \renewcommand{\nomname}{Symbols}                        %
@@ -55,10 +55,10 @@
 \renewcommand{\thesubfigure}{(\alph{subfigure})}            % 子图编号格式
 \renewcommand{\thetable}{\thechapter-\arabic{table}}        % 表编号格式
 \renewcommand{\thealgorithm}{\thechapter-\arabic{algorithm}}% 算法编号格式
-\@addtoreset{algorithm}{chapter}                            % 按章节编号
+\counterwithin*{algorithm}{chapter}                          % 按章节编号
 \renewcommand{\theequation}{\thechapter-\arabic{equation}}  % 公式编号格式
 \nwpu_if_bachelor:TF                                        % 本科公式编号样式
-  { \def\tagform@#1{\maketag@@@{\fSong （#1）}} }
+  { \def\tagform@#1{\maketag@@@{\fSong （#1）}} }            % (\def required: amsmath internal)
   {}
 \renewcommand{\thetheorem}{\thechapter.\arabic{theorem}}    % 定理编号格式
 \renewcommand{\theaxiom}{\thechapter.\arabic{axiom}}        % 公理编号格式

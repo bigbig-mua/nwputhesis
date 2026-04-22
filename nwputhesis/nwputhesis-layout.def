@@ -5,10 +5,10 @@
 \ExplSyntaxOn
 \RequirePackage{indentfirst}                                % 段首空格设置
 \nwpu_if_bachelor:TF                                        % 本科论文段首空格
-    { \setlength\parindent{26pt} }                          % 段首空格长度（本科）
-    { \setlength\parindent{24pt} }                          % 段首空格长度（硕博）
-\setlength\parskip{0pt}                                     % 段落间距
-\renewcommand{\baselinestretch}{1.0}                        % 行距
+    { \dim_set:Nn \parindent { 26pt } }                     % 段首空格长度（本科）
+    { \dim_set:Nn \parindent { 24pt } }                     % 段首空格长度（硕博）
+\skip_set:Nn \parskip { 0pt }                               % 段落间距
+\linespread{1.0}                                            % 行距
 %%-----------------------------------------------------------------------------%
 \RequirePackage{ulem}                                       % 下划线
 \NewDocumentCommand \dlmu@underline { O{5cm} m }
@@ -87,13 +87,13 @@
                 .3pc]{.}\contentspage}[\vspace{0em}]            %
     }
     {                                                           % 硕博英文
-        \newlength{\contents@titlewidth}                        %
-        \newlength{\contents@appendixwidth}                     %
-        \settowidth{\contents@titlewidth}{\graduatecontentsfont Chapter~000} %
-        \settowidth{\contents@appendixwidth}{\graduatecontentsfont Appendix~M00}
+        \dim_new:N \l__nwpu_contents_title_dim
+        \dim_new:N \l__nwpu_contents_appendix_dim
+        \settowidth{\l__nwpu_contents_title_dim}{\graduatecontentsfont Chapter~000} %
+        \settowidth{\l__nwpu_contents_appendix_dim}{\graduatecontentsfont Appendix~M00}
         \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
             ][l]{\nwpu@eng@chaptercname{\thecontentslabel}}\hspace{%
-                \contents@titlewidth}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{
+                \l__nwpu_contents_title_dim}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{
             \titlerule*[.3pc]{.}\contentspage}[\vspace{0em}]    %
     }
 }
@@ -147,7 +147,7 @@
 %%-----------------------------------------------------------------------------%
 \RequirePackage[
     backend=biber,
-    style=\nwpu@bibstyle,
+    style=\l__nwpu_bibstyle_tl,
     gbpunctin = false,
     sorting=none
 ]{biblatex}                                                 % 参考文献
@@ -219,13 +219,13 @@
 \newcolumntype{P}[1]{>{\raggedright\let\newline\\%          % 指定宽度左对齐
         \arraybackslash\hspace{0pt}}p{#1}}                  %
 \renewcommand{\arraystretch}{1.4}                           % 表格行高为 1.4 倍
-\setlength\heavyrulewidth{1.5pt}                            % 表格上下线宽 1.5 磅
-\setlength\lightrulewidth{1pt}                              % 表格中线宽 1.0 磅
+\dim_set:Nn \heavyrulewidth { 1.5pt }                       % 表格上下线宽 1.5 磅
+\dim_set:Nn \lightrulewidth { 1pt }                         % 表格中线宽 1.0 磅
 %%-----------------------------------------------------------------------------%
 \RequirePackage[amsmath,thmmarks]{ntheorem}                 % 定理环境格式
 \theorembodyfont{\normalfont\itshape}                       % 主体文字格式
 \theoremseparator{\quad}                                    % 标题与主体间隔
-\setlength\topsep{0pt}                                      % 设置定理环境间距
+\dim_set:Nn \topsep { 0pt }                                  % 设置定理环境间距
 \theorempreskip{0pt}                                        % 节前空白大小
 \theorempostskip{0pt}                                       % 节后空白大小
 \cs_set_protected:Npn \thm@space@setup {                       %
@@ -296,22 +296,25 @@
 \RequirePackage{nomencl}                                    % 添加符号表功能
 \RequirePackage{multicol}                                   % 页面具体尺寸信息
 \makenomenclature                                           % 单栏符号表
-\@ifundefined{chapter}{\def\npu@nomsec{section}}{\def\npu@nomsec{chapter}}
-\def\thenomenclature{%
-    % \newlength{\npu@columnsep@save}
-    % \setlength{\npu@columnsep@save}{\columnsep}
-    % \setlength{\columnsep}{20pt}
+\tl_new:N \l__nwpu_nom_sec_tl
+\cs_if_exist:NTF \chapter
+  { \tl_set:Nn \l__nwpu_nom_sec_tl { chapter } }
+  { \tl_set:Nn \l__nwpu_nom_sec_tl { section } }
+\cs_set:Npn \thenomenclature {%
+    % \dim_new:N \l__nwpu_columnsep_save_dim
+    % \dim_set:Nn \l__nwpu_columnsep_save_dim \columnsep
+    % \dim_set:Nn \columnsep { 20pt }
     % \begin{multicols}{2}[%
-    \csname\npu@nomsec\endcsname*{\nomname}
-    \if@intoc\addcontentsline{toc}{\npu@nomsec}{\nomname}\fi
+    \use:c { \l__nwpu_nom_sec_tl } * { \nomname }
+    \if@intoc\addcontentsline{toc}{\l__nwpu_nom_sec_tl}{\nomname}\fi
     \nompreamble % \raggedcolumns
     % ]
     \list{}{\labelsep=15pt\labelwidth\nom@tempdim\leftmargin\labelwidth\advance
         \leftmargin\labelsep\itemsep\nomitemsep\let\makelabel\nomlabel}%
 }
-\def\endthenomenclature{\endlist
+\cs_set:Npn \endthenomenclature {\endlist
     % \end{multicols}
-    % \setlength{\columnsep}{\npu@columnsep@save}
+    % \dim_set:Nn \columnsep { \l__nwpu_columnsep_save_dim }
     \nompostamble}
 \ExplSyntaxOff
 %%=============================================================================%

@@ -4,12 +4,12 @@
 %% 参考文献处理
 %%-----------------------------------------------------------------------------%
 \ExplSyntaxOn
-\setlength{\biblabelsep}{0pt}                              %
-\newlength{\nwpu@bibfirstlineindent}                       %
-\AtBeginDocument{\typeout{NWPUDEBUG bib indent begin}\settowidth{\nwpu@bibfirstlineindent}{汉汉}\typeout{NWPUDEBUG bib indent end}} %
-\newlength{\nwpu@biblabelwidth}                            %
-\newlength{\nwpu@bibfirstlinereserve}                      %
-\setlength{\nwpu@bibfirstlinereserve}{1.5em}               %
+\dim_set:Nn \biblabelsep { 0pt }                             %
+\dim_new:N \l__nwpu_bib_firstline_indent_dim
+\AtBeginDocument{\typeout{NWPUDEBUG bib indent begin}\settowidth{\l__nwpu_bib_firstline_indent_dim}{汉汉}\typeout{NWPUDEBUG bib indent end}} %
+\dim_new:N \l__nwpu_bib_label_dim
+\dim_new:N \l__nwpu_bib_firstline_reserve_dim
+\dim_set:Nn \l__nwpu_bib_firstline_reserve_dim { 1.5em }    %
 \tl_new:N \l__nwpu_patent_number_tl
 \cs_new_protected:Npn \nwpu_patent_number_allowbreaks:n #1
   {
@@ -252,7 +252,7 @@
     \leavevmode%
     \nwpu_if_bachelor:TF
         { \hspace*{0pt} }
-        { \hspace*{\nwpu@bibfirstlineindent} }
+        { \hspace*{\l__nwpu_bib_firstline_indent_dim} }
     \mkgbnumlabel{\printfield{labelnumber}}\hspace{0.3em}}
 \defbibenvironment{bibliography}
     {\begingroup\setlength{\parindent}{0pt}\setlength{\emergencystretch}{2em}\sloppy}

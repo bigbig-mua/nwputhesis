@@ -76,7 +76,7 @@
 \cs_new_protected:Npn \sDefault { \fontsize{12pt}{20pt}\selectfont }    % 小四，1.67 倍
 \cs_new_protected:Npn \graduatebodyfont                              % 研究生正文型页面统一格式
   {
-    \cs_set:Npn \baselinestretch {1.0}
+    \linespread{1.0}
     \sDefault
   }
 \raggedbottom                                               % 避免分页时拉伸竖直空白

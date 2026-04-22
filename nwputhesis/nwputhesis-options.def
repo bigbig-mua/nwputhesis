@@ -16,7 +16,8 @@
 \bool_new:N \l__nwpu_font_using_fandol_bool                  % 实际使用 Fandol 字体标记
 \bool_new:N \l__nwpu_colorcover_bool                         % 彩色封面封底标记
 \bool_new:N \l__nwpu_class_loaded_bool                       % 类文件已完成加载
-\def\nwpu@bibstyle{gb7714-2015}                              % 默认参考文献标准
+\tl_new:N \l__nwpu_bibstyle_tl
+\tl_set:Nn \l__nwpu_bibstyle_tl { gb7714-2015 }               % 默认参考文献标准
 \bool_set_true:N \l__nwpu_lang_chs_bool
 \bool_set_true:N \l__nwpu_type_phd_bool
 \bool_set_true:N \l__nwpu_academic_bool
@@ -97,8 +98,8 @@
       {
         \str_case:nnF {#1}
           {
-            { 2015 } { \def\nwpu@bibstyle{gb7714-2015} }
-            { 2025 } { \def\nwpu@bibstyle{gb7714-2025} }
+            { 2015 } { \tl_set:Nn \l__nwpu_bibstyle_tl { gb7714-2015 } }
+            { 2025 } { \tl_set:Nn \l__nwpu_bibstyle_tl { gb7714-2025 } }
           }
           {
             \ClassError { nwputhesis } { Unsupported~bibstyle~`#1' }
