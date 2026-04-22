@@ -16,9 +16,99 @@
 \dim_new:N \l__nwpu_chs_inner_title_line_dim
 \dim_new:N \l__nwpu_chs_inner_info_value_dim
 \dim_new:N \l__nwpu_cover_visual_bottom_raise_dim
-\dim_set:Nn \l__nwpu_cover_visual_bottom_raise_dim { 1.5pt }
 \int_new:N \l__nwpu_hbadness_save_int
 \int_new:N \l__nwpu_vbadness_save_int
+%%-----------------------------------------------------------------------------%
+%% 标题页尺寸常量
+%%-----------------------------------------------------------------------------%
+\dim_set:Nn \l__nwpu_cover_visual_bottom_raise_dim { 1.5pt }
+\dim_new:N \l__nwpu_cover_detail_label_width_dim
+\dim_new:N \l__nwpu_cover_detail_value_width_dim
+\dim_new:N \l__nwpu_cover_title_label_width_dim
+\dim_new:N \l__nwpu_cover_title_value_width_dim
+\dim_new:N \l__nwpu_cover_title_row_height_dim
+\dim_new:N \l__nwpu_cover_author_label_width_dim
+\dim_new:N \l__nwpu_cover_author_value_width_dim
+\dim_new:N \l__nwpu_cover_author_row_height_dim
+\dim_new:N \l__nwpu_cover_info_label_width_dim
+\dim_new:N \l__nwpu_cover_info_value_width_dim
+\dim_new:N \l__nwpu_cover_info_row_height_dim
+\dim_new:N \l__nwpu_chs_inner_title_label_width_dim
+\dim_new:N \l__nwpu_chs_inner_title_value_min_width_dim
+\dim_new:N \l__nwpu_chs_inner_title_row_height_dim
+\dim_new:N \l__nwpu_chs_inner_info_label_width_dim
+\dim_new:N \l__nwpu_chs_inner_info_value_min_width_dim
+\dim_new:N \l__nwpu_chs_inner_info_row_height_dim
+\dim_new:N \l__nwpu_bachelor_logo_width_dim
+\dim_new:N \l__nwpu_bachelor_title_underline_width_dim
+\dim_new:N \l__nwpu_bachelor_info_underline_width_dim
+\dim_new:N \l__nwpu_bachelor_title_gap_dim
+\dim_new:N \l__nwpu_committee_review_name_width_dim
+\dim_new:N \l__nwpu_committee_review_rank_width_dim
+\dim_new:N \l__nwpu_committee_review_org_width_dim
+\dim_new:N \l__nwpu_committee_role_width_dim
+\dim_new:N \l__nwpu_committee_name_width_dim
+\dim_new:N \l__nwpu_committee_rank_width_dim
+\dim_new:N \l__nwpu_committee_org_width_dim
+\dim_new:N \l__nwpu_cover_background_inner_sep_dim
+\dim_set:Nn \l__nwpu_cover_detail_label_width_dim { 2.05cm }
+\dim_set:Nn \l__nwpu_cover_detail_value_width_dim { 2.4cm }
+\dim_set:Nn \l__nwpu_cover_title_label_width_dim { 2.34cm }
+\dim_set:Nn \l__nwpu_cover_title_value_width_dim { 12.13cm }
+\dim_set:Nn \l__nwpu_cover_title_row_height_dim { 1.45cm }
+\dim_set:Nn \l__nwpu_cover_author_label_width_dim { 1.56cm }
+\dim_set:Nn \l__nwpu_cover_author_value_width_dim { 3.72cm }
+\dim_set:Nn \l__nwpu_cover_author_row_height_dim { 1.28cm }
+\dim_set:Nn \l__nwpu_cover_info_label_width_dim { 3.59cm }
+\dim_set:Nn \l__nwpu_cover_info_value_width_dim { 9cm }
+\dim_set:Nn \l__nwpu_cover_info_row_height_dim { 1cm }
+\dim_set:Nn \l__nwpu_chs_inner_title_label_width_dim { 2.54cm }
+\dim_set:Nn \l__nwpu_chs_inner_title_value_min_width_dim { 7.85cm }
+\dim_set:Nn \l__nwpu_chs_inner_title_row_height_dim { 1.45cm }
+\dim_set:Nn \l__nwpu_chs_inner_info_label_width_dim { 2.88cm }
+\dim_set:Nn \l__nwpu_chs_inner_info_value_min_width_dim { 4.34cm }
+\dim_set:Nn \l__nwpu_chs_inner_info_row_height_dim { 1cm }
+\dim_set:Nn \l__nwpu_bachelor_logo_width_dim { 10cm }
+\dim_set:Nn \l__nwpu_bachelor_title_underline_width_dim { 8cm }
+\dim_set:Nn \l__nwpu_bachelor_info_underline_width_dim { 5.5cm }
+\dim_set:Nn \l__nwpu_bachelor_title_gap_dim { 0.2cm }
+\dim_set:Nn \l__nwpu_committee_review_name_width_dim { 3.71cm }
+\dim_set:Nn \l__nwpu_committee_review_rank_width_dim { 2.83cm }
+\dim_set:Nn \l__nwpu_committee_review_org_width_dim { 8.73cm }
+\dim_set:Nn \l__nwpu_committee_role_width_dim { 3.76cm }
+\dim_set:Nn \l__nwpu_committee_name_width_dim { 2.68cm }
+\dim_set:Nn \l__nwpu_committee_rank_width_dim { 2.25cm }
+\dim_set:Nn \l__nwpu_committee_org_width_dim { 6.75cm }
+\dim_set:Nn \l__nwpu_cover_background_inner_sep_dim { 0pt }
+\cs_new:Npn \__nwpu_cover_detail_label_text_width: { 4em }
+\cs_new:Npn \__nwpu_cover_after_detail_skip: { 21\baselineskip }
+\cs_new:Npn \__nwpu_cover_after_title_skip: { 3\baselineskip }
+\cs_new:Npn \__nwpu_cover_after_author_skip: { 4\baselineskip }
+\cs_new:Npn \__nwpu_cover_after_info_skip: { 2.5\baselineskip }
+\cs_new:Npn \__nwpu_chs_inner_school_title_stretch: { 1.41667 }
+\cs_new:Npn \__nwpu_chs_inner_top_skip: { 1\baselineskip }
+\cs_new:Npn \__nwpu_chs_inner_after_school_skip: { 5mm }
+\cs_new:Npn \__nwpu_chs_inner_after_doc_title_skip: { 5mm }
+\cs_new:Npn \__nwpu_chs_inner_before_title_skip: { 6\baselineskip }
+\cs_new:Npn \__nwpu_chs_inner_after_title_skip: { 6\baselineskip }
+\cs_new:Npn \__nwpu_chs_inner_after_info_skip: { 2\baselineskip }
+\cs_new:Npn \__nwpu_eng_inner_top_skip: { 3\baselineskip }
+\cs_new:Npn \__nwpu_eng_inner_after_title_skip: { 3\baselineskip }
+\cs_new:Npn \__nwpu_eng_inner_after_advisor_skip: { 4\baselineskip }
+\cs_new:Npn \__nwpu_eng_inner_before_degree_skip: { 1\baselineskip }
+\cs_new:Npn \__nwpu_eng_inner_after_degree_skip: { 4\baselineskip }
+\cs_new:Npn \__nwpu_bachelor_top_skip: { 2.3cm }
+\cs_new:Npn \__nwpu_bachelor_after_logo_skip: { 1.3cm }
+\cs_new:Npn \__nwpu_bachelor_after_doc_title_skip: { 3.5cm }
+\cs_new:Npn \__nwpu_bachelor_after_title_skip: { 1.5cm }
+\cs_new:Npn \__nwpu_bachelor_info_row_skip: { 1.1cm }
+\cs_new:Npn \__nwpu_committee_top_skip: { 1\baselineskip }
+\cs_new:Npn \__nwpu_committee_before_reviewers_skip: { \baselineskip }
+\cs_new:Npn \__nwpu_committee_reviewers_title_before_skip: { 0.3\baselineskip }
+\cs_new:Npn \__nwpu_committee_reviewers_table_before_skip: { 0.3\baselineskip }
+\cs_new:Npn \__nwpu_committee_before_defense_skip: { \baselineskip }
+\cs_new:Npn \__nwpu_committee_defense_title_before_skip: { 0.3\baselineskip }
+\cs_new:Npn \__nwpu_committee_defense_table_before_skip: { 0.3\baselineskip }
 \cs_new_protected:Npn \__nwpu_cover_cell:nnnnn #1#2#3#4#5
   { \parbox[#1][#3][#2]{#4}{\centering #5\par} }
 \cs_new_protected:Npn \__nwpu_cover_bottom_cell:nnn #1#2#3
@@ -32,41 +122,68 @@
   { \__nwpu_cover_cell:nnnnn { c } { c } {#2} {#1} {#3} }
 \cs_new_protected:Npn \__nwpu_cover_title_row:nn #1#2
   {
-    #1 & \__nwpu_cover_visual_bottom_cell:nnn { 12.13cm } { 1.45cm } {#2}
+    #1 & \__nwpu_cover_visual_bottom_cell:nnn
+      { \l__nwpu_cover_title_value_width_dim }
+      { \l__nwpu_cover_title_row_height_dim }
+      {#2}
     \tabularnewline \cline{2-2}
   }
 \cs_new_protected:Npn \__nwpu_cover_author_row:n #1
   {
-    \__nwpu_cover_visual_bottom_cell:nnn { 1.56cm } { 1.28cm } { \bfseries 作者 }
-    & \__nwpu_cover_visual_bottom_cell:nnn { 3.72cm } { 1.28cm } { \bfseries #1 }
+    \__nwpu_cover_visual_bottom_cell:nnn
+      { \l__nwpu_cover_author_label_width_dim }
+      { \l__nwpu_cover_author_row_height_dim }
+      { \bfseries 作者 }
+    & \__nwpu_cover_visual_bottom_cell:nnn
+      { \l__nwpu_cover_author_value_width_dim }
+      { \l__nwpu_cover_author_row_height_dim }
+      { \bfseries #1 }
     \tabularnewline \cline{2-2}
   }
 \cs_new_protected:Npn \__nwpu_cover_info_row:nn #1#2
   {
-    \__nwpu_cover_visual_bottom_cell:nnn { 3.59cm } { 1cm } { \bfseries #1 }
-    & \__nwpu_cover_center_cell:nnn { 9cm } { 1cm } { \bfseries #2 }
+    \__nwpu_cover_visual_bottom_cell:nnn
+      { \l__nwpu_cover_info_label_width_dim }
+      { \l__nwpu_cover_info_row_height_dim }
+      { \bfseries #1 }
+    & \__nwpu_cover_center_cell:nnn
+      { \l__nwpu_cover_info_value_width_dim }
+      { \l__nwpu_cover_info_row_height_dim }
+      { \bfseries #2 }
     \tabularnewline \cline{2-2}
   }
 \cs_new_protected:Npn \__nwpu_chs_inner_title_row:nn #1#2
   {
     #1 & \__nwpu_cover_visual_bottom_cell:nnn
-      { \l__nwpu_chs_inner_title_value_dim } { 1.45cm } {#2}
+      { \l__nwpu_chs_inner_title_value_dim }
+      { \l__nwpu_chs_inner_title_row_height_dim }
+      {#2}
     \tabularnewline \cline{2-2}
   }
 \cs_new_protected:Npn \__nwpu_chs_inner_title:
   {
     \begin{tabular}[b]{@{}c@{}c@{}}
       \__nwpu_chs_inner_title_row:nn
-        { \__nwpu_cover_visual_bottom_cell:nnn { 2.54cm } { 1.45cm } { 题目： } }
+        {
+          \__nwpu_cover_visual_bottom_cell:nnn
+            { \l__nwpu_chs_inner_title_label_width_dim }
+            { \l__nwpu_chs_inner_title_row_height_dim }
+            { 题目： }
+        }
         { \nwpu@chs@coverTitleLineA }
       \__nwpu_chs_inner_title_row:nn { } { \nwpu@chs@coverTitleLineB }
     \end{tabular}
   }
 \cs_new_protected:Npn \__nwpu_chs_inner_info_row:nn #1#2
   {
-    \__nwpu_cover_visual_bottom_cell:nnn { 2.88cm } { 1cm } {#1}
+    \__nwpu_cover_visual_bottom_cell:nnn
+      { \l__nwpu_chs_inner_info_label_width_dim }
+      { \l__nwpu_chs_inner_info_row_height_dim }
+      {#1}
     & \__nwpu_cover_visual_bottom_cell:nnn
-      { \l__nwpu_chs_inner_info_value_dim } { 1cm } {#2}
+      { \l__nwpu_chs_inner_info_value_dim }
+      { \l__nwpu_chs_inner_info_row_height_dim }
+      {#2}
     \tabularnewline \cline{2-2}
   }
 \cs_new_protected:Npn \__nwpu_chs_inner_info:
@@ -93,7 +210,7 @@
         % 彩色封面背景图
         \nwpu_if_colorcover:TF {
             \begin{tikzpicture}[remember picture,overlay]
-                \node[at=(current page.center),inner sep=0pt] {
+                \node[at=(current page.center),inner sep=\l__nwpu_cover_background_inner_sep_dim] {
                     \nwpu_if_phd:TF {
                         \includegraphics[width=\paperwidth,height=\paperheight]{cover-phd.jpg}
                     } {
@@ -114,26 +231,34 @@
         \linespread{1.25}\selectfont                        % 1.25 倍行距
         \begin{center}                                      %
             \hfill \fHei \sWuhao                            %
-            \begin{tabular}{|>{\centering\arraybackslash}p{2.05cm}|>{\centering\arraybackslash}p{2.4cm}|}\hline %
-                \makebox[4em][s]{学\hfil 校\hfil 代\hfil 码} & \nwpu@schoolcode    \\ \hline
-                \makebox[4em][s]{分\hfil 类\hfil 号}          & \nwpu@classnumber   \\ \hline
-                \makebox[4em][s]{密\hfil 级}                  & \nwpu@securitylevel \\ \hline
-                \makebox[4em][s]{学\hfil 号}                  & \nwpu@uid           \\ \hline
+            \begin{tabular}{
+                |>{\centering\arraybackslash}p{\l__nwpu_cover_detail_label_width_dim}|
+                 >{\centering\arraybackslash}p{\l__nwpu_cover_detail_value_width_dim}|
+              }\hline %
+                \makebox[\__nwpu_cover_detail_label_text_width:][s]{学\hfil 校\hfil 代\hfil 码} & \nwpu@schoolcode    \\ \hline
+                \makebox[\__nwpu_cover_detail_label_text_width:][s]{分\hfil 类\hfil 号}          & \nwpu@classnumber   \\ \hline
+                \makebox[\__nwpu_cover_detail_label_text_width:][s]{密\hfil 级}                  & \nwpu@securitylevel \\ \hline
+                \makebox[\__nwpu_cover_detail_label_text_width:][s]{学\hfil 号}                  & \nwpu@uid           \\ \hline
             \end{tabular}\par                               % 排版基本信息表
-            \vspace{21\baselineskip}                        % 21 * 10.5pt * 1.25
+            \vspace{\__nwpu_cover_after_detail_skip:}        %
             \fHei \sErhao
             \begin{tabular}[b]{@{}c@{}c@{}}
                 \__nwpu_cover_title_row:nn
-                    { \__nwpu_cover_visual_bottom_cell:nnn { 2.34cm } { 1.45cm } { 题目 } }
+                    {
+                      \__nwpu_cover_visual_bottom_cell:nnn
+                        { \l__nwpu_cover_title_label_width_dim }
+                        { \l__nwpu_cover_title_row_height_dim }
+                        { 题目 }
+                    }
                     { \nwpu@chs@coverTitleLineA }
                 \__nwpu_cover_title_row:nn { } { \nwpu@chs@coverTitleLineB }
             \end{tabular}\par                                   % 排版结束
-            \sWuhao \vspace{3\baselineskip}                 % 2 * 10.5pt * 1.25
+            \sWuhao \vspace{\__nwpu_cover_after_title_skip:}%
             \sSanhao \fSong                                 %
             \begin{tabular}[b]{@{}c@{}c@{}}
                 \__nwpu_cover_author_row:n { \nwpu@chs@author }
             \end{tabular}\par                               % 排版作者信息
-            \sWuhao \vspace{4\baselineskip}                 % 3 * 10.5pt * 1.25
+            \sWuhao \vspace{\__nwpu_cover_after_author_skip:}%
             \sSanhao \fSong
             \begin{tabular}[t]{@{}c@{}c@{}}
                 \__nwpu_cover_info_row:nn
@@ -149,7 +274,7 @@
                     { 申{\enspace}请{\enspace}日{\enspace}期 }
                     { \nwpu@chs@date }
             \end{tabular}                                   % 排版结束
-            \vspace{2.5\baselineskip}                       % 2.5 * 24pt * 1.25
+            \vspace{\__nwpu_cover_after_info_skip:}         %
         \end{center}                                        %
     \end{titlepage} \fSong \normalsize \newpage \clearpage  %
 }                                                           %
@@ -168,14 +293,16 @@
     \dim_set:Nn \l__nwpu_maxname_dim { \l__nwpu_author_dim }
     \dim_compare:nNnT \l__nwpu_advisor_dim > \l__nwpu_maxname_dim
         { \dim_set:Nn \l__nwpu_maxname_dim { \l__nwpu_advisor_dim } }
-    \dim_set:Nn \l__nwpu_chs_inner_title_value_dim { 7.85cm }
+    \dim_set:Nn \l__nwpu_chs_inner_title_value_dim
+        { \l__nwpu_chs_inner_title_value_min_width_dim }
     \settowidth{\l__nwpu_chs_inner_title_line_dim}{\sErhao\nwpu@chs@coverTitleLineA}
     \dim_compare:nNnT \l__nwpu_chs_inner_title_line_dim > \l__nwpu_chs_inner_title_value_dim
         { \dim_set:Nn \l__nwpu_chs_inner_title_value_dim { \l__nwpu_chs_inner_title_line_dim } }
     \settowidth{\l__nwpu_chs_inner_title_line_dim}{\sErhao\nwpu@chs@coverTitleLineB}
     \dim_compare:nNnT \l__nwpu_chs_inner_title_line_dim > \l__nwpu_chs_inner_title_value_dim
         { \dim_set:Nn \l__nwpu_chs_inner_title_value_dim { \l__nwpu_chs_inner_title_line_dim } }
-    \dim_set:Nn \l__nwpu_chs_inner_info_value_dim { 4.34cm }
+    \dim_set:Nn \l__nwpu_chs_inner_info_value_dim
+        { \l__nwpu_chs_inner_info_value_min_width_dim }
     \dim_compare:nNnT \l__nwpu_major_dim > \l__nwpu_chs_inner_info_value_dim
         { \dim_set:Nn \l__nwpu_chs_inner_info_value_dim { \l__nwpu_major_dim } }
     \dim_compare:nNnT \l__nwpu_maxname_dim > \l__nwpu_chs_inner_info_value_dim
@@ -183,18 +310,18 @@
     \begin{titlepage}                                       %
         \linespread{1.4}\selectfont                         %
         \begin{center}                                      %
-            \fSong \sSanhao \par \vspace*{1\baselineskip}   %
-            \makebox[1.41667\l__nwpu_chstitle_hwidtha_dim][s]{\sSanhao\nwpu@chs@schoolname} \par
-            \vspace*{5mm}                                   %
-            \makebox[1.41667\l__nwpu_chstitle_hwidthb_dim][s]{\sYihao\nwpu@chs@doctitle} \par
-            \vspace*{5mm}                                   %
-            \sSihao \par \vspace{6\baselineskip}            % 6 * 21pt * 1.5
+            \fSong \sSanhao \par \vspace*{\__nwpu_chs_inner_top_skip:}%
+            \makebox[\__nwpu_chs_inner_school_title_stretch:\l__nwpu_chstitle_hwidtha_dim][s]{\sSanhao\nwpu@chs@schoolname} \par
+            \vspace*{\__nwpu_chs_inner_after_school_skip:}  %
+            \makebox[\__nwpu_chs_inner_school_title_stretch:\l__nwpu_chstitle_hwidthb_dim][s]{\sYihao\nwpu@chs@doctitle} \par
+            \vspace*{\__nwpu_chs_inner_after_doc_title_skip:}%
+            \sSihao \par \vspace{\__nwpu_chs_inner_before_title_skip:}%
             \fSong \sErhao                                  % 排版标题
             \__nwpu_chs_inner_title: \fSong \sWuhao \par    % 排版结束
-            \vspace{6\baselineskip}                         % 7 * 10.5pt * 1.5
+            \vspace{\__nwpu_chs_inner_after_title_skip:}     %
             \sSanhao \__nwpu_chs_inner_info: \\
             \fSong \sWuhao \par                             %
-            \vspace{2\baselineskip}                         % 2 * 10.5pt * 1.5
+            \vspace{\__nwpu_chs_inner_after_info_skip:}      %
             \fSong \sSanhao \nwpu@chs@date                  %
         \end{center}                                        %
     \end{titlepage} \fSong \normalsize \newpage \clearpage  %
@@ -206,21 +333,21 @@
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
         \begin{center}                                      %
-            \fSong \sErhao \par \vspace*{3\baselineskip}    %
+            \fSong \sErhao \par \vspace*{\__nwpu_eng_inner_top_skip:}%
             \fEng \sErhao \textbf{Title:}~\sSanhao \nwpu@eng@title \par     %
-            \fSong \sXiaoer \vspace{3\baselineskip}         %
+            \fSong \sXiaoer \vspace{\__nwpu_eng_inner_after_title_skip:}%
             \fEng \sXiaosan \textbf{By} \par                %
             \fEng \sXiaosan \nwpu@eng@author \par  %
             \fEng \sXiaosan \textbf{Under~the~Supervision~of~\nwpu@eng@advisorAcademicRank} \\
             \fEng \sXiaosan \nwpu@eng@advisor \par %
-            \fSong \sSanhao \vspace{4\baselineskip}         %
+            \fSong \sSanhao \vspace{\__nwpu_eng_inner_after_advisor_skip:}%
             \fEng \sXiaosan A~Dissertation~Submitted~to \\  %
             \fEng \sXiaosan {\nwpu@eng@schoolname} \\       %
-            \fSong \sSanhao \vspace{1\baselineskip}         %
+            \fSong \sSanhao \vspace{\__nwpu_eng_inner_before_degree_skip:}%
             \fEng \sXiaosan {In~Partial~Fulfillment~of~The~Requirement} \\
             \fEng \sXiaosan {For~The~Degree~of} \\                      %
             \fEng \sXiaosan {{\nwpu@eng@degree}~of~\nwpu_if_master:TF{\nwpu@eng@major}{\textbf{\nwpu@eng@major}}}
-            \fSong \sXiaosan \par \vspace{4\baselineskip}   %
+            \fSong \sXiaosan \par \vspace{\__nwpu_eng_inner_after_degree_skip:}%
             \fEng \sXiaosan Xi'an,~P.R.~China \\            %
             \fEng \sXiaosan {\nwpu@eng@date}                %
         \end{center}                                        %
@@ -234,23 +361,23 @@
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
         \begin{center}                                      %
-            \vspace*{2.3cm}                                 %
-            \includegraphics[width=10cm]{nwpulogo.png}%
-            \vskip 1.3cm                                    %
+            \vspace*{\__nwpu_bachelor_top_skip:}            %
+            \includegraphics[width=\l__nwpu_bachelor_logo_width_dim]{nwpulogo.png}%
+            \vskip \__nwpu_bachelor_after_logo_skip:        %
             \sChuhao\fSong {\bfseries 本科毕业设计（论文）}   %
-            \vskip 3.5cm                                    %
+            \vskip \__nwpu_bachelor_after_doc_title_skip:   %
                 {                                               %
-                    \sSanhao\fHei 题~~目 \hspace{0.2cm}\coverunderline[8cm]{\nwpu@chs@title} %
+                    \sSanhao\fHei 题~~目 \hspace{\l__nwpu_bachelor_title_gap_dim}\coverunderline[\l__nwpu_bachelor_title_underline_width_dim]{\nwpu@chs@title} %
                 }                                               %
-            \vskip 1.5cm                                    %
+            \vskip \__nwpu_bachelor_after_title_skip:       %
                 {                                               %
-                    \sSihao\fSong 专业名称\coverunderline[5.5cm]{\nwpu@chs@major} %
-                    \vskip 1.1cm                                %
-                    \sSihao\fSong 学生姓名\coverunderline[5.5cm]{\nwpu@chs@author} %
-                    \vskip 1.1cm                                %
-                    \sSihao\fSong 指导教师\coverunderline[5.5cm]{\nwpu@chs@advisor} %
-                    \vskip 1.1cm                                %
-                    \sSihao\fSong 毕业时间\coverunderline[5.5cm]{\nwpu@chs@date} %
+                    \sSihao\fSong 专业名称\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@major} %
+                    \vskip \__nwpu_bachelor_info_row_skip:      %
+                    \sSihao\fSong 学生姓名\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@author} %
+                    \vskip \__nwpu_bachelor_info_row_skip:      %
+                    \sSihao\fSong 指导教师\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@advisor} %
+                    \vskip \__nwpu_bachelor_info_row_skip:      %
+                    \sSihao\fSong 毕业时间\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@date} %
                     \vfill                                      %
                 }                                               %
         \end{center}                                        %
@@ -282,7 +409,7 @@
         \clearpage
         \thispagestyle{empty}
         \begin{tikzpicture}[remember picture,overlay]
-            \node[at=(current page.center),inner sep=0pt] {
+            \node[at=(current page.center),inner sep=\l__nwpu_cover_background_inner_sep_dim] {
                 \nwpu_if_phd:TF {
                     \includegraphics[width=\paperwidth,height=\paperheight]{backcover-phd.jpg}
                 } {
@@ -324,7 +451,7 @@
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
         \linespread{1.2} \sXiaosan \par                     % 1.2 倍行距
-        \vspace{1\baselineskip}                             % 1 * 22pt * 1.2
+        \vspace{\__nwpu_committee_top_skip:}                %
         \begin{center}                                      %
             \fHei \sSanhao {学位论文评阅人和答辩委员会名单} \par
             #1\relax                                        %
@@ -333,27 +460,34 @@
     \thispagestyle{empty} \cleardoublepage}                 %
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \reviewers #1 {                                 %
-    \fSong \sDefault \vspace{\baselineskip}                 %
-    \fSong \sSihao \vspace{0.3\baselineskip}                %
-    \fHei \sSihao {学位论文评阅人名单} \par                 %
-    \fSong \sSihao \vspace{0.3\baselineskip}                %
-    \setlength{\tabcolsep}{2pt}                             %
-    \begin{tabular}{O{3.71cm}O{2.83cm}O{8.73cm}}  %
+    \par \fSong \sDefault \vspace{\__nwpu_committee_before_reviewers_skip:}%
+    \fSong \sSihao \vspace{\__nwpu_committee_reviewers_title_before_skip:}%
+    \makebox[\linewidth][c]{\fHei \sSihao 学位论文评阅人名单} \par%
+    \fSong \sSihao \vspace{\__nwpu_committee_reviewers_table_before_skip:}%
+    \begin{tabular}{
+        O{\l__nwpu_committee_review_name_width_dim}
+        O{\l__nwpu_committee_review_rank_width_dim}
+        O{\l__nwpu_committee_review_org_width_dim}
+      }  %
         \sDefault \expert{\textbf{姓名}}{\textbf{职称}}{\textbf{工作单位}}
         #1\relax                                            %
-    \end{tabular}}                                         %
+    \end{tabular}\par}                                     %
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \committee #1 #2 {                                 %
-    \fSong \sDefault \vspace{\baselineskip}                 %
-    \fSong \sSihao \vspace{0.3\baselineskip}                %
-    \fHei \sSihao {答辩委员会名单} \par                     %
-    \fSong \sSihao \vspace{-0.9\baselineskip}                %
-    \setlength{\tabcolsep}{2pt}                             %
-    \begin{tabular}{O{3.76cm}O{2.68cm}O{2.25cm}O{6.75cm}}
+    \par \fSong \sDefault \vspace{\__nwpu_committee_before_defense_skip:}%
+    \fSong \sSihao \vspace{\__nwpu_committee_defense_title_before_skip:}%
+    \makebox[\linewidth][c]{\fHei \sSihao 答辩委员会名单} \par%
+    \fSong \sSihao \vspace{\__nwpu_committee_defense_table_before_skip:}%
+    \begin{tabular}{
+        O{\l__nwpu_committee_role_width_dim}
+        O{\l__nwpu_committee_name_width_dim}
+        O{\l__nwpu_committee_rank_width_dim}
+        O{\l__nwpu_committee_org_width_dim}
+      }
         \defenseDate{#1} \sDefault\textbf{答辩委员会} & %   %
         \expert{\textbf{姓名}}{\textbf{职称}}{\textbf{工作单位}}
         #2\relax                                            %
-    \end{tabular}}                                         %
+    \end{tabular}\par}                                     %
 %%=============================================================================%
 
 \ExplSyntaxOff
