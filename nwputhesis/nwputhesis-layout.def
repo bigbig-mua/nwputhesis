@@ -78,37 +78,37 @@
 \nwpu_if_bachelor:TF                                        % 本科论文目录章节格式
 {
     \cs_new:Npn \nwpu@bcl@chaptercname #1 { 第 \CJKnumber{#1} 章 }% 本科目录章节中文标题
-    \titlecontents{section}[\nwpuTocSectionIndent]{\nwpuTOCFont\nwpuTOCFontSize}%
+    \titlecontents{section}[\nwpuTocSectionIndent]{\nwpuTOCEntryFont}%
     {\contentslabel{\nwpuTocSectionLabelWidth}}{}%
     {\titlerule*[\nwpuGraduateTocDotSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
-    \titlecontents{subsection}[\nwpuTocSubsectionIndent]{\nwpuTOCFont\nwpuTOCFontSize}%
+    \titlecontents{subsection}[\nwpuTocSubsectionIndent]{\nwpuTOCEntryFont}%
     {\contentslabel{\nwpuTocSubsectionLabelWidth}}{}%
     {\titlerule*[\nwpuGraduateTocDotSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
-    \titlecontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\nwpuTOCFont\nwpuTOCFontSize}%
+    \titlecontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\nwpuTOCEntryFont}%
     {\contentslabel{\nwpuTocSubsubsectionLabelWidth}}{}%
     {\titlerule*[\nwpuGraduateTocDotSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
-    \titlecontents{chapter}[0pt]{\nwpuTOCFontSize\nwpuTOCFont\vspace{\nwpuTocChapterBeforeSkip}}%
-    {\contentsmargin{1em}\nwpuTOCFontSize\nwpuTOCFont\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{\nwpuBachelorTocChapterLabelOffset}}%
-    {\contentsmargin{1em}\nwpuTOCFontSize\nwpuTOCFont\bfseries}%
-    {\nwpuTOCFontSize\normalfont\titlerule*[\nwpuTocLeaderSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]
+    \titlecontents{chapter}[0pt]{\nwpuTOCEntryFont\vspace{\nwpuTocChapterBeforeSkip}}%
+    {\contentsmargin{1em}\nwpuTOCEntryFont\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{\nwpuBachelorTocChapterLabelOffset}}%
+    {\contentsmargin{1em}\nwpuTOCEntryFont\bfseries}%
+    {\nwpuTOCEntryFont\normalfont\titlerule*[\nwpuTocLeaderSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]
 }
 {
-    \dottedcontents{section}[\nwpuTocSectionIndent]{\nwpuTOCFont\nwpuTOCFontSize}{\nwpuTocSectionLabelWidth}{\nwpuGraduateTocDotSep}   %
-    \dottedcontents{subsection}[\nwpuTocSubsectionIndent]{\nwpuTOCFont\nwpuTOCFontSize}{\nwpuTocSubsectionLabelWidth}{\nwpuGraduateTocDotSep}%
-    \dottedcontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\nwpuTOCFont\nwpuTOCFontSize}{\nwpuTocSubsubsectionLabelWidth}{\nwpuGraduateTocDotSep}
+    \dottedcontents{section}[\nwpuTocSectionIndent]{\nwpuTOCEntryFont}{\nwpuTocSectionLabelWidth}{\nwpuGraduateTocDotSep}   %
+    \dottedcontents{subsection}[\nwpuTocSubsectionIndent]{\nwpuTOCEntryFont}{\nwpuTocSubsectionLabelWidth}{\nwpuGraduateTocDotSep}%
+    \dottedcontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\nwpuTOCEntryFont}{\nwpuTocSubsubsectionLabelWidth}{\nwpuGraduateTocDotSep}
     \nwpu_if_chinese:TF                                      % 硕博中文本地化显示
     {
-        \titlecontents{chapter}[0pt]{\nwpuTOCFont\nwpuTOCFontSize}{\contentsmargin{1em}\nwpuTOCFont\nwpuTOCFontSize\makebox[0pt  %
+        \titlecontents{chapter}[0pt]{\nwpuTOCEntryFont}{\contentsmargin{1em}\nwpuTOCEntryFont\makebox[0pt  %
             ][l]{\nwpu@chs@chaptercname{\thecontentslabel}}\hspace{%
-                \nwpuGraduateTocChapterLabelOffset}}{\contentsmargin{1em}\nwpuTOCFont\nwpuTOCFontSize}{\titlerule*[%
+                \nwpuGraduateTocChapterLabelOffset}}{\contentsmargin{1em}\nwpuTOCEntryFont}{\titlerule*[%
                 \nwpuTocLeaderSep]{.}\contentspage}[\vspace{0em}]            %
     }
     {                                                           % 硕博英文
         \dim_new:N \l__nwpu_contents_title_dim
-        \settowidth{\l__nwpu_contents_title_dim}{\nwpuTOCFontSize Chapter~000} %
-        \titlecontents{chapter}[0pt]{\nwpuTOCFont\nwpuTOCFontSize}{\contentsmargin{1em}\nwpuTOCFont\nwpuTOCFontSize\makebox[0pt  %
+        \settowidth{\l__nwpu_contents_title_dim}{\nwpuTOCEntryFont Chapter~000} %
+        \titlecontents{chapter}[0pt]{\nwpuTOCEntryFont}{\contentsmargin{1em}\nwpuTOCEntryFont\makebox[0pt  %
             ][l]{\nwpu@eng@chaptercname{\thecontentslabel}}\hspace{%
-                \l__nwpu_contents_title_dim}}{\contentsmargin{1em}\nwpuTOCFont\nwpuTOCFontSize}{
+                \l__nwpu_contents_title_dim}}{\contentsmargin{1em}\nwpuTOCEntryFont}{
             \titlerule*[\nwpuTocLeaderSep]{.}\contentspage}[\vspace{0em}]    %
     }
 }
@@ -183,23 +183,20 @@
 \RequirePackage{longtable}                                  % 长表格（跨页表格）
 \RequirePackage{booktabs}                                   % 三线表
 \RequirePackage{tabularx}                                   % 定宽表格
-\DeclareCaptionFont{cWuhao}{\nwpuCaptionSize}                % 图表标题为五号
-\DeclareCaptionFont{cGradFigureCaption}{\nwpuGraduateFigureCaptionFont} % 研究生图题
-\DeclareCaptionFont{cBclTableCaption}{\nwpuBachelorTableCaptionFont}    % 本科表题
-\DeclareCaptionFont{cBclFigureCaption}{\nwpuBachelorFigureCaptionFont}  % 本科图题
+\DeclareCaptionFont{nwpuTableCaption}{\nwpuTableCaptionFont}
+\DeclareCaptionFont{nwpuFigureCaption}{\nwpuFigureCaptionFont}
+\DeclareCaptionFont{nwpuSubcaption}{\nwpuCaptionSize}
 \nwpu_if_bachelor:TF
 {
     \setlength{\textfloatsep}{\nwpuTextFloatSep}              %
     \setlength{\floatsep}{\nwpuFloatSep}                      %
     \setlength{\intextsep}{\nwpuInTextSep}                    %
     \captionsetup[table]{%
-        labelfont=cBclTableCaption,
-        textfont=cBclTableCaption,
+        font=nwpuTableCaption,
         aboveskip=\nwpuBachelorCaptionAboveSkip,
         belowskip=\nwpuBachelorCaptionBelowSkip}
     \captionsetup[figure]{%
-        labelfont=cBclFigureCaption,
-        textfont=cBclFigureCaption,
+        font=nwpuFigureCaption,
         aboveskip=\nwpuBachelorCaptionAboveSkip,
         belowskip=\nwpuBachelorCaptionBelowSkip}
     \captionsetup[subfigure]{labelformat=simple, aboveskip=\nwpuCaptionAboveSkip, belowskip=\nwpuSubcaptionBelowSkip}
@@ -208,12 +205,11 @@
     \setlength{\textfloatsep}{\nwpuTextFloatSep}              %
     \setlength{\floatsep}{\nwpuFloatSep}                      %
     \setlength{\intextsep}{\nwpuInTextSep}                    %
-    \captionsetup[table]{labelfont=cWuhao, textfont=cWuhao, aboveskip=\nwpuCaptionAboveSkip, belowskip=\nwpuCaptionBelowSkip}
-    \captionsetup[figure]{labelfont=cGradFigureCaption, textfont=cGradFigureCaption, aboveskip=\nwpuCaptionAboveSkip, belowskip=\nwpuCaptionBelowSkip}
+    \captionsetup[table]{font=nwpuTableCaption, aboveskip=\nwpuCaptionAboveSkip, belowskip=\nwpuCaptionBelowSkip}
+    \captionsetup[figure]{font=nwpuFigureCaption, aboveskip=\nwpuCaptionAboveSkip, belowskip=\nwpuCaptionBelowSkip}
     \captionsetup[subfigure]{%
         labelformat=simple,
-        labelfont=cWuhao,
-        textfont=cWuhao,
+        font=nwpuSubcaption,
         aboveskip=\nwpuCaptionAboveSkip,
         belowskip=\nwpuCaptionBelowSkip}
 }
@@ -248,30 +244,6 @@
 \dim_set:Nn \tabcolsep { \nwpuTableColumnSep }               % 表格列内边距
 \dim_set:Nn \heavyrulewidth { \nwpuHeavyRuleWidth }          % 表格上下线宽
 \dim_set:Nn \lightrulewidth { \nwpuLightRuleWidth }          % 表格中线宽
-%%-----------------------------------------------------------------------------%
-\RequirePackage{listings}                                   % 添加插入代码控制
-\lstset{                                                    % 代码样式
-    basicstyle=\color[HTML]{000000}\small\ttfamily,         % 等宽字体 10pt 字号
-    numbers=left,                                           % 左侧加入行号
-    numberstyle=\tiny,                                      % 行号 6pt 字号
-    numbersep=\nwpuListingNumberSep,                        % 行号与代码间隔
-    tabsize=4,                                              % 制表符大小
-    extendedchars=true,                                     % 拓展字符集显示汉字
-    breaklines=true,                                        % 允许自动换行
-    keywordstyle=\color[HTML]{0000FF}\bfseries,             % 关键字样式
-    numberstyle=\color[HTML]{ff8000},                       % 数字样式
-    commentstyle=\color[HTML]{008000}\bfseries,             % 注释样式
-    stringstyle=\color[HTML]{A31515}\ttfamily,              % 字符串样式
-    showspaces=false,                                       % 不显示空格字符
-    showtabs=false,                                         % 不显示制表符
-    frame=shadowbox,                                        % 添加阴影边框
-    framexrightmargin=\nwpuListingFrameRightMargin,         % 边框右边缩进
-    framexbottommargin=\nwpuListingFrameBottomMargin,       % 边框底端缩进
-    rulesepcolor=\color[HTML]{C0C0C0},                      % 边框颜色
-    showstringspaces=false,                                 % 显示字符串内空格
-    escapeinside=`',                                        % 逃逸字符以显示公式
-}                                                           %
-\lstloadlanguages{C++, Java, Python, Matlab, R, Mathematica}% 默认加载常用语言
 %%-----------------------------------------------------------------------------%
 \RequirePackage{algorithm}                                  % 算法流程
 \cs_set_protected:Npn \fs@ruled {                           %

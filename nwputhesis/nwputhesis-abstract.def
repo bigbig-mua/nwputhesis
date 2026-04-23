@@ -77,7 +77,7 @@
       {                                                         % 硕博论文英文摘要格式
         \cs_set_protected:Npn \ensep {\unskip\!; ~\ignorespaces}% 硕博：分号+空格
         \nwpuBodyFont                                           %
-        \chapter[ABSTRACT]{\selectfont\rmfamily\fEng\textbf{Abstract}}%
+        \chapter[ABSTRACT]{\nwpuEngAbstractTitleFont Abstract}%
         \markboth{Abstract}{ABSTRACT}                           %
       }
   }
