@@ -28,7 +28,11 @@
 \cs_new:Npn \nwpuLineHeightXiaosan { 22pt }                 % 小三默认基线距
 \cs_new:Npn \nwpuLineHeightSihao { 21pt }                   % 四号默认基线距
 \cs_new:Npn \nwpuLineHeightXiaosi { 14.4pt }                % 小四默认基线距
-\cs_new:Npn \nwpuLineHeightBody { 20pt }                    % 正文小四基线距
+\cs_new:Npn \nwpuBachelorLineHeight { 20pt }                % 本科正文体系统一基线距
+\cs_new:Npn \nwpuGraduateLineHeight { 20pt }                % 研究生正文体系统一基线距
+\nwpu_if_bachelor:TF
+  { \cs_new:Npn \nwpuLineHeightBody { \nwpuBachelorLineHeight } } % 本科正文小四基线距
+  { \cs_new:Npn \nwpuLineHeightBody { \nwpuGraduateLineHeight } } % 研究生正文小四基线距
 \cs_new:Npn \nwpuLineHeightWuhao { 10.5pt }                 % 五号默认基线距
 \cs_new:Npn \nwpuLineHeightXiaowu { 9pt }                   % 小五默认基线距
 
@@ -49,18 +53,32 @@
 %% 将字号映射到格式规范中的角色。学校改字号要求时，修改这里的映射。
 %%-------------------------------------------------------------------------
 %% 章节标题
-\cs_new_protected:Npn \nwpuChapterSize { \fontsize{\nwpuFontPointSanhao}{\nwpuLineHeightSanhao}\selectfont } % 一级标题（章）
-\cs_new_protected:Npn \nwpuSectionSize { \fontsize{\nwpuFontPointSihao}{\nwpuLineHeightSihao}\selectfont }   % 二级标题（节）
-\cs_new_protected:Npn \nwpuSubsectionSize { \fontsize{\nwpuFontPointXiaosi}{\nwpuLineHeightXiaosi}\selectfont } % 三级标题（小四）
+\nwpu_if_bachelor:TF
+  {
+    \cs_new_protected:Npn \nwpuChapterSize { \fontsize{\nwpuFontPointSanhao}{\nwpuBachelorLineHeight}\selectfont } % 本科一级标题（章）
+    \cs_new_protected:Npn \nwpuSectionSize { \fontsize{\nwpuFontPointSihao}{\nwpuBachelorLineHeight}\selectfont } % 本科二级标题（节）
+    \cs_new_protected:Npn \nwpuSubsectionSize { \fontsize{\nwpuFontPointXiaosi}{\nwpuBachelorLineHeight}\selectfont } % 本科三级标题（小四）
+  }
+  {
+    \cs_new_protected:Npn \nwpuChapterSize { \fontsize{\nwpuFontPointSanhao}{\nwpuGraduateLineHeight}\selectfont } % 研究生一级标题（章）
+    \cs_new_protected:Npn \nwpuSectionSize { \fontsize{\nwpuFontPointSihao}{\nwpuGraduateLineHeight}\selectfont } % 研究生二级标题（节）
+    \cs_new_protected:Npn \nwpuSubsectionSize { \fontsize{\nwpuFontPointXiaosi}{\nwpuGraduateLineHeight}\selectfont } % 研究生三级标题（小四）
+  }
 
 %% 图表标题
-\cs_new_protected:Npn \nwpuCaptionSize { \fontsize{\nwpuFontPointWuhao}{\nwpuLineHeightWuhao}\selectfont } % 图表标题字号
+\nwpu_if_bachelor:TF
+  { \cs_new_protected:Npn \nwpuCaptionSize { \fontsize{\nwpuFontPointWuhao}{\nwpuBachelorLineHeight}\selectfont } } % 本科图表标题字号
+  { \cs_new_protected:Npn \nwpuCaptionSize { \fontsize{\nwpuFontPointWuhao}{\nwpuGraduateLineHeight}\selectfont } } % 研究生图表标题字号
 
 %% 页眉页脚
-\cs_new_protected:Npn \nwpuHeaderFooterSize { \fontsize{\nwpuFontPointXiaowu}{\nwpuLineHeightXiaowu}\selectfont } % 页眉页脚字号
+\nwpu_if_bachelor:TF
+  { \cs_new_protected:Npn \nwpuHeaderFooterSize { \fontsize{\nwpuFontPointXiaowu}{\nwpuBachelorLineHeight}\selectfont } } % 本科页眉页脚字号
+  { \cs_new_protected:Npn \nwpuHeaderFooterSize { \fontsize{\nwpuFontPointXiaowu}{\nwpuGraduateLineHeight}\selectfont } } % 研究生页眉页脚字号
 
 %% 目录条目
-\cs_new:Npn \nwpuTOCLineHeight { 19pt }                     % 目录条目基线距
+\nwpu_if_bachelor:TF
+  { \cs_new:Npn \nwpuTOCLineHeight { \nwpuBachelorLineHeight } } % 本科目录条目基线距
+  { \cs_new:Npn \nwpuTOCLineHeight { \nwpuGraduateLineHeight } } % 研究生目录条目基线距
 \cs_new_protected:Npn \nwpuTOCFontSize { \fontsize{\nwpuFontPointXiaosi}{\nwpuTOCLineHeight}\selectfont } % 目录条目字号与行距
 
 %%=== 正文格式 ===========================================================
@@ -69,10 +87,10 @@
 
 %%=== 页面边距 ===========================================================
 \nwpu_if_bachelor:TF {
-  \cs_new:Npn \nwpuMarginLeft     { 1.25in }                % 本科左页边距
-  \cs_new:Npn \nwpuMarginRight    { 1.25in }                % 本科右页边距
-  \cs_new:Npn \nwpuMarginTop      { 1in }                   % 本科上页边距
-  \cs_new:Npn \nwpuMarginBottom   { 1in }                   % 本科下页边距
+  \cs_new:Npn \nwpuMarginLeft     { 3.18cm }                % 本科左页边距
+  \cs_new:Npn \nwpuMarginRight    { 3.18cm }                % 本科右页边距
+  \cs_new:Npn \nwpuMarginTop      { 2.54cm }                % 本科上页边距
+  \cs_new:Npn \nwpuMarginBottom   { 2.54cm }                % 本科下页边距
   \cs_new:Npn \nwpuHeadHeight     { 0.93cm }                % 本科页眉高度
   \cs_new:Npn \nwpuHeadSep        { 0.4cm }                 % 本科页眉到正文距离
   \cs_new:Npn \nwpuFootSkip       { 0.79cm }                % 本科正文到底部页脚基线距离
@@ -87,9 +105,7 @@
 }
 
 %%=== 段落格式 ===========================================================
-\nwpu_if_bachelor:TF
-  { \cs_new:Npn \nwpuParIndent { 26pt } }                   % 本科段首缩进
-  { \cs_new:Npn \nwpuParIndent { 24pt } }                   % 研究生段首缩进
+\cs_new:Npn \nwpuParIndent { 24pt }                         % 段首缩进
 \cs_new:Npn \nwpuParSkip { 0pt }                            % 段间距
 
 %%=== 章节标题间距 =======================================================
@@ -220,10 +236,10 @@
 \cs_new:Npn \nwpuCommitteeDefenseTableBeforeSkip { 7.56pt } % 答辩委员会表格前距
 
 %%=== 评阅人与答辩委员会页字体 ===========================================
-\cs_new_protected:Npn \nwpuCommitteePageFont { \fontsize{\nwpuFontPointXiaosan}{\nwpuLineHeightXiaosan}\selectfont } % 评阅人与答辩委员会页基础字号
-\cs_new_protected:Npn \nwpuCommitteeMainTitleFont { \fHei \fontsize{\nwpuFontPointSanhao}{\nwpuLineHeightSanhao}\selectfont } % 评阅人与答辩委员会页主标题字体
-\cs_new_protected:Npn \nwpuCommitteeBodyFont { \fSong \fontsize{\nwpuFontPointXiaosi}{\nwpuLineHeightBody}\selectfont } % 评阅人与答辩委员会表格内容字体
-\cs_new_protected:Npn \nwpuCommitteeSectionTitleFont { \fHei \fontsize{\nwpuFontPointSihao}{\nwpuLineHeightSihao}\selectfont } % 评阅人/答辩委员会小标题字体
+\cs_new_protected:Npn \nwpuCommitteePageFont { \fontsize{\nwpuFontPointXiaosan}{\nwpuGraduateLineHeight}\selectfont } % 评阅人与答辩委员会页基础字号
+\cs_new_protected:Npn \nwpuCommitteeMainTitleFont { \fHei \fontsize{\nwpuFontPointSanhao}{\nwpuGraduateLineHeight}\selectfont } % 评阅人与答辩委员会页主标题字体
+\cs_new_protected:Npn \nwpuCommitteeBodyFont { \fSong \fontsize{\nwpuFontPointXiaosi}{\nwpuGraduateLineHeight}\selectfont } % 评阅人与答辩委员会表格内容字体
+\cs_new_protected:Npn \nwpuCommitteeSectionTitleFont { \fHei \fontsize{\nwpuFontPointSihao}{\nwpuGraduateLineHeight}\selectfont } % 评阅人/答辩委员会小标题字体
 
 %%=== 下划线、标题、目录、页眉与题注 =====================================
 \cs_new:Npn \nwpuUnderlineDefaultWidth { 5cm }              % 通用下划线默认宽度
@@ -255,9 +271,9 @@
 \cs_new:Npn \nwpuBachelorHeaderRuleWidth { 0.8pt }          % 本科页眉线宽度
 \cs_new:Npn \nwpuBachelorHeaderLogoScale { 0.15 }           % 本科页眉校徽缩放比例
 \cs_new:Npn \nwpuHeaderRaise { 0.5pt }                      % 研究生页眉文字垂直抬升
-\cs_new:Npn \nwpuGraduateFigureCaptionLineHeight { 9.5pt }  % 研究生图题基线距
-\cs_new:Npn \nwpuBachelorTableCaptionLineHeight { 14pt }    % 本科表题基线距
-\cs_new:Npn \nwpuBachelorFigureCaptionLineHeight { 11.5pt } % 本科图题基线距
+\cs_new:Npn \nwpuGraduateFigureCaptionLineHeight { \nwpuGraduateLineHeight } % 研究生图题基线距
+\cs_new:Npn \nwpuBachelorTableCaptionLineHeight { \nwpuBachelorLineHeight } % 本科表题基线距
+\cs_new:Npn \nwpuBachelorFigureCaptionLineHeight { \nwpuBachelorLineHeight } % 本科图题基线距
 \cs_new_protected:Npn \nwpuGraduateFigureCaptionFont { \fontsize{\nwpuFontPointWuhao}{\nwpuGraduateFigureCaptionLineHeight}\selectfont } % 研究生图题字号与行距
 \cs_new_protected:Npn \nwpuBachelorTableCaptionFont { \fontsize{\nwpuFontPointWuhao}{\nwpuBachelorTableCaptionLineHeight}\selectfont\bfseries } % 本科表题字号与字重
 \cs_new_protected:Npn \nwpuBachelorFigureCaptionFont { \fontsize{\nwpuFontPointWuhao}{\nwpuBachelorFigureCaptionLineHeight}\selectfont\fSong } % 本科图题字号与字体
@@ -268,15 +284,16 @@
 \cs_new:Npn \nwpuSubcaptionBelowSkip { -5pt }               % 子图/子表标题下方间距
 
 %%=== 摘要、目录页与后置页格式 ===========================================
-\cs_new:Npn \nwpuBachelorAbstractChsLineSpread { 1.345 }    % 本科中文摘要行距倍率
-\cs_new:Npn \nwpuBachelorAbstractEngLineSpread { 1.2 }      % 本科英文摘要行距倍率
-\cs_new_protected:Npn \nwpuBachelorAbstractFont { \fontsize{\nwpuFontPointXiaosi}{\nwpuLineHeightXiaosi}\selectfont } % 本科摘要正文字号
-\cs_new_protected:Npn \nwpuFundingFont { \fontsize{\nwpuFontPointWuhao}{\nwpuLineHeightWuhao}\selectfont } % 摘要页基金项目字号
-\cs_new_protected:Npn \nwpuEquationVariablesFont { \fontsize{\nwpuFontPointWuhao}{\nwpuLineHeightWuhao}\selectfont } % 公式变量说明字号
+\cs_new_protected:Npn \nwpuBachelorAbstractFont { \fontsize{\nwpuFontPointXiaosi}{\nwpuBachelorLineHeight}\selectfont } % 本科摘要正文字号
+\nwpu_if_bachelor:TF
+  { \cs_new_protected:Npn \nwpuFundingFont { \fontsize{\nwpuFontPointWuhao}{\nwpuBachelorLineHeight}\selectfont } } % 本科摘要页基金项目字号
+  { \cs_new_protected:Npn \nwpuFundingFont { \fontsize{\nwpuFontPointWuhao}{\nwpuGraduateLineHeight}\selectfont } } % 研究生摘要页基金项目字号
+\nwpu_if_bachelor:TF
+  { \cs_new_protected:Npn \nwpuEquationVariablesFont { \fontsize{\nwpuFontPointWuhao}{\nwpuBachelorLineHeight}\selectfont } } % 本科公式变量说明字号
+  { \cs_new_protected:Npn \nwpuEquationVariablesFont { \fontsize{\nwpuFontPointWuhao}{\nwpuGraduateLineHeight}\selectfont } } % 研究生公式变量说明字号
 \cs_new_protected:Npn \nwpuDesignSummaryFont { \fontsize{\nwpuFontPointXiaosi}{\nwpuLineHeightBody}\selectfont } % 本科毕业设计小结正文字号
 \cs_new:Npn \nwpuKeywordBeforeSkip { 1\baselineskip }       % 关键词区域前距
 \cs_new:Npn \nwpuTocHfuzz { 2pt }                           % 目录页容忍的水平溢出
-\cs_new:Npn \nwpuDesignSummaryLineSpread { 1.0 }            % 本科毕业设计小结行距倍率
 
 %%=== 参考文献格式 =======================================================
 \cs_new:Npn \nwpuBibLabelSep { 0pt }                        % 参考文献编号标签间距

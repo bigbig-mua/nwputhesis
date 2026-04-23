@@ -9,8 +9,7 @@
     \setcounter{page}{1}                                        % 页码从 1 开始
     \nwpu_if_bachelor:TF                                        % 本科论文摘要格式
       {
-        \linespread{\nwpuBachelorAbstractChsLineSpread}\selectfont % 行距
-        \nwpuBachelorAbstractFont                               % 小四，1.2倍行距
+        \nwpuBachelorAbstractFont                               % 小四，20pt 基线距
         \cs_set_protected:Npn \sep {\unskip，\ignorespaces}     % 本科：逗号
         \nwpu@apply@abstract@chs@format
         \chapter*{摘~~要}                                        %
@@ -69,8 +68,7 @@
   {
     \nwpu_if_bachelor:TF                                        % 本科论文英文摘要格式
       {
-        \linespread{\nwpuBachelorAbstractEngLineSpread}\selectfont % 行距
-        \nwpuBachelorAbstractFont                               % 小四
+        \nwpuBachelorAbstractFont                               % 小四，20pt 基线距
         \cs_set_protected:Npn \ensep {\unskip, ~\ignorespaces}  % 本科：逗号+空格
         \nwpu@apply@abstract@eng@format
         \chapter*{ABSTRACT}                                     %
