@@ -259,7 +259,7 @@
     {\endgroup}
     {\nwpu@bibitemcmd}
 \AtBeginBibliography{                                        %
-    \graduatebodyfont                                       %
+    \nwpuBodyFont                                           %
     \setlength{\bibitemsep}{\nwpuBibItemSep}                %
     \setlength{\bibhang}{\nwpuBibHang}                      %
 }                                                           %

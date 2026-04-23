@@ -9,13 +9,12 @@
 \linespread{\nwpuBodyLineSpread}                            % 行距
 %%-----------------------------------------------------------------------------%
 \RequirePackage{ulem}                                       % 下划线
-\NewDocumentCommand \dlmu@underline { O{\nwpuUnderlineDefaultWidth} m }
+\NewDocumentCommand \coverunderline { O{\nwpuUnderlineDefaultWidth} m }
     {
       \hspace{\nwpuUnderlineLeftSpace}
       \underline{ \hb@xt@ #1 { \hss #2 \hss } }
       \hspace{\nwpuUnderlineRightSpace}
     }
-\cs_set_eq:NN \coverunderline \dlmu@underline
 %%-----------------------------------------------------------------------------%
 \RequirePackage[sf]{titlesec}                               % 章节标题格式
 \RequirePackage{titletoc}                                   % 目录格式
@@ -79,37 +78,37 @@
 \nwpu_if_bachelor:TF                                        % 本科论文目录章节格式
 {
     \cs_new:Npn \nwpu@bcl@chaptercname #1 { 第 \CJKnumber{#1} 章 }% 本科目录章节中文标题
-    \titlecontents{section}[\nwpuTocSectionIndent]{\fSong\graduatecontentsfont}%
+    \titlecontents{section}[\nwpuTocSectionIndent]{\fSong\nwpuTOCFontSize}%
     {\contentslabel{\nwpuTocSectionLabelWidth}}{}%
     {\titlerule*[\nwpuGraduateTocDotSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
-    \titlecontents{subsection}[\nwpuTocSubsectionIndent]{\fSong\graduatecontentsfont}%
+    \titlecontents{subsection}[\nwpuTocSubsectionIndent]{\fSong\nwpuTOCFontSize}%
     {\contentslabel{\nwpuTocSubsectionLabelWidth}}{}%
     {\titlerule*[\nwpuGraduateTocDotSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
-    \titlecontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\fSong\graduatecontentsfont}%
+    \titlecontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\fSong\nwpuTOCFontSize}%
     {\contentslabel{\nwpuTocSubsubsectionLabelWidth}}{}%
     {\titlerule*[\nwpuGraduateTocDotSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
-    \titlecontents{chapter}[0pt]{\graduatecontentsfont\fSong\vspace{\nwpuTocChapterBeforeSkip}}%
-    {\contentsmargin{1em}\graduatecontentsfont\fSong\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{\nwpuBachelorTocChapterLabelOffset}}%
-    {\contentsmargin{1em}\graduatecontentsfont\fSong\bfseries}%
-    {\graduatecontentsfont\normalfont\titlerule*[\nwpuTocLeaderSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]
+    \titlecontents{chapter}[0pt]{\nwpuTOCFontSize\fSong\vspace{\nwpuTocChapterBeforeSkip}}%
+    {\contentsmargin{1em}\nwpuTOCFontSize\fSong\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{\nwpuBachelorTocChapterLabelOffset}}%
+    {\contentsmargin{1em}\nwpuTOCFontSize\fSong\bfseries}%
+    {\nwpuTOCFontSize\normalfont\titlerule*[\nwpuTocLeaderSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]
 }
 {
-    \dottedcontents{section}[\nwpuTocSectionIndent]{\fSong\graduatecontentsfont}{\nwpuTocSectionLabelWidth}{\nwpuGraduateTocDotSep}   %
-    \dottedcontents{subsection}[\nwpuTocSubsectionIndent]{\fSong\graduatecontentsfont}{\nwpuTocSubsectionLabelWidth}{\nwpuGraduateTocDotSep}%
-    \dottedcontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\fSong\graduatecontentsfont}{\nwpuTocSubsubsectionLabelWidth}{\nwpuGraduateTocDotSep}
+    \dottedcontents{section}[\nwpuTocSectionIndent]{\fSong\nwpuTOCFontSize}{\nwpuTocSectionLabelWidth}{\nwpuGraduateTocDotSep}   %
+    \dottedcontents{subsection}[\nwpuTocSubsectionIndent]{\fSong\nwpuTOCFontSize}{\nwpuTocSubsectionLabelWidth}{\nwpuGraduateTocDotSep}%
+    \dottedcontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\fSong\nwpuTOCFontSize}{\nwpuTocSubsubsectionLabelWidth}{\nwpuGraduateTocDotSep}
     \nwpu_if_chinese:TF                                      % 硕博中文本地化显示
     {
-        \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
+        \titlecontents{chapter}[0pt]{\fSong\nwpuTOCFontSize}{\contentsmargin{1em}\fSong\nwpuTOCFontSize\makebox[0pt  %
             ][l]{\nwpu@chs@chaptercname{\thecontentslabel}}\hspace{%
-                \nwpuGraduateTocChapterLabelOffset}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{\titlerule*[%
+                \nwpuGraduateTocChapterLabelOffset}}{\contentsmargin{1em}\fSong\nwpuTOCFontSize}{\titlerule*[%
                 \nwpuTocLeaderSep]{.}\contentspage}[\vspace{0em}]            %
     }
     {                                                           % 硕博英文
         \dim_new:N \l__nwpu_contents_title_dim
-        \settowidth{\l__nwpu_contents_title_dim}{\graduatecontentsfont Chapter~000} %
-        \titlecontents{chapter}[0pt]{\fSong\graduatecontentsfont}{\contentsmargin{1em}\fSong\graduatecontentsfont\makebox[0pt  %
+        \settowidth{\l__nwpu_contents_title_dim}{\nwpuTOCFontSize Chapter~000} %
+        \titlecontents{chapter}[0pt]{\fSong\nwpuTOCFontSize}{\contentsmargin{1em}\fSong\nwpuTOCFontSize\makebox[0pt  %
             ][l]{\nwpu@eng@chaptercname{\thecontentslabel}}\hspace{%
-                \l__nwpu_contents_title_dim}}{\contentsmargin{1em}\fSong\graduatecontentsfont}{
+                \l__nwpu_contents_title_dim}}{\contentsmargin{1em}\fSong\nwpuTOCFontSize}{
             \titlerule*[\nwpuTocLeaderSep]{.}\contentspage}[\vspace{0em}]    %
     }
 }

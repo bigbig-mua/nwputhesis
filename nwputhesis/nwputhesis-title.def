@@ -231,7 +231,7 @@
   }
 \cs_new_protected:Npn \__nwpu_prepare_cover_title:
   {
-    \fHei \sErhao
+    \nwpuCoverTitleFont
     \hbox_set:Nn \l__nwpu_title_measure_box { \nwpu@chs@title }
     \dim_compare:nNnTF { \box_wd:N \l__nwpu_title_measure_box } >
       { \l__nwpu_cover_title_value_width_dim }
@@ -252,7 +252,7 @@
   {
     \dim_set:Nn \l__nwpu_chs_inner_title_value_dim
       { \l__nwpu_chs_inner_title_value_min_width_dim }
-    \fSong \sErhao
+    \nwpuChsInnerTitleFont
     \__nwpu_title_split:NnNN \nwpu@chs@title
       { \l__nwpu_chs_inner_title_value_dim }
       \l__nwpu_chs_inner_title_line_a_tl
@@ -353,10 +353,9 @@
             \end{tikzpicture}
         }
         \bfseries                                           %
-        \linespread{\nwpuCoverLineSpread}\selectfont         % 封皮行距
         \begin{center}                                      %
             \__nwpu_prepare_cover_title:
-            \hfill \fHei \sWuhao                            %
+            \hfill \nwpuCoverDetailFont                     %
             \begin{tabular}{
                 |>{\centering\arraybackslash}p{\l__nwpu_cover_detail_label_width_dim}|
                  >{\centering\arraybackslash}p{\l__nwpu_cover_detail_value_width_dim}|
@@ -367,7 +366,7 @@
                 \makebox[\__nwpu_cover_detail_label_text_width:][s]{学\hfil 号}                  & \nwpu@uid           \\ \hline
             \end{tabular}\par                               % 排版基本信息表
             \vspace{\__nwpu_cover_after_detail_skip:}        %
-            \fHei \sErhao
+            \nwpuCoverTitleFont
             \begin{tabular}[b]{@{}c@{}c@{}}
                 \__nwpu_cover_title_row:nn
                     {
@@ -381,13 +380,13 @@
                     { }
                     { \tl_use:N \l__nwpu_cover_title_line_b_tl }
             \end{tabular}\par                                   % 排版结束
-            \sWuhao \vspace{\__nwpu_cover_after_title_skip:}%
-            \sSanhao \fSong                                 %
+            \vspace{\__nwpu_cover_after_title_skip:}             %
+            \nwpuCoverAuthorFont                            %
             \begin{tabular}[b]{@{}c@{}c@{}}
                 \__nwpu_cover_author_row:n { \nwpu@chs@author }
             \end{tabular}\par                               % 排版作者信息
-            \sWuhao \vspace{\__nwpu_cover_after_author_skip:}%
-            \sSanhao \fSong
+            \vspace{\__nwpu_cover_after_author_skip:}        %
+            \nwpuCoverInfoFont
             \begin{tabular}[t]{@{}c@{}c@{}}
                 \__nwpu_cover_info_row:nn
                     { \nwpu@chs@outerCoverFirstOption }
@@ -411,12 +410,12 @@
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \make@nwpu@chs@title {                          % 设置中文内封
     \thispagestyle{empty}                                   % 清空页面格式
-    \settowidth{\l__nwpu_chstitle_hwidtha_dim}{\sSanhao\nwpu@chs@schoolname}
-    \settowidth{\l__nwpu_chstitle_hwidthb_dim}{\sYihao\nwpu@chs@doctitle}
-    % 测量宽度（注意使用相同字体 \sSanhao）
-    \settowidth{\l__nwpu_author_dim}{\sSanhao\nwpu@chs@author}
-    \settowidth{\l__nwpu_advisor_dim}{\sSanhao\nwpu@chs@advisor}
-    \settowidth{\l__nwpu_major_dim}{\sSanhao\nwpu@chs@major}
+    \settowidth{\l__nwpu_chstitle_hwidtha_dim}{\nwpuChsInnerSchoolNameFont\nwpu@chs@schoolname}
+    \settowidth{\l__nwpu_chstitle_hwidthb_dim}{\nwpuChsInnerDocTitleFont\nwpu@chs@doctitle}
+    % 测量宽度时使用与实际排版一致的字体
+    \settowidth{\l__nwpu_author_dim}{\nwpuChsInnerInfoFont\nwpu@chs@author}
+    \settowidth{\l__nwpu_advisor_dim}{\nwpuChsInnerInfoFont\nwpu@chs@advisor}
+    \settowidth{\l__nwpu_major_dim}{\nwpuChsInnerInfoFont\nwpu@chs@major}
     % 取最大值
     \dim_set:Nn \l__nwpu_maxname_dim { \l__nwpu_author_dim }
     \dim_compare:nNnT \l__nwpu_advisor_dim > \l__nwpu_maxname_dim
@@ -431,19 +430,19 @@
     \begin{titlepage}                                       %
         \linespread{\nwpuChsInnerLineSpread}\selectfont      %
         \begin{center}                                      %
-            \fSong \sSanhao \par \vspace*{\__nwpu_chs_inner_top_skip:}%
-            \makebox[\__nwpu_chs_inner_school_title_stretch:\l__nwpu_chstitle_hwidtha_dim][s]{\sSanhao\nwpu@chs@schoolname} \par
+            \nwpuChsInnerSchoolNameFont \par \vspace*{\__nwpu_chs_inner_top_skip:}%
+            \makebox[\__nwpu_chs_inner_school_title_stretch:\l__nwpu_chstitle_hwidtha_dim][s]{\nwpuChsInnerSchoolNameFont\nwpu@chs@schoolname} \par
             \vspace*{\__nwpu_chs_inner_after_school_skip:}  %
-            \makebox[\__nwpu_chs_inner_school_title_stretch:\l__nwpu_chstitle_hwidthb_dim][s]{\sYihao\nwpu@chs@doctitle} \par
+            \makebox[\__nwpu_chs_inner_school_title_stretch:\l__nwpu_chstitle_hwidthb_dim][s]{\nwpuChsInnerDocTitleFont\nwpu@chs@doctitle} \par
             \vspace*{\__nwpu_chs_inner_after_doc_title_skip:}%
-            \sSihao \par \vspace{\__nwpu_chs_inner_before_title_skip:}%
-            \fSong \sErhao                                  % 排版标题
-            \__nwpu_chs_inner_title: \fSong \sWuhao \par    % 排版结束
+            \vspace{\__nwpu_chs_inner_before_title_skip:}    %
+            \nwpuChsInnerTitleFont                          % 排版标题
+            \__nwpu_chs_inner_title: \par                    % 排版结束
             \vspace{\__nwpu_chs_inner_after_title_skip:}     %
-            \sSanhao \__nwpu_chs_inner_info: \\
-            \fSong \sWuhao \par                             %
+            \nwpuChsInnerInfoFont \__nwpu_chs_inner_info: \\
+            \par                                             %
             \vspace{\__nwpu_chs_inner_after_info_skip:}      %
-            \fSong \sSanhao \nwpu@chs@date                  %
+            \nwpuChsInnerDateFont \nwpu@chs@date            %
         \end{center}                                        %
     \end{titlepage} \fSong \normalsize \newpage \clearpage  %
 }                                                           %
@@ -454,23 +453,23 @@
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
         \begin{center}                                      %
-            \fSong \sErhao \par \vspace*{\__nwpu_eng_inner_top_skip:}%
-            \fEng \sErhao \textbf{Title:}~\sSanhao \nwpu@eng@title \par     %
-            \fSong \sXiaoer \vspace{\__nwpu_eng_inner_after_title_skip:}%
-            \fEng \sXiaosan \textbf{By} \par                %
-            \fEng \sXiaosan \nwpu@eng@author \par  %
-            \fEng \sXiaosan \textbf{Under~the~Supervision~of~\nwpu@eng@advisorAcademicRank} \\
-            \fEng \sXiaosan \nwpu@eng@advisor \par %
-            \fSong \sSanhao \vspace{\__nwpu_eng_inner_after_advisor_skip:}%
-            \fEng \sXiaosan A~Dissertation~Submitted~to \\  %
-            \fEng \sXiaosan {\nwpu@eng@schoolname} \\       %
-            \fSong \sSanhao \vspace{\__nwpu_eng_inner_before_degree_skip:}%
-            \fEng \sXiaosan {In~Partial~Fulfillment~of~The~Requirement} \\
-            \fEng \sXiaosan {For~The~Degree~of} \\                      %
-            \fEng \sXiaosan {{\nwpu@eng@degree}~of~\nwpu_if_master:TF{\nwpu@eng@major}{\textbf{\nwpu@eng@major}}}
-            \fSong \sXiaosan \par \vspace{\__nwpu_eng_inner_after_degree_skip:}%
-            \fEng \sXiaosan Xi'an,~P.R.~China \\            %
-            \fEng \sXiaosan {\nwpu@eng@date}                %
+            \vspace*{\__nwpu_eng_inner_top_skip:}            %
+            \nwpuEngInnerTitleFont \textbf{Title:}~\nwpuEngInnerTitleValueFont \nwpu@eng@title \par %
+            \vspace{\__nwpu_eng_inner_after_title_skip:}     %
+            \nwpuEngInnerTextFont \textbf{By} \par          %
+            \nwpuEngInnerTextFont \nwpu@eng@author \par     %
+            \nwpuEngInnerTextFont \textbf{Under~the~Supervision~of~\nwpu@eng@advisorAcademicRank} \\
+            \nwpuEngInnerTextFont \nwpu@eng@advisor \par    %
+            \vspace{\__nwpu_eng_inner_after_advisor_skip:}   %
+            \nwpuEngInnerTextFont A~Dissertation~Submitted~to \\ %
+            \nwpuEngInnerTextFont {\nwpu@eng@schoolname} \\  %
+            \vspace{\__nwpu_eng_inner_before_degree_skip:}   %
+            \nwpuEngInnerTextFont {In~Partial~Fulfillment~of~The~Requirement} \\
+            \nwpuEngInnerTextFont {For~The~Degree~of} \\    %
+            \nwpuEngInnerTextFont {{\nwpu@eng@degree}~of~\nwpu_if_master:TF{\nwpu@eng@major}{\textbf{\nwpu@eng@major}}}
+            \par \vspace{\__nwpu_eng_inner_after_degree_skip:}%
+            \nwpuEngInnerTextFont Xi'an,~P.R.~China \\      %
+            \nwpuEngInnerTextFont {\nwpu@eng@date}          %
         \end{center}                                        %
     \end{titlepage} \fSong \normalsize \newpage             %
     \thispagestyle{empty} \cleardoublepage                  %
@@ -485,20 +484,20 @@
             \vspace*{\__nwpu_bachelor_top_skip:}            %
             \includegraphics[width=\l__nwpu_bachelor_logo_width_dim]{nwpulogo.png}%
             \vskip \__nwpu_bachelor_after_logo_skip:        %
-            \sChuhao\fSong {\bfseries 本科毕业设计（论文）}   %
+            \nwpuBachelorDocTitleFont {\bfseries 本科毕业设计（论文）}%
             \vskip \__nwpu_bachelor_after_doc_title_skip:   %
                 {                                               %
-                    \sSanhao\fHei 题~~目 \hspace{\l__nwpu_bachelor_title_gap_dim}\coverunderline[\l__nwpu_bachelor_title_underline_width_dim]{\nwpu@chs@title} %
+                    \nwpuBachelorTitleFont 题~~目 \hspace{\l__nwpu_bachelor_title_gap_dim}\coverunderline[\l__nwpu_bachelor_title_underline_width_dim]{\nwpu@chs@title} %
                 }                                               %
             \vskip \__nwpu_bachelor_after_title_skip:       %
                 {                                               %
-                    \sSihao\fSong 专业名称\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@major} %
+                    \nwpuBachelorInfoFont 专业名称\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@major} %
                     \vskip \__nwpu_bachelor_info_row_skip:      %
-                    \sSihao\fSong 学生姓名\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@author} %
+                    \nwpuBachelorInfoFont 学生姓名\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@author} %
                     \vskip \__nwpu_bachelor_info_row_skip:      %
-                    \sSihao\fSong 指导教师\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@advisor} %
+                    \nwpuBachelorInfoFont 指导教师\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@advisor} %
                     \vskip \__nwpu_bachelor_info_row_skip:      %
-                    \sSihao\fSong 毕业时间\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@date} %
+                    \nwpuBachelorInfoFont 毕业时间\coverunderline[\l__nwpu_bachelor_info_underline_width_dim]{\nwpu@chs@date} %
                     \vfill                                      %
                 }                                               %
         \end{center}                                        %
@@ -553,7 +552,7 @@
 %% 学位论文评阅人和答辩委员会名单
 %%-----------------------------------------------------------------------------%
 %%-----------------------------------------------------------------------------%
-\cs_new_protected:Npn \npu@text #1 {\relax\sDefault{#1}}
+\cs_new_protected:Npn \npu@text #1 {\relax\nwpuCommitteeBodyFont{#1}}
 \cs_new_protected:Npn \expert #1 #2 #3 {\npu@text{#1} & \npu@text{#2} & \npu@text{#3} \\ }
 \cs_new_protected:Npn \expertBlindReview {\expert{全盲评阅}{无}{无}}
 \cs_new_protected:Npn \expertEmpty {\expert{}{}{}}
@@ -561,50 +560,50 @@
     \prg_replicate:nn {#1} {\expertBlindReview}%
     \prg_replicate:nn { \int_max:nn { 5 - #1 } { 0 } } {\expertEmpty}%
 }
-\cs_new_protected:Npn \defenseDate #1 {\sDefault\textbf{答辩日期}%
-    & \multicolumn{3}{c}{\sDefault{#1}} \\ }
-\cs_new_protected:Npn \defenseChair #1 #2 #3 {\sDefault\textbf{主席} & \expert{#1}{#2}{#3} }
-\cs_new_protected:Npn \committeeMember #1 #2 #3 {\sDefault\textbf{委员} & \expert{#1}{#2}{#3} }
-\cs_new_protected:Npn \defenseSecretary #1 #2 #3 {\sDefault\textbf{秘书} & \expert{#1}{#2}{#3} }
+\cs_new_protected:Npn \defenseDate #1 {\nwpuCommitteeBodyFont\textbf{答辩日期}%
+    & \multicolumn{3}{c}{\nwpuCommitteeBodyFont{#1}} \\ }
+\cs_new_protected:Npn \defenseChair #1 #2 #3 {\nwpuCommitteeBodyFont\textbf{主席} & \expert{#1}{#2}{#3} }
+\cs_new_protected:Npn \committeeMember #1 #2 #3 {\nwpuCommitteeBodyFont\textbf{委员} & \expert{#1}{#2}{#3} }
+\cs_new_protected:Npn \defenseSecretary #1 #2 #3 {\nwpuCommitteeBodyFont\textbf{秘书} & \expert{#1}{#2}{#3} }
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \makeCommitteePage #1 {                         %
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
-        \linespread{\nwpuCommitteeLineSpread} \sXiaosan \par % 评阅与答辩页行距
+        \linespread{\nwpuCommitteeLineSpread} \nwpuCommitteePageFont \par % 评阅与答辩页行距
         \vspace{\__nwpu_committee_top_skip:}                %
         \begin{center}                                      %
-            \fHei \sSanhao {学位论文评阅人和答辩委员会名单} \par
+            \nwpuCommitteeMainTitleFont {学位论文评阅人和答辩委员会名单} \par
             #1\relax                                        %
         \end{center}                                        %
     \end{titlepage} \normalsize \newpage             %
     \thispagestyle{empty} \cleardoublepage}                 %
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \reviewers #1 {                                 %
-    \par \fSong \sDefault \vspace{\__nwpu_committee_before_reviewers_skip:}%
-    \fSong \sSihao \vspace{\__nwpu_committee_reviewers_title_before_skip:}%
-    \makebox[\linewidth][c]{\fHei \sSihao 学位论文评阅人名单} \par%
-    \fSong \sSihao \vspace{\__nwpu_committee_reviewers_table_before_skip:}%
+    \par \nwpuCommitteeBodyFont \vspace{\__nwpu_committee_before_reviewers_skip:}%
+    \vspace{\__nwpu_committee_reviewers_title_before_skip:}%
+    \makebox[\linewidth][c]{\nwpuCommitteeSectionTitleFont 学位论文评阅人名单} \par%
+    \vspace{\__nwpu_committee_reviewers_table_before_skip:}%
     \begin{tabular}{
         O{\l__nwpu_committee_review_name_width_dim}
         O{\l__nwpu_committee_review_rank_width_dim}
         O{\l__nwpu_committee_review_org_width_dim}
       }  %
-        \sDefault \expert{\textbf{姓名}}{\textbf{职称}}{\textbf{工作单位}}
+        \nwpuCommitteeBodyFont \expert{\textbf{姓名}}{\textbf{职称}}{\textbf{工作单位}}
         #1\relax                                            %
     \end{tabular}\par}                                     %
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \committee #1 #2 {                                 %
-    \par \fSong \sDefault \vspace{\__nwpu_committee_before_defense_skip:}%
-    \fSong \sSihao \vspace{\__nwpu_committee_defense_title_before_skip:}%
-    \makebox[\linewidth][c]{\fHei \sSihao 答辩委员会名单} \par%
-    \fSong \sSihao \vspace{\__nwpu_committee_defense_table_before_skip:}%
+    \par \nwpuCommitteeBodyFont \vspace{\__nwpu_committee_before_defense_skip:}%
+    \vspace{\__nwpu_committee_defense_title_before_skip:}%
+    \makebox[\linewidth][c]{\nwpuCommitteeSectionTitleFont 答辩委员会名单} \par%
+    \vspace{\__nwpu_committee_defense_table_before_skip:}%
     \begin{tabular}{
         O{\l__nwpu_committee_role_width_dim}
         O{\l__nwpu_committee_name_width_dim}
         O{\l__nwpu_committee_rank_width_dim}
         O{\l__nwpu_committee_org_width_dim}
       }
-        \defenseDate{#1} \sDefault\textbf{答辩委员会} & %   %
+        \defenseDate{#1} \nwpuCommitteeBodyFont\textbf{答辩委员会} & %   %
         \expert{\textbf{姓名}}{\textbf{职称}}{\textbf{工作单位}}
         #2\relax                                            %
     \end{tabular}\par}                                     %

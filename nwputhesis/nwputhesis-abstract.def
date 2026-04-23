@@ -18,7 +18,7 @@
       }
       {                                                         % 硕博论文摘要格式
         \cs_set_protected:Npn \sep {\unskip\!；\ignorespaces}   % 硕博：分号
-        \graduatebodyfont                                       %
+        \nwpuBodyFont                                           %
         \chapter[摘{\quad}要]{摘{\quad}要}                      %
         \markboth{摘{\quad}要}{摘{\quad}要}                     %
       }
@@ -29,7 +29,7 @@
         \nwpu@apply@chapter@format
       }
       {}
-    \vfill\sWuhao
+    \vfill\nwpuFundingFont
     \nwpu_if_bachelor:TF
       { \noindent }
       { \indent }
@@ -78,7 +78,7 @@
       }
       {                                                         % 硕博论文英文摘要格式
         \cs_set_protected:Npn \ensep {\unskip\!; ~\ignorespaces}% 硕博：分号+空格
-        \graduatebodyfont                                       %
+        \nwpuBodyFont                                           %
         \chapter[ABSTRACT]{\selectfont\rmfamily\fEng\textbf{Abstract}}%
         \markboth{Abstract}{ABSTRACT}                           %
       }
@@ -89,7 +89,7 @@
         \nwpu@apply@chapter@format
       }
       {}
-    \vfill\sWuhao
+    \vfill\nwpuFundingFont
     \nwpu_if_bachelor:TF
       { \noindent }
       { \indent }
@@ -121,7 +121,7 @@
 %%-----------------------------------------------------------------------------%
 \NewDocumentEnvironment{eqvariables}{}
   {
-    \par\noindent\sWuhao\ignorespaces
+    \par\noindent\nwpuEquationVariablesFont\ignorespaces
   }
   {
     \par
@@ -133,7 +133,7 @@
 \cs_set_eq:NN \nwpu@old@toc \tableofcontents                    % 目录
 \cs_gset_protected:Npn \tableofcontents
   {
-    \graduatebodyfont\phantomsection                             %
+    \nwpuBodyFont\phantomsection                                 %
     \bookmark[dest=\HyperLocalCurrentHref, level=0]{\contentsname}
     { \hfuzz=\nwpuTocHfuzz \nwpu@old@toc } \cleardoublepage     %
   }
@@ -141,7 +141,7 @@
 \cs_set_eq:NN \nwpu@old@lof \listoffigures                      % 图目录
 \cs_gset_protected:Npn \listoffigures
   {
-    \graduatebodyfont\phantomsection                             %
+    \nwpuBodyFont\phantomsection                                 %
     \addcontentsline{toc}{chapter}{\listfigurename}              %
     \nwpu@old@lof \cleardoublepage                               %
   }
@@ -149,7 +149,7 @@
 \cs_set_eq:NN \nwpu@old@lot \listoftables                       % 表目录
 \cs_gset_protected:Npn \listoftables
   {
-    \graduatebodyfont\phantomsection                             %
+    \nwpuBodyFont\phantomsection                                 %
     \addcontentsline{toc}{chapter}{\listtablename}               %
     \nwpu@old@lot \cleardoublepage                               %
   }

@@ -4,7 +4,7 @@
 \ExplSyntaxOn
 %%-----------------------------------------------------------------------------%
 \NewDocumentEnvironment{acknowledgements}{}{%               % 致谢
-    \graduatebodyfont                                       %
+    \nwpuBodyFont                                           %
     \phantomsection\chapter*{\texorpdfstring{\nwpu@page@ack}{\nwpu@page@ack@pdf}}%
     \markboth{\nwpu@page@ack}{\nwpu@page@ack}               %
     \addcontentsline{toc}{chapter}{\texorpdfstring{\nwpu@page@ack}{\nwpu@page@ack@pdf}}%
@@ -12,7 +12,7 @@
 }{\par \cleardoublepage}                                    %
 %%-----------------------------------------------------------------------------%
 \NewDocumentEnvironment{thesisappendix}{}{%                  % 附录
-    \graduatebodyfont                                       %
+    \nwpuBodyFont                                           %
     \bool_if:NF \l__nwpu_thesis_appendix_mode_bool          %
       {
         \appendix                                           %
@@ -26,7 +26,7 @@
 }{\par \cleardoublepage}                                    %
 %%-----------------------------------------------------------------------------%
 \NewDocumentEnvironment{accomplishments}{}{%                 % 参加科研情况
-    \graduatebodyfont                                       %
+    \nwpuBodyFont                                           %
     \phantomsection\chapter*{\texorpdfstring{\nwpu@page@acp}{\nwpu@page@acp@pdf}}%
     \markboth{\nwpu@page@acp}{}                             %
     \addcontentsline{toc}{chapter}{\texorpdfstring{\nwpu@page@acp}{\nwpu@page@acp@pdf}}%
@@ -34,7 +34,7 @@
 %%-----------------------------------------------------------------------------%
 \NewDocumentEnvironment{designsummary}{}{%                   % 毕业设计小结（本科）
     \linespread{\nwpuDesignSummaryLineSpread}\selectfont     %
-    \sDefault                                               %
+    \nwpuDesignSummaryFont                                  %
     \phantomsection\chapter*{毕业设计小结}                  %
     \markboth{毕业设计小结}{毕业设计小结}                   %
     \addcontentsline{toc}{chapter}{毕业设计小结}            %

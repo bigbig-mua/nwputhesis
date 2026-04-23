@@ -60,6 +60,6 @@
   {
     \nwpu@oldmainmatter
     \nwpu_enable_table_content_font:
-    \graduatebodyfont
+    \nwpuBodyFont
   }
 \ExplSyntaxOff
