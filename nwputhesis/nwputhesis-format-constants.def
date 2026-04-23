@@ -49,36 +49,29 @@
 \cs_new_protected:Npn \nwpuFontSizeWuhao { \fontsize{\nwpuFontPointWuhao}{\nwpuFontPointWuhao}\selectfont }    % 五号纯字号
 \cs_new_protected:Npn \nwpuFontSizeXiaowu { \fontsize{\nwpuFontPointXiaowu}{\nwpuFontPointXiaowu}\selectfont } % 小五纯字号
 
-%%=== 语义化字体别名 =====================================================
-%% 将字体族映射到格式规范中的角色。学校改字体要求时，修改这里的映射。
+%%=== 语义化字体角色 =====================================================
+%% 将字体族、字号、字重映射到格式规范中的角色。学校改格式要求时，修改这里的映射。
 %%-------------------------------------------------------------------------
-%% 章节标题
-\cs_new_protected:Npn \nwpuChapterFont { \sffamily \fHei }
-\cs_new_protected:Npn \nwpuSectionFont { \nwpuChapterFont }
-\cs_new_protected:Npn \nwpuSubsectionFont { \nwpuChapterFont }
-\cs_new_protected:Npn \nwpuSubsubsectionFont { \nwpuChapterFont }
+%% 章节标题（完整字体：族 + 字号 + 行距）
+\nwpu_if_bachelor:TF
+  {
+    \cs_new_protected:Npn \nwpuChapterFont { \sffamily\fHei\fontsize{\nwpuFontPointSanhao}{\nwpuBachelorLineHeight}\selectfont }
+    \cs_new_protected:Npn \nwpuSectionFont { \sffamily\fHei\fontsize{\nwpuFontPointSihao}{\nwpuBachelorLineHeight}\selectfont }
+    \cs_new_protected:Npn \nwpuSubsectionFont { \sffamily\fHei\fontsize{\nwpuFontPointXiaosi}{\nwpuBachelorLineHeight}\selectfont }
+    \cs_new_protected:Npn \nwpuSubsubsectionFont { \sffamily\fHei\fontsize{\nwpuFontPointXiaosi}{\nwpuBachelorLineHeight}\selectfont }
+  }
+  {
+    \cs_new_protected:Npn \nwpuChapterFont { \sffamily\fHei\fontsize{\nwpuFontPointSanhao}{\nwpuGraduateLineHeight}\selectfont }
+    \cs_new_protected:Npn \nwpuSectionFont { \sffamily\fHei\fontsize{\nwpuFontPointSihao}{\nwpuGraduateLineHeight}\selectfont }
+    \cs_new_protected:Npn \nwpuSubsectionFont { \sffamily\fHei\fontsize{\nwpuFontPointXiaosi}{\nwpuGraduateLineHeight}\selectfont }
+    \cs_new_protected:Npn \nwpuSubsubsectionFont { \sffamily\fHei\fontsize{\nwpuFontPointXiaosi}{\nwpuGraduateLineHeight}\selectfont }
+  }
 
 %% 目录
 \cs_new_protected:Npn \nwpuTOCFont { \fSong }
 
 %% 关键词标签
 \cs_new_protected:Npn \nwpuKeywordFont { \fHei }
-
-%%=== 语义化字号别名 =====================================================
-%% 将字号映射到格式规范中的角色。学校改字号要求时，修改这里的映射。
-%%-------------------------------------------------------------------------
-%% 章节标题
-\nwpu_if_bachelor:TF
-  {
-    \cs_new_protected:Npn \nwpuChapterSize { \fontsize{\nwpuFontPointSanhao}{\nwpuBachelorLineHeight}\selectfont } % 本科一级标题（章）
-    \cs_new_protected:Npn \nwpuSectionSize { \fontsize{\nwpuFontPointSihao}{\nwpuBachelorLineHeight}\selectfont } % 本科二级标题（节）
-    \cs_new_protected:Npn \nwpuSubsectionSize { \fontsize{\nwpuFontPointXiaosi}{\nwpuBachelorLineHeight}\selectfont } % 本科三级标题（小四）
-  }
-  {
-    \cs_new_protected:Npn \nwpuChapterSize { \fontsize{\nwpuFontPointSanhao}{\nwpuGraduateLineHeight}\selectfont } % 研究生一级标题（章）
-    \cs_new_protected:Npn \nwpuSectionSize { \fontsize{\nwpuFontPointSihao}{\nwpuGraduateLineHeight}\selectfont } % 研究生二级标题（节）
-    \cs_new_protected:Npn \nwpuSubsectionSize { \fontsize{\nwpuFontPointXiaosi}{\nwpuGraduateLineHeight}\selectfont } % 研究生三级标题（小四）
-  }
 
 %% 图表标题
 \nwpu_if_bachelor:TF

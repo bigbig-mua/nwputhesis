@@ -23,21 +23,21 @@
 %% 正文章节格式（可复用命令，abstract.def 退出时调用恢复）
 \cs_new_protected:Npn \nwpu@apply@chapter@format {
   \nwpu_if_bachelor:TF {
-    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter\nwpuChapterFont}%
-      {第\CJKnumber{\thechapter}章}{\nwpuChapterLabelSep}{\nwpuChapterSize}
+    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterFont\filcenter}%
+      {第\CJKnumber{\thechapter}章}{\nwpuChapterLabelSep}{\nwpuChapterFont}
   } {
-    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter  %
-      \nwpuChapterFont}{\nwpuChapterFont\nwpuChapterSize{\chaptertitlename}}{\nwpuGraduateChapterLabelSep}{\nwpuChapterSize}
+    \titleformat{\chapter}[hang]{\normalfont\nwpuChapterFont\filcenter}%
+      {\nwpuChapterFont{\chaptertitlename}}{\nwpuGraduateChapterLabelSep}{\nwpuChapterFont}
   }
 }
 %% 摘要章节格式（本科 \chapter* 无编号标题）
 \cs_new_protected:Npn \nwpu@apply@abstract@chs@format {
-  \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter\nwpuChapterFont}%
-    {\nwpuChapterSize}{\nwpuChapterLabelSep}{\nwpuChapterSize}
+  \titleformat{\chapter}[hang]{\normalfont\nwpuChapterFont\filcenter}%
+    {\nwpuChapterFont}{\nwpuChapterLabelSep}{\nwpuChapterFont}
 }
 \cs_new_protected:Npn \nwpu@apply@abstract@eng@format {
-  \titleformat{\chapter}[hang]{\normalfont\nwpuChapterSize\filcenter}%
-    {\nwpuChapterSize}{\nwpuChapterLabelSep}{\nwpuChapterSize}
+  \titleformat{\chapter}[hang]{\normalfont\nwpuChapterFont\filcenter}%
+    {\nwpuChapterFont}{\nwpuChapterLabelSep}{\nwpuChapterFont}
 }
 %%-----------------------------------------------------------------------------
 \nwpu_if_bachelor:TF                                        % 本科论文章节格式
@@ -45,10 +45,10 @@
     \renewcommand{\thechapter}{\arabic{chapter}}            % 章节编号保持数字
     \renewcommand{\chaptername}{第\CJKnumber{\thechapter}章}% 章节名称（中文数字）
     \nwpu@apply@chapter@format
-    \titleformat{\section}[hang]{\nwpuSectionSize\nwpuSectionFont}%
-      {\nwpuSectionSize\thesection}{\nwpuSectionLabelSep}{}{}
-    \titleformat{\subsection}[hang]{\nwpuSubsectionSize\nwpuSubsectionFont}%
-      {\nwpuSubsectionSize\thesubsection}{\nwpuSectionLabelSep}{}{}
+    \titleformat{\section}[hang]{\nwpuSectionFont}%
+      {\nwpuSectionFont\thesection}{\nwpuSectionLabelSep}{}{}
+    \titleformat{\subsection}[hang]{\nwpuSubsectionFont}%
+      {\nwpuSubsectionFont\thesubsection}{\nwpuSectionLabelSep}{}{}
     \titleformat{\subsubsection}[hang]{\nwpuSubsubsectionFont}%
       {(\arabic{subsubsection})}{\nwpuSectionLabelSep}{}{}
     \titlespacing{\chapter}{0pt}{\nwpuChapterBeforeSkip}{\nwpuChapterAfterSkip}
@@ -58,10 +58,10 @@
 }
 {                                                           % 硕博论文章节格式
     \nwpu@apply@chapter@format
-    \titleformat{\section}[hang]{\nwpuSectionFont\nwpuSectionSize}{%
-      \nwpuSectionFont\nwpuSectionSize\thesection}{\nwpuSectionLabelSep}{}{}
-    \titleformat{\subsection}[hang]{\nwpuSubsectionFont\nwpuSubsectionSize}{%
-      \nwpuSubsectionFont\nwpuSubsectionSize\thesubsection}{\nwpuSectionLabelSep}{}{}
+    \titleformat{\section}[hang]{\nwpuSectionFont}{%
+      \nwpuSectionFont\thesection}{\nwpuSectionLabelSep}{}{}
+    \titleformat{\subsection}[hang]{\nwpuSubsectionFont}{%
+      \nwpuSubsectionFont\thesubsection}{\nwpuSectionLabelSep}{}{}
     \titleformat{\subsubsection}[hang]{\nwpuSubsubsectionFont}{%
       (\arabic{subsubsection})}{\nwpuSectionLabelSep}{}{}
     \titlespacing{\chapter}{0pt}{\nwpuChapterBeforeSkip}{\nwpuChapterAfterSkip}
