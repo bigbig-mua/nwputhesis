@@ -135,10 +135,10 @@
 \graphicspath{{content/figures/}{figures/}}                % 定义图片文件搜索目录
 \nwpu_if_bachelor:TF                                        % 本科论文页眉设置
 {
-    \pagestyle{fancyplain}                                  % 新增版式 fancyplain
+    \pagestyle{fancyplain}                                  %
     \fancyhf{}                                              % 清空原有页眉页脚
     \fancyfoot[C,C]{\nwpuHeaderFooterSize~\thepage~}           % 页脚中央显示页码
-    \chead{\includegraphics[scale=\nwpuBachelorHeaderLogoScale]{nwpuheader.png}}% 页眉居中（图片）
+    \chead{\includegraphics[scale=\nwpuBachelorHeaderLogoScale]{nwpuheader.png}}%
 }
 {                                                           % 硕博论文页眉设置
     \nwpu_if_chinese:TF                                     % 中英文章节页眉设置
@@ -150,10 +150,9 @@
         \renewcommand{\chaptermark}[1]{                     %
             \markboth{\nwpu@eng@chaptercname{\thechapter}\quad #1}{}}
     }
-    \pagestyle{fancyplain}                                  % 新增版式 fancyplain
+    \pagestyle{fancyplain}                                  %
     \fancyhf{}                                              % 清空原有页眉页脚
     \fancyfoot[C, C]{\nwpuHeaderFooterSize{\thepage}}          % 页脚中央显示页码
-    \fancyhead{}                                            % 页眉清除原有设置
     \fancyhead[COH]{\raisebox{\nwpuHeaderRaise}{\nwpuHeaderFooterSize{\leftmark}}}%
     \nwpu_if_chinese:TF                                     % 中文论文环境
         { \fancyhead[CEH]{\raisebox{\nwpuHeaderRaise}{\nwpuHeaderFooterSize{\nwpu@chs@header}}} }

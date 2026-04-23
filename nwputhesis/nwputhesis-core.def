@@ -53,6 +53,8 @@
     headheight=\nwpuHeadHeight,
     headsep=\nwpuHeadSep,
     footskip=\nwpuFootSkip}
+\setlength{\topmargin}{\nwpuTopMargin}                        % 页眉到页面顶部距离
+\addtolength{\footskip}{\nwpuBottomMargin}                     % 页脚基线到页面底部距离
 %%-----------------------------------------------------------------------------%
 \raggedbottom                                               % 避免分页时拉伸竖直空白
 \cs_set_eq:NN \nwpu@oldmainmatter \mainmatter
