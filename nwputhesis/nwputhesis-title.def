@@ -347,7 +347,6 @@
             \makebox[\nwpuChsInnerSchoolTitleStretch\l__nwpu_chstitle_hwidtha_dim][s]{\nwpuChsInnerSchoolNameFont\nwpu@chs@schoolname} \par
             \vspace*{\nwpuChsInnerAfterSchoolSkip}           %
             \makebox[\nwpuChsInnerSchoolTitleStretch\l__nwpu_chstitle_hwidthb_dim][s]{\nwpuChsInnerDocTitleFont\nwpu@chs@doctitle} \par
-            \vspace*{\nwpuChsInnerAfterDocTitleSkip}         %
             \vspace{\nwpuChsInnerBeforeTitleSkip}            %
             \nwpuChsInnerTitleFont                          % 排版标题
             \__nwpu_chs_inner_title: \par                    % 排版结束
@@ -465,13 +464,22 @@
 %% 学位论文评阅人和答辩委员会名单
 %%-----------------------------------------------------------------------------%
 %%-----------------------------------------------------------------------------%
+\int_new:N \l__nwpu_expert_count_int
+\tl_new:N \l__nwpu_expert_rows_tl
+\bool_new:N \l__nwpu_reviewers_mode_bool
 \cs_new_protected:Npn \npu@text #1 {\relax\nwpuCommitteeBodyFont{#1}}
-\cs_new_protected:Npn \expert #1 #2 #3 {\npu@text{#1} & \npu@text{#2} & \npu@text{#3} \\ }
+\cs_new_protected:Npn \expert #1 #2 #3 {%
+    \bool_if:NTF \l__nwpu_reviewers_mode_bool
+      {
+        \int_incr:N \l__nwpu_expert_count_int
+        \tl_put_right:Nn \l__nwpu_expert_rows_tl
+          { \npu@text{#1} & \npu@text{#2} & \npu@text{#3} \\ }
+      }
+      { \npu@text{#1} & \npu@text{#2} & \npu@text{#3} \\ }
+}
 \cs_new_protected:Npn \expertBlindReview {\expert{全盲评阅}{无}{无}}
-\cs_new_protected:Npn \expertEmpty {\expert{}{}{}}
 \cs_new_protected:Npn \fullBlindReview #1 {%
     \prg_replicate:nn {#1} {\expertBlindReview}%
-    \prg_replicate:nn { \int_max:nn { 5 - #1 } { 0 } } {\expertEmpty}%
 }
 \cs_new_protected:Npn \defenseDate #1 {\nwpuCommitteeBodyFont\textbf{答辩日期}%
     & \multicolumn{3}{c}{\nwpuCommitteeBodyFont{#1}} \\ }
@@ -483,7 +491,7 @@
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
         \linespread{\nwpuCommitteeLineSpread} \nwpuCommitteePageFont \par % 评阅与答辩页行距
-        \vspace{\nwpuCommitteeTopSkip}                       %
+        \vspace*{\nwpuCommitteeTopSkip}                      %
         \begin{center}                                      %
             \nwpuCommitteeMainTitleFont {学位论文评阅人和答辩委员会名单} \par
             #1\relax                                        %
@@ -493,21 +501,26 @@
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \reviewers #1 {                                 %
     \par \nwpuCommitteeBodyFont \vspace{\nwpuCommitteeBeforeReviewersSkip}%
-    \vspace{\nwpuCommitteeReviewersTitleBeforeSkip}         %
     \makebox[\linewidth][c]{\nwpuCommitteeSectionTitleFont 学位论文评阅人名单} \par%
     \vspace{\nwpuCommitteeReviewersTableBeforeSkip}         %
+    \int_zero:N \l__nwpu_expert_count_int
+    \tl_clear:N \l__nwpu_expert_rows_tl
+    \bool_set_true:N \l__nwpu_reviewers_mode_bool
+    #1\relax                                            %
+    \bool_set_false:N \l__nwpu_reviewers_mode_bool
     \begin{tabular}{
         O{\nwpuCommitteeReviewNameWidth}
         O{\nwpuCommitteeReviewRankWidth}
         O{\nwpuCommitteeReviewOrgWidth}
-      }  %
-        \nwpuCommitteeBodyFont \expert{\textbf{姓名}}{\textbf{职称}}{\textbf{工作单位}}
-        #1\relax                                            %
+      }
+        \npu@text{\textbf{姓名}} & \npu@text{\textbf{职称}} & \npu@text{\textbf{工作单位}} \\
+        \tl_use:N \l__nwpu_expert_rows_tl
+        \prg_replicate:nn { \int_max:nn { 5 - \l__nwpu_expert_count_int } { 0 } }
+          { \npu@text{} & \npu@text{} & \npu@text{} \\ }
     \end{tabular}\par}                                     %
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \committee #1 #2 {                                 %
     \par \nwpuCommitteeBodyFont \vspace{\nwpuCommitteeBeforeDefenseSkip}%
-    \vspace{\nwpuCommitteeDefenseTitleBeforeSkip}            %
     \makebox[\linewidth][c]{\nwpuCommitteeSectionTitleFont 答辩委员会名单} \par%
     \vspace{\nwpuCommitteeDefenseTableBeforeSkip}            %
     \begin{tabular}{

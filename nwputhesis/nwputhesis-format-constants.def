@@ -118,7 +118,7 @@
   \cs_new:Npn \nwpuSubsecBeforeSkip    { 3pt }              % 本科小节标题前距
   \cs_new:Npn \nwpuSubsecAfterSkip     { -1pt }             % 本科小节标题后距
 } {
-  \cs_new:Npn \nwpuChapterBeforeSkip   { 4pt }              % 研究生章标题前距
+  \cs_new:Npn \nwpuChapterBeforeSkip   { 9pt }              % 研究生章标题前距
   \cs_new:Npn \nwpuChapterAfterSkip    { 14pt }             % 研究生章标题后距
   \cs_new:Npn \nwpuSectionBeforeSkip   { 7pt }              % 研究生节标题前距
   \cs_new:Npn \nwpuSectionAfterSkip    { 0pt }              % 研究生节标题后距
@@ -174,12 +174,11 @@
 \cs_new:Npn \nwpuChsInnerInfoRowHeight { 1cm }              % 中文内封作者信息表单元格高度
 \cs_new:Npn \nwpuChsInnerLineSpread { 1.4 }                 % 中文内封整体行距倍率
 \cs_new:Npn \nwpuChsInnerSchoolTitleStretch { 1.41667 }     % 中文内封校名/文档类型标题拉伸倍率
-\cs_new:Npn \nwpuChsInnerTopSkip { 33.6pt }                 % 中文内封顶部空白
-\cs_new:Npn \nwpuChsInnerAfterSchoolSkip { 5mm }            % 中文内封校名后距
-\cs_new:Npn \nwpuChsInnerAfterDocTitleSkip { 5mm }          % 中文内封文档类型标题后距
-\cs_new:Npn \nwpuChsInnerBeforeTitleSkip { 176.4pt }        % 中文内封题目表前距
-\cs_new:Npn \nwpuChsInnerAfterTitleSkip { 88.2pt }          % 中文内封题目表后距
-\cs_new:Npn \nwpuChsInnerAfterInfoSkip { 29.4pt }           % 中文内封作者信息表后距
+\cs_new:Npn \nwpuChsInnerTopSkip { 32pt }                 % 中文内封顶部空白
+\cs_new:Npn \nwpuChsInnerAfterSchoolSkip { 4mm }            % 中文内封校名后距
+\cs_new:Npn \nwpuChsInnerBeforeTitleSkip { 170pt }        % 中文内封题目表前距
+\cs_new:Npn \nwpuChsInnerAfterTitleSkip { 100pt }          % 中文内封题目表后距
+\cs_new:Npn \nwpuChsInnerAfterInfoSkip { 35pt }           % 中文内封作者信息表后距
 
 \cs_new:Npn \nwpuEngInnerTopSkip { 84pt }                   % 英文内封顶部空白
 \cs_new:Npn \nwpuEngInnerAfterTitleSkip { 54pt }            % 英文内封标题后距
@@ -191,8 +190,10 @@
 \cs_new:Npn \nwpuCoverDetailLineHeight { 11.55pt }             % 封皮右上角信息表行距
 \cs_new_protected:Npn \nwpuCoverDetailFont { \fHei \fontsize{\nwpuFontPointWuhao}{\nwpuCoverDetailLineHeight}\selectfont } % 封皮右上角信息表字体
 \cs_new_protected:Npn \nwpuCoverTitleFont { \fHei \fontsize{\nwpuFontPointErhao}{\nwpuLineHeightErhao}\selectfont }  % 封皮题目表字体
-\cs_new_protected:Npn \nwpuCoverAuthorFont { \fSong \fontsize{\nwpuFontPointSanhao}{\nwpuLineHeightSanhao}\selectfont } % 封皮作者表字体
-\cs_new_protected:Npn \nwpuCoverInfoFont { \fSong \fontsize{\nwpuFontPointSanhao}{\nwpuLineHeightSanhao}\selectfont } % 封皮专业/导师信息表字体
+\cs_new:Npn \nwpuCoverAuthorLineHeight { 18pt }                % 封皮作者表行距
+\cs_new_protected:Npn \nwpuCoverAuthorFont { \fSong \fontsize{\nwpuFontPointSanhao}{\nwpuCoverAuthorLineHeight}\selectfont } % 封皮作者表字体
+\cs_new:Npn \nwpuCoverInfoLineHeight { 18pt }                 % 封皮专业/导师信息表行距
+\cs_new_protected:Npn \nwpuCoverInfoFont { \fSong \fontsize{\nwpuFontPointSanhao}{\nwpuCoverInfoLineHeight}\selectfont } % 封皮专业/导师信息表字体
 \cs_new_protected:Npn \nwpuChsInnerSchoolNameFont { \fSong \fontsize{\nwpuFontPointSanhao}{\nwpuLineHeightSanhao}\selectfont } % 中文内封校名字体
 \cs_new_protected:Npn \nwpuChsInnerDocTitleFont { \fSong \fontsize{\nwpuFontPointYihao}{\nwpuLineHeightYihao}\selectfont } % 中文内封文档标题字体
 \cs_new_protected:Npn \nwpuChsInnerTitleFont { \fSong \fontsize{\nwpuFontPointErhao}{\nwpuLineHeightErhao}\selectfont } % 中文内封题目表字体
@@ -227,13 +228,11 @@
 \cs_new:Npn \nwpuCommitteeNameWidth { 2.68cm }              % 答辩委员会姓名列宽
 \cs_new:Npn \nwpuCommitteeRankWidth { 2.25cm }              % 答辩委员会职称列宽
 \cs_new:Npn \nwpuCommitteeOrgWidth { 6.75cm }               % 答辩委员会工作单位列宽
-\cs_new:Npn \nwpuCommitteeTopSkip { 26.4pt }                % 评阅人与答辩委员会页顶部空白
-\cs_new:Npn \nwpuCommitteeBeforeReviewersSkip { 26.4pt }    % 评阅人名单区域前距
-\cs_new:Npn \nwpuCommitteeReviewersTitleBeforeSkip { 7.56pt } % 评阅人名单标题前距
-\cs_new:Npn \nwpuCommitteeReviewersTableBeforeSkip { 7.56pt } % 评阅人名单表格前距
-\cs_new:Npn \nwpuCommitteeBeforeDefenseSkip { 26.4pt }      % 答辩委员会名单区域前距
-\cs_new:Npn \nwpuCommitteeDefenseTitleBeforeSkip { 7.56pt } % 答辩委员会标题前距
-\cs_new:Npn \nwpuCommitteeDefenseTableBeforeSkip { 7.56pt } % 答辩委员会表格前距
+\cs_new:Npn \nwpuCommitteeTopSkip { 18pt }                % 评阅人与答辩委员会页顶部空白
+\cs_new:Npn \nwpuCommitteeBeforeReviewersSkip { 35pt }    % 评阅人名单区域前距
+\cs_new:Npn \nwpuCommitteeReviewersTableBeforeSkip { 9pt } % 评阅人名单表格前距
+\cs_new:Npn \nwpuCommitteeBeforeDefenseSkip { 16pt }      % 答辩委员会名单区域前距
+\cs_new:Npn \nwpuCommitteeDefenseTableBeforeSkip { 9pt } % 答辩委员会表格前距
 
 %%=== 评阅人与答辩委员会页字体 ===========================================
 \cs_new_protected:Npn \nwpuCommitteePageFont { \fontsize{\nwpuFontPointXiaosan}{\nwpuGraduateLineHeight}\selectfont } % 评阅人与答辩委员会页基础字号
