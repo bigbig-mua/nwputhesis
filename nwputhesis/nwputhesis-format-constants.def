@@ -39,212 +39,212 @@
 \cs_new_protected:Npn \nwpuHeaderFooterSize { \sXiaowu }     % 小五
 
 %% 目录条目
-\cs_new_protected:Npn \nwpuTOCFontSize { \fontsize{12pt}{19pt}\selectfont }
+\cs_new_protected:Npn \nwpuTOCFontSize { \fontsize{12pt}{19pt}\selectfont } % 目录条目字号与行距
 
 %%=== 正文格式 ===========================================================
-\cs_new:Npn \nwpuBodyLineSpread { 1.0 }
-\cs_new_protected:Npn \nwpuBodyFont { \linespread{\nwpuBodyLineSpread}\sDefault }
+\cs_new:Npn \nwpuBodyLineSpread { 1.0 }                     % 正文基础行距倍率
+\cs_new_protected:Npn \nwpuBodyFont { \linespread{\nwpuBodyLineSpread}\sDefault } % 正文字体字号组合
 \cs_new_eq:NN \graduatebodyfont \nwpuBodyFont                 % 向后兼容
 \cs_new_eq:NN \graduatecontentsfont \nwpuTOCFontSize          % 向后兼容
 
 %%=== 页面边距 ===========================================================
 \nwpu_if_bachelor:TF {
-  \cs_new:Npn \nwpuMarginLeft     { 1.25in }
-  \cs_new:Npn \nwpuMarginRight    { 1.25in }
-  \cs_new:Npn \nwpuMarginTop      { 1in }
-  \cs_new:Npn \nwpuMarginBottom   { 1in }
-  \cs_new:Npn \nwpuHeadHeight     { 0.93cm }
-  \cs_new:Npn \nwpuHeadSep        { 0.4cm }
-  \cs_new:Npn \nwpuFootSkip       { 0.79cm }
+  \cs_new:Npn \nwpuMarginLeft     { 1.25in }                % 本科左页边距
+  \cs_new:Npn \nwpuMarginRight    { 1.25in }                % 本科右页边距
+  \cs_new:Npn \nwpuMarginTop      { 1in }                   % 本科上页边距
+  \cs_new:Npn \nwpuMarginBottom   { 1in }                   % 本科下页边距
+  \cs_new:Npn \nwpuHeadHeight     { 0.93cm }                % 本科页眉高度
+  \cs_new:Npn \nwpuHeadSep        { 0.4cm }                 % 本科页眉到正文距离
+  \cs_new:Npn \nwpuFootSkip       { 0.79cm }                % 本科正文到底部页脚基线距离
 } {
-  \cs_new:Npn \nwpuMarginLeft     { 2.5cm }
-  \cs_new:Npn \nwpuMarginRight    { 2.5cm }
-  \cs_new:Npn \nwpuMarginTop      { 2.54cm }
-  \cs_new:Npn \nwpuMarginBottom   { 2.54cm }
-  \cs_new:Npn \nwpuHeadHeight     { 1.0cm }
-  \cs_new:Npn \nwpuHeadSep        { 0.11cm }
-  \cs_new:Npn \nwpuFootSkip       { 0.79cm }
+  \cs_new:Npn \nwpuMarginLeft     { 2.5cm }                 % 研究生左页边距
+  \cs_new:Npn \nwpuMarginRight    { 2.5cm }                 % 研究生右页边距
+  \cs_new:Npn \nwpuMarginTop      { 2.54cm }                % 研究生上页边距
+  \cs_new:Npn \nwpuMarginBottom   { 2.54cm }                % 研究生下页边距
+  \cs_new:Npn \nwpuHeadHeight     { 1.0cm }                 % 研究生页眉高度
+  \cs_new:Npn \nwpuHeadSep        { 0.11cm }                % 研究生页眉到正文距离
+  \cs_new:Npn \nwpuFootSkip       { 0.79cm }                % 研究生正文到底部页脚基线距离
 }
 
 %%=== 段落格式 ===========================================================
 \nwpu_if_bachelor:TF
-  { \cs_new:Npn \nwpuParIndent { 26pt } }
-  { \cs_new:Npn \nwpuParIndent { 24pt } }
-\cs_new:Npn \nwpuParSkip { 0pt }
+  { \cs_new:Npn \nwpuParIndent { 26pt } }                   % 本科段首缩进
+  { \cs_new:Npn \nwpuParIndent { 24pt } }                   % 研究生段首缩进
+\cs_new:Npn \nwpuParSkip { 0pt }                            % 段间距
 
 %%=== 章节标题间距 =======================================================
 %% \titlespacing{<cmd>}{<left>}{<before>}{<after>}[<right>]
 \nwpu_if_bachelor:TF {
-  \cs_new:Npn \nwpuChapterBeforeSkip   { 5pt }
-  \cs_new:Npn \nwpuChapterAfterSkip    { 23pt }
-  \cs_new:Npn \nwpuSectionBeforeSkip   { 2pt }
-  \cs_new:Npn \nwpuSectionAfterSkip    { 2pt }
-  \cs_new:Npn \nwpuSubsecBeforeSkip    { 3pt }
-  \cs_new:Npn \nwpuSubsecAfterSkip     { -1pt }
+  \cs_new:Npn \nwpuChapterBeforeSkip   { 5pt }              % 本科章标题前距
+  \cs_new:Npn \nwpuChapterAfterSkip    { 23pt }             % 本科章标题后距
+  \cs_new:Npn \nwpuSectionBeforeSkip   { 2pt }              % 本科节标题前距
+  \cs_new:Npn \nwpuSectionAfterSkip    { 2pt }              % 本科节标题后距
+  \cs_new:Npn \nwpuSubsecBeforeSkip    { 3pt }              % 本科小节标题前距
+  \cs_new:Npn \nwpuSubsecAfterSkip     { -1pt }             % 本科小节标题后距
 } {
-  \cs_new:Npn \nwpuChapterBeforeSkip   { 4pt }
-  \cs_new:Npn \nwpuChapterAfterSkip    { 14pt }
-  \cs_new:Npn \nwpuSectionBeforeSkip   { 7pt }
-  \cs_new:Npn \nwpuSectionAfterSkip    { 0pt }
-  \cs_new:Npn \nwpuSubsecBeforeSkip    { 6.5pt }
-  \cs_new:Npn \nwpuSubsecAfterSkip     { 0pt }
+  \cs_new:Npn \nwpuChapterBeforeSkip   { 4pt }              % 研究生章标题前距
+  \cs_new:Npn \nwpuChapterAfterSkip    { 14pt }             % 研究生章标题后距
+  \cs_new:Npn \nwpuSectionBeforeSkip   { 7pt }              % 研究生节标题前距
+  \cs_new:Npn \nwpuSectionAfterSkip    { 0pt }              % 研究生节标题后距
+  \cs_new:Npn \nwpuSubsecBeforeSkip    { 6.5pt }            % 研究生小节标题前距
+  \cs_new:Npn \nwpuSubsecAfterSkip     { 0pt }              % 研究生小节标题后距
 }
 
 %%=== 浮动体间距 =========================================================
 \nwpu_if_bachelor:TF {
-  \cs_new:Npn \nwpuFloatSep     { 20pt }
-  \cs_new:Npn \nwpuTextFloatSep { 20pt }
-  \cs_new:Npn \nwpuInTextSep    { 20pt }
+  \cs_new:Npn \nwpuFloatSep     { 20pt }                    % 本科浮动体之间距离
+  \cs_new:Npn \nwpuTextFloatSep { 20pt }                    % 本科浮动体与正文距离
+  \cs_new:Npn \nwpuInTextSep    { 20pt }                    % 本科文中浮动体上下距离
 } {
-  \cs_new:Npn \nwpuFloatSep     { 8pt }
-  \cs_new:Npn \nwpuTextFloatSep { 8pt }
-  \cs_new:Npn \nwpuInTextSep    { 8pt }
+  \cs_new:Npn \nwpuFloatSep     { 8pt }                     % 研究生浮动体之间距离
+  \cs_new:Npn \nwpuTextFloatSep { 8pt }                     % 研究生浮动体与正文距离
+  \cs_new:Npn \nwpuInTextSep    { 8pt }                     % 研究生文中浮动体上下距离
 }
 
 %%=== 表格线宽 ===========================================================
-\cs_new:Npn \nwpuHeavyRuleWidth { 1.5pt }
-\cs_new:Npn \nwpuLightRuleWidth { 1.0pt }
+\cs_new:Npn \nwpuHeavyRuleWidth { 1.5pt }                   % booktabs 粗线宽度
+\cs_new:Npn \nwpuLightRuleWidth { 1.0pt }                   % booktabs 细线宽度
 
 %%=== 表格格式 ===========================================================
-\cs_new:Npn \nwpuGraduateTableLineSpread { 1 }
-\cs_new:Npn \nwpuTableArrayStretch { 1.4 }
-\cs_new:Npn \nwpuTableRuleWidth { 0.5pt }
-\cs_new:Npn \nwpuTableColumnSep { 0pt }
+\cs_new:Npn \nwpuGraduateTableLineSpread { 1 }              % 研究生表格内部行距倍率
+\cs_new:Npn \nwpuTableArrayStretch { 1.4 }                  % 全局表格行高倍率
+\cs_new:Npn \nwpuTableRuleWidth { 0.5pt }                   % 全局普通表格线宽
+\cs_new:Npn \nwpuTableColumnSep { 0pt }                     % 全局表格列内左右边距
 
 %%=== 封皮与内封尺寸 =====================================================
-\cs_new:Npn \nwpuCoverVisualBottomRaise { 1.5pt }
-\cs_new:Npn \nwpuCoverDetailLabelWidth { 2.05cm }
-\cs_new:Npn \nwpuCoverDetailValueWidth { 2.4cm }
-\cs_new:Npn \nwpuCoverDetailLabelTextWidth { 4em }
-\cs_new:Npn \nwpuCoverTitleLabelWidth { 2.34cm }
-\cs_new:Npn \nwpuCoverTitleValueWidth { 12.13cm }
-\cs_new:Npn \nwpuCoverTitleRowHeight { 1.45cm }
-\cs_new:Npn \nwpuCoverAuthorLabelWidth { 1.56cm }
-\cs_new:Npn \nwpuCoverAuthorValueWidth { 3.72cm }
-\cs_new:Npn \nwpuCoverAuthorRowHeight { 1.28cm }
-\cs_new:Npn \nwpuCoverInfoLabelWidth { 3.59cm }
-\cs_new:Npn \nwpuCoverInfoValueWidth { 9cm }
-\cs_new:Npn \nwpuCoverInfoRowHeight { 1cm }
-\cs_new:Npn \nwpuCoverBackgroundInnerSep { 0pt }
-\cs_new:Npn \nwpuCoverLineSpread { 1.25 }
-\cs_new:Npn \nwpuCoverAfterDetailSkip { 21\baselineskip }
-\cs_new:Npn \nwpuCoverAfterTitleSkip { 3\baselineskip }
-\cs_new:Npn \nwpuCoverAfterAuthorSkip { 4\baselineskip }
-\cs_new:Npn \nwpuCoverAfterInfoSkip { 2.5\baselineskip }
+\cs_new:Npn \nwpuCoverVisualBottomRaise { 1.5pt }           % 封皮固定高度单元格文字底端微调
+\cs_new:Npn \nwpuCoverDetailLabelWidth { 2.05cm }           % 封皮右上角信息表标签列宽
+\cs_new:Npn \nwpuCoverDetailValueWidth { 2.4cm }            % 封皮右上角信息表内容列宽
+\cs_new:Npn \nwpuCoverDetailLabelTextWidth { 4em }          % 封皮右上角信息表标签字距拉伸宽度
+\cs_new:Npn \nwpuCoverTitleLabelWidth { 2.34cm }            % 封皮题目表标签列宽
+\cs_new:Npn \nwpuCoverTitleValueWidth { 12.13cm }           % 封皮题目表内容列宽
+\cs_new:Npn \nwpuCoverTitleRowHeight { 1.45cm }             % 封皮题目表单元格高度
+\cs_new:Npn \nwpuCoverAuthorLabelWidth { 1.56cm }           % 封皮作者表标签列宽
+\cs_new:Npn \nwpuCoverAuthorValueWidth { 3.72cm }           % 封皮作者表内容列宽
+\cs_new:Npn \nwpuCoverAuthorRowHeight { 1.28cm }            % 封皮作者表单元格高度
+\cs_new:Npn \nwpuCoverInfoLabelWidth { 3.59cm }             % 封皮专业/导师等信息表标签列宽
+\cs_new:Npn \nwpuCoverInfoValueWidth { 9cm }                % 封皮专业/导师等信息表内容列宽
+\cs_new:Npn \nwpuCoverInfoRowHeight { 1cm }                 % 封皮专业/导师等信息表单元格高度
+\cs_new:Npn \nwpuCoverBackgroundInnerSep { 0pt }            % 彩色封面/封底背景图节点内边距
+\cs_new:Npn \nwpuCoverLineSpread { 1.25 }                   % 研究生封皮整体行距倍率
+\cs_new:Npn \nwpuCoverAfterDetailSkip { 21\baselineskip }   % 封皮右上角信息表到题目表距离
+\cs_new:Npn \nwpuCoverAfterTitleSkip { 3\baselineskip }     % 封皮题目表到作者表距离
+\cs_new:Npn \nwpuCoverAfterAuthorSkip { 4\baselineskip }    % 封皮作者表到专业/导师信息表距离
+\cs_new:Npn \nwpuCoverAfterInfoSkip { 2.5\baselineskip }    % 封皮信息表到底部日期区域预留距离
 
-\cs_new:Npn \nwpuChsInnerTitleLabelWidth { 2.54cm }
-\cs_new:Npn \nwpuChsInnerTitleValueMinWidth { 7.85cm }
-\cs_new:Npn \nwpuChsInnerTitleRowHeight { 1.45cm }
-\cs_new:Npn \nwpuChsInnerInfoLabelWidth { 2.88cm }
-\cs_new:Npn \nwpuChsInnerInfoValueMinWidth { 4.34cm }
-\cs_new:Npn \nwpuChsInnerInfoRowHeight { 1cm }
-\cs_new:Npn \nwpuChsInnerLineSpread { 1.4 }
-\cs_new:Npn \nwpuChsInnerSchoolTitleStretch { 1.41667 }
-\cs_new:Npn \nwpuChsInnerTopSkip { 1\baselineskip }
-\cs_new:Npn \nwpuChsInnerAfterSchoolSkip { 5mm }
-\cs_new:Npn \nwpuChsInnerAfterDocTitleSkip { 5mm }
-\cs_new:Npn \nwpuChsInnerBeforeTitleSkip { 6\baselineskip }
-\cs_new:Npn \nwpuChsInnerAfterTitleSkip { 6\baselineskip }
-\cs_new:Npn \nwpuChsInnerAfterInfoSkip { 2\baselineskip }
+\cs_new:Npn \nwpuChsInnerTitleLabelWidth { 2.54cm }         % 中文内封题目表标签列宽
+\cs_new:Npn \nwpuChsInnerTitleValueMinWidth { 7.85cm }      % 中文内封题目表内容列最小宽度
+\cs_new:Npn \nwpuChsInnerTitleRowHeight { 1.45cm }          % 中文内封题目表单元格高度
+\cs_new:Npn \nwpuChsInnerInfoLabelWidth { 2.88cm }          % 中文内封作者信息表标签列宽
+\cs_new:Npn \nwpuChsInnerInfoValueMinWidth { 4.34cm }       % 中文内封作者信息表内容列最小宽度
+\cs_new:Npn \nwpuChsInnerInfoRowHeight { 1cm }              % 中文内封作者信息表单元格高度
+\cs_new:Npn \nwpuChsInnerLineSpread { 1.4 }                 % 中文内封整体行距倍率
+\cs_new:Npn \nwpuChsInnerSchoolTitleStretch { 1.41667 }     % 中文内封校名/文档类型标题拉伸倍率
+\cs_new:Npn \nwpuChsInnerTopSkip { 1\baselineskip }         % 中文内封顶部空白
+\cs_new:Npn \nwpuChsInnerAfterSchoolSkip { 5mm }            % 中文内封校名后距
+\cs_new:Npn \nwpuChsInnerAfterDocTitleSkip { 5mm }          % 中文内封文档类型标题后距
+\cs_new:Npn \nwpuChsInnerBeforeTitleSkip { 6\baselineskip } % 中文内封题目表前距
+\cs_new:Npn \nwpuChsInnerAfterTitleSkip { 6\baselineskip }  % 中文内封题目表后距
+\cs_new:Npn \nwpuChsInnerAfterInfoSkip { 2\baselineskip }   % 中文内封作者信息表后距
 
-\cs_new:Npn \nwpuEngInnerTopSkip { 3\baselineskip }
-\cs_new:Npn \nwpuEngInnerAfterTitleSkip { 3\baselineskip }
-\cs_new:Npn \nwpuEngInnerAfterAdvisorSkip { 4\baselineskip }
-\cs_new:Npn \nwpuEngInnerBeforeDegreeSkip { 1\baselineskip }
-\cs_new:Npn \nwpuEngInnerAfterDegreeSkip { 4\baselineskip }
+\cs_new:Npn \nwpuEngInnerTopSkip { 3\baselineskip }         % 英文内封顶部空白
+\cs_new:Npn \nwpuEngInnerAfterTitleSkip { 3\baselineskip }  % 英文内封标题后距
+\cs_new:Npn \nwpuEngInnerAfterAdvisorSkip { 4\baselineskip }% 英文内封导师信息后距
+\cs_new:Npn \nwpuEngInnerBeforeDegreeSkip { 1\baselineskip }% 英文内封学位说明前距
+\cs_new:Npn \nwpuEngInnerAfterDegreeSkip { 4\baselineskip } % 英文内封学位说明后距
 
 %%=== 本科封面尺寸 =======================================================
-\cs_new:Npn \nwpuBachelorLogoWidth { 10cm }
-\cs_new:Npn \nwpuBachelorTitleUnderlineWidth { 8cm }
-\cs_new:Npn \nwpuBachelorInfoUnderlineWidth { 5.5cm }
-\cs_new:Npn \nwpuBachelorTitleGap { 0.2cm }
-\cs_new:Npn \nwpuBachelorTopSkip { 2.3cm }
-\cs_new:Npn \nwpuBachelorAfterLogoSkip { 1.3cm }
-\cs_new:Npn \nwpuBachelorAfterDocTitleSkip { 3.5cm }
-\cs_new:Npn \nwpuBachelorAfterTitleSkip { 1.5cm }
-\cs_new:Npn \nwpuBachelorInfoRowSkip { 1.1cm }
+\cs_new:Npn \nwpuBachelorLogoWidth { 10cm }                 % 本科封面校徽宽度
+\cs_new:Npn \nwpuBachelorTitleUnderlineWidth { 8cm }        % 本科封面题目下划线宽度
+\cs_new:Npn \nwpuBachelorInfoUnderlineWidth { 5.5cm }       % 本科封面专业/姓名等下划线宽度
+\cs_new:Npn \nwpuBachelorTitleGap { 0.2cm }                 % 本科封面“题目”和下划线间距
+\cs_new:Npn \nwpuBachelorTopSkip { 2.3cm }                  % 本科封面顶部空白
+\cs_new:Npn \nwpuBachelorAfterLogoSkip { 1.3cm }            % 本科封面校徽后距
+\cs_new:Npn \nwpuBachelorAfterDocTitleSkip { 3.5cm }        % 本科封面文档标题后距
+\cs_new:Npn \nwpuBachelorAfterTitleSkip { 1.5cm }           % 本科封面题目后距
+\cs_new:Npn \nwpuBachelorInfoRowSkip { 1.1cm }              % 本科封面信息行之间距离
 
 %%=== 评阅人与答辩委员会页尺寸 ===========================================
-\cs_new:Npn \nwpuCommitteeLineSpread { 1.2 }
-\cs_new:Npn \nwpuCommitteeReviewNameWidth { 3.71cm }
-\cs_new:Npn \nwpuCommitteeReviewRankWidth { 2.83cm }
-\cs_new:Npn \nwpuCommitteeReviewOrgWidth { 8.73cm }
-\cs_new:Npn \nwpuCommitteeRoleWidth { 3.76cm }
-\cs_new:Npn \nwpuCommitteeNameWidth { 2.68cm }
-\cs_new:Npn \nwpuCommitteeRankWidth { 2.25cm }
-\cs_new:Npn \nwpuCommitteeOrgWidth { 6.75cm }
-\cs_new:Npn \nwpuCommitteeTopSkip { 1\baselineskip }
-\cs_new:Npn \nwpuCommitteeBeforeReviewersSkip { \baselineskip }
-\cs_new:Npn \nwpuCommitteeReviewersTitleBeforeSkip { 0.3\baselineskip }
-\cs_new:Npn \nwpuCommitteeReviewersTableBeforeSkip { 0.3\baselineskip }
-\cs_new:Npn \nwpuCommitteeBeforeDefenseSkip { \baselineskip }
-\cs_new:Npn \nwpuCommitteeDefenseTitleBeforeSkip { 0.3\baselineskip }
-\cs_new:Npn \nwpuCommitteeDefenseTableBeforeSkip { 0.3\baselineskip }
+\cs_new:Npn \nwpuCommitteeLineSpread { 1.2 }                % 评阅人与答辩委员会页整体行距倍率
+\cs_new:Npn \nwpuCommitteeReviewNameWidth { 3.71cm }        % 评阅人名单姓名列宽
+\cs_new:Npn \nwpuCommitteeReviewRankWidth { 2.83cm }        % 评阅人名单职称列宽
+\cs_new:Npn \nwpuCommitteeReviewOrgWidth { 8.73cm }         % 评阅人名单工作单位列宽
+\cs_new:Npn \nwpuCommitteeRoleWidth { 3.76cm }              % 答辩委员会角色列宽
+\cs_new:Npn \nwpuCommitteeNameWidth { 2.68cm }              % 答辩委员会姓名列宽
+\cs_new:Npn \nwpuCommitteeRankWidth { 2.25cm }              % 答辩委员会职称列宽
+\cs_new:Npn \nwpuCommitteeOrgWidth { 6.75cm }               % 答辩委员会工作单位列宽
+\cs_new:Npn \nwpuCommitteeTopSkip { 1\baselineskip }        % 评阅人与答辩委员会页顶部空白
+\cs_new:Npn \nwpuCommitteeBeforeReviewersSkip { \baselineskip } % 评阅人名单区域前距
+\cs_new:Npn \nwpuCommitteeReviewersTitleBeforeSkip { 0.3\baselineskip } % 评阅人名单标题前距
+\cs_new:Npn \nwpuCommitteeReviewersTableBeforeSkip { 0.3\baselineskip } % 评阅人名单表格前距
+\cs_new:Npn \nwpuCommitteeBeforeDefenseSkip { \baselineskip } % 答辩委员会名单区域前距
+\cs_new:Npn \nwpuCommitteeDefenseTitleBeforeSkip { 0.3\baselineskip } % 答辩委员会标题前距
+\cs_new:Npn \nwpuCommitteeDefenseTableBeforeSkip { 0.3\baselineskip } % 答辩委员会表格前距
 
 %%=== 下划线、标题、目录、页眉与题注 =====================================
-\cs_new:Npn \nwpuUnderlineDefaultWidth { 5cm }
-\cs_new:Npn \nwpuUnderlineLeftSpace { 1pt }
-\cs_new:Npn \nwpuUnderlineRightSpace { 3pt }
-\cs_new:Npn \nwpuChapterLabelSep { 1em }
-\cs_new:Npn \nwpuGraduateChapterLabelSep { 20pt }
-\cs_new:Npn \nwpuSectionLabelSep { 0.5em }
-\cs_new:Npn \nwpuSubsubsectionBeforeSkip { 0.25em }
-\cs_new:Npn \nwpuParagraphBeforeSkip { 0.25em }
-\cs_new:Npn \nwpuTocSectionIndent { 1.16cm }
-\cs_new:Npn \nwpuTocSubsectionIndent { 2.00cm }
-\cs_new:Npn \nwpuTocSubsubsectionIndent { 2.86cm }
-\cs_new:Npn \nwpuTocSectionLabelWidth { 1.8em }
-\cs_new:Npn \nwpuTocSubsectionLabelWidth { 2.7em }
-\cs_new:Npn \nwpuTocSubsubsectionLabelWidth { 3.4em }
-\cs_new:Npn \nwpuBachelorTocDotSep { 5pt }
-\cs_new:Npn \nwpuGraduateTocDotSep { 3pt }
-\cs_new:Npn \nwpuTocChapterBeforeSkip { 0.2\baselineskip }
-\cs_new:Npn \nwpuBachelorTocChapterLabelOffset { 3.8em }
-\cs_new:Npn \nwpuGraduateTocChapterLabelOffset { 3.5em }
-\cs_new:Npn \nwpuTocLeaderSep { .3pc }
-\cs_new:Npn \nwpuHeaderTopRuleRaise { .7\baselineskip }
-\cs_new:Npn \nwpuGraduateHeaderTopRuleWidth { 3.4pt }
-\cs_new:Npn \nwpuGraduateHeaderTopRuleVSkip { -1.07\baselineskip }
-\cs_new:Npn \nwpuGraduateHeaderBottomRuleRaise { .5\baselineskip }
-\cs_new:Npn \nwpuGraduateHeaderBottomRuleWidth { 0.6pt }
-\cs_new:Npn \nwpuHeaderAfterRuleVSkip { -.8\baselineskip }
-\cs_new:Npn \nwpuBachelorHeaderRuleWidth { 0.8pt }
-\cs_new:Npn \nwpuBachelorHeaderLogoScale { 0.15 }
-\cs_new:Npn \nwpuHeaderRaise { 0.5pt }
-\cs_new_protected:Npn \nwpuGraduateFigureCaptionFont { \fontsize{10.5pt}{9.5pt}\selectfont }
-\cs_new_protected:Npn \nwpuBachelorTableCaptionFont { \fontsize{10.5pt}{14pt}\selectfont\bfseries }
-\cs_new_protected:Npn \nwpuBachelorFigureCaptionFont { \fontsize{10.5pt}{11.5pt}\selectfont\fSong }
-\cs_new:Npn \nwpuBachelorCaptionAboveSkip { 12pt }
-\cs_new:Npn \nwpuBachelorCaptionBelowSkip { 2pt }
-\cs_new:Npn \nwpuCaptionAboveSkip { 10pt }
-\cs_new:Npn \nwpuCaptionBelowSkip { 0pt }
-\cs_new:Npn \nwpuSubcaptionBelowSkip { -5pt }
+\cs_new:Npn \nwpuUnderlineDefaultWidth { 5cm }              % 通用下划线默认宽度
+\cs_new:Npn \nwpuUnderlineLeftSpace { 1pt }                 % 通用下划线左侧留白
+\cs_new:Npn \nwpuUnderlineRightSpace { 3pt }                % 通用下划线右侧留白
+\cs_new:Npn \nwpuChapterLabelSep { 1em }                    % 章标题编号与标题间距
+\cs_new:Npn \nwpuGraduateChapterLabelSep { 20pt }           % 研究生章标题编号与标题间距
+\cs_new:Npn \nwpuSectionLabelSep { 0.5em }                  % 节/小节标题编号与标题间距
+\cs_new:Npn \nwpuSubsubsectionBeforeSkip { 0.25em }         % 四级标题前距
+\cs_new:Npn \nwpuParagraphBeforeSkip { 0.25em }             % 段标题前距
+\cs_new:Npn \nwpuTocSectionIndent { 1.16cm }                % 目录节条目左缩进
+\cs_new:Npn \nwpuTocSubsectionIndent { 2.00cm }             % 目录小节条目左缩进
+\cs_new:Npn \nwpuTocSubsubsectionIndent { 2.86cm }          % 目录四级标题条目左缩进
+\cs_new:Npn \nwpuTocSectionLabelWidth { 1.8em }             % 目录节编号盒宽
+\cs_new:Npn \nwpuTocSubsectionLabelWidth { 2.7em }          % 目录小节编号盒宽
+\cs_new:Npn \nwpuTocSubsubsectionLabelWidth { 3.4em }       % 目录四级标题编号盒宽
+\cs_new:Npn \nwpuBachelorTocDotSep { 5pt }                  % 本科目录点线间距
+\cs_new:Npn \nwpuGraduateTocDotSep { 3pt }                  % 研究生目录点线间距
+\cs_new:Npn \nwpuTocChapterBeforeSkip { 0.2\baselineskip }  % 目录章条目前距
+\cs_new:Npn \nwpuBachelorTocChapterLabelOffset { 3.8em }    % 本科目录章标题文本起始偏移
+\cs_new:Npn \nwpuGraduateTocChapterLabelOffset { 3.5em }    % 研究生目录章标题文本起始偏移
+\cs_new:Npn \nwpuTocLeaderSep { .3pc }                      % 目录章条目点线间距
+\cs_new:Npn \nwpuHeaderTopRuleRaise { .7\baselineskip }     % 页眉上线垂直抬升
+\cs_new:Npn \nwpuGraduateHeaderTopRuleWidth { 3.4pt }       % 研究生页眉粗线宽度
+\cs_new:Npn \nwpuGraduateHeaderTopRuleVSkip { -1.07\baselineskip } % 研究生页眉粗线后垂直回退
+\cs_new:Npn \nwpuGraduateHeaderBottomRuleRaise { .5\baselineskip } % 研究生页眉细线垂直抬升
+\cs_new:Npn \nwpuGraduateHeaderBottomRuleWidth { 0.6pt }    % 研究生页眉细线宽度
+\cs_new:Npn \nwpuHeaderAfterRuleVSkip { -.8\baselineskip }  % 页眉线绘制后垂直回退
+\cs_new:Npn \nwpuBachelorHeaderRuleWidth { 0.8pt }          % 本科页眉线宽度
+\cs_new:Npn \nwpuBachelorHeaderLogoScale { 0.15 }           % 本科页眉校徽缩放比例
+\cs_new:Npn \nwpuHeaderRaise { 0.5pt }                      % 研究生页眉文字垂直抬升
+\cs_new_protected:Npn \nwpuGraduateFigureCaptionFont { \fontsize{10.5pt}{9.5pt}\selectfont } % 研究生图题字号与行距
+\cs_new_protected:Npn \nwpuBachelorTableCaptionFont { \fontsize{10.5pt}{14pt}\selectfont\bfseries } % 本科表题字号与字重
+\cs_new_protected:Npn \nwpuBachelorFigureCaptionFont { \fontsize{10.5pt}{11.5pt}\selectfont\fSong } % 本科图题字号与字体
+\cs_new:Npn \nwpuBachelorCaptionAboveSkip { 12pt }          % 本科图表标题上方间距
+\cs_new:Npn \nwpuBachelorCaptionBelowSkip { 2pt }           % 本科图表标题下方间距
+\cs_new:Npn \nwpuCaptionAboveSkip { 10pt }                  % 研究生图表标题上方间距
+\cs_new:Npn \nwpuCaptionBelowSkip { 0pt }                   % 研究生图表标题下方间距
+\cs_new:Npn \nwpuSubcaptionBelowSkip { -5pt }               % 子图/子表标题下方间距
 
 %%=== 摘要、目录页与后置页格式 ===========================================
-\cs_new:Npn \nwpuBachelorAbstractChsLineSpread { 1.345 }
-\cs_new:Npn \nwpuBachelorAbstractEngLineSpread { 1.2 }
-\cs_new_protected:Npn \nwpuBachelorAbstractFont { \fontsize{12pt}{14.4pt}\selectfont }
-\cs_new:Npn \nwpuKeywordBeforeSkip { 1\baselineskip }
-\cs_new:Npn \nwpuTocHfuzz { 2pt }
-\cs_new:Npn \nwpuDesignSummaryLineSpread { 1.0 }
+\cs_new:Npn \nwpuBachelorAbstractChsLineSpread { 1.345 }    % 本科中文摘要行距倍率
+\cs_new:Npn \nwpuBachelorAbstractEngLineSpread { 1.2 }      % 本科英文摘要行距倍率
+\cs_new_protected:Npn \nwpuBachelorAbstractFont { \fontsize{12pt}{14.4pt}\selectfont } % 本科摘要正文字号
+\cs_new:Npn \nwpuKeywordBeforeSkip { 1\baselineskip }       % 关键词区域前距
+\cs_new:Npn \nwpuTocHfuzz { 2pt }                           % 目录页容忍的水平溢出
+\cs_new:Npn \nwpuDesignSummaryLineSpread { 1.0 }            % 本科毕业设计小结行距倍率
 
 %%=== 参考文献格式 =======================================================
-\cs_new:Npn \nwpuBibLabelSep { 0pt }
-\cs_new:Npn \nwpuBibFirstLineReserve { 1.5em }
-\cs_new:Npn \nwpuBibLabelNumberGap { 0.3em }
-\cs_new:Npn \nwpuBibParIndent { 0pt }
-\cs_new:Npn \nwpuBibEmergencyStretch { 2em }
-\cs_new:Npn \nwpuBibItemSep { 0.5ex }
-\cs_new:Npn \nwpuBibHang { 0pt }
+\cs_new:Npn \nwpuBibLabelSep { 0pt }                        % 参考文献编号标签间距
+\cs_new:Npn \nwpuBibFirstLineReserve { 1.5em }              % 参考文献首行编号预留宽度
+\cs_new:Npn \nwpuBibLabelNumberGap { 0.3em }                % 参考文献编号与正文间距
+\cs_new:Npn \nwpuBibParIndent { 0pt }                       % 参考文献段落缩进
+\cs_new:Npn \nwpuBibEmergencyStretch { 2em }                % 参考文献断行弹性宽度
+\cs_new:Npn \nwpuBibItemSep { 0.5ex }                       % 参考文献条目间距
+\cs_new:Npn \nwpuBibHang { 0pt }                            % 参考文献悬挂缩进
 
 %%=== 代码、算法与符号表格式 =============================================
-\cs_new:Npn \nwpuListingNumberSep { 5pt }
-\cs_new:Npn \nwpuListingFrameRightMargin { 5pt }
-\cs_new:Npn \nwpuListingFrameBottomMargin { 4pt }
-\cs_new:Npn \nwpuAlgorithmRuleKern { 2pt }
-\cs_new:Npn \nwpuNomenclatureLabelSep { 15pt }
+\cs_new:Npn \nwpuListingNumberSep { 5pt }                   % 代码块行号与代码间距
+\cs_new:Npn \nwpuListingFrameRightMargin { 5pt }            % 代码块边框右侧缩进
+\cs_new:Npn \nwpuListingFrameBottomMargin { 4pt }           % 代码块边框底部缩进
+\cs_new:Npn \nwpuAlgorithmRuleKern { 2pt }                  % 算法浮动体横线与内容间距
+\cs_new:Npn \nwpuNomenclatureLabelSep { 15pt }              % 符号表标签与说明间距
 
 %%=== 中文换行格式 =======================================================
-\cs_new:Npn \nwpuCJKLineBreakSkip { 0pt plus 1pt }
+\cs_new:Npn \nwpuCJKLineBreakSkip { 0pt plus 1pt }          % 中文自动换行弹性间距
 
 \ExplSyntaxOff
