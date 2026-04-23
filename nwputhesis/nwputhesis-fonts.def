@@ -189,5 +189,5 @@
   { \RequirePackage{CJKnumb} }                                 % 中文数字
   {}
 \XeTeXlinebreaklocale "zh"                                  % 使用中文的换行风格
-\XeTeXlinebreakskip = 0pt plus 1pt                          % 换行逻辑的弹性大小
+\XeTeXlinebreakskip = \nwpuCJKLineBreakSkip                 % 换行逻辑的弹性大小
 \ExplSyntaxOff

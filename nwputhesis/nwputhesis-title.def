@@ -32,7 +32,7 @@
 %%-----------------------------------------------------------------------------%
 %% 标题页尺寸常量
 %%-----------------------------------------------------------------------------%
-\dim_set:Nn \l__nwpu_cover_visual_bottom_raise_dim { 1.5pt }
+\dim_set:Nn \l__nwpu_cover_visual_bottom_raise_dim { \nwpuCoverVisualBottomRaise }
 \dim_new:N \l__nwpu_cover_detail_label_width_dim
 \dim_new:N \l__nwpu_cover_detail_value_width_dim
 \dim_new:N \l__nwpu_cover_title_label_width_dim
@@ -62,64 +62,64 @@
 \dim_new:N \l__nwpu_committee_rank_width_dim
 \dim_new:N \l__nwpu_committee_org_width_dim
 \dim_new:N \l__nwpu_cover_background_inner_sep_dim
-\dim_set:Nn \l__nwpu_cover_detail_label_width_dim { 2.05cm }
-\dim_set:Nn \l__nwpu_cover_detail_value_width_dim { 2.4cm }
-\dim_set:Nn \l__nwpu_cover_title_label_width_dim { 2.34cm }
-\dim_set:Nn \l__nwpu_cover_title_value_width_dim { 12.13cm }
-\dim_set:Nn \l__nwpu_cover_title_row_height_dim { 1.45cm }
-\dim_set:Nn \l__nwpu_cover_author_label_width_dim { 1.56cm }
-\dim_set:Nn \l__nwpu_cover_author_value_width_dim { 3.72cm }
-\dim_set:Nn \l__nwpu_cover_author_row_height_dim { 1.28cm }
-\dim_set:Nn \l__nwpu_cover_info_label_width_dim { 3.59cm }
-\dim_set:Nn \l__nwpu_cover_info_value_width_dim { 9cm }
-\dim_set:Nn \l__nwpu_cover_info_row_height_dim { 1cm }
-\dim_set:Nn \l__nwpu_chs_inner_title_label_width_dim { 2.54cm }
-\dim_set:Nn \l__nwpu_chs_inner_title_value_min_width_dim { 7.85cm }
-\dim_set:Nn \l__nwpu_chs_inner_title_row_height_dim { 1.45cm }
-\dim_set:Nn \l__nwpu_chs_inner_info_label_width_dim { 2.88cm }
-\dim_set:Nn \l__nwpu_chs_inner_info_value_min_width_dim { 4.34cm }
-\dim_set:Nn \l__nwpu_chs_inner_info_row_height_dim { 1cm }
-\dim_set:Nn \l__nwpu_bachelor_logo_width_dim { 10cm }
-\dim_set:Nn \l__nwpu_bachelor_title_underline_width_dim { 8cm }
-\dim_set:Nn \l__nwpu_bachelor_info_underline_width_dim { 5.5cm }
-\dim_set:Nn \l__nwpu_bachelor_title_gap_dim { 0.2cm }
-\dim_set:Nn \l__nwpu_committee_review_name_width_dim { 3.71cm }
-\dim_set:Nn \l__nwpu_committee_review_rank_width_dim { 2.83cm }
-\dim_set:Nn \l__nwpu_committee_review_org_width_dim { 8.73cm }
-\dim_set:Nn \l__nwpu_committee_role_width_dim { 3.76cm }
-\dim_set:Nn \l__nwpu_committee_name_width_dim { 2.68cm }
-\dim_set:Nn \l__nwpu_committee_rank_width_dim { 2.25cm }
-\dim_set:Nn \l__nwpu_committee_org_width_dim { 6.75cm }
-\dim_set:Nn \l__nwpu_cover_background_inner_sep_dim { 0pt }
-\cs_new:Npn \__nwpu_cover_detail_label_text_width: { 4em }
-\cs_new:Npn \__nwpu_cover_after_detail_skip: { 21\baselineskip }
-\cs_new:Npn \__nwpu_cover_after_title_skip: { 3\baselineskip }
-\cs_new:Npn \__nwpu_cover_after_author_skip: { 4\baselineskip }
-\cs_new:Npn \__nwpu_cover_after_info_skip: { 2.5\baselineskip }
-\cs_new:Npn \__nwpu_chs_inner_school_title_stretch: { 1.41667 }
-\cs_new:Npn \__nwpu_chs_inner_top_skip: { 1\baselineskip }
-\cs_new:Npn \__nwpu_chs_inner_after_school_skip: { 5mm }
-\cs_new:Npn \__nwpu_chs_inner_after_doc_title_skip: { 5mm }
-\cs_new:Npn \__nwpu_chs_inner_before_title_skip: { 6\baselineskip }
-\cs_new:Npn \__nwpu_chs_inner_after_title_skip: { 6\baselineskip }
-\cs_new:Npn \__nwpu_chs_inner_after_info_skip: { 2\baselineskip }
-\cs_new:Npn \__nwpu_eng_inner_top_skip: { 3\baselineskip }
-\cs_new:Npn \__nwpu_eng_inner_after_title_skip: { 3\baselineskip }
-\cs_new:Npn \__nwpu_eng_inner_after_advisor_skip: { 4\baselineskip }
-\cs_new:Npn \__nwpu_eng_inner_before_degree_skip: { 1\baselineskip }
-\cs_new:Npn \__nwpu_eng_inner_after_degree_skip: { 4\baselineskip }
-\cs_new:Npn \__nwpu_bachelor_top_skip: { 2.3cm }
-\cs_new:Npn \__nwpu_bachelor_after_logo_skip: { 1.3cm }
-\cs_new:Npn \__nwpu_bachelor_after_doc_title_skip: { 3.5cm }
-\cs_new:Npn \__nwpu_bachelor_after_title_skip: { 1.5cm }
-\cs_new:Npn \__nwpu_bachelor_info_row_skip: { 1.1cm }
-\cs_new:Npn \__nwpu_committee_top_skip: { 1\baselineskip }
-\cs_new:Npn \__nwpu_committee_before_reviewers_skip: { \baselineskip }
-\cs_new:Npn \__nwpu_committee_reviewers_title_before_skip: { 0.3\baselineskip }
-\cs_new:Npn \__nwpu_committee_reviewers_table_before_skip: { 0.3\baselineskip }
-\cs_new:Npn \__nwpu_committee_before_defense_skip: { \baselineskip }
-\cs_new:Npn \__nwpu_committee_defense_title_before_skip: { 0.3\baselineskip }
-\cs_new:Npn \__nwpu_committee_defense_table_before_skip: { 0.3\baselineskip }
+\dim_set:Nn \l__nwpu_cover_detail_label_width_dim { \nwpuCoverDetailLabelWidth }
+\dim_set:Nn \l__nwpu_cover_detail_value_width_dim { \nwpuCoverDetailValueWidth }
+\dim_set:Nn \l__nwpu_cover_title_label_width_dim { \nwpuCoverTitleLabelWidth }
+\dim_set:Nn \l__nwpu_cover_title_value_width_dim { \nwpuCoverTitleValueWidth }
+\dim_set:Nn \l__nwpu_cover_title_row_height_dim { \nwpuCoverTitleRowHeight }
+\dim_set:Nn \l__nwpu_cover_author_label_width_dim { \nwpuCoverAuthorLabelWidth }
+\dim_set:Nn \l__nwpu_cover_author_value_width_dim { \nwpuCoverAuthorValueWidth }
+\dim_set:Nn \l__nwpu_cover_author_row_height_dim { \nwpuCoverAuthorRowHeight }
+\dim_set:Nn \l__nwpu_cover_info_label_width_dim { \nwpuCoverInfoLabelWidth }
+\dim_set:Nn \l__nwpu_cover_info_value_width_dim { \nwpuCoverInfoValueWidth }
+\dim_set:Nn \l__nwpu_cover_info_row_height_dim { \nwpuCoverInfoRowHeight }
+\dim_set:Nn \l__nwpu_chs_inner_title_label_width_dim { \nwpuChsInnerTitleLabelWidth }
+\dim_set:Nn \l__nwpu_chs_inner_title_value_min_width_dim { \nwpuChsInnerTitleValueMinWidth }
+\dim_set:Nn \l__nwpu_chs_inner_title_row_height_dim { \nwpuChsInnerTitleRowHeight }
+\dim_set:Nn \l__nwpu_chs_inner_info_label_width_dim { \nwpuChsInnerInfoLabelWidth }
+\dim_set:Nn \l__nwpu_chs_inner_info_value_min_width_dim { \nwpuChsInnerInfoValueMinWidth }
+\dim_set:Nn \l__nwpu_chs_inner_info_row_height_dim { \nwpuChsInnerInfoRowHeight }
+\dim_set:Nn \l__nwpu_bachelor_logo_width_dim { \nwpuBachelorLogoWidth }
+\dim_set:Nn \l__nwpu_bachelor_title_underline_width_dim { \nwpuBachelorTitleUnderlineWidth }
+\dim_set:Nn \l__nwpu_bachelor_info_underline_width_dim { \nwpuBachelorInfoUnderlineWidth }
+\dim_set:Nn \l__nwpu_bachelor_title_gap_dim { \nwpuBachelorTitleGap }
+\dim_set:Nn \l__nwpu_committee_review_name_width_dim { \nwpuCommitteeReviewNameWidth }
+\dim_set:Nn \l__nwpu_committee_review_rank_width_dim { \nwpuCommitteeReviewRankWidth }
+\dim_set:Nn \l__nwpu_committee_review_org_width_dim { \nwpuCommitteeReviewOrgWidth }
+\dim_set:Nn \l__nwpu_committee_role_width_dim { \nwpuCommitteeRoleWidth }
+\dim_set:Nn \l__nwpu_committee_name_width_dim { \nwpuCommitteeNameWidth }
+\dim_set:Nn \l__nwpu_committee_rank_width_dim { \nwpuCommitteeRankWidth }
+\dim_set:Nn \l__nwpu_committee_org_width_dim { \nwpuCommitteeOrgWidth }
+\dim_set:Nn \l__nwpu_cover_background_inner_sep_dim { \nwpuCoverBackgroundInnerSep }
+\cs_new:Npn \__nwpu_cover_detail_label_text_width: { \nwpuCoverDetailLabelTextWidth }
+\cs_new:Npn \__nwpu_cover_after_detail_skip: { \nwpuCoverAfterDetailSkip }
+\cs_new:Npn \__nwpu_cover_after_title_skip: { \nwpuCoverAfterTitleSkip }
+\cs_new:Npn \__nwpu_cover_after_author_skip: { \nwpuCoverAfterAuthorSkip }
+\cs_new:Npn \__nwpu_cover_after_info_skip: { \nwpuCoverAfterInfoSkip }
+\cs_new:Npn \__nwpu_chs_inner_school_title_stretch: { \nwpuChsInnerSchoolTitleStretch }
+\cs_new:Npn \__nwpu_chs_inner_top_skip: { \nwpuChsInnerTopSkip }
+\cs_new:Npn \__nwpu_chs_inner_after_school_skip: { \nwpuChsInnerAfterSchoolSkip }
+\cs_new:Npn \__nwpu_chs_inner_after_doc_title_skip: { \nwpuChsInnerAfterDocTitleSkip }
+\cs_new:Npn \__nwpu_chs_inner_before_title_skip: { \nwpuChsInnerBeforeTitleSkip }
+\cs_new:Npn \__nwpu_chs_inner_after_title_skip: { \nwpuChsInnerAfterTitleSkip }
+\cs_new:Npn \__nwpu_chs_inner_after_info_skip: { \nwpuChsInnerAfterInfoSkip }
+\cs_new:Npn \__nwpu_eng_inner_top_skip: { \nwpuEngInnerTopSkip }
+\cs_new:Npn \__nwpu_eng_inner_after_title_skip: { \nwpuEngInnerAfterTitleSkip }
+\cs_new:Npn \__nwpu_eng_inner_after_advisor_skip: { \nwpuEngInnerAfterAdvisorSkip }
+\cs_new:Npn \__nwpu_eng_inner_before_degree_skip: { \nwpuEngInnerBeforeDegreeSkip }
+\cs_new:Npn \__nwpu_eng_inner_after_degree_skip: { \nwpuEngInnerAfterDegreeSkip }
+\cs_new:Npn \__nwpu_bachelor_top_skip: { \nwpuBachelorTopSkip }
+\cs_new:Npn \__nwpu_bachelor_after_logo_skip: { \nwpuBachelorAfterLogoSkip }
+\cs_new:Npn \__nwpu_bachelor_after_doc_title_skip: { \nwpuBachelorAfterDocTitleSkip }
+\cs_new:Npn \__nwpu_bachelor_after_title_skip: { \nwpuBachelorAfterTitleSkip }
+\cs_new:Npn \__nwpu_bachelor_info_row_skip: { \nwpuBachelorInfoRowSkip }
+\cs_new:Npn \__nwpu_committee_top_skip: { \nwpuCommitteeTopSkip }
+\cs_new:Npn \__nwpu_committee_before_reviewers_skip: { \nwpuCommitteeBeforeReviewersSkip }
+\cs_new:Npn \__nwpu_committee_reviewers_title_before_skip: { \nwpuCommitteeReviewersTitleBeforeSkip }
+\cs_new:Npn \__nwpu_committee_reviewers_table_before_skip: { \nwpuCommitteeReviewersTableBeforeSkip }
+\cs_new:Npn \__nwpu_committee_before_defense_skip: { \nwpuCommitteeBeforeDefenseSkip }
+\cs_new:Npn \__nwpu_committee_defense_title_before_skip: { \nwpuCommitteeDefenseTitleBeforeSkip }
+\cs_new:Npn \__nwpu_committee_defense_table_before_skip: { \nwpuCommitteeDefenseTableBeforeSkip }
 \cs_new_protected:Npn \__nwpu_cover_cell:nnnnn #1#2#3#4#5
   { \parbox[#1][#3][#2]{#4}{\centering #5\par} }
 \cs_new_protected:Npn \__nwpu_cover_bottom_cell:nnn #1#2#3
@@ -353,7 +353,7 @@
             \end{tikzpicture}
         }
         \bfseries                                           %
-        \linespread{1.25}\selectfont                        % 1.25 倍行距
+        \linespread{\nwpuCoverLineSpread}\selectfont         % 封皮行距
         \begin{center}                                      %
             \__nwpu_prepare_cover_title:
             \hfill \fHei \sWuhao                            %
@@ -429,7 +429,7 @@
     \dim_compare:nNnT \l__nwpu_maxname_dim > \l__nwpu_chs_inner_info_value_dim
         { \dim_set:Nn \l__nwpu_chs_inner_info_value_dim { \l__nwpu_maxname_dim } }
     \begin{titlepage}                                       %
-        \linespread{1.4}\selectfont                         %
+        \linespread{\nwpuChsInnerLineSpread}\selectfont      %
         \begin{center}                                      %
             \fSong \sSanhao \par \vspace*{\__nwpu_chs_inner_top_skip:}%
             \makebox[\__nwpu_chs_inner_school_title_stretch:\l__nwpu_chstitle_hwidtha_dim][s]{\sSanhao\nwpu@chs@schoolname} \par
@@ -570,7 +570,7 @@
 \cs_new_protected:Npn \makeCommitteePage #1 {                         %
     \thispagestyle{empty}                                   % 清空页面格式
     \begin{titlepage}                                       %
-        \linespread{1.2} \sXiaosan \par                     % 1.2 倍行距
+        \linespread{\nwpuCommitteeLineSpread} \sXiaosan \par % 评阅与答辩页行距
         \vspace{\__nwpu_committee_top_skip:}                %
         \begin{center}                                      %
             \fHei \sSanhao {学位论文评阅人和答辩委员会名单} \par

@@ -42,7 +42,8 @@
 \cs_new_protected:Npn \nwpuTOCFontSize { \fontsize{12pt}{19pt}\selectfont }
 
 %%=== 正文格式 ===========================================================
-\cs_new_protected:Npn \nwpuBodyFont { \linespread{1.0}\sDefault }
+\cs_new:Npn \nwpuBodyLineSpread { 1.0 }
+\cs_new_protected:Npn \nwpuBodyFont { \linespread{\nwpuBodyLineSpread}\sDefault }
 \cs_new_eq:NN \graduatebodyfont \nwpuBodyFont                 % 向后兼容
 \cs_new_eq:NN \graduatecontentsfont \nwpuTOCFontSize          % 向后兼容
 
@@ -103,5 +104,147 @@
 %%=== 表格线宽 ===========================================================
 \cs_new:Npn \nwpuHeavyRuleWidth { 1.5pt }
 \cs_new:Npn \nwpuLightRuleWidth { 1.0pt }
+
+%%=== 表格格式 ===========================================================
+\cs_new:Npn \nwpuGraduateTableLineSpread { 1 }
+\cs_new:Npn \nwpuTableArrayStretch { 1.4 }
+\cs_new:Npn \nwpuTableRuleWidth { 0.5pt }
+\cs_new:Npn \nwpuTableColumnSep { 0pt }
+
+%%=== 封皮与内封尺寸 =====================================================
+\cs_new:Npn \nwpuCoverVisualBottomRaise { 1.5pt }
+\cs_new:Npn \nwpuCoverDetailLabelWidth { 2.05cm }
+\cs_new:Npn \nwpuCoverDetailValueWidth { 2.4cm }
+\cs_new:Npn \nwpuCoverDetailLabelTextWidth { 4em }
+\cs_new:Npn \nwpuCoverTitleLabelWidth { 2.34cm }
+\cs_new:Npn \nwpuCoverTitleValueWidth { 12.13cm }
+\cs_new:Npn \nwpuCoverTitleRowHeight { 1.45cm }
+\cs_new:Npn \nwpuCoverAuthorLabelWidth { 1.56cm }
+\cs_new:Npn \nwpuCoverAuthorValueWidth { 3.72cm }
+\cs_new:Npn \nwpuCoverAuthorRowHeight { 1.28cm }
+\cs_new:Npn \nwpuCoverInfoLabelWidth { 3.59cm }
+\cs_new:Npn \nwpuCoverInfoValueWidth { 9cm }
+\cs_new:Npn \nwpuCoverInfoRowHeight { 1cm }
+\cs_new:Npn \nwpuCoverBackgroundInnerSep { 0pt }
+\cs_new:Npn \nwpuCoverLineSpread { 1.25 }
+\cs_new:Npn \nwpuCoverAfterDetailSkip { 21\baselineskip }
+\cs_new:Npn \nwpuCoverAfterTitleSkip { 3\baselineskip }
+\cs_new:Npn \nwpuCoverAfterAuthorSkip { 4\baselineskip }
+\cs_new:Npn \nwpuCoverAfterInfoSkip { 2.5\baselineskip }
+
+\cs_new:Npn \nwpuChsInnerTitleLabelWidth { 2.54cm }
+\cs_new:Npn \nwpuChsInnerTitleValueMinWidth { 7.85cm }
+\cs_new:Npn \nwpuChsInnerTitleRowHeight { 1.45cm }
+\cs_new:Npn \nwpuChsInnerInfoLabelWidth { 2.88cm }
+\cs_new:Npn \nwpuChsInnerInfoValueMinWidth { 4.34cm }
+\cs_new:Npn \nwpuChsInnerInfoRowHeight { 1cm }
+\cs_new:Npn \nwpuChsInnerLineSpread { 1.4 }
+\cs_new:Npn \nwpuChsInnerSchoolTitleStretch { 1.41667 }
+\cs_new:Npn \nwpuChsInnerTopSkip { 1\baselineskip }
+\cs_new:Npn \nwpuChsInnerAfterSchoolSkip { 5mm }
+\cs_new:Npn \nwpuChsInnerAfterDocTitleSkip { 5mm }
+\cs_new:Npn \nwpuChsInnerBeforeTitleSkip { 6\baselineskip }
+\cs_new:Npn \nwpuChsInnerAfterTitleSkip { 6\baselineskip }
+\cs_new:Npn \nwpuChsInnerAfterInfoSkip { 2\baselineskip }
+
+\cs_new:Npn \nwpuEngInnerTopSkip { 3\baselineskip }
+\cs_new:Npn \nwpuEngInnerAfterTitleSkip { 3\baselineskip }
+\cs_new:Npn \nwpuEngInnerAfterAdvisorSkip { 4\baselineskip }
+\cs_new:Npn \nwpuEngInnerBeforeDegreeSkip { 1\baselineskip }
+\cs_new:Npn \nwpuEngInnerAfterDegreeSkip { 4\baselineskip }
+
+%%=== 本科封面尺寸 =======================================================
+\cs_new:Npn \nwpuBachelorLogoWidth { 10cm }
+\cs_new:Npn \nwpuBachelorTitleUnderlineWidth { 8cm }
+\cs_new:Npn \nwpuBachelorInfoUnderlineWidth { 5.5cm }
+\cs_new:Npn \nwpuBachelorTitleGap { 0.2cm }
+\cs_new:Npn \nwpuBachelorTopSkip { 2.3cm }
+\cs_new:Npn \nwpuBachelorAfterLogoSkip { 1.3cm }
+\cs_new:Npn \nwpuBachelorAfterDocTitleSkip { 3.5cm }
+\cs_new:Npn \nwpuBachelorAfterTitleSkip { 1.5cm }
+\cs_new:Npn \nwpuBachelorInfoRowSkip { 1.1cm }
+
+%%=== 评阅人与答辩委员会页尺寸 ===========================================
+\cs_new:Npn \nwpuCommitteeLineSpread { 1.2 }
+\cs_new:Npn \nwpuCommitteeReviewNameWidth { 3.71cm }
+\cs_new:Npn \nwpuCommitteeReviewRankWidth { 2.83cm }
+\cs_new:Npn \nwpuCommitteeReviewOrgWidth { 8.73cm }
+\cs_new:Npn \nwpuCommitteeRoleWidth { 3.76cm }
+\cs_new:Npn \nwpuCommitteeNameWidth { 2.68cm }
+\cs_new:Npn \nwpuCommitteeRankWidth { 2.25cm }
+\cs_new:Npn \nwpuCommitteeOrgWidth { 6.75cm }
+\cs_new:Npn \nwpuCommitteeTopSkip { 1\baselineskip }
+\cs_new:Npn \nwpuCommitteeBeforeReviewersSkip { \baselineskip }
+\cs_new:Npn \nwpuCommitteeReviewersTitleBeforeSkip { 0.3\baselineskip }
+\cs_new:Npn \nwpuCommitteeReviewersTableBeforeSkip { 0.3\baselineskip }
+\cs_new:Npn \nwpuCommitteeBeforeDefenseSkip { \baselineskip }
+\cs_new:Npn \nwpuCommitteeDefenseTitleBeforeSkip { 0.3\baselineskip }
+\cs_new:Npn \nwpuCommitteeDefenseTableBeforeSkip { 0.3\baselineskip }
+
+%%=== 下划线、标题、目录、页眉与题注 =====================================
+\cs_new:Npn \nwpuUnderlineDefaultWidth { 5cm }
+\cs_new:Npn \nwpuUnderlineLeftSpace { 1pt }
+\cs_new:Npn \nwpuUnderlineRightSpace { 3pt }
+\cs_new:Npn \nwpuChapterLabelSep { 1em }
+\cs_new:Npn \nwpuGraduateChapterLabelSep { 20pt }
+\cs_new:Npn \nwpuSectionLabelSep { 0.5em }
+\cs_new:Npn \nwpuSubsubsectionBeforeSkip { 0.25em }
+\cs_new:Npn \nwpuParagraphBeforeSkip { 0.25em }
+\cs_new:Npn \nwpuTocSectionIndent { 1.16cm }
+\cs_new:Npn \nwpuTocSubsectionIndent { 2.00cm }
+\cs_new:Npn \nwpuTocSubsubsectionIndent { 2.86cm }
+\cs_new:Npn \nwpuTocSectionLabelWidth { 1.8em }
+\cs_new:Npn \nwpuTocSubsectionLabelWidth { 2.7em }
+\cs_new:Npn \nwpuTocSubsubsectionLabelWidth { 3.4em }
+\cs_new:Npn \nwpuBachelorTocDotSep { 5pt }
+\cs_new:Npn \nwpuGraduateTocDotSep { 3pt }
+\cs_new:Npn \nwpuTocChapterBeforeSkip { 0.2\baselineskip }
+\cs_new:Npn \nwpuBachelorTocChapterLabelOffset { 3.8em }
+\cs_new:Npn \nwpuGraduateTocChapterLabelOffset { 3.5em }
+\cs_new:Npn \nwpuTocLeaderSep { .3pc }
+\cs_new:Npn \nwpuHeaderTopRuleRaise { .7\baselineskip }
+\cs_new:Npn \nwpuGraduateHeaderTopRuleWidth { 3.4pt }
+\cs_new:Npn \nwpuGraduateHeaderTopRuleVSkip { -1.07\baselineskip }
+\cs_new:Npn \nwpuGraduateHeaderBottomRuleRaise { .5\baselineskip }
+\cs_new:Npn \nwpuGraduateHeaderBottomRuleWidth { 0.6pt }
+\cs_new:Npn \nwpuHeaderAfterRuleVSkip { -.8\baselineskip }
+\cs_new:Npn \nwpuBachelorHeaderRuleWidth { 0.8pt }
+\cs_new:Npn \nwpuBachelorHeaderLogoScale { 0.15 }
+\cs_new:Npn \nwpuHeaderRaise { 0.5pt }
+\cs_new_protected:Npn \nwpuGraduateFigureCaptionFont { \fontsize{10.5pt}{9.5pt}\selectfont }
+\cs_new_protected:Npn \nwpuBachelorTableCaptionFont { \fontsize{10.5pt}{14pt}\selectfont\bfseries }
+\cs_new_protected:Npn \nwpuBachelorFigureCaptionFont { \fontsize{10.5pt}{11.5pt}\selectfont\fSong }
+\cs_new:Npn \nwpuBachelorCaptionAboveSkip { 12pt }
+\cs_new:Npn \nwpuBachelorCaptionBelowSkip { 2pt }
+\cs_new:Npn \nwpuCaptionAboveSkip { 10pt }
+\cs_new:Npn \nwpuCaptionBelowSkip { 0pt }
+\cs_new:Npn \nwpuSubcaptionBelowSkip { -5pt }
+
+%%=== 摘要、目录页与后置页格式 ===========================================
+\cs_new:Npn \nwpuBachelorAbstractChsLineSpread { 1.345 }
+\cs_new:Npn \nwpuBachelorAbstractEngLineSpread { 1.2 }
+\cs_new_protected:Npn \nwpuBachelorAbstractFont { \fontsize{12pt}{14.4pt}\selectfont }
+\cs_new:Npn \nwpuKeywordBeforeSkip { 1\baselineskip }
+\cs_new:Npn \nwpuTocHfuzz { 2pt }
+\cs_new:Npn \nwpuDesignSummaryLineSpread { 1.0 }
+
+%%=== 参考文献格式 =======================================================
+\cs_new:Npn \nwpuBibLabelSep { 0pt }
+\cs_new:Npn \nwpuBibFirstLineReserve { 1.5em }
+\cs_new:Npn \nwpuBibLabelNumberGap { 0.3em }
+\cs_new:Npn \nwpuBibParIndent { 0pt }
+\cs_new:Npn \nwpuBibEmergencyStretch { 2em }
+\cs_new:Npn \nwpuBibItemSep { 0.5ex }
+\cs_new:Npn \nwpuBibHang { 0pt }
+
+%%=== 代码、算法与符号表格式 =============================================
+\cs_new:Npn \nwpuListingNumberSep { 5pt }
+\cs_new:Npn \nwpuListingFrameRightMargin { 5pt }
+\cs_new:Npn \nwpuListingFrameBottomMargin { 4pt }
+\cs_new:Npn \nwpuAlgorithmRuleKern { 2pt }
+\cs_new:Npn \nwpuNomenclatureLabelSep { 15pt }
+
+%%=== 中文换行格式 =======================================================
+\cs_new:Npn \nwpuCJKLineBreakSkip { 0pt plus 1pt }
 
 \ExplSyntaxOff

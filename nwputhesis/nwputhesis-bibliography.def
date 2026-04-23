@@ -4,12 +4,12 @@
 %% 参考文献处理
 %%-----------------------------------------------------------------------------%
 \ExplSyntaxOn
-\dim_set:Nn \biblabelsep { 0pt }                             %
+\dim_set:Nn \biblabelsep { \nwpuBibLabelSep }                %
 \dim_new:N \l__nwpu_bib_firstline_indent_dim
 \AtBeginDocument{\settowidth{\l__nwpu_bib_firstline_indent_dim}{汉汉}} %
 \dim_new:N \l__nwpu_bib_label_dim
 \dim_new:N \l__nwpu_bib_firstline_reserve_dim
-\dim_set:Nn \l__nwpu_bib_firstline_reserve_dim { 1.5em }    %
+\dim_set:Nn \l__nwpu_bib_firstline_reserve_dim { \nwpuBibFirstLineReserve }%
 \tl_new:N \l__nwpu_patent_number_tl
 \cs_new_protected:Npn \nwpu_patent_number_allowbreaks:n #1
   {
@@ -253,15 +253,15 @@
     \nwpu_if_bachelor:TF
         { \hspace*{0pt} }
         { \hspace*{\l__nwpu_bib_firstline_indent_dim} }
-    \mkgbnumlabel{\printfield{labelnumber}}\hspace{0.3em}}
+    \mkgbnumlabel{\printfield{labelnumber}}\hspace{\nwpuBibLabelNumberGap}}
 \defbibenvironment{bibliography}
-    {\begingroup\setlength{\parindent}{0pt}\setlength{\emergencystretch}{2em}\sloppy}
+    {\begingroup\setlength{\parindent}{\nwpuBibParIndent}\setlength{\emergencystretch}{\nwpuBibEmergencyStretch}\sloppy}
     {\endgroup}
     {\nwpu@bibitemcmd}
 \AtBeginBibliography{                                        %
     \graduatebodyfont                                       %
-    \setlength{\bibitemsep}{0.5ex}                          %
-    \setlength{\bibhang}{0pt}                               %
+    \setlength{\bibitemsep}{\nwpuBibItemSep}                %
+    \setlength{\bibhang}{\nwpuBibHang}                      %
 }                                                           %
 \cs_set_eq:NN \nwpu@oldprintbibliography \printbibliography            %
 \RenewDocumentCommand{\printbibliography}{O{}}{             %

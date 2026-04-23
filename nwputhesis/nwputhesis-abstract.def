@@ -9,8 +9,8 @@
     \setcounter{page}{1}                                        % 页码从 1 开始
     \nwpu_if_bachelor:TF                                        % 本科论文摘要格式
       {
-        \linespread{1.345}\selectfont                            % 行距
-        \fontsize{12pt}{14.4pt}\selectfont                      % 小四，1.2倍行距
+        \linespread{\nwpuBachelorAbstractChsLineSpread}\selectfont % 行距
+        \nwpuBachelorAbstractFont                               % 小四，1.2倍行距
         \cs_set_protected:Npn \sep {\unskip，\ignorespaces}     % 本科：逗号
         \nwpu@apply@abstract@chs@format
         \chapter*{摘~~要}                                        %
@@ -40,10 +40,10 @@
   {
     \nwpu_if_bachelor:TF                                        % 本科关键词格式
       {
-        \vspace{1\baselineskip} \par\noindent{\fHei 关键词：}%
+        \vspace{\nwpuKeywordBeforeSkip} \par\noindent{\fHei 关键词：}%
       }
       {                                                         % 硕博关键词格式
-        \vspace{1\baselineskip} \par{\fHei 关键词：}           %
+        \vspace{\nwpuKeywordBeforeSkip} \par{\fHei 关键词：}   %
       }
     \ignorespaces
   }
@@ -69,8 +69,8 @@
   {
     \nwpu_if_bachelor:TF                                        % 本科论文英文摘要格式
       {
-        \linespread{1.2}\selectfont                             % 行距
-        \fontsize{12pt}{14.4pt}\selectfont                      % 小四
+        \linespread{\nwpuBachelorAbstractEngLineSpread}\selectfont % 行距
+        \nwpuBachelorAbstractFont                               % 小四
         \cs_set_protected:Npn \ensep {\unskip, ~\ignorespaces}  % 本科：逗号+空格
         \nwpu@apply@abstract@eng@format
         \chapter*{ABSTRACT}                                     %
@@ -100,10 +100,10 @@
   {
     \nwpu_if_bachelor:TF                                        % 本科英文关键词格式
       {
-        \vspace{1\baselineskip} \par\noindent \textbf{KEY~WORDS：}%
+        \vspace{\nwpuKeywordBeforeSkip} \par\noindent \textbf{KEY~WORDS：}%
       }
       {                                                         % 硕博英文关键词格式
-        \vspace{1\baselineskip} \par\noindent \textbf{Key~words：}%
+        \vspace{\nwpuKeywordBeforeSkip} \par\noindent \textbf{Key~words：}%
       }
     \ignorespaces
   }
@@ -135,7 +135,7 @@
   {
     \graduatebodyfont\phantomsection                             %
     \bookmark[dest=\HyperLocalCurrentHref, level=0]{\contentsname}
-    { \hfuzz=2pt \nwpu@old@toc } \cleardoublepage               %
+    { \hfuzz=\nwpuTocHfuzz \nwpu@old@toc } \cleardoublepage     %
   }
 
 \cs_set_eq:NN \nwpu@old@lof \listoffigures                      % 图目录

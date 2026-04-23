@@ -33,7 +33,7 @@
 }{\cleardoublepage}                                       %
 %%-----------------------------------------------------------------------------%
 \NewDocumentEnvironment{designsummary}{}{%                   % 毕业设计小结（本科）
-    \linespread{1.0}\selectfont                              %
+    \linespread{\nwpuDesignSummaryLineSpread}\selectfont     %
     \sDefault                                               %
     \phantomsection\chapter*{毕业设计小结}                  %
     \markboth{毕业设计小结}{毕业设计小结}                   %
