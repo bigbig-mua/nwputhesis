@@ -250,46 +250,6 @@
 \dim_set:Nn \heavyrulewidth { \nwpuHeavyRuleWidth }          % 表格上下线宽
 \dim_set:Nn \lightrulewidth { \nwpuLightRuleWidth }          % 表格中线宽
 %%-----------------------------------------------------------------------------%
-\RequirePackage[amsmath,thmmarks]{ntheorem}                 % 定理环境格式
-\theorembodyfont{\normalfont\itshape}                       % 主体文字格式
-\theoremseparator{\quad}                                    % 标题与主体间隔
-\dim_set:Nn \topsep { 0pt }                                  % 设置定理环境间距
-\theorempreskip{0pt}                                        % 节前空白大小
-\theorempostskip{0pt}                                       % 节后空白大小
-\cs_set_protected:Npn \thm@space@setup {                       %
-    \thm@preskip=0pt                                        %
-    \thm@postskip=0pt}                                      %
-\AtBeginDocument{                                           %
-    \setlength{\abovedisplayskip}{0pt}                      %
-    \setlength{\belowdisplayskip}{0pt}                      %
-    \setlength{\abovedisplayshortskip}{0pt}                 %
-    \setlength{\belowdisplayshortskip}{0pt}                 %
-}                                                           %
-{\theoremsymbol{\ensuremath{\square}}                       % 证明环境 囗
-    \nwpu_if_chinese:TF
-        { \newtheorem*{proof}{证明} }
-        { \newtheorem*{proof}{Proof} }
-}
-\nwpu_if_chinese:TF                                         % 定制中文定理环境
-{
-    \newtheorem{theorem}{定理}[chapter]                     %
-    \newtheorem{axiom}[theorem]{公理}                       %
-    \newtheorem{corollary}[theorem]{推论}                   %
-    \newtheorem{lemma}[theorem]{引理}                       %
-    \newtheorem{definition}[theorem]{定义}                  %
-    \newtheorem{example}[theorem]{例}                       %
-    \newtheorem{proposition}[theorem]{命题}                 %
-}
-{                                                           % 定制英文定理环境
-    \newtheorem{theorem}{Theorem}[chapter]                  %
-    \newtheorem{axiom}[theorem]{Axiom}                      %
-    \newtheorem{corollary}[theorem]{Corollary}              %
-    \newtheorem{lemma}[theorem]{Lemma}                      %
-    \newtheorem{definition}[theorem]{Definition}            %
-    \newtheorem{example}[theorem]{Example}                  %
-    \newtheorem{proposition}[theorem]{Proposition}          %
-}
-%%-----------------------------------------------------------------------------%
 \RequirePackage{listings}                                   % 添加插入代码控制
 \lstset{                                                    % 代码样式
     basicstyle=\color[HTML]{000000}\small\ttfamily,         % 等宽字体 10pt 字号
@@ -327,22 +287,5 @@
 \RequirePackage{algpseudocode}                              % 伪代码
 %%-----------------------------------------------------------------------------%
 \RequirePackage{appendix}                                   % 添加附录功能
-%%-----------------------------------------------------------------------------%
-\RequirePackage{nomencl}                                    % 添加符号表功能
-\RequirePackage{multicol}                                   % 页面具体尺寸信息
-\makenomenclature                                           % 单栏符号表
-\tl_new:N \l__nwpu_nom_sec_tl
-\cs_if_exist:NTF \chapter
-  { \tl_set:Nn \l__nwpu_nom_sec_tl { chapter } }
-  { \tl_set:Nn \l__nwpu_nom_sec_tl { section } }
-\cs_set:Npn \thenomenclature {%
-    \use:c { \l__nwpu_nom_sec_tl } * { \nomname }
-    \if@intoc\addcontentsline{toc}{\l__nwpu_nom_sec_tl}{\nomname}\fi
-    \nompreamble
-    \list{}{\labelsep=\nwpuNomenclatureLabelSep\labelwidth\nom@tempdim\leftmargin\labelwidth\advance
-        \leftmargin\labelsep\itemsep\nomitemsep\let\makelabel\nomlabel}%
-}
-\cs_set:Npn \endthenomenclature {\endlist
-    \nompostamble}
 \ExplSyntaxOff
 %%=============================================================================%

@@ -32,7 +32,7 @@ env:
   REQUIRED_PKGS: >-
     algorithmicx algorithms appendix bookmark booktabs caption catchfile
     enumitem etoolbox fancyhdr float geometry ifplatform koma-script
-    listings makecell multirow nomencl ntheorem pdfpages pgf
+    listings makecell multirow ntheorem pdfpages pgf
     silence titlesec wrapfig xcolor xkeyval xstring
   FONT_PKGS: fandol tex-gyre dejavu
 

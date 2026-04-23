@@ -111,17 +111,5 @@
         \nwpu@appendixfigureprefix\arabic{figure}}
     \cs_gset_protected:Npn \thealgorithm {%
         \nwpu@appendixalgorithmprefix\arabic{algorithm}}
-    \cs_gset_protected:Npn \thetheorem {%
-        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{theorem}}
-    \cs_gset_protected:Npn \theaxiom {%
-        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{axiom}}%
-    \cs_gset_protected:Npn \thecorollary {%
-        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{corollary}}
-    \cs_gset_protected:Npn \thelemma {%
-        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{lemma}}%
-    \cs_gset_protected:Npn \thedefinition {%
-        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{definition}}
-    \cs_gset_protected:Npn \theexample {%
-        \nwpu@ifappendixletter{\nwpu@appendixprefix.}{}\arabic{example}}
 }                                                            %
 \ExplSyntaxOff

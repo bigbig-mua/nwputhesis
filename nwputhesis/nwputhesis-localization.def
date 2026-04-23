@@ -27,27 +27,14 @@
       { \def\equationautorefname#1#2\null{式#1(#2\null)}   }% ~(\def required: delimited args, no expl3 equivalent)
     \def\sectionautorefname#1#2\null{#2\null{ }节}          % (\def required: delimited args, no expl3 equivalent)
     \def\subsectionautorefname#1#2\null{#2\null{ }小节}     % (\def required: delimited args, no expl3 equivalent)
-    \renewcommand{\theoremautorefname}{定理}                %
-    \cs_new_protected:Npn \axiomautorefname {公理}          %
-    \cs_new_protected:Npn \corollaryautorefname {推论}      %
-    \cs_new_protected:Npn \lemmaautorefname {引理}          %
-    \cs_new_protected:Npn \definitionautorefname {定义}     %
-    \cs_new_protected:Npn \exampleautorefname {例}          %
-    \cs_new_protected:Npn \propositionautorefname {命题}    %
     \cs_new_protected:Npn \algorithmname {算法}             %
     \cs_new_protected:Npn \algorithmautorefname {算法}      %
     \floatname{algorithm}{算法}                             %
-    \renewcommand{\lstlistingname}{代码片段}                %
-    \cs_new_protected:Npn \lstlistingautorefname {代码片段} %
-    \renewcommand{\nomname}{符号表}                         %
   }
   {                                                        % 英文引用提示文字
     \renewcommand{\figureautorefname}{Fig.}                 %
     \renewcommand{\tableautorefname}{Table}                 %
     \def\equationautorefname#1#2\null{Eq.#1(#2\null)}       % (\def required: delimited args, no expl3 equivalent)
-    \renewcommand{\lstlistingname}{Code~Snippet}            %
-    \cs_new_protected:Npn \lstlistingautorefname {Code~Snippet} %
-    \renewcommand{\nomname}{Symbols}                        %
   }
 %%-----------------------------------------------------------------------------%
 \renewcommand{\chaptername}{第~\thechapter~章}              % 章节名
@@ -60,12 +47,6 @@
 \nwpu_if_bachelor:TF                                        % 本科公式编号样式
   { \def\tagform@#1{\maketag@@@{\fSong （#1）}} }            % (\def required: amsmath internal)
   {}
-\renewcommand{\thetheorem}{\thechapter.\arabic{theorem}}    % 定理编号格式
-\renewcommand{\theaxiom}{\thechapter.\arabic{axiom}}        % 公理编号格式
-\renewcommand{\thecorollary}{\thechapter.\arabic{corollary}}% 推论编号格式
-\renewcommand{\thelemma}{\thechapter.\arabic{lemma}}        % 引理编号格式
-\renewcommand{\thedefinition}{\thechapter.\arabic{definition}} % 定义编号格式
-\renewcommand{\theexample}{\thechapter.\arabic{example}}    % 例子编号格式
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \nwpu@chs@schoolname {西北工业大学}   % 文档字符串设置
 \cs_new_protected:Npn \nwpu@eng@schoolname {Northwestern~Polytechnical~University}

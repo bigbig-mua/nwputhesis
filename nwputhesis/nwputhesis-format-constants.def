@@ -304,12 +304,11 @@
 \cs_new:Npn \nwpuBibItemSep { 0.5ex }                       % 参考文献条目间距
 \cs_new:Npn \nwpuBibHang { 0pt }                            % 参考文献悬挂缩进
 
-%%=== 代码、算法与符号表格式 =============================================
+%%=== 代码与算法格式 =====================================================
 \cs_new:Npn \nwpuListingNumberSep { 5pt }                   % 代码块行号与代码间距
 \cs_new:Npn \nwpuListingFrameRightMargin { 5pt }            % 代码块边框右侧缩进
 \cs_new:Npn \nwpuListingFrameBottomMargin { 4pt }           % 代码块边框底部缩进
 \cs_new:Npn \nwpuAlgorithmRuleKern { 2pt }                  % 算法浮动体横线与内容间距
-\cs_new:Npn \nwpuNomenclatureLabelSep { 15pt }              % 符号表标签与说明间距
 
 %%=== 中文换行格式 =======================================================
 \cs_new:Npn \nwpuCJKLineBreakSkip { 0pt plus 1pt }          % 中文自动换行弹性间距
