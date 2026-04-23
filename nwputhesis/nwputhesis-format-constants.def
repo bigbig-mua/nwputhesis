@@ -162,10 +162,9 @@
 \cs_new:Npn \nwpuCoverInfoValueWidth { 9cm }                % 封皮专业/导师等信息表内容列宽
 \cs_new:Npn \nwpuCoverInfoRowHeight { 1cm }                 % 封皮专业/导师等信息表单元格高度
 \cs_new:Npn \nwpuCoverBackgroundInnerSep { 0pt }            % 彩色封面/封底背景图节点内边距
-\cs_new:Npn \nwpuCoverAfterDetailSkip { 275.625pt }         % 封皮右上角信息表到题目表距离
-\cs_new:Npn \nwpuCoverAfterTitleSkip { 39.375pt }           % 封皮题目表到作者表距离
-\cs_new:Npn \nwpuCoverAfterAuthorSkip { 52.5pt }            % 封皮作者表到专业/导师信息表距离
-\cs_new:Npn \nwpuCoverAfterInfoSkip { 32.8125pt }           % 封皮信息表到底部日期区域预留距离
+\cs_new:Npn \nwpuCoverAfterDetailSkip { 265pt }         % 封皮右上角信息表到题目表距离
+\cs_new:Npn \nwpuCoverAfterTitleSkip { 30pt }           % 封皮题目表到作者表距离
+\cs_new:Npn \nwpuCoverAfterAuthorSkip { 42pt }            % 封皮作者表到专业/导师信息表距离
 
 \cs_new:Npn \nwpuChsInnerTitleLabelWidth { 2.54cm }         % 中文内封题目表标签列宽
 \cs_new:Npn \nwpuChsInnerTitleValueMinWidth { 7.85cm }      % 中文内封题目表内容列最小宽度
@@ -189,7 +188,8 @@
 \cs_new:Npn \nwpuEngInnerAfterDegreeSkip { 88pt }           % 英文内封学位说明后距
 
 %%=== 封皮与内封字体 =====================================================
-\cs_new_protected:Npn \nwpuCoverDetailFont { \fHei \fontsize{\nwpuFontPointWuhao}{\nwpuLineHeightWuhao}\selectfont } % 封皮右上角信息表字体
+\cs_new:Npn \nwpuCoverDetailLineHeight { 11.55pt }             % 封皮右上角信息表行距
+\cs_new_protected:Npn \nwpuCoverDetailFont { \fHei \fontsize{\nwpuFontPointWuhao}{\nwpuCoverDetailLineHeight}\selectfont } % 封皮右上角信息表字体
 \cs_new_protected:Npn \nwpuCoverTitleFont { \fHei \fontsize{\nwpuFontPointErhao}{\nwpuLineHeightErhao}\selectfont }  % 封皮题目表字体
 \cs_new_protected:Npn \nwpuCoverAuthorFont { \fSong \fontsize{\nwpuFontPointSanhao}{\nwpuLineHeightSanhao}\selectfont } % 封皮作者表字体
 \cs_new_protected:Npn \nwpuCoverInfoFont { \fSong \fontsize{\nwpuFontPointSanhao}{\nwpuLineHeightSanhao}\selectfont } % 封皮专业/导师信息表字体
