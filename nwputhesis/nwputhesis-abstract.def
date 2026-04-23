@@ -39,10 +39,10 @@
   {
     \nwpu_if_bachelor:TF                                        % 本科关键词格式
       {
-        \vspace{\nwpuKeywordBeforeSkip} \par\noindent{\fHei 关键词：}%
+        \vspace{\nwpuKeywordBeforeSkip} \par\noindent{\nwpuKeywordFont 关键词：}%
       }
       {                                                         % 硕博关键词格式
-        \vspace{\nwpuKeywordBeforeSkip} \par{\fHei 关键词：}   %
+        \vspace{\nwpuKeywordBeforeSkip} \par{\nwpuKeywordFont 关键词：}   %
       }
     \ignorespaces
   }

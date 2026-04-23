@@ -49,6 +49,21 @@
 \cs_new_protected:Npn \nwpuFontSizeWuhao { \fontsize{\nwpuFontPointWuhao}{\nwpuFontPointWuhao}\selectfont }    % 五号纯字号
 \cs_new_protected:Npn \nwpuFontSizeXiaowu { \fontsize{\nwpuFontPointXiaowu}{\nwpuFontPointXiaowu}\selectfont } % 小五纯字号
 
+%%=== 语义化字体别名 =====================================================
+%% 将字体族映射到格式规范中的角色。学校改字体要求时，修改这里的映射。
+%%-------------------------------------------------------------------------
+%% 章节标题
+\cs_new_protected:Npn \nwpuChapterFont { \sffamily \fHei }
+\cs_new_protected:Npn \nwpuSectionFont { \nwpuChapterFont }
+\cs_new_protected:Npn \nwpuSubsectionFont { \nwpuChapterFont }
+\cs_new_protected:Npn \nwpuSubsubsectionFont { \nwpuChapterFont }
+
+%% 目录
+\cs_new_protected:Npn \nwpuTOCFont { \fSong }
+
+%% 关键词标签
+\cs_new_protected:Npn \nwpuKeywordFont { \fHei }
+
 %%=== 语义化字号别名 =====================================================
 %% 将字号映射到格式规范中的角色。学校改字号要求时，修改这里的映射。
 %%-------------------------------------------------------------------------
@@ -103,9 +118,9 @@
   \cs_new:Npn \nwpuMarginBottom   { 2.54cm }                % 研究生下页边距
   \cs_new:Npn \nwpuHeadHeight     { 1.0cm }                 % 研究生页眉高度
   \cs_new:Npn \nwpuTopMargin      { -45pt }                    % 研究生页眉到页面顶部距离
-  \cs_new:Npn \nwpuHeadSep        { 0.11cm }                % 研究生页眉到正文距离
+  \cs_new:Npn \nwpuHeadSep        { 0.7cm }                % 研究生页眉到正文距离
   \cs_new:Npn \nwpuFootSkip       { 0.79cm }                % 研究生正文到底部页脚基线距离
-  \cs_new:Npn \nwpuBottomMargin   { 10pt }                    % 研究生页脚基线到页面底部距离
+  \cs_new:Npn \nwpuBottomMargin   { 0pt }                    % 研究生页脚基线到页面底部距离
 }
 
 %%=== 段落格式 ===========================================================
@@ -122,7 +137,7 @@
   \cs_new:Npn \nwpuSubsecBeforeSkip    { 3pt }              % 本科小节标题前距
   \cs_new:Npn \nwpuSubsecAfterSkip     { -1pt }             % 本科小节标题后距
 } {
-  \cs_new:Npn \nwpuChapterBeforeSkip   { 9pt }              % 研究生章标题前距
+  \cs_new:Npn \nwpuChapterBeforeSkip   { -4pt }              % 研究生章标题前距
   \cs_new:Npn \nwpuChapterAfterSkip    { 14pt }             % 研究生章标题后距
   \cs_new:Npn \nwpuSectionBeforeSkip   { 7pt }              % 研究生节标题前距
   \cs_new:Npn \nwpuSectionAfterSkip    { 0pt }              % 研究生节标题后距
@@ -146,6 +161,7 @@
 \cs_new:Npn \nwpuLightRuleWidth { 1.0pt }                   % booktabs 细线宽度
 
 %%=== 表格格式 ===========================================================
+\cs_new:Npn \nwpuGraduateTableLineHeight { 11.5pt }          % 研究生表格内容行距
 \cs_new:Npn \nwpuGraduateTableLineSpread { 1 }              % 研究生表格内部行距倍率
 \cs_new:Npn \nwpuTableArrayStretch { 1.4 }                  % 全局表格行高倍率
 \cs_new:Npn \nwpuTableRuleWidth { 0.5pt }                   % 全局普通表格线宽

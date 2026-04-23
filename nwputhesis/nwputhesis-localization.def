@@ -37,7 +37,7 @@
     \def\equationautorefname#1#2\null{Eq.#1(#2\null)}       % (\def required: delimited args, no expl3 equivalent)
   }
 %%-----------------------------------------------------------------------------%
-\renewcommand{\chaptername}{第~\thechapter~章}              % 章节名
+\renewcommand{\chaptername}{第\thechapter{}章}              % 章节名
 \renewcommand{\thefigure}{\thechapter-\arabic{figure}}      % 图编号格式
 \renewcommand{\thesubfigure}{(\alph{subfigure})}            % 子图编号格式
 \renewcommand{\thetable}{\thechapter-\arabic{table}}        % 表编号格式
