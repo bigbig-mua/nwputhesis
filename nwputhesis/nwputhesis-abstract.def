@@ -12,14 +12,13 @@
         \nwpuBachelorAbstractFont                               % 小四，20pt 基线距
         \cs_set_protected:Npn \sep {\unskip，\ignorespaces}     % 本科：逗号
         \nwpu@apply@abstract@chs@format
-        \chapter*{摘~~要}                                        %
-        \markboth{中~文~摘~要}{中~文~摘~要}                     %
+        \chapter*{摘\ 要}                                        %
       }
       {                                                         % 硕博论文摘要格式
         \cs_set_protected:Npn \sep {\unskip\!；\ignorespaces}   % 硕博：分号
         \nwpuBodyFont                                           %
-        \chapter[摘{\quad}要]{摘{\quad}要}                      %
-        \markboth{摘{\quad}要}{摘{\quad}要}                     %
+        \chapter{摘{\quad}要}                                    %
+        \markboth{摘{\quad}要}{}                                  %
       }
   }
   {
@@ -72,13 +71,12 @@
         \cs_set_protected:Npn \ensep {\unskip, ~\ignorespaces}  % 本科：逗号+空格
         \nwpu@apply@abstract@eng@format
         \chapter*{ABSTRACT}                                     %
-        \markboth{英~文~摘~要}{英~文~摘~要}                    %
       }
       {                                                         % 硕博论文英文摘要格式
         \cs_set_protected:Npn \ensep {\unskip\!; ~\ignorespaces}% 硕博：分号+空格
         \nwpuBodyFont                                           %
         \chapter[ABSTRACT]{\nwpuEngAbstractTitleFont Abstract}%
-        \markboth{Abstract}{ABSTRACT}                           %
+        \markboth{Abstract}{}                                    %
       }
   }
   {

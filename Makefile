@@ -46,7 +46,7 @@ viewthesis: thesis
 
 # 清理辅助文件
 clean:
-	$(LATEXMK) -c $(SAMPLE)
+	$(LATEXMK) -C $(SAMPLE)
 	-@$(RM) -f *.gls *.glo *.ind *.idx *.ilg *.nlo *.nls 2>/dev/null || true
 
 # 清理所有生成文件

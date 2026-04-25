@@ -42,8 +42,8 @@
 %%-----------------------------------------------------------------------------
 \nwpu_if_bachelor:TF                                        % 本科论文章节格式
 {
-    \renewcommand{\thechapter}{\arabic{chapter}}            % 章节编号保持数字
-    \renewcommand{\chaptername}{第\CJKnumber{\thechapter}章}% 章节名称（中文数字）
+    \cs_gset:Npn \thechapter { \arabic{chapter} }            % 章节编号保持数字
+    \cs_gset_protected:Npn \chaptername { 第\CJKnumber{\thechapter}章 }% 章节名称（中文数字）
     \nwpu@apply@chapter@format
     \titleformat{\section}[hang]{\nwpuSectionFont}%
       {\nwpuSectionFont\thesection}{\nwpuSectionLabelSep}{}{}
@@ -126,8 +126,8 @@
     \makebox[0pt][l]{\rule[\nwpuHeaderTopRuleRaise]{\headwidth}{\nwpuBachelorHeaderRuleWidth}}%
     \vskip\nwpuHeaderAfterRuleVSkip                         %
 }
-\renewcommand{\headrule}{                                   %
-    \if@fancyplain\let\headrulewidth\plainheadrulewidth\fi  %
+\cs_gset_protected:Npn \headrule {                           %
+    \if@fancyplain \cs_set_eq:NN \headrulewidth \plainheadrulewidth \fi  %
     \nwpu_if_bachelor:TF                                    % 本科页眉线
         { \npu@bcl@headrule }                               %
         { \npu@headrule }                                   %
@@ -143,11 +143,11 @@
 {                                                           % 硕博论文页眉设置
     \nwpu_if_chinese:TF                                     % 中英文章节页眉设置
     {
-        \renewcommand{\chaptermark}[1]{                     %
+        \cs_gset_protected:Npn \chaptermark #1 {             %
             \markboth{\nwpu@chs@chaptercname{\thechapter}\quad #1}{}}
     }
     {                                                       %
-        \renewcommand{\chaptermark}[1]{                     %
+        \cs_gset_protected:Npn \chaptermark #1 {             %
             \markboth{\nwpu@eng@chaptercname{\thechapter}\quad #1}{}}
     }
     \pagestyle{fancyplain}                                  %
@@ -239,7 +239,7 @@
         \arraybackslash\hspace{0pt}}p{#1}}                  %
 \newcolumntype{P}[1]{>{\raggedright\let\newline\\%          % 指定宽度左对齐
         \arraybackslash\hspace{0pt}}p{#1}}                  %
-\renewcommand{\arraystretch}{\nwpuTableArrayStretch}         % 表格行高
+\cs_gset:Npn \arraystretch {\nwpuTableArrayStretch}          % 表格行高
 \dim_set:Nn \arrayrulewidth { \nwpuTableRuleWidth }          % 表格框线宽
 \dim_set:Nn \tabcolsep { \nwpuTableColumnSep }               % 表格列内边距
 \dim_set:Nn \heavyrulewidth { \nwpuHeavyRuleWidth }          % 表格上下线宽
