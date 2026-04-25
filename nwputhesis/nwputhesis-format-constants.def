@@ -271,12 +271,17 @@
 \cs_new:Npn \nwpuSectionLabelSep { 0.5em }                  % 节/小节标题编号与标题间距
 \cs_new:Npn \nwpuSubsubsectionBeforeSkip { 0.25em }         % 四级标题前距
 \cs_new:Npn \nwpuParagraphBeforeSkip { 0.25em }             % 段标题前距
-\cs_new:Npn \nwpuTocSectionIndent { 1.16cm }                % 目录节条目左缩进
-\cs_new:Npn \nwpuTocSubsectionIndent { 2.00cm }             % 目录小节条目左缩进
-\cs_new:Npn \nwpuTocSubsubsectionIndent { 2.86cm }          % 目录四级标题条目左缩进
+\nwpu_if_bachelor:TF
+  {
+    \cs_new:Npn \nwpuTocSectionIndent { 45pt }              % 本科目录节条目左缩进（chapter + 2 字符）
+    \cs_new:Npn \nwpuTocSubsectionIndent { 70pt }           % 本科目录小节条目左缩进（chapter + 3.5 字符）
+  }
+  {
+    \cs_new:Npn \nwpuTocSectionIndent { 45pt }                % 研究生目录节条目左缩进（chapter + 2 字符）
+    \cs_new:Npn \nwpuTocSubsectionIndent { 78pt }             % 研究生目录小节条目左缩进（chapter + 4 字符）
+  }
 \cs_new:Npn \nwpuTocSectionLabelWidth { 1.8em }             % 目录节编号盒宽
 \cs_new:Npn \nwpuTocSubsectionLabelWidth { 2.7em }          % 目录小节编号盒宽
-\cs_new:Npn \nwpuTocSubsubsectionLabelWidth { 3.4em }       % 目录四级标题编号盒宽
 \cs_new:Npn \nwpuBachelorTocDotSep { 5pt }                  % 本科目录点线间距
 \cs_new:Npn \nwpuGraduateTocDotSep { 3pt }                  % 研究生目录点线间距
 \cs_new:Npn \nwpuTocChapterBeforeSkip { 0.2\baselineskip }  % 目录章条目前距

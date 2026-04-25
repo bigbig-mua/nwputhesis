@@ -12,7 +12,7 @@
     \renewcommand{\bibname}{参考文献}                       %
     \nwpu_if_bachelor:TF                                    % 本科论文目录标题
       {
-        \renewcommand{\contentsname}{\nwpuTOCTitleFont 目~录}       %
+        \renewcommand{\contentsname}{\nwpuTOCTitleFont 目\ 录}       %
         \renewcommand{\listfigurename}{插图列表}            %
         \renewcommand{\listtablename}{表格列表}             %
       }

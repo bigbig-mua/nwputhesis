@@ -36,8 +36,8 @@
     {\nwpuChapterFont}{\nwpuChapterLabelSep}{\nwpuChapterFont}
 }
 \cs_new_protected:Npn \nwpu@apply@abstract@eng@format {
-  \titleformat{\chapter}[hang]{\normalfont\nwpuChapterFont\filcenter}%
-    {\nwpuChapterFont}{\nwpuChapterLabelSep}{\nwpuChapterFont}
+  \titleformat{\chapter}[hang]{\normalfont\fEng\bfseries\fontsize{\nwpuFontPointSanhao}{\nwpuBachelorLineHeight}\selectfont\filcenter}%
+    {}{0pt}{}
 }
 %%-----------------------------------------------------------------------------
 \nwpu_if_bachelor:TF                                        % 本科论文章节格式
@@ -72,11 +72,11 @@
 }
 \dottedcontents{section}[\nwpuTocSectionIndent]{}{\nwpuTocSectionLabelWidth}{\nwpuBachelorTocDotSep}              % 定义目录中各级标题
 \dottedcontents{subsection}[\nwpuTocSubsectionIndent]{}{\nwpuTocSubsectionLabelWidth}{\nwpuBachelorTocDotSep}      % 之间的格式以及缩进
-\dottedcontents{subsubsection}[\nwpuTocSubsubsectionIndent]{}{\nwpuTocSubsubsectionLabelWidth}{\nwpuBachelorTocDotSep}%
 \cs_new:Npn \nwpu@chs@chaptercname #1 { 第 ~ #1 ~ 章 }     % 目录章节中文标题（硕博）
 \cs_new:Npn \nwpu@eng@chaptercname #1 { Chapter ~ #1 }     % 目录章节英文标题
 \nwpu_if_bachelor:TF                                        % 本科论文目录章节格式
 {
+    \contentsmargin{0pt}
     \cs_new:Npn \nwpu@bcl@chaptercname #1 { 第 \CJKnumber{#1} 章 }% 本科目录章节中文标题
     \titlecontents{section}[\nwpuTocSectionIndent]{\nwpuTOCEntryFont}%
     {\contentslabel{\nwpuTocSectionLabelWidth}}{}%
@@ -84,18 +84,14 @@
     \titlecontents{subsection}[\nwpuTocSubsectionIndent]{\nwpuTOCEntryFont}%
     {\contentslabel{\nwpuTocSubsectionLabelWidth}}{}%
     {\titlerule*[\nwpuGraduateTocDotSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
-    \titlecontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\nwpuTOCEntryFont}%
-    {\contentslabel{\nwpuTocSubsubsectionLabelWidth}}{}%
-    {\titlerule*[\nwpuGraduateTocDotSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]%
     \titlecontents{chapter}[0pt]{\nwpuTOCEntryFont\vspace{\nwpuTocChapterBeforeSkip}}%
-    {\contentsmargin{1em}\nwpuTOCEntryFont\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{\nwpuBachelorTocChapterLabelOffset}}%
-    {\contentsmargin{1em}\nwpuTOCEntryFont\bfseries}%
+    {\nwpuTOCEntryFont\bfseries\makebox[0pt][l]{\nwpu@bcl@chaptercname{\thecontentslabel}}\hspace{\nwpuBachelorTocChapterLabelOffset}}%
+    {\nwpuTOCEntryFont\bfseries}%
     {\nwpuTOCEntryFont\normalfont\titlerule*[\nwpuTocLeaderSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]
 }
 {
     \dottedcontents{section}[\nwpuTocSectionIndent]{\nwpuTOCEntryFont}{\nwpuTocSectionLabelWidth}{\nwpuGraduateTocDotSep}   %
     \dottedcontents{subsection}[\nwpuTocSubsectionIndent]{\nwpuTOCEntryFont}{\nwpuTocSubsectionLabelWidth}{\nwpuGraduateTocDotSep}%
-    \dottedcontents{subsubsection}[\nwpuTocSubsubsectionIndent]{\nwpuTOCEntryFont}{\nwpuTocSubsubsectionLabelWidth}{\nwpuGraduateTocDotSep}
     \nwpu_if_chinese:TF                                      % 硕博中文本地化显示
     {
         \titlecontents{chapter}[0pt]{\nwpuTOCEntryFont}{\contentsmargin{1em}\nwpuTOCEntryFont\makebox[0pt  %
