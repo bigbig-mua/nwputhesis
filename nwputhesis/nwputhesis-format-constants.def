@@ -109,7 +109,7 @@
   \cs_new:Npn \nwpuMarginTop      { 2.54cm }                % 本科上页边距
   \cs_new:Npn \nwpuMarginBottom   { 2.54cm }                % 本科下页边距
   \cs_new:Npn \nwpuHeadHeight     { 0.93cm }                % 本科页眉高度
-  \cs_new:Npn \nwpuTopMargin      { 0pt }                    % 本科页眉到页面顶部距离
+  \cs_new:Npn \nwpuTopMargin      { -35pt }                    % 本科页眉到页面顶部距离
   \cs_new:Npn \nwpuHeadSep        { 0.4cm }                 % 本科页眉到正文距离
   \cs_new:Npn \nwpuFootSkip       { 0.79cm }                % 本科正文到底部页脚基线距离
   \cs_new:Npn \nwpuBottomMargin   { 0pt }                    % 本科页脚基线到页面底部距离
@@ -133,7 +133,7 @@
 %% \titlespacing{<cmd>}{<left>}{<before>}{<after>}[<right>]
 \nwpu_if_bachelor:TF {
   \cs_new:Npn \nwpuChapterBeforeSkip   { 5pt }              % 本科章标题前距
-  \cs_new:Npn \nwpuChapterAfterSkip    { 23pt }             % 本科章标题后距
+  \cs_new:Npn \nwpuChapterAfterSkip    { 17pt }             % 本科章标题后距
   \cs_new:Npn \nwpuSectionBeforeSkip   { 2pt }              % 本科节标题前距
   \cs_new:Npn \nwpuSectionAfterSkip    { 2pt }              % 本科节标题后距
   \cs_new:Npn \nwpuSubsecBeforeSkip    { 3pt }              % 本科小节标题前距
