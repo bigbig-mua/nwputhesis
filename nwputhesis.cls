@@ -28,6 +28,7 @@
     hypertexnames=false,                                    % 避免重复页锚点命名
 }                                                           %
 \special{pdf:minorversion 7}                                % 允许包含 PDF 1.7 页面
+\providecommand\HyperLocalCurrentHref{}
 \RequirePackage{bookmark}                                   %
 \pdfstringdefDisableCommands{%                              % 解决 "Token not allowed in a PDF string" 警告
 \def\!{}%
