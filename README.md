@@ -27,12 +27,14 @@
 - `Z` 表示格式修复或其它不影响模板使用方式的更新。
 
 ## 使用说明
+获取模板有两种方式（二选一）：
 - **Fork 仓库**（推荐）：方便后续通过 Git 跟踪更新。
-- **下载 Release**：也可直接下载 [最新 Release 版本](https://github.com/1195343015/nwputhesis/releases/latest)。非 Windows 系统用户需要从仓库中自行下载 Windows 字体。
-- 支持各种操作系统，推荐在 TeX Live 最新版本下搭配 VS Code 中的 LaTeX Workshop 插件使用。
+- **下载 Release**：直接下载 [最新 Release 版本](https://github.com/1195343015/nwputhesis/releases/latest)，体积更小且不含开发测试文件。
+
+- 非 Windows 系统用户需要从仓库中自行下载 Windows 字体。
 
 ### 编译方式
-提供了两种编译方式（如下图所示）：
+推荐在 TeX Live 最新版本下搭配 VS Code 中的 LaTeX Workshop 插件使用，提供了两种编译方式（如下图所示）：
 - **Recipe: xelatex + biber + xelatex x 2**：想要正确编译参考文献时必须使用此种方式，但是编译速度较慢
 - **Recipe: xelatex (fast)**：快速编译，在不修改参考文献时使用
 - 推荐平常使用第二种方式即可，只在添加参考文献时使用第一种方式
