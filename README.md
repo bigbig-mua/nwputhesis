@@ -11,7 +11,7 @@
 
 </div>
 
-> 如果没有强烈使用 LaTeX 写论文的需求，推荐使用 Typst 模板 **[modern-npu-thesis](https://github.com/1195343015/modern-npu-thesis)** ，这是一个 **西北工业大学本硕博论文 Typst 模板**。相比 LaTeX，其语法更简洁，类似于 Markdown 语法，对新手更友好，编译速度远比 LaTeX 快。
+> 强烈推荐使用 Typst 模板 **[modern-npu-thesis](https://github.com/1195343015/modern-npu-thesis)** 。相比 LaTeX，其语法更简洁，类似于 Markdown 语法，对新手更友好，编译速度远比 LaTeX 快。
 
 本模板支持本硕博，已成功通过学校的论文最终版提交（26届硕士）。
 
