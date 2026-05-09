@@ -132,6 +132,44 @@
     {\usebibmacro{related:init}\usebibmacro{related}}
     {}%
   \usebibmacro{annotation}\usebibmacro{finentry}}
+\newbibmacro*{nwpu:standardlocation+publisher+date}{%
+  \bibpubfont%
+  \iflistundef{location}{}{%
+    \printlist{location}%
+    \iflistundef{publisher}{}{\setunit*{\addcolon\space}}%
+  }%
+  \iflistundef{publisher}{}{\printlist{publisher}}%
+  \ifboolexpr{
+      not test {\iffieldundef{year}}
+      or
+      not test {\iffieldundef{month}}
+      or
+      not test {\iffieldundef{day}}
+  }{
+    \setunit*{\addcomma\space}%
+    \usebibmacro{newsdate}%
+  }{}%
+}
+\DeclareBibliographyDriver{standard}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/translator+others}%
+  \ifnameundef{author}{}{\setunit{\labelnamepunct}\newblock}%
+  \usebibmacro{title}%
+  \newunit\newblock
+  \usebibmacro{nwpu:standardlocation+publisher+date}%
+  \usebibmacro{chapter+pages}%
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+    {\usebibmacro{related:init}\usebibmacro{related}}
+    {}%
+  \usebibmacro{annotation}\usebibmacro{finentry}%
+}
 \DeclareBibliographyDriver{other}{%
   \usebibmacro{bibindex}%
   \usebibmacro{begentry}%
