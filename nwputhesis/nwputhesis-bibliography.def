@@ -4,6 +4,16 @@
 %% 参考文献处理
 %%-----------------------------------------------------------------------------%
 \ExplSyntaxOn
+% 中文全角标点支持（gb7714-2025 提供，此处为 gb7714-2015 提供降级）
+\cs_if_exist:cF { gbpunctcomma } { \cs_new:Npn \gbpunctcomma { \addcomma\addspace } }
+\cs_if_exist:cF { gbpunctcommalanen } { \cs_new:Npn \gbpunctcommalanen { \addcomma\addspace } }
+\cs_if_exist:cF { gbpunctcolon } { \cs_new:Npn \gbpunctcolon { \addcolon\addspace } }
+\cs_if_exist:cF { gbpunctcolonlanen } { \cs_new:Npn \gbpunctcolonlanen { \addcolon\addspace } }
+\cs_if_exist:cF { gbpunctdot } { \cs_new:Npn \gbpunctdot { \adddot\addspace } }
+\cs_if_exist:cF { gbpunctdotlanen } { \cs_new:Npn \gbpunctdotlanen { \adddot\addspace } }
+\cs_new:Npn \nwpucolon { \iffieldequalstr{userd}{chinese}{\gbpunctcolon}{\gbpunctcolonlanen} }
+\cs_new:Npn \nwp comma { \iffieldequalstr{userd}{chinese}{\gbpunctcomma}{\gbpunctcommalanen} }
+\cs_new:Npn \nwpudot { \iffieldequalstr{userd}{chinese}{\gbpunctdot}{\gbpunctdotlanen} }
 \renewcommand*{\bibfont}{\nwpuBodyFont}
 \str_if_eq:VnF \l__nwpu_bibindent_tl { hanging } {
     \dim_set:Nn \biblabelsep { \nwpuBibLabelSep }
@@ -35,7 +45,7 @@
     {}%
     {\printtext[title]{\bibtitlefont%
        \iffieldequalstr{entrysubtype}{standard}{%
-            \iffieldundef{number}{}{\printtext{\thefield{number}}\setunit{\addcomma\space}}%
+            \iffieldundef{number}{}{\printtext{\thefield{number}}\setunit{\nwp comma}}%
        }{}%
        \printfield[titlecase]{title}%
        \ifboolexpr{test {\iffieldundef{subtitle}}}%
@@ -63,7 +73,7 @@
     \newunit\newblock%
     \printlist{location}%
     \iffieldundef{number}{}{%
-        \setunit{\addcolon\addspace}%
+        \setunit{\nwpucolon}%
         \printfield{number}%
     }%
     \ifboolexpr{
@@ -73,7 +83,7 @@
         or
         not test {\iffieldundef{day}}
     }{%
-        \setunit{\addcomma\addspace}%
+        \setunit{\nwp comma}%
         \usebibmacro{newsdate}%
     }{}%
     \usebibmacro{finentry}%
@@ -82,13 +92,13 @@
   \bibpubfont%
   \iflistundef{institution}
     {}
-    {\printlist{institution}\setunit*{\adddot\space}}%
+    {\printlist{institution}\setunit*{\nwpudot}}%
   {\printlist{location}%
    \iflistundef{location}
      {}
      {\iflistundef{institution}
-        {\setunit*{\adddot\space}}
-        {\setunit*{\addcolon\space}}}%
+        {\setunit*{\nwpudot}}
+        {\setunit*{\nwpucolon}}}%
    \ifboolexpr{
         not test {\iffieldundef{year}}
         or
@@ -136,7 +146,7 @@
   \bibpubfont%
   \iflistundef{location}{}{%
     \printlist{location}%
-    \iflistundef{publisher}{}{\setunit*{\addcolon\space}}%
+    \iflistundef{publisher}{}{\setunit*{\nwpucolon}}%
   }%
   \iflistundef{publisher}{}{\printlist{publisher}}%
   \ifboolexpr{
@@ -146,7 +156,7 @@
       or
       not test {\iffieldundef{day}}
   }{
-    \setunit*{\addcomma\space}%
+    \setunit*{\nwp comma}%
     \usebibmacro{newsdate}%
   }{}%
 }
@@ -261,9 +271,9 @@
             }}%
     }
     \newbibmacro*{nwpu:bachelorin}{%
-        \setunit{\adddot\addspace}%
+        \setunit{\nwpudot}%
         \iffieldequalstr{userd}{chinese}
-            {\printtext{见\addcolon\space}}
+            {\printtext{见：}}
             {\printtext{In\addcolon\space}}%
     }
     \DeclareBibliographyDriver{nwpubachelorconf}{%
@@ -277,10 +287,10 @@
         \ifnameundef{bookauthor}{%
             \ifnameundef{editor}{}{\newunit}%
         }{\newunit}%
-        \iffieldundef{series}{}{\usebibmacro{series+number}\setunit{\addcolon\addspace}}%
+        \iffieldundef{series}{}{\usebibmacro{series+number}\setunit{\nwpucolon}}%
         \usebibmacro{nwpu:bachelorbooktitle}%
-        % \iffieldundef{volume}{}{\setunit{\addcolon\addspace}\printfield{volume}}%
-        \iffieldundef{number}{}{\setunit{\addcolon\addspace}\printfield{number}}%
+        % \iffieldundef{volume}{}{\setunit{\nwpucolon}\printfield{volume}}%
+        \iffieldundef{number}{}{\setunit{\nwpucolon}\printfield{number}}%
         \newunit\newblock%
         \printfield{edition}%
         \newunit\newblock%

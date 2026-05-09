@@ -161,6 +161,9 @@
     gbpunctin = false,
     sorting=none
 ]{biblatex}                                                 % 参考文献
+\str_if_eq:VnT \l__nwpu_bibstyle_tl { gb7714-2025 } {
+    \ExecuteBibliographyOptions{gbpunctwidth=bylan}
+}
 \nwpu_if_graduate:TF{%
     \DefineBibliographyStrings{english}{in={}}%
     \DefineBibliographyStrings{english}{incn={}}%
