@@ -128,7 +128,7 @@
         { \npu@bcl@headrule }                               %
         { \npu@headrule }                                   %
 }
-\graphicspath{{content/figures/}{figures/}}                % 定义图片文件搜索目录
+\graphicspath{{content/figures/}{figures/}{nwputhesis/assets/}}                % 定义图片文件搜索目录
 \nwpu_if_bachelor:TF                                        % 本科论文页眉设置
 {
     \pagestyle{fancyplain}                                  %
