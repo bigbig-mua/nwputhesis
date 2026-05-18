@@ -37,6 +37,10 @@
   }
 \DeclareFieldFormat[patent]{title}{#1}
 \DeclareFieldFormat[patent]{number}{\nwpuPatentNumberAllowBreaks{#1}}
+\renewcommand*{\multiciterangedelim}{\textasciitilde}
+\renewcommand*{\multicitesubentryrangedelim}{\multiciterangedelim}
+\renewcommand*{\superciterangedelim}{\textasciitilde}
+\renewcommand*{\supercitesubentryrangedelim}{\superciterangedelim}
 \renewbibmacro*{title}{%
 \ifboolexpr{%
     test{\iffieldundef{title}}%
