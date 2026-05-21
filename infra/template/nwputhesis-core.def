@@ -6,6 +6,7 @@
 \NewDocumentCommand{\ifbachelor}{mm}{\nwpu_if_bachelor:TF{#1}{#2}}
 \NewDocumentCommand{\ifgraduate}{mm}{\nwpu_if_graduate:TF{#1}{#2}}
 \NewDocumentCommand{\iflistfigures}{mm}{\nwpu_if_listfigures:TF{#1}{#2}}
+\NewDocumentCommand{\ifblindreview}{mm}{\nwpu_if_blindreview:TF{#1}{#2}}
 %%-----------------------------------------------------------------------------%
 \RequirePackage{amsmath}                                    % AMS 数学公式
 \RequirePackage{amssymb}                                    % AMS 数学符号
