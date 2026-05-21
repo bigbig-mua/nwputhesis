@@ -22,6 +22,10 @@
 
 编译得到的参考文献格式有问题的，可以在命令行执行 `tlmgr update biblatex-gb7714-2015`。
 
+> **近期更新**
+> 1. `master.tex` 和 `phd.tex` 已合并为 `graduate.tex`（默认硕士，改 `degree = phd` 即可编译博士）
+> 2. 原根目录下的 `thesis-body.tex` 已拆分移至 `content/thesis/undergraduate/thesis-body.tex`（本科）和 `content/thesis/graduate/thesis-body.tex`（研究生）
+
 ## 使用说明
 推荐通过 Fork / Clone 仓库获取模板，可以获取最新版本，方便后续通过 Git 跟踪更新。
 
@@ -39,6 +43,8 @@
 推荐直接编译对应的入口文件：
 - `bachelor.tex`：本科毕业设计论文
 - `graduate.tex`：硕博学位论文（默认硕士，改 `degree = phd` 即可编译博士）
+
+各入口文件的论文内容分别在 `content/thesis/undergraduate/thesis-body.tex` 和 `content/thesis/graduate/thesis-body.tex` 中组织。
 
 论文类型、字体、学术/专业学位、盲评和彩色封面等加载期选项统一写在入口文件的 `\documentclass[...]` 中。例如：
 
