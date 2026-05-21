@@ -95,13 +95,15 @@
     {\nwpuTOCEntryFont\normalfont\titlerule*[\nwpuTocLeaderSep]{\raisebox{0.35ex}{.}}\thecontentspage}[\vspace{0em}]
 }
 {
+    \cs_set:Npn \@pnumwidth { 0.5em }                             % 页码预留宽度（匹配实际数字宽度）
+    \cs_set:Npn \contentspage { \thecontentspage }                % 导引点延伸至页码
     \dottedcontents{section}[\nwpuTocSectionIndent]{\nwpuTOCEntryFont}{\nwpuTocSectionLabelWidth}{\nwpuGraduateTocDotSep}   %
     \dottedcontents{subsection}[\nwpuTocSubsectionIndent]{\nwpuTOCEntryFont}{\nwpuTocSubsectionLabelWidth}{\nwpuGraduateTocDotSep}%
     \nwpu_if_chinese:TF                                      % 硕博中文本地化显示
     {
         \titlecontents{chapter}[0pt]{\nwpuTOCEntryFont}{\contentsmargin{1em}\nwpuTOCEntryFont\makebox[0pt  %
             ][l]{\nwpu@chs@chaptercname{\thecontentslabel}}\hspace{%
-                \nwpuGraduateTocChapterLabelOffset}}{\contentsmargin{1em}\nwpuTOCEntryFont}{\titlerule*[%
+                \nwpuGraduateTocChapterLabelOffset}}{\nwpuTOCEntryFont}{\titlerule*[%
                 \nwpuTocLeaderSep]{.}\contentspage}[\vspace{0em}]            %
     }
     {                                                           % 硕博英文
@@ -109,7 +111,7 @@
         \settowidth{\l__nwpu_contents_title_dim}{\nwpuTOCEntryFont Chapter~000} %
         \titlecontents{chapter}[0pt]{\nwpuTOCEntryFont}{\contentsmargin{1em}\nwpuTOCEntryFont\makebox[0pt  %
             ][l]{\nwpu@eng@chaptercname{\thecontentslabel}}\hspace{%
-                \l__nwpu_contents_title_dim}}{\contentsmargin{1em}\nwpuTOCEntryFont}{
+                \l__nwpu_contents_title_dim}}{\nwpuTOCEntryFont}{
             \titlerule*[\nwpuTocLeaderSep]{.}\contentspage}[\vspace{0em}]    %
     }
 }
