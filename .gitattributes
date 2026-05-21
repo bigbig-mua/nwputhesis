@@ -34,12 +34,12 @@ Makefile text eol=lf
 fonts/ export-ignore
 
 # Docs
-CONTRIBUTING.md export-ignore
+docs/ export-ignore
 
 # Build outputs and helper files
 build/ export-ignore
 testfiles/ export-ignore
-build.lua export-ignore
+tools/ export-ignore
 *.aux export-ignore
 *.bbl export-ignore
 *.blg export-ignore
