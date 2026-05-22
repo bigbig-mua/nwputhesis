@@ -16,7 +16,7 @@
 
 硕博格式符合 [研究生学位论文写作指南](https://gs.nwpu.edu.cn/info/2283/30467.htm)，本科格式符合 [本科毕业设计（论文）撰写规范](https://jiaowu.nwpu.edu.cn/info/1160/24598.htm)。
 
-> **近期更新**：`master.tex` 和 `phd.tex` 已合并为 `graduate.tex`；原根目录 `thesis-body.tex` 已拆分至 `content/thesis/undergraduate/` 和 `content/thesis/graduate/` 下。
+> **近期更新**：编译产物统一输出到 `build/` 目录，根目录不再产生中间文件；`master.tex` 和 `phd.tex` 已合并为 `graduate.tex`；原根目录 `thesis-body.tex` 已拆分至 `content/thesis/undergraduate/` 和 `content/thesis/graduate/` 下。
 
 ## 使用说明
 
@@ -27,6 +27,8 @@ Fork 仓库后 Clone 到本地获取模板。字体自动检测，Windows 用户
 推荐搭配 VS Code 的 LaTeX Workshop 插件：
 - **Recipe: xelatex + biber + xelatex x 2**：编译参考文献时使用
 - **Recipe: xelatex (fast)**：日常编辑时使用
+
+编译产物统一输出到 `build/` 目录，根目录保持干净。PDF 位于 `build/bachelor.pdf` 或 `build/graduate.pdf`。
 
 ![[编译方式]](infra/template/assets/example.png)
 
