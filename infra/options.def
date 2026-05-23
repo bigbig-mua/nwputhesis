@@ -89,7 +89,7 @@
           {
             { phd }      { \bool_set_true:N \l__nwpu_type_phd_bool  \bool_set_false:N \l__nwpu_type_mst_bool \bool_set_false:N \l__nwpu_type_bcl_bool }
             { master }   { \bool_set_false:N \l__nwpu_type_phd_bool \bool_set_true:N \l__nwpu_type_mst_bool  \bool_set_false:N \l__nwpu_type_bcl_bool }
-            { bachelor } { \bool_set_false:N \l__nwpu_type_phd_bool \bool_set_false:N \l__nwpu_type_mst_bool \bool_set_true:N \l__nwpu_type_bcl_bool  \tl_set:Nn \l__nwpu_bibstyle_tl { gb7714-2025 } }
+            { bachelor } { \bool_set_false:N \l__nwpu_type_phd_bool \bool_set_false:N \l__nwpu_type_mst_bool \bool_set_true:N \l__nwpu_type_bcl_bool }
           }
           {
             \ClassError { nwputhesis } { Unsupported~degree~`#1' }

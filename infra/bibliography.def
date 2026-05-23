@@ -14,6 +14,74 @@
 \cs_new:Npn \nwpucolon { \iffieldequalstr{userd}{chinese}{\gbpunctcolon}{\gbpunctcolonlanen} }
 \cs_new:Npn \nwp comma { \iffieldequalstr{userd}{chinese}{\gbpunctcomma}{\gbpunctcommalanen} }
 \cs_new:Npn \nwpudot { \iffieldequalstr{userd}{chinese}{\gbpunctdot}{\gbpunctdotlanen} }
+% 本科参考文献中文标点使用全角
+\nwpu_if_bachelor:T {
+  \cs_set:Npn \gbpunctcomma { \mbox{，}\allowbreak }
+  \cs_set:Npn \gbpunctcolon { \mbox{：}\allowbreak }
+  \cs_set:Npn \gbpunctdot { \mbox{．}\allowbreak }
+  \cs_set:Npn \gbpunctcommalanen { \addcomma\addspace }
+  \cs_set:Npn \gbpunctcolonlanen { \addcolon\addspace }
+  \cs_set:Npn \gbpunctdotlanen { \adddot\addspace }
+  \cs_new:Npn \nwpu_bib_comma: { \iffieldequalstr{userd}{chinese}{\gbpunctcomma}{\gbpunctcommalanen} }
+  \def\newunitpunct{%
+    \iffieldequalstr{userd}{chinese}{\gbpunctdot}{\gbpunctdotlanen}}
+  \renewcommand{\pubdatadelim}{\setunit*{\nwpu_bib_comma:}}
+  \renewcommand{\locnopubdelim}{\setunit*{\nwpu_bib_comma:}}
+  \DeclareFieldFormat{title}{%
+    \iffieldequalstr{userd}{chinese}{#1}{#1\adddot\addthinspace}}
+  \DeclareFieldFormat[article,patent,thesis,unpublished]{title}{%
+    \iffieldequalstr{userd}{chinese}{#1}{#1\adddot\addthinspace}}
+  \renewbibmacro*{name:gbuppercase}[4]{\bibauthorfont%
+    \gbcaselocalset%
+    \ifuseprefix%
+      {\usebibmacro{name:delim}{#3#1}%
+       \usebibmacro{name:hook}{#3#1}%
+       \ifdefvoid{#3}{}{%
+         \ifcapital%
+           {\mkbibnameprefix{\MakeCapital{#3}}\isdot}%
+           {\mkbibnameprefix{#3}\isdot}%
+         \ifprefchar{}{\bibnamedelimc}}%
+       \mkbibnamefamily{\MakeCapital{#1}}\isdot%
+       \ifdefvoid{#2}{}{\revsdnamepunct\bibnamedelimd\mkbibnamegiven{\MakeUppercase{#2}}\isdot}%
+       \ifdefvoid{#4}{}{\addcomma\bibnamedelimd\mkbibnamesuffix{#4}\isdot}}%
+      {\usebibmacro{name:delim}{#1}%
+       \usebibmacro{name:hook}{#1}%
+       \mkbibnamefamily{\MakeCapital{#1}}\isdot%
+       \ifboolexpe{%
+         test {\ifdefvoid{#2}}
+         and
+         test {\ifdefvoid{#3}}}
+         {}{\revsdnamepunct}%
+       \ifdefvoid{#2}{}{\bibnamedelimd\mkbibnamegiven{\MakeUppercase{#2}}\isdot}%
+       \ifdefvoid{#3}{}{\bibnamedelimd\mkbibnameprefix{#3}\isdot}%
+       \ifdefvoid{#4}{}{\addcomma\bibnamedelimd\mkbibnamesuffix{#4}\isdot}}}
+  \renewbibmacro*{journal+issuetitle}{\bibpubfont%
+    \usebibmacro{journal}%
+    \iffieldundef{journaltitle}{}{\setunit*{\nwpu_bib_comma:}}%
+    \iffieldundef{series}
+      {}
+      {\newunit
+       \printfield{series}%
+       \setunit{\addspace}}%
+    \printtext{\usebibmacro{issue+date}}%
+    \iffieldundef{volume}{}{\setunit*{\nwpu_bib_comma:}}%
+    \usebibmacro{issue}%
+    \usebibmacro{volume+number+eid}}
+  \renewcommand*{\subtitlepunct}{%
+    \iffieldequalstr{userd}{chinese}{\gbpunctcolon}{\gbpunctcolonlanen}}
+  \renewcommand{\publocpunct}{%
+    \iffieldequalstr{userd}{chinese}{\gbpunctcolon}{\gbpunctcolonlanen}}
+  \DeclareDelimFormat[bib,biblist]{multinamedelim}{%
+    \iffieldequalstr{userd}{chinese}{\gbpunctcomma}{\addcomma\space}}
+  \DeclareDelimFormat[bib,biblist]{finalnamedelim}{%
+    \iffieldequalstr{userd}{chinese}{\gbpunctcomma}{\addcomma\space}}
+  \DeclareDelimFormat[bib,biblist]{nameyeardelim}{%
+    \iffieldequalstr{userd}{chinese}{\gbpunctcomma}{\gbpunctcommalanen}}
+  \DeclareDelimFormat[bib,biblist]{andothersdelim}{%
+    \iffieldequalstr{userd}{chinese}{\gbpunctcomma}{\gbpunctcommalanen}}
+  \DeclareDelimFormat{bibpagespunct}{%
+    \iffieldequalstr{userd}{chinese}{\unspace\gbpunctcolon}{\unspace\gbpunctcolonlanen}}
+}
 \renewcommand*{\bibfont}{\nwpuBodyFont}
 \str_if_eq:VnF \l__nwpu_bibindent_tl { hanging } {
     \dim_set:Nn \biblabelsep { \nwpuBibLabelSep }
