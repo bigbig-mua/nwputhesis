@@ -136,8 +136,8 @@
 %%=== 章节标题间距 =======================================================
 %% \titlespacing{<cmd>}{<left>}{<before>}{<after>}[<right>]
 \nwpu_if_bachelor:TF {
-  \cs_new:Npn \nwpuChapterBeforeSkip   { 5pt }              % 本科章标题前距
-  \cs_new:Npn \nwpuChapterAfterSkip    { 17pt }             % 本科章标题后距
+  \cs_new:Npn \nwpuChapterBeforeSkip   { 24pt }              % 本科章标题前距
+  \cs_new:Npn \nwpuChapterAfterSkip    { 20pt }             % 本科章标题后距
   \cs_new:Npn \nwpuSectionBeforeSkip   { 2pt }              % 本科节标题前距
   \cs_new:Npn \nwpuSectionAfterSkip    { 2pt }              % 本科节标题后距
   \cs_new:Npn \nwpuSubsecBeforeSkip    { 3pt }              % 本科小节标题前距
