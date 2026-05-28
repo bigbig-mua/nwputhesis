@@ -466,7 +466,7 @@
                     \vfill                                      %
                 }                                               %
         \end{center}                                        %
-    \end{titlepage} \fSong \normalsize \newpage \clearpage  %
+    \end{titlepage} \fSong \normalsize \thispagestyle{empty} \cleardoublepage %
 }                                                           %
 %%-----------------------------------------------------------------------------%
 %% 生成标题页

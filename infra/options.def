@@ -17,6 +17,7 @@
 \bool_new:N \l__nwpu_fontset_explicit_bool                   % 用户显式指定了 fontset
 \bool_new:N \l__nwpu_colorcover_bool                         % 彩色封面封底标记
 \bool_new:N \l__nwpu_listfigures_bool                        % 图/表目录标记
+\bool_new:N \l__nwpu_printmode_bool                         % 双面印刷标记（仅本科）
 \bool_set_true:N \l__nwpu_listfigures_bool
 \bool_new:N \l__nwpu_class_loaded_bool                       % 类文件已完成加载
 \tl_new:N \l__nwpu_bibstyle_tl
@@ -158,6 +159,19 @@
           }
       }
   }
+\cs_new_protected:Npn \nwpu_printmode_set:n #1
+  {
+    \nwpu_load_time_key_allowed:nT { printmode }
+      {
+        \bool_if:NT \l__nwpu_type_bcl_bool
+          { \__nwpu_set_bool:Nn \l__nwpu_printmode_bool {#1} }
+        \bool_if:NF \l__nwpu_type_bcl_bool
+          {
+            \ClassWarningNoLine { nwputhesis }
+              { Option~`printmode'~is~only~applicable~to~bachelor~theses;~ignoring~it }
+          }
+      }
+  }
 \cs_new_protected:Npn \nwpu_unknown_key:n #1
   {
     \bool_if:NTF \l__nwpu_in_setup_bool
@@ -193,6 +207,10 @@
     color-cover .default:n = true,
     listfigures .code:n    = { \__nwpu_set_bool:Nn \l__nwpu_listfigures_bool {#1} },
     listfigures .default:n = true,
+    printmode   .code:n    = { \nwpu_printmode_set:n {#1} },
+    printmode   .default:n = true,
+    print-mode  .code:n    = { \nwpu_printmode_set:n {#1} },
+    print-mode  .default:n = true,
     unknown     .code:n    = { \nwpu_unknown_key:n {#1} },
   }
 \ProcessKeyOptions [ nwputhesis ]
@@ -217,6 +235,8 @@
   { \bool_if:NTF \l__nwpu_colorcover_bool { \prg_return_true: } { \prg_return_false: } }
 \prg_new_conditional:Npnn \nwpu_if_listfigures: { T, F, TF }
   { \bool_if:NTF \l__nwpu_listfigures_bool { \prg_return_true: } { \prg_return_false: } }
+\prg_new_conditional:Npnn \nwpu_if_printmode: { T, F, TF }
+  { \bool_if:NTF \l__nwpu_printmode_bool { \prg_return_true: } { \prg_return_false: } }
 \prg_new_conditional:Npnn \nwpu_if_fandol: { T, F, TF }
   { \bool_if:NTF \l__nwpu_font_using_fandol_bool { \prg_return_true: } { \prg_return_false: } }
 \prg_new_conditional:Npnn \nwpu_if_local_fonts: { T, F, TF }
