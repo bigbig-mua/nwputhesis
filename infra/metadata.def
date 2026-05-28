@@ -238,18 +238,18 @@
   }
 \cs_new_protected:Npn \nwpu@set@chs@advisor@rank #1
   {
-    \cs_gset:Npn \nwpu@chs@advisorAcademicRank { \nobreakspace\nobreakspace #1 }
+    \cs_gset:Npn \nwpu@chs@advisorAcademicRank { \blindreview{\nobreakspace\nobreakspace #1} }
     \bool_if:NF \l__nwpu_rank_en_explicit_bool
       {
         \prop_get:NnNTF \l__nwpu_rank_en_prop {#1} \l_tmpa_tl
-          { \cs_gset:Npx \nwpu@eng@advisorAcademicRank { \l_tmpa_tl } }
-          { \cs_gset:Npn \nwpu@eng@advisorAcademicRank { \chs@space } }
+          { \cs_gset:Npx \nwpu@eng@advisorAcademicRank { \exp_not:N \blindreview { \l_tmpa_tl } } }
+          { \cs_gset:Npn \nwpu@eng@advisorAcademicRank { \blindreview{\chs@space} } }
       }
   }
 \cs_new_protected:Npn \nwpu@set@eng@advisor@rank #1
   {
     \bool_set_true:N \l__nwpu_rank_en_explicit_bool
-    \cs_gset:Npn \nwpu@eng@advisorAcademicRank {#1}
+    \cs_gset:Npn \nwpu@eng@advisorAcademicRank { \blindreview{#1} }
   }
 \cs_new_protected:Npn \nwpu@set@chs@funding #1
   { \cs_gset:Npn \nwpu@chs@funding {#1} }

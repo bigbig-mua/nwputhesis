@@ -517,6 +517,16 @@
 \int_new:N \l__nwpu_expert_count_int
 \tl_new:N \l__nwpu_expert_rows_tl
 \bool_new:N \l__nwpu_reviewers_mode_bool
+\bool_new:N \l__nwpu_reviewers_called_bool
+\bool_new:N \g__nwpu_reviewers_called_aux_bool
+\cs_new_protected:Npn \__nwpu_reviewers_write_aux:
+  {
+    \bool_gset_true:N \g__nwpu_reviewers_called_aux_bool
+    \protected@write \@auxout { }
+      { \token_to_str:N \nwpu@reviewers@called@aux }
+  }
+\cs_new_protected:Npn \nwpu@reviewers@called@aux
+  { \bool_gset_true:N \g__nwpu_reviewers_called_aux_bool }
 \cs_new_protected:Npn \npu@text #1 {\relax\nwpuCommitteeBodyFont{#1}}
 \cs_new_protected:Npn \expert #1 #2 #3 {%
     \bool_if:NTF \l__nwpu_reviewers_mode_bool
@@ -532,10 +542,10 @@
     \prg_replicate:nn {#1} {\expertBlindReview}%
 }
 \cs_new_protected:Npn \defenseDate #1 {\nwpuCommitteeBodyFont\textbf{答辩日期}%
-    & \multicolumn{3}{c}{\nwpuCommitteeBodyFont{#1}} \\ }
-\cs_new_protected:Npn \defenseChair #1 #2 #3 {\nwpuCommitteeBodyFont\textbf{主席} & \expert{#1}{#2}{#3} }
-\cs_new_protected:Npn \committeeMember #1 #2 #3 {\nwpuCommitteeBodyFont\textbf{委员} & \expert{#1}{#2}{#3} }
-\cs_new_protected:Npn \defenseSecretary #1 #2 #3 {\nwpuCommitteeBodyFont\textbf{秘书} & \expert{#1}{#2}{#3} }
+    & \multicolumn{3}{c}{\nwpuCommitteeBodyFont{\blindreview{#1}}} \\ }
+\cs_new_protected:Npn \defenseChair #1 #2 #3 {\nwpuCommitteeBodyFont\textbf{主席} & \expert{\blindreview{#1}}{\blindreview{#2}}{\blindreview{#3}} }
+\cs_new_protected:Npn \committeeMember #1 #2 #3 {\nwpuCommitteeBodyFont\textbf{委员} & \expert{\blindreview{#1}}{\blindreview{#2}}{\blindreview{#3}} }
+\cs_new_protected:Npn \defenseSecretary #1 #2 #3 {\nwpuCommitteeBodyFont\textbf{秘书} & \expert{\blindreview{#1}}{\blindreview{#2}}{\blindreview{#3}} }
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \makeCommitteePage #1 {                         %
     \thispagestyle{empty}                                   % 清空页面格式
@@ -544,12 +554,36 @@
         \vspace*{\nwpuCommitteeTopSkip}                      %
         \begin{center}                                      %
             \nwpuCommitteeMainTitleFont {学位论文评阅人和答辩委员会名单} \par
-            #1\relax                                        %
+            \bool_set_false:N \l__nwpu_reviewers_called_bool
+            \bool_if:NF \g__nwpu_reviewers_called_aux_bool
+              { \__nwpu_reviewers_default: }
+            #1\relax
         \end{center}                                        %
     \end{titlepage} \normalsize \newpage             %
     \thispagestyle{empty} \cleardoublepage}                 %
 %%-----------------------------------------------------------------------------%
+\cs_new_protected:Npn \__nwpu_reviewers_default:
+  {
+    \par \nwpuCommitteeBodyFont \vspace{\nwpuCommitteeBeforeReviewersSkip}
+    \makebox[\linewidth][c]{\nwpuCommitteeSectionTitleFont 学位论文评阅人名单} \par
+    \vspace{\nwpuCommitteeReviewersTableBeforeSkip}
+    \begin{tabular}{
+        O{\nwpuCommitteeReviewNameWidth}
+        O{\nwpuCommitteeReviewRankWidth}
+        O{\nwpuCommitteeReviewOrgWidth}
+      }
+        \npu@text{\textbf{姓名}} & \npu@text{\textbf{职称}} & \npu@text{\textbf{工作单位}} \\
+        \expertBlindReview
+        \expertBlindReview
+        \npu@text{} & \npu@text{} & \npu@text{} \\
+        \npu@text{} & \npu@text{} & \npu@text{} \\
+        \npu@text{} & \npu@text{} & \npu@text{} \\
+    \end{tabular}\par
+  }
+%%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \reviewers #1 {                                 %
+    \__nwpu_reviewers_write_aux:
+    \bool_set_true:N \l__nwpu_reviewers_called_bool
     \par \nwpuCommitteeBodyFont \vspace{\nwpuCommitteeBeforeReviewersSkip}%
     \makebox[\linewidth][c]{\nwpuCommitteeSectionTitleFont 学位论文评阅人名单} \par%
     \vspace{\nwpuCommitteeReviewersTableBeforeSkip}         %
@@ -582,7 +616,7 @@
         \defenseDate{#1 年 #2 月 #3 日} \nwpuCommitteeBodyFont\textbf{答辩委员会} & %
         \expert{\textbf{姓名}}{\textbf{职称}}{\textbf{工作单位}}
         #4\relax                                            %
-    \end{tabular}\par}                                     %
+    \end{tabular}\par}
 %%=============================================================================%
 
 \ExplSyntaxOff

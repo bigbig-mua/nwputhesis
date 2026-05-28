@@ -15,11 +15,7 @@
 %%=============================================================================%
 %% 盲评版本的文字替换功能
 %%-----------------------------------------------------------------------------%
-\cs_new_protected:Npn \__nwpu_replace_blank:n #1
-  {
-    \setlength{\fboxsep}{0pt}
-    \colorbox{white}{\phantom{#1}}
-  }
+\cs_new_protected:Npn \__nwpu_replace_blank:n #1 { \strut }
 \cs_new_protected:Npn \__nwpu_replace_black:n #1
   {
     \setlength{\fboxsep}{0pt}
